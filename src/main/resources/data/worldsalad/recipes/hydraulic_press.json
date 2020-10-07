@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BNQ",
+    "IPI",
+    "FSF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:aluminum_ingot"
+    },
+    "I": {
+      "item": "worldsalad:small_battery"
+    },
+    "S": {
+      "item": "minecraft:anvil"
+    },
+    "P": {
+      "item": "worldsalad:simple_machine_casing"
+    },
+    "B": {
+      "item": "minecraft:bucket"
+    },
+    "Q": {
+      "item": "minecraft:iron_ingot"
+    },
+    "N": {
+      "item": "minecraft:piston"
+    }
+  },
+  "result": {
+    "item": "worldsalad:hydraulic_press",
+    "count": 1
+  }
+}

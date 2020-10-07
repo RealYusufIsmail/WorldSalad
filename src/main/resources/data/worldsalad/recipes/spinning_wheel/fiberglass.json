@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:spinningwheel",
+	"output": {
+		"item": "worldsalad:fiberglass_sheet"
+	},
+	
+	"input": {
+		"item": "worldsalad:oil"
+	},
+	
+	"input2": {
+		"item": "minecraft:glass"
+	}
+}

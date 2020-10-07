@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "worldsalad:block/moldy_hyphae_brick_slab" },
+        "type=top": { "model": "worldsalad:block/moldy_hyphae_brick_slab_top" },
+        "type=double": { "model": "worldsalad:block/moldy_hyphae_bricks" }
+    }
+}

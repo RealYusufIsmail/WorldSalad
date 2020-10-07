@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "worldsalad:blocks/bleached_log",
+        "side": "worldsalad:blocks/bleached_log"
+    }
+}

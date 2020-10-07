@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "worldsalad:block/willow_slab" },
+        "type=top": { "model": "worldsalad:block/willow_slab_top" },
+        "type=double": { "model": "worldsalad:block/willow_planks" }
+    }
+}

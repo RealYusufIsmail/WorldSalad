@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "FFF",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:moldy_hyphae_bricks"
+    }
+  },
+  "result": {
+    "item": "worldsalad:moldy_hyphae_brick_wall",
+    "count": 6
+  }
+}

@@ -1,0 +1,10 @@
+{
+	"type": "worldsalad:kiln",
+	"output": {
+		"item": "minecraft:terracotta"
+	},
+	
+	"input": {
+		"item": "minecraft:clay"
+	}
+}

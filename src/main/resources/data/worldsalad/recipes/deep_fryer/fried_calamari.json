@@ -1,0 +1,10 @@
+{
+	"type": "worldsalad:deepfryer",
+	"output": {
+		"item": "worldsalad:fried_calamari"
+	},
+	
+	"input": {
+		"item": "worldsalad:raw_squid"
+	}
+}

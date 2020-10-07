@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:manganese_block"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:manganese_dust",
+    "count": 9
+  }
+}

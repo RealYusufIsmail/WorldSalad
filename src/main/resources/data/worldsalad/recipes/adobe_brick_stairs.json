@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F  ",
+    "FF ",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:adobe_bricks"
+    }
+  },
+  "result": {
+    "item": "worldsalad:adobe_brick_stairs",
+    "count": 4
+  }
+}

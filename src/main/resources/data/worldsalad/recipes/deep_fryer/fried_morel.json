@@ -1,0 +1,10 @@
+{
+	"type": "worldsalad:deepfryer",
+	"output": {
+		"item": "worldsalad:fried_morel"
+	},
+	
+	"input": {
+		"item": "worldsalad:morel"
+	}
+}

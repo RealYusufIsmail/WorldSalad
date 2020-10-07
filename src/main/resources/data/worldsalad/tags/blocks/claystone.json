@@ -1,0 +1,10 @@
+{
+	"replace": false,
+	"values": [
+		"worldsalad:claystone",
+		"worldsalad:red_claystone",
+		"worldsalad:green_claystone",
+		"worldsalad:purple_claystone",
+		"worldsalad:white_claystone"
+	]
+}

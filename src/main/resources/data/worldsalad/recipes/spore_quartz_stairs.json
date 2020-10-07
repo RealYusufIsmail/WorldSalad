@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F  ",
+    "FF ",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:smooth_spore_quartz"
+    }
+  },
+  "result": {
+    "item": "worldsalad:spore_quartz_stairs",
+    "count": 4
+  }
+}

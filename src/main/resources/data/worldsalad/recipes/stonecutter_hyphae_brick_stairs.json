@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "worldsalad:hyphae_bricks"
+  },
+  "result": "worldsalad:hyphae_brick_stairs",
+  "count": 1
+}

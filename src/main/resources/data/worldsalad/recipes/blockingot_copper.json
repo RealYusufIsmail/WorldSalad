@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:copper_block"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:copper_ingot",
+    "count": 9
+  }
+}

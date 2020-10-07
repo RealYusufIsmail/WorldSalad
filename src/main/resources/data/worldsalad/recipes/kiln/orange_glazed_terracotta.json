@@ -1,0 +1,10 @@
+{
+	"type": "worldsalad:kiln",
+	"output": {
+		"item": "minecraft:orange_glazed_terracotta"
+	},
+	
+	"input": {
+		"item": "minecraft:orange_terracotta"
+	}
+}

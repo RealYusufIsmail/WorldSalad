@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:hydraulicpress",
+	"output": {
+		"item": "worldsalad:iron_plate"
+	},
+	
+	"input": {
+		"item": "minecraft:iron_ingot"
+	},
+	
+	"input2": {
+		"item": "minecraft:iron_ingot"
+	}
+}

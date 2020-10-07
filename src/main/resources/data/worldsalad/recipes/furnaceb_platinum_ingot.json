@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "worldsalad:platinum_ore"
+  },
+  "result": "worldsalad:platinum_ingot",
+  "experience": 0.1,
+  "cookingtime": 100
+}

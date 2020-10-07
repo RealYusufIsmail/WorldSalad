@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "worldsalad:block/bleached_slab" },
+        "type=top": { "model": "worldsalad:block/bleached_slab_top" },
+        "type=double": { "model": "worldsalad:block/bleached_planks" }
+    }
+}

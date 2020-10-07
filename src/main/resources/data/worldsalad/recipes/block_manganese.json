@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FFF",
+    "FFF",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:manganese_dust"
+    }
+  },
+  "result": {
+    "item": "worldsalad:manganese_block"
+  }
+}

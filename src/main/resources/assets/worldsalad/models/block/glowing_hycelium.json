@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "bottom": "worldsalad:blocks/fungal_dirt",
+        "top": "worldsalad:blocks/glowing_hycelium_top",
+        "side": "worldsalad:blocks/glowing_hycelium_side"
+    }
+}

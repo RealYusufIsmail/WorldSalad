@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:mithril_block"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:mithril_ingot",
+    "count": 9
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FIF",
+    "G G",
+    "FIF"
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:iron_ingot"
+    },
+    "G": {
+      "item": "worldsalad:fiberglass_sheet"
+    },
+    "I": {
+      "item": "worldsalad:aluminum_ingot"
+    }
+  },
+  "result": {
+    "item": "worldsalad:simple_machine_casing",
+    "count": 1
+  }
+}

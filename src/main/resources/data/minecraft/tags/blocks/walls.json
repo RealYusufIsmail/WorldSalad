@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		"worldsalad:hyphae_brick_wall",
+		"worldsalad:moldy_hyphae_brick_wall",
+		"worldsalad:hyphae_cobblestone_wall",
+		"worldsalad:moldy_hyphae_cobblestone_wall"
+	]
+}

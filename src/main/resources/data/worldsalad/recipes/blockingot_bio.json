@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:bioluminescent_crystal_block"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:bioluminescent_crystal",
+    "count": 9
+  }
+}

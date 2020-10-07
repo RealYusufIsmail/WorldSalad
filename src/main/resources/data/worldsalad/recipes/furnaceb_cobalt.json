@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "worldsalad:cobalt_ore"
+  },
+  "result": "worldsalad:cobalt_shard",
+  "experience": 0.1,
+  "cookingtime": 100
+}

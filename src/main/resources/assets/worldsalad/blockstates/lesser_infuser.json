@@ -1,0 +1,6 @@
+{
+	"variants": {
+		"lit=false": { "model": "worldsalad:block/lesser_infuser" },
+		"lit=true": { "model": "worldsalad:block/lesser_infuser_lit" }
+	}
+} 

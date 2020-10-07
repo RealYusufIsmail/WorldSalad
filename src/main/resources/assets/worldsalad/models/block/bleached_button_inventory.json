@@ -1,0 +1,6 @@
+{
+    "parent": "block/button_inventory",
+    "textures": {
+        "texture": "worldsalad:blocks/bleached_planks"
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NCN",
+    "FSF",
+    "FSF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:tungsten_ingot"
+    },
+    "S": {
+      "item": "worldsalad:medium_battery"
+    },
+    "C": {
+      "item": "worldsalad:copper_wire"
+    },
+    "N": {
+      "item": "worldsalad:silicon_wafer"
+    }
+  },
+  "result": {
+    "item": "worldsalad:large_battery",
+    "count": 1
+  }
+}

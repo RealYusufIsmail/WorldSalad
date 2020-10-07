@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "worldsalad:titanium_ore"
+  },
+  "result": "worldsalad:titanium_ingot",
+  "experience": 0.1,
+  "cookingtime": 100
+}

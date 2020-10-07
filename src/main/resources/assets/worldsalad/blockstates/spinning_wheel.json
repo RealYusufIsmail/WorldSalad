@@ -1,0 +1,12 @@
+{
+	 "variants": {
+        "facing=north,spinning=false": { "model": "worldsalad:block/spinning_wheel" },
+        "facing=south,spinning=false": { "model": "worldsalad:block/spinning_wheel", "y": 180 },
+        "facing=west,spinning=false":  { "model": "worldsalad:block/spinning_wheel", "y": 270 },
+        "facing=east,spinning=false":  { "model": "worldsalad:block/spinning_wheel", "y": 90 },
+        "facing=north,spinning=true": { "model": "worldsalad:block/spinning_wheel_spinning" },
+        "facing=south,spinning=true": { "model": "worldsalad:block/spinning_wheel_spinning", "y": 180 },
+        "facing=west,spinning=true":  { "model": "worldsalad:block/spinning_wheel_spinning", "y": 270 },
+        "facing=east,spinning=true":  { "model": "worldsalad:block/spinning_wheel_spinning", "y": 90 }
+	}
+} 

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:lithium_block"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:lithium_dust",
+    "count": 9
+  }
+}

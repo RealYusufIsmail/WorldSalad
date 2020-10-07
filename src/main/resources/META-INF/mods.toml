@@ -1,0 +1,47 @@
+
+modLoader="javafml"
+
+loaderVersion="[31,)"
+
+issueTrackerURL="http://my.issue.tracker/"
+
+logoFile="logo.png"
+
+[[mods]]
+
+modId="worldsalad"
+
+version="1.0"
+
+displayName="WorldSalad"
+
+updateJSONURL="http://myurl.me/"
+
+displayURL="http://example.com/"
+
+credits="WorldSalad by RadioctiveTaco. Brainstorming and playtesting from Pointy Triangle and Smackatron on discord"
+ 
+authors="RadioctiveTaco"
+
+description='''Machines and a mushroom dimension.
+'''
+
+
+[[dependencies.worldsalad]]
+    # the modid of the dependency
+    modId="forge" #mandatory
+    # Does this dependency have to exist - if not, ordering below must be specified
+    mandatory=true #mandatory
+    # The version range of the dependency
+    versionRange="[31,)" #mandatory
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="NONE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="BOTH"
+    
+[[dependencies.worldsalad]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"

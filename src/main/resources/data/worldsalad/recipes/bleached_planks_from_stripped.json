@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:stripped_bleached_log"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:bleached_planks",
+    "count": 4
+  }
+}

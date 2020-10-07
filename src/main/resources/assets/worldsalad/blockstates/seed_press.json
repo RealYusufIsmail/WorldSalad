@@ -1,0 +1,8 @@
+{
+	 "variants": {
+        "facing=north": { "model": "worldsalad:block/seed_press" },
+        "facing=south": { "model": "worldsalad:block/seed_press", "y": 180 },
+        "facing=west":  { "model": "worldsalad:block/seed_press", "y": 270 },
+        "facing=east":  { "model": "worldsalad:block/seed_press", "y": 90 }
+	}
+} 

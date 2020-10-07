@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "worldsalad:blood_quartz_ore"
+  },
+  "result": "worldsalad:blood_quartz",
+  "experience": 0.1,
+  "cookingtime": 100
+}

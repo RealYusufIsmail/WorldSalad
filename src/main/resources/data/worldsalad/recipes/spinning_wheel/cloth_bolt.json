@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:spinningwheel",
+	"output": {
+		"item": "worldsalad:cloth_bolt"
+	},
+	
+	"input": {
+		"item": "minecraft:stick"
+	},
+	
+	"input2": {
+		"item": "minecraft:string"
+	}
+}

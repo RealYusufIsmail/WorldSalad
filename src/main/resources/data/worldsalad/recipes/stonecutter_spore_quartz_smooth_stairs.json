@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "worldsalad:smooth_spore_quartz"
+  },
+  "result": "worldsalad:spore_quartz_stairs",
+  "count": 1
+}

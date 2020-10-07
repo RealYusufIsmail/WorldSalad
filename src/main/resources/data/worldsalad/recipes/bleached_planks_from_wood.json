@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:bleached_wood"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:bleached_planks",
+    "count": 4
+  }
+}

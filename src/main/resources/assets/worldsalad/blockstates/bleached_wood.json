@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y": { "model": "worldsalad:block/bleached_wood" },
+        "axis=z": { "model": "worldsalad:block/bleached_wood", "x": 90 },
+        "axis=x": { "model": "worldsalad:block/bleached_wood", "x": 90, "y": 90 }
+    }
+}

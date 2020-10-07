@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "FF "
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:reed_block"
+    }
+  },
+  "result": {
+    "item": "worldsalad:reed_mat",
+    "count": 3
+  }
+}

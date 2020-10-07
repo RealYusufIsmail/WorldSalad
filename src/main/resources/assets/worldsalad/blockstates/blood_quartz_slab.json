@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "worldsalad:block/blood_quartz_slab" },
+        "type=top": { "model": "worldsalad:block/blood_quartz_slab_top" },
+        "type=double": { "model": "worldsalad:block/smooth_blood_quartz" }
+    }
+}

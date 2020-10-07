@@ -1,0 +1,6 @@
+{
+	"parent": "block/cross",
+	"textures": {
+		"cross": "worldsalad:blocks/ghost_grape_bush_stage0"
+	}
+}

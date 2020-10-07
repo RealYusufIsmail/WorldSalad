@@ -1,0 +1,6 @@
+{
+	"parent": "block/tinted_cross",
+	"textures": {
+		"cross": "worldsalad:blocks/tall_lumgrass_bottom"
+	}
+}

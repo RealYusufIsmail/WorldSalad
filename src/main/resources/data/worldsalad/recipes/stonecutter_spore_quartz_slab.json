@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "worldsalad:spore_quartz_block"
+  },
+  "result": "worldsalad:bordered_spore_quartz_slab",
+  "count": 2
+}

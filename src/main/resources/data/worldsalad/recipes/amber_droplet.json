@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:amber"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:amber_droplet",
+    "count": 9
+  }
+}

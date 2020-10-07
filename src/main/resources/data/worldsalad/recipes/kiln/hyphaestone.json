@@ -1,0 +1,10 @@
+{
+	"type": "worldsalad:kiln",
+	"output": {
+		"item": "worldsalad:tough_hyphae"
+	},
+	
+	"input": {
+		"item": "worldsalad:hyphae_cobblestone"
+	}
+}

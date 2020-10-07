@@ -1,0 +1,6 @@
+{
+	"parent": "block/cross",
+	"textures": {
+		"cross": "worldsalad:blocks/hotcoffee_crop_5_6"
+	}
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "GHG",
+    "GHG"
+  ],
+  "key": {
+    "G": {
+      "item": "worldsalad:willow_planks"
+    },
+     "H": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "worldsalad:willow_fence",
+    "count": 3
+  }
+}

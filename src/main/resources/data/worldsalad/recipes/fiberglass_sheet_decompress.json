@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:fiberglass_block"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:fiberglass_sheet",
+    "count": 8
+  }
+}

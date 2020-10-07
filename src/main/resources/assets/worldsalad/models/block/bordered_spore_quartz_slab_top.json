@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab_top",
+    "textures": {
+        "bottom": "worldsalad:blocks/spore_quartz_block",
+        "top": "worldsalad:blocks/spore_quartz_block",
+        "side": "worldsalad:blocks/spore_quartz_block"
+    }
+}

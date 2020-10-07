@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "worldsalad:adobe_bricks"
+  },
+  "result": "worldsalad:adobe_brick_stairs",
+  "count": 1
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "G  "
+  ],
+  "key": {
+    "G": {
+      "item": "worldsalad:bleached_planks"
+    }
+  },
+  "result": {
+    "item": "worldsalad:bleached_button"
+  }
+}

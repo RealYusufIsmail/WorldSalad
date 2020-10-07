@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "worldsalad:silicon_quartz"
+  },
+  "result": "worldsalad:silicon_nugget",
+  "experience": 0.1,
+  "cookingtime": 100
+}

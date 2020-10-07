@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "worldsalad:items/nether_shell_fragment_fossil"
+		}
+}

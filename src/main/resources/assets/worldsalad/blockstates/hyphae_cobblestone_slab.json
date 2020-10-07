@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "worldsalad:block/hyphae_cobblestone_slab" },
+        "type=top": { "model": "worldsalad:block/hyphae_cobblestone_slab_top" },
+        "type=double": { "model": "worldsalad:block/hyphae_cobblestone" }
+    }
+}

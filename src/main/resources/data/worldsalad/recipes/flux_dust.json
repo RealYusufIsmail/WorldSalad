@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:sulfur"
+    },
+    {
+      "item": "worldsalad:lithium_dust"
+    },
+     {
+      "item": "worldsalad:lithium_dust"
+    },
+    {
+      "item": "minecraft:redstone"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:flux_powder",
+    "count": 2
+  }
+}

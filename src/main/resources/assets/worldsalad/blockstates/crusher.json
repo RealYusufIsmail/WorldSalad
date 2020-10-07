@@ -1,0 +1,8 @@
+{
+	"variants": {
+	"facing=north": { "model": "worldsalad:block/crusher" },
+	"facing=south": { "model": "worldsalad:block/crusher", "y": 180 },
+	"facing=west": { "model": "worldsalad:block/crusher", "y": 270 },
+	"facing=east": { "model": "worldsalad:block/crusher", "y": 90 }
+	}
+}

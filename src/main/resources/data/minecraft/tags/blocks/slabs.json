@@ -1,0 +1,13 @@
+{
+	"replace": false,
+	"values": [
+		"worldsalad:void_quartz_slab",
+		"worldsalad:spore_quartz_slab",
+		"worldsalad:blood_quartz_slab",
+		"worldsalad:bordered_void_quartz_slab",
+		"worldsalad:bordered_spore_quartz_slab",
+		"worldsalad:bordered_blood_quartz_slab",
+		"worldsalad:willow_slab",
+		"worldsalad:bleached_slab"
+	]
+}

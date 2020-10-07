@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FFF",
+    "FFF",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:molybdenum_nugget"
+    }
+  },
+  "result": {
+    "item": "worldsalad:molybdenum_ingot"
+  }
+}

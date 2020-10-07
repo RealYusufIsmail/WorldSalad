@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "worldsalad:blocks/bleached_planks",
+        "top": "worldsalad:blocks/bleached_planks",
+        "side": "worldsalad:blocks/bleached_planks"
+    }
+}

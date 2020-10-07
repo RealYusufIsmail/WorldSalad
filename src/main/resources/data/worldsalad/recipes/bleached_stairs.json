@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F  ",
+    "FF ",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:bleached_planks"
+    }
+  },
+  "result": {
+    "item": "worldsalad:bleached_stairs",
+    "count": 4
+  }
+}

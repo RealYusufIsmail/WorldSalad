@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y": { "model": "worldsalad:block/wet_grass_block" },
+        "axis=z": { "model": "worldsalad:block/wet_grass_block", "x": 90 },
+        "axis=x": { "model": "worldsalad:block/wet_grass_block", "x": 90, "y": 90 }
+    }
+}

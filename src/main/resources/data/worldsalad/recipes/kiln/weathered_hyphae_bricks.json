@@ -1,0 +1,10 @@
+{
+	"type": "worldsalad:kiln",
+	"output": {
+		"item": "worldsalad:hyphae_bricks"
+	},
+	
+	"input": {
+		"item": "worldsalad:weathered_hyphae_bricks"
+	}
+}

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y": { "model": "worldsalad:block/void_quartz_pillar" },
+        "axis=z": { "model": "worldsalad:block/void_quartz_pillar", "x": 90 },
+        "axis=x": { "model": "worldsalad:block/void_quartz_pillar", "x": 90, "y": 90 }
+    }
+}

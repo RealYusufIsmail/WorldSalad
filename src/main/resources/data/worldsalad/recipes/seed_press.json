@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CBC",
+    "PIP",
+    "WIW"
+  ],
+  "key": {
+    "W": {
+      "tag": "minecraft:logs"
+    },
+    "I": {
+      "item": "minecraft:heavy_weighted_pressure_plate"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "C": {
+      "item": "worldsalad:copper_ingot"
+    },
+    "B": {
+      "item": "minecraft:piston"
+    }
+  },
+  "result": {
+    "item": "worldsalad:seed_press",
+    "count": 1
+  }
+}

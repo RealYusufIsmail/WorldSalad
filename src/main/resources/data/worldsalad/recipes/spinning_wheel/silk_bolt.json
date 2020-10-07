@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:spinningwheel",
+	"output": {
+		"item": "worldsalad:silk_bolt"
+	},
+	
+	"input": {
+		"item": "minecraft:stick"
+	},
+	
+	"input2": {
+		"item": "worldsalad:silk_strand"
+	}
+}

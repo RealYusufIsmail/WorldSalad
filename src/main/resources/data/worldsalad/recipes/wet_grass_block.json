@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:grass"
+    }
+  },
+  "result": {
+    "item": "worldsalad:wet_grass_block",
+    "count": 2
+  }
+}

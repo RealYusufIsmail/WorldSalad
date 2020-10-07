@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "worldsalad:blocks/adobe_block",
+        "top": "worldsalad:blocks/adobe_block",
+        "side": "worldsalad:blocks/adobe_block"
+    }
+}

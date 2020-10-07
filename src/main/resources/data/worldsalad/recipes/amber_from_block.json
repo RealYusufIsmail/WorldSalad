@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:amber_block"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:amber",
+    "count": 9
+  }
+}

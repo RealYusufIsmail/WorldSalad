@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F  ",
+    "FF ",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:hyphae_cobblestone"
+    }
+  },
+  "result": {
+    "item": "worldsalad:hyphae_cobblestone_stairs",
+    "count": 4
+  }
+}

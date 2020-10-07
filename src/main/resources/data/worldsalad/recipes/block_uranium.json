@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FFF",
+    "FFF",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:uranium_ingot"
+    }
+  },
+  "result": {
+    "item": "worldsalad:uranium_block"
+  }
+}

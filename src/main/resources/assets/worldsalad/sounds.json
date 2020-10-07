@@ -1,0 +1,62 @@
+{
+	"entity.rock_monster.ambient": {
+	"category": "entity",
+	"subtitle": "Rock Monster grunts",
+	"sounds": [
+			{
+			"name": "worldsalad:entity/entity.rock_monster.ambient",
+			"stream": true
+			}
+		]
+	},
+	"entity.rock_monster.death": {
+	"category": "entity",
+	"subtitle": "Rock Monster dies",
+	"sounds": [
+			{
+			"name": "worldsalad:entity/entity.rock_monster.death",
+			"stream": true
+			}
+		]
+	},
+	"entity.rock_monster.hurt": {
+	"category": "entity",
+	"subtitle": "Rock Monster hurts",
+	"sounds": [
+			{
+			"name": "worldsalad:entity/entity.rock_monster.hurt",
+			"stream": true
+			}
+		]
+	},
+	"entity.wraith.ambient": {
+	"category": "entity",
+	"subtitle": "Wraith breathes",
+	"sounds": [
+			{
+			"name": "worldsalad:entity/entity.wraith.death",
+			"stream": true
+			}
+		]
+	},
+	"entity.wraith.death": {
+	"category": "entity",
+	"subtitle": "Wraith dies",
+	"sounds": [
+			{
+			"name": "worldsalad:entity/entity.wraith.death",
+			"stream": true
+			}
+		]
+	},
+	"entity.wraith.hurt": {
+	"category": "entity",
+	"subtitle": "Wraith hurts",
+	"sounds": [
+			{
+			"name": "worldsalad:entity/entity.wraith.hurt",
+			"stream": true
+			}
+		]
+	}
+}

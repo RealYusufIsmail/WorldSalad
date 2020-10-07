@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "worldsalad:moldy_hyphae_cobblestone"
+  },
+  "result": "worldsalad:moldy_hyphae_cobblestone_slab",
+  "count": 2
+}

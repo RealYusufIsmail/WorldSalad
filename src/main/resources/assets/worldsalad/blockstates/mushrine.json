@@ -1,0 +1,8 @@
+{
+	"variants": {
+	"facing=north": { "model": "worldsalad:block/mushrine" },
+	"facing=south": { "model": "worldsalad:block/mushrine", "y": 180 },
+	"facing=west": { "model": "worldsalad:block/mushrine", "y": 270 },
+	"facing=east": { "model": "worldsalad:block/mushrine", "y": 90 }
+	}
+}

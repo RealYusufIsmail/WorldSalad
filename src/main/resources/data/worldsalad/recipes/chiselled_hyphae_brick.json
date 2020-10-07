@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "F  ",
+    "F  "
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:hyphae_bricks"
+    }
+  },
+  "result": {
+    "item": "worldsalad:chiselled_hyphae_brick",
+    "count": 1
+  }
+}

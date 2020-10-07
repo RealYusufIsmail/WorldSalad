@@ -1,0 +1,10 @@
+{
+	"type": "worldsalad:kiln",
+	"output": {
+		"item": "minecraft:glass"
+	},
+	
+	"input": {
+		"tag": "minecraft:sand"
+	}
+}

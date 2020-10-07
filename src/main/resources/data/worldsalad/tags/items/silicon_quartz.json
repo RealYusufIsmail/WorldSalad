@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:quartz",
+		"worldsalad:blood_quartz",
+		"worldsalad:spore_quartz",
+		"worldsalad:void_quartz"
+	]
+}

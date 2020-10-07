@@ -1,0 +1,10 @@
+{
+	"type": "worldsalad:kiln",
+	"output": {
+		"item": "minecraft:smooth_red_sandstone"
+	},
+	
+	"input": {
+		"item": "minecraft:red_sandstone"
+	}
+}

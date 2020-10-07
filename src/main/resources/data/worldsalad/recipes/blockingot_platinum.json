@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:platinum_block"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:platinum_ingot",
+    "count": 9
+  }
+}

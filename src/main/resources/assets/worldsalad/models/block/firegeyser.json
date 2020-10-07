@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "bottom": "worldsalad:blocks/lavarock",
+        "top": "worldsalad:blocks/firegeyser",
+        "side": "worldsalad:blocks/lavarock"
+    }
+}

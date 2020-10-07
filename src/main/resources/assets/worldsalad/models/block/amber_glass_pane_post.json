@@ -1,0 +1,7 @@
+{
+    "parent": "block/template_glass_pane_post",
+    "textures": {
+        "edge": "worldsalad:blocks/amber_glass_pane_top",
+        "pane": "worldsalad:blocks/amber_glass"
+    }
+}

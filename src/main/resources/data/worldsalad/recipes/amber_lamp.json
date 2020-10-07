@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FIF",
+    "IBI",
+    "FIF"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_nugget"
+    },
+    "B": {
+      "item": "worldsalad:bioluminescent_crystal"
+    },
+    "F": {
+      "item": "worldsalad:amber_droplet"
+    }
+  },
+  "result": {
+    "item": "worldsalad:amber_lamp",
+    "count": 2
+  }
+}

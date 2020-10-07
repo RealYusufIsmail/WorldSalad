@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "worldsalad:block/adobe_slab" },
+        "type=top": { "model": "worldsalad:block/adobe_slab_top" },
+        "type=double": { "model": "worldsalad:block/adobe_block" }
+    }
+}

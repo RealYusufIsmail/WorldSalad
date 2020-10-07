@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "worldsalad:blocks/thatch_block_end",
+        "side": "worldsalad:blocks/thatch_block_side"
+    }
+}

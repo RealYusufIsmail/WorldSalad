@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "F  ",
+    "F  "
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:bordered_spore_quartz_slab"
+    }
+  },
+  "result": {
+    "item": "worldsalad:chiselled_spore_quartz",
+    "count": 1
+  }
+}

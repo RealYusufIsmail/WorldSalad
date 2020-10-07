@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:adobe_block"
+    }
+  },
+  "result": {
+    "item": "worldsalad:adobe_slab",
+    "count": 6
+  }
+}

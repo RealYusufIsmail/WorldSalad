@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 4,
+      "entries": [
+      {
+          "type": "minecraft:item",
+          "weight": 80,
+          "name": "minecraft:redstone"
+        },
+     	{
+          "type": "minecraft:item",
+          "weight": 140,
+          "name": "minecraft:iron_nugget"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 80,
+          "name": "minecraft:gold_nugget"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 150,
+          "name": "worldsalad:copper_nugget"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 120,
+          "name": "worldsalad:lead_nugget"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 100,
+          "name": "worldsalad:aluminum_nugget"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "worldsalad:platinum_nugget"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "worldsalad:uranium_nugget"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:diamond"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:emerald"
+        }
+      ]
+    }
+  ]
+}

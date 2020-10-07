@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "worldsalad:blocks/moldy_hyphae_cobblestone",
+        "top": "worldsalad:blocks/moldy_hyphae_cobblestone",
+        "side": "worldsalad:blocks/moldy_hyphae_cobblestone"
+    }
+}

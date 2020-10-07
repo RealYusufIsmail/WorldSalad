@@ -1,0 +1,6 @@
+{
+	"parent": "block/cross",
+	"textures": {
+		"cross": "worldsalad:blocks/fountain_grass_top"
+	}
+}

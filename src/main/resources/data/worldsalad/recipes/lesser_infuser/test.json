@@ -1,0 +1,10 @@
+{
+	"type": "worldsalad:lesserinfuser",
+	"output": {
+		"item": "worldsalad:world_salad"
+	},
+	
+	"input": {
+		"item": "minecraft:stick"
+	}
+}

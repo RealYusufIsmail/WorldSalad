@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=lower": { "model": "worldsalad:block/tall_lumgrass_bottom" },
+        "half=upper":    { "model": "worldsalad:block/tall_lumgrass_top" }
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "worldsalad:hyphae_cobblestone"
+  },
+  "result": "worldsalad:tough_hyphae",
+  "experience": 0.1,
+  "cookingtime": 100
+}

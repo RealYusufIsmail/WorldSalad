@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "FF "
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:bleached_planks"
+    }
+  },
+  "result": {
+    "item": "worldsalad:bleached_pressure_plate"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  F",
+    " F ",
+    "F  "
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:dry_reed"
+    }
+  },
+  "result": {
+    "item": "worldsalad:vaulting_reed",
+    "count": 2
+  }
+}

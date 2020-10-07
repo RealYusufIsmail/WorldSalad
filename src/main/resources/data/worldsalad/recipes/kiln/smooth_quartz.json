@@ -1,0 +1,10 @@
+{
+	"type": "worldsalad:kiln",
+	"output": {
+		"item": "minecraft:smooth_quartz"
+	},
+	
+	"input": {
+		"item": "minecraft:quartz_block"
+	}
+}

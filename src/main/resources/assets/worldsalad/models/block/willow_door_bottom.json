@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_bottom",
+    "textures": {
+        "bottom": "worldsalad:blocks/willow_door_bottom",
+        "top": "worldsalad:blocks/willow_door_top"
+    }
+}

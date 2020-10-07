@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:molybdenum_block"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:molybdenum_ingot",
+    "count": 9
+  }
+}

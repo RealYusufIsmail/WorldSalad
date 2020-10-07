@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "worldsalad:block/spore_quartz_slab" },
+        "type=top": { "model": "worldsalad:block/spore_quartz_slab_top" },
+        "type=double": { "model": "worldsalad:block/smooth_spore_quartz" }
+    }
+}

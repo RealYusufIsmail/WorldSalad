@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "F  ",
+    "F  "
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:bordered_blood_quartz_slab"
+    }
+  },
+  "result": {
+    "item": "worldsalad:chiselled_blood_quartz",
+    "count": 1
+  }
+}

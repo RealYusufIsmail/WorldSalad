@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "worldsalad:void_quartz_ore"
+  },
+  "result": "worldsalad:void_quartz",
+  "experience": 0.1,
+  "cookingtime": 100
+}

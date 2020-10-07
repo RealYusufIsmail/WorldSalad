@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:smooth_void_quartz"
+    }
+  },
+  "result": {
+    "item": "worldsalad:void_quartz_slab",
+    "count": 6
+  }
+}

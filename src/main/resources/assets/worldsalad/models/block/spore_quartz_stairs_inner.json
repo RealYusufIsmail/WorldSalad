@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "worldsalad:blocks/smooth_spore_quartz",
+        "top": "worldsalad:blocks/smooth_spore_quartz",
+        "side": "worldsalad:blocks/smooth_spore_quartz"
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FFF",
+    "FFF",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:bioluminescent_crystal"
+    }
+  },
+  "result": {
+    "item": "worldsalad:bioluminescent_crystal_block"
+  }
+}

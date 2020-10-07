@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "worldsalad:blocks/adobe_bricks",
+        "top": "worldsalad:blocks/adobe_bricks",
+        "side": "worldsalad:blocks/adobe_bricks"
+    }
+}

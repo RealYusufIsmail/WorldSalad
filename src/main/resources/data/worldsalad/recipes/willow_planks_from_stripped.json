@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:stripped_willow_log"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:willow_planks",
+    "count": 4
+  }
+}

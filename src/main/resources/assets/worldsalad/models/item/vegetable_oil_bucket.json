@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "worldsalad:items/vegetable_oil_bucket"
+		}
+}

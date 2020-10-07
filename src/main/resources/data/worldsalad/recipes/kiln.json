@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PIP",
+    "WWW"
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:bricks"
+    },
+    "I": {
+      "item": "minecraft:furnace"
+    },
+    "W": {
+      "item": "worldsalad:copper_ingot"
+    }
+  },
+  "result": {
+    "item": "worldsalad:kiln",
+    "count": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "HGH",
+    "HGH"
+  ],
+  "key": {
+    "G": {
+      "item": "worldsalad:bleached_planks"
+    },
+     "H": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "worldsalad:bleached_fence_gate"
+  }
+}

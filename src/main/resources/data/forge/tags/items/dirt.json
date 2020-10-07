@@ -1,0 +1,11 @@
+  
+{
+  "replace": false,
+  "values": [
+    "worldsalad:fungal_dirt",
+    "worldsalad:mud",
+    "worldsalad:glowing_hycelium",
+    "worldsalad:hycelium",
+    "worldsalad:moldgrass"
+  ]
+}

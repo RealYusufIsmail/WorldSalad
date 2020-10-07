@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:hotcoffee_beans"
+    },
+    {
+      "item": "worldsalad:hotcoffee_beans"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "minecraft:cocoa_beans"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:chocolate_hotcoffee_beans",
+    "count": 2
+  }
+}

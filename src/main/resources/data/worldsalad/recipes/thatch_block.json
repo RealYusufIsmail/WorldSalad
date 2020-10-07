@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:thatch"
+    }
+  },
+  "result": {
+    "item": "worldsalad:thatch_block",
+    "count": 2
+  }
+}

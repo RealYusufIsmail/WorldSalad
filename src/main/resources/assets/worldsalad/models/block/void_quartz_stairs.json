@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "worldsalad:blocks/smooth_void_quartz",
+        "top": "worldsalad:blocks/smooth_void_quartz",
+        "side": "worldsalad:blocks/smooth_void_quartz"
+    }
+}

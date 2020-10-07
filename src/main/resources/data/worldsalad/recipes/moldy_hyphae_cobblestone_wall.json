@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "FFF",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:moldy_hyphae_cobblestone"
+    }
+  },
+  "result": {
+    "item": "worldsalad:moldy_hyphae_cobblestone_wall",
+    "count": 6
+  }
+}

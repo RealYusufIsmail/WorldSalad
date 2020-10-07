@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:zinc_block"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:zinc_dust",
+    "count": 9
+  }
+}

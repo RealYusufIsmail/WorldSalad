@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:spinningwheel",
+	"output": {
+		"item": "worldsalad:copper_wire"
+	},
+	
+	"input": {
+		"item": "minecraft:stick"
+	},
+	
+	"input2": {
+		"item": "worldsalad:copper_ingot"
+	}
+}

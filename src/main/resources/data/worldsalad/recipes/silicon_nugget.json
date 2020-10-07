@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:silicon_ingot"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:silicon_nugget",
+    "count": 9
+  }
+}

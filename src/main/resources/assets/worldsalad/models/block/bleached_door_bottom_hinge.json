@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_bottom_rh",
+    "textures": {
+        "bottom": "worldsalad:blocks/bleached_door_bottom",
+        "top": "worldsalad:blocks/bleached_door_top"
+    }
+}

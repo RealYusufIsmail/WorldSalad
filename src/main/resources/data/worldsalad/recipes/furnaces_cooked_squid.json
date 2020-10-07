@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "worldsalad:raw_squid"
+  },
+  "result": "worldsalad:cooked_squid",
+  "experience": 0.1,
+  "cookingtime": 100
+}

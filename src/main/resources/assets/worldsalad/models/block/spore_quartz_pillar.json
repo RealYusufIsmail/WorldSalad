@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "worldsalad:blocks/spore_quartz_pillar_top",
+        "side": "worldsalad:blocks/spore_quartz_pillar_side"
+    }
+}

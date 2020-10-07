@@ -1,0 +1,11 @@
+{
+	"replace": false,
+	"values": [
+		"worldsalad:crude_oil_flowing",
+		"worldsalad:crude_oil_fluid",
+		"worldsalad:acid_flowing",
+		"worldsalad:acid_fluid",
+		"worldsalad:vegetable_oil_flowing",
+		"worldsalad:vegetable_oil_fluid"
+	]
+}

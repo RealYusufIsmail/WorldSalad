@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 50,
+          "name": "minecraft:coal"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 30,
+          "name": "worldsalad:oil"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 20,
+          "name": "worldsalad:black_shale"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NCN",
+    "FPF",
+    "FSF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:aluminum_ingot"
+    },
+    "S": {
+      "item": "worldsalad:salt"
+    },
+    "P": {
+      "item": "worldsalad:flux_powder"
+    },
+    "C": {
+      "item": "worldsalad:copper_wire"
+    },
+    "N": {
+      "item": "worldsalad:copper_nugget"
+    }
+  },
+  "result": {
+    "item": "worldsalad:small_battery",
+    "count": 1
+  }
+}

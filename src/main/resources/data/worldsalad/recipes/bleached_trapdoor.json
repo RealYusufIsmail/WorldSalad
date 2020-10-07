@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "FFF",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:bleached_planks"
+    }
+  },
+  "result": {
+    "item": "worldsalad:bleached_trapdoor",
+    "count": 2
+  }
+}

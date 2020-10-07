@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "worldsalad:blocks/kiln_top",
+        "front": "worldsalad:blocks/kiln_front_on",
+        "side": "worldsalad:blocks/kiln_side"
+    }
+}

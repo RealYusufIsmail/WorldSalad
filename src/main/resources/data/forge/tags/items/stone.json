@@ -1,0 +1,11 @@
+  
+{
+  "replace": false,
+  "values": [
+  "worldsalad:tough_hyphae",
+  "worldsalad:limestone",
+  "worldsalad:shale",
+    "worldsalad:claystone",
+    "worldsalad:siltstone"
+  ]
+}

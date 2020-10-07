@@ -1,0 +1,13 @@
+{
+	"replace": false,
+	"values": [
+		"worldsalad:willow_log",
+		"worldsalad:willow_wood",
+		"worldsalad:stripped_willow_log",
+		"worldsalad:stripped_willow_wood",
+		"worldsalad:bleached_log",
+		"worldsalad:bleached_wood",
+		"worldsalad:stripped_bleached_log",
+		"worldsalad:stripped_bleached_wood"
+	]
+}

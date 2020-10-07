@@ -1,0 +1,10 @@
+{
+	"type": "worldsalad:deepfryer",
+	"output": {
+		"item": "worldsalad:bacon"
+	},
+	
+	"input": {
+		"item": "minecraft:porkchop"
+	}
+}

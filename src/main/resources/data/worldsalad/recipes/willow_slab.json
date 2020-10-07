@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:willow_planks"
+    }
+  },
+  "result": {
+    "item": "worldsalad:willow_slab",
+    "count": 6
+  }
+}

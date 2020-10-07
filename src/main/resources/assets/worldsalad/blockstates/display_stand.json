@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "worldsalad:block/display_stand" },
+        "facing=south": { "model": "worldsalad:block/display_stand", "y": 180 },
+        "facing=west":  { "model": "worldsalad:block/display_stand", "y": 270 },
+        "facing=east":  { "model": "worldsalad:block/display_stand", "y": 90 }
+    }
+}

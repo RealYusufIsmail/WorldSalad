@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:hydraulicpress",
+	"output": {
+		"item": "worldsalad:copper_plate"
+	},
+	
+	"input": {
+		"item": "worldsalad:copper_ingot"
+	},
+	
+	"input2": {
+		"item": "worldsalad:copper_ingot"
+	}
+}

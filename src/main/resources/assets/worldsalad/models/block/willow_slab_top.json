@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab_top",
+    "textures": {
+        "bottom": "worldsalad:blocks/willow_planks",
+        "top": "worldsalad:blocks/willow_planks",
+        "side": "worldsalad:blocks/willow_planks"
+    }
+}

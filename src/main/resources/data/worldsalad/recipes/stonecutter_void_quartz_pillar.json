@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "worldsalad:void_quartz_block"
+  },
+  "result": "worldsalad:void_quartz_pillar",
+  "count": 1
+}

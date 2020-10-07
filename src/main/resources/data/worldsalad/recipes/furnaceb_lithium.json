@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "worldsalad:lithium_ore"
+  },
+  "result": "worldsalad:lithium_dust",
+  "experience": 0.1,
+  "cookingtime": 100
+}

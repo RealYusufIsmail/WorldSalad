@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:lead_ingot"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:lead_nugget",
+    "count": 9
+  }
+}

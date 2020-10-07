@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WMW",
+    "WDW",
+    "QGQ"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_block"
+    },
+    "M": {
+      "item": "minecraft:mushroom_stew"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "Q": {
+      "item": "minecraft:quartz_block"
+    },
+    "W": {
+      "item": "minecraft:nether_wart_block"
+    }
+  },
+  "result": {
+    "item": "worldsalad:mushrine",
+    "count": 2
+  }
+}

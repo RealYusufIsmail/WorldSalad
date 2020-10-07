@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:hydraulicpress",
+	"output": {
+		"item": "worldsalad:silicon_wafer"
+	},
+	
+	"input": {
+		"item": "worldsalad:silicon_ingot"
+	},
+	
+	"input2": {
+		"item": "worldsalad:silicon_ingot"
+	}
+}

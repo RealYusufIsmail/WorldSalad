@@ -1,0 +1,10 @@
+{
+	"type": "worldsalad:kiln",
+	"output": {
+		"item": "worldsalad:smooth_blood_quartz"
+	},
+	
+	"input": {
+		"item": "worldsalad:blood_quartz_block"
+	}
+}

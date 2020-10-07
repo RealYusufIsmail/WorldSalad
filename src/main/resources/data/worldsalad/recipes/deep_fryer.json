@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IBI",
+    "FPF",
+    "FSF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:iron_plate"
+    },
+    "I": {
+      "item": "worldsalad:fiberglass_sheet"
+    },
+    "S": {
+      "item": "worldsalad:medium_battery"
+    },
+    "P": {
+      "item": "worldsalad:simple_machine_casing"
+    },
+    "B": {
+      "item": "minecraft:bucket"
+    }
+  },
+  "result": {
+    "item": "worldsalad:deep_fryer",
+    "count": 1
+  }
+}

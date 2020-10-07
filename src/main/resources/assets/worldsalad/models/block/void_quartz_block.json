@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "worldsalad:blocks/void_quartz_block"
+	}
+}

@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "worldsalad:blocks/willow_log_top",
+        "side": "worldsalad:blocks/willow_log"
+    }
+}

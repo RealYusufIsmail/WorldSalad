@@ -1,0 +1,10 @@
+{
+	"type": "worldsalad:kiln",
+	"output": {
+		"item": "worldsalad:smooth_void_quartz"
+	},
+	
+	"input": {
+		"item": "worldsalad:void_quartz_block"
+	}
+}

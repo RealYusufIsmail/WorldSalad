@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "worldsalad:blocks/moldy_hyphae_bricks",
+        "top": "worldsalad:blocks/moldy_hyphae_bricks",
+        "side": "worldsalad:blocks/moldy_hyphae_bricks"
+    }
+}
