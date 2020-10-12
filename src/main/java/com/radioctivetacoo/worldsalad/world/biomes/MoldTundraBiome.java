@@ -19,7 +19,6 @@ import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.ConfiguredPlacement;
 import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.FrequencyConfig;
-import net.minecraft.world.gen.placement.HeightWithChanceConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -39,9 +38,6 @@ public class MoldTundraBiome extends Biome {
 
 	private static final BlockState ROTTING_GRASS = BlockInit.ROTTING_GRASS.get().getDefaultState();
 	private static final BlockState MOLD_GROWTH = BlockInit.MOLD_GROWTH.get().getDefaultState();
-	private static final BlockState SPOREPUMPERBLOCK = BlockInit.SPOREPUMPER.get().getDefaultState();
-	BlockClusterFeatureConfig SPOREPUMPER = (new BlockClusterFeatureConfig.Builder(
-			new SimpleBlockStateProvider(SPOREPUMPERBLOCK), new SimpleBlockPlacer())).tries(1).func_227317_b_().build();
 	BlockClusterFeatureConfig MOLD_GROWTH_CONFIG = (new BlockClusterFeatureConfig.Builder(
 			new SimpleBlockStateProvider(MOLD_GROWTH), new SimpleBlockPlacer())).tries(12).build();
 	BlockClusterFeatureConfig ROTTING_GRASS_CONFIG = (new BlockClusterFeatureConfig.Builder(
@@ -57,9 +53,6 @@ public class MoldTundraBiome extends Biome {
 		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 				Feature.FANCY_TREE.withConfiguration(DeadTree.DEAD_TREE_CONFIG).withPlacement(
 						Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(1, 0f, 0))));
-		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-				Feature.RANDOM_PATCH.withConfiguration(SPOREPUMPER).withPlacement(
-						Placement.COUNT_CHANCE_HEIGHTMAP.configure(new HeightWithChanceConfig(8, 0.14F))));
 		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 				Feature.RANDOM_PATCH.withConfiguration(MOLD_GROWTH_CONFIG)
 						.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(2))));

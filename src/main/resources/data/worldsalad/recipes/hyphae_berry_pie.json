@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:lumberry"
+    },
+    {
+      "item": "worldsalad:fungberry"
+    },
+    {
+      "item": "worldsalad:moldberry"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:hyphae_berry_pie",
+    "count": 1
+  }
+}

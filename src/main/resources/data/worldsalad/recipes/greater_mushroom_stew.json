@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:morel"
+    },
+    {
+      "item": "worldsalad:toadstool"
+    },
+    {
+      "item": "worldsalad:smoked_enoki_bulb"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:greater_mushroom_stew",
+    "count": 1
+  }
+}

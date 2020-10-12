@@ -35,7 +35,7 @@ public class DisplayStandRenderer extends TileEntityRenderer<DisplayStandTileEnt
 				matrixStackIn.push();
 				matrixStackIn.translate(0.5D, 1D, 0.5D);
 				matrixStackIn.scale(0.5F, 0.5F, 0.5F);
-				matrixStackIn.rotate(Vector3f.YP.rotationDegrees(degrees++ / 8));
+				matrixStackIn.rotate(Vector3f.YP.rotationDegrees(degrees++ / 5));
 				renderItem(stack, partialTicks, matrixStackIn, bufferIn, combinedLightIn);
 				matrixStackIn.pop();
 			}

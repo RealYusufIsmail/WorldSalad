@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:blue_glowing_mushroom"
+    },
+    {
+      "item": "worldsalad:green_glowing_mushroom"
+    },
+    {
+      "item": "worldsalad:pink_glowing_mushroom"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:glowshroom_stew",
+    "count": 1
+  }
+}

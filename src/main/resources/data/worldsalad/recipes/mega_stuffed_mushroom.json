@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:fried_morel"
+    },
+    {
+      "item": "worldsalad:bacon"
+    },
+    {
+      "item": "worldsalad:fried_chicken"
+    },
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "item": "minecraft:red_mushroom"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "item": "worldsalad:smoked_enoki_bulb"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:mega_stuffed_mushroom",
+    "count": 1
+  }
+}

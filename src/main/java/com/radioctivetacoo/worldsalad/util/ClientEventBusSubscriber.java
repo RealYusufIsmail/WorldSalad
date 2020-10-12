@@ -7,7 +7,9 @@ import com.radioctivetacoo.worldsalad.client.entity.render.RockMonsterRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.SoldierAntRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.TraderAntRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.UrchinRender;
+import com.radioctivetacoo.worldsalad.client.entity.render.WorkerAntRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.WraithRender;
+import com.radioctivetacoo.worldsalad.client.gui.AlloyFurnaceScreen;
 import com.radioctivetacoo.worldsalad.client.gui.ArchaeologyStationScreen;
 import com.radioctivetacoo.worldsalad.client.gui.DeepFryerScreen;
 import com.radioctivetacoo.worldsalad.client.gui.DisplayStandScreen;
@@ -46,6 +48,7 @@ public class ClientEventBusSubscriber {
 		ScreenManager.registerFactory(ContainerInit.HYDRAULIC_PRESS.get(), HydraulicPressScreen::new);
 		ScreenManager.registerFactory(ContainerInit.ARCHAEOLOGY_STATION.get(), ArchaeologyStationScreen::new);
 		ScreenManager.registerFactory(ContainerInit.DISPLAY_STAND.get(), DisplayStandScreen::new);
+		ScreenManager.registerFactory(ContainerInit.ALLOY_FURNACE.get(), AlloyFurnaceScreen::new);
 
 		RenderTypeLookup.setRenderLayer(FluidInit.VEGETABLE_OIL_FLOWING.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(FluidInit.VEGETABLE_OIL_FLUID.get(), RenderType.getTranslucent());
@@ -57,7 +60,6 @@ public class ClientEventBusSubscriber {
 		RenderTypeLookup.setRenderLayer(BlockInit.BLUE_MUSHROOM_BLOCK.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(BlockInit.PINK_MUSHROOM_BLOCK.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(BlockInit.GREEN_MUSHROOM_BLOCK.get(), RenderType.getTranslucent());
-		RenderTypeLookup.setRenderLayer(BlockInit.SPOREPUMPER.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(BlockInit.WILLOW_SAPLING.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.TALL_LUMGRASS.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.FOUNTAIN_GRASS.get(), RenderType.getCutout());
@@ -77,6 +79,7 @@ public class ClientEventBusSubscriber {
 		RenderTypeLookup.setRenderLayer(BlockInit.HOTCOFFEE_CROP.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.POTTED_WILLOW_SAPLING.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.LICHEN.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.ESSENCE_CATALYST.get(), RenderType.getCutout());
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.ROCK_MONSTER.get(), RockMonsterRender::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.MOTH.get(), MothRender::new);
@@ -85,6 +88,7 @@ public class ClientEventBusSubscriber {
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.TRADER_ANT.get(), TraderAntRender::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.SOLDIER_ANT.get(), SoldierAntRender::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.WRAITH.get(), WraithRender::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityInit.WORKER_ANT.get(), WorkerAntRender::new);
 		
 		ClientRegistry.bindTileEntityRenderer(TileEntityInit.DISPLAY_STAND.get(), DisplayStandRenderer::new);
 	}

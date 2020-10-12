@@ -169,6 +169,17 @@ public class ModOreGen {
 											new BlockMatcher(BlockInit.TOUGH_HYPHAE.get())),
 									BlockInit.FUNGAL_DIRT.get().getDefaultState(), 30))
 							.withPlacement(customConfigMushroomFungalDirt));
+			
+			@SuppressWarnings("rawtypes")
+			ConfiguredPlacement customConfigBlackShale = Placement.COUNT_RANGE
+					.configure(new CountRangeConfig(10, 0, 0, 130));
+			biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+					Feature.ORE
+							.withConfiguration(new OreFeatureConfig(
+									OreFeatureConfig.FillerBlockType.create("PURPLE_CLAYSTONE", null,
+											new BlockMatcher(BlockInit.PURPLE_CLAYSTONE.get())),
+									BlockInit.BLACK_SHALE.get().getDefaultState(), 35))
+							.withPlacement(customConfigBlackShale));
 
 			@SuppressWarnings("rawtypes")
 			ConfiguredPlacement customConfigMushroomSQuartz = Placement.COUNT_RANGE

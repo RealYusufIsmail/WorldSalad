@@ -91,7 +91,7 @@ public class TraderAnt extends CreatureEntity implements IAnimatedEntity {
 		this.goalSelector.addGoal(8, new SwimGoal(this));
 		this.goalSelector.addGoal(7, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
 		this.goalSelector.addGoal(3, new AvoidEntityGoal(this, Exoskeleton.class, 24.0F, 1.5D, 1.5D));
-		this.targetSelector.addGoal(3, (new HurtByTargetGoal(this)).setCallsForHelp(SoldierAnt.class, TraderAnt.class));
+		this.targetSelector.addGoal(8, (new HurtByTargetGoal(this)));
 	}
 
 	@Override
@@ -139,7 +139,7 @@ public class TraderAnt extends CreatureEntity implements IAnimatedEntity {
 	         	for(int i = 0; i < 8; ++i) {
 	        	 this.world.addParticle(ParticleTypes.COMPOSTER, this.getPosXRandom(1.0D), this.getPosYRandom() + 0.5D, this.getPosZRandom(1.0D), d0, d1, d2);
 	         	}
-	         	int generator = this.rand.nextInt(56);
+	         	int generator = this.rand.nextInt(66);
        			if (generator <= 10) {
        				for(int i = 0; i < 32; ++i) {
        				 this.entityDropItem(BlockInit.ADOBE_BLOCK.get(), 1);
@@ -169,6 +169,9 @@ public class TraderAnt extends CreatureEntity implements IAnimatedEntity {
        				for(int i = 0; i < 4; ++i) {
        				 this.entityDropItem(ItemInit.SPORE_QUARTZ.get(), 1);
        				}
+             	}
+       			if (generator > 56 && generator <= 65) {
+       			 this.entityDropItem(ItemInit.EARTHWORMS.get(), 1);
              	}
 	         	this.tradeCooldown = 100;
 	         	return super.processInteract(player, hand);

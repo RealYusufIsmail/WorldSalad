@@ -92,22 +92,23 @@ public class SoldierAnt extends MonsterEntity implements IAnimatedEntity {
 	@Override
 	protected void registerGoals() {
 		this.goalSelector.addGoal(12, new LookAtGoal(this, SoldierAnt.class, 3.0F));
-		this.goalSelector.addGoal(11, new LookAtGoal(this, TraderAnt.class, 3.0F));
+		this.goalSelector.addGoal(10, new LookAtGoal(this, TraderAnt.class, 3.0F));
+		this.goalSelector.addGoal(11, new LookAtGoal(this, WorkerAnt.class, 3.0F));
 		this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
-		this.goalSelector.addGoal(8, new SwimGoal(this));
-		this.goalSelector.addGoal(7, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
+		this.goalSelector.addGoal(9, new SwimGoal(this));
+		this.goalSelector.addGoal(8, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Exoskeleton.class, true));
 		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.0D, true));
-		this.targetSelector.addGoal(3, (new HurtByTargetGoal(this)).setCallsForHelp(TraderAnt.class));
+		this.targetSelector.addGoal(7, (new HurtByTargetGoal(this)));
 	}
 
 	@Override
 	protected void registerAttributes() {
 		super.registerAttributes();
-		this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.31F);
-		this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(30.0D);
+		this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.287F);
+		this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(15.0D);
 		this.getAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(2.0D);
-		this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(5.0D);
+		this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(7.0D);
 	}
 
 	@Override

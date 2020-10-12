@@ -30,21 +30,22 @@ import net.minecraftforge.fml.network.NetworkHooks;
 
 public class LesserInfuserBlock extends Block {
 	public static final BooleanProperty LIT = BooleanProperty.create("lit");
+	public static final BooleanProperty HAS_CATALYST = BooleanProperty.create("has_catalyst");
 	
 	public LesserInfuserBlock(Properties properties) {
 		super(properties);
-		this.setDefaultState(this.stateContainer.getBaseState().with(LIT, false));
+		this.setDefaultState(this.stateContainer.getBaseState().with(LIT, false).with(HAS_CATALYST, false));
 	}
 
 	@Override
 	public BlockState getStateForPlacement(BlockItemUseContext context) {
-		return this.getDefaultState().with(LIT, false);
+		return this.getDefaultState().with(LIT, false).with(HAS_CATALYST, false);
 	}
 
 	@Override
 	protected void fillStateContainer(Builder<Block, BlockState> builder) {
 		super.fillStateContainer(builder);
-		builder.add(LIT);
+		builder.add(LIT, HAS_CATALYST);
 	}
 
 	@Override

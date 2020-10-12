@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "SES",
+    "DDD"
+  ],
+  "key": {
+    "G": {
+      "item": "worldsalad:gummy_worms"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "D": {
+      "item": "minecraft:cocoa_beans"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    }
+  },
+  "result": {
+    "item": "worldsalad:dirt_cake",
+    "count": 1
+  }
+}

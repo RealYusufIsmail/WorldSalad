@@ -1,6 +1,7 @@
 package com.radioctivetacoo.worldsalad.init;
 
 import com.radioctivetacoo.worldsalad.WorldSalad;
+import com.radioctivetacoo.worldsalad.tileentity.AlloyFurnaceTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.ArchaeologyStationTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.DeepFryerTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.DisplayStandTileEntity;
@@ -51,4 +52,8 @@ public class TileEntityInit {
 	public static final RegistryObject<TileEntityType<DisplayStandTileEntity>> DISPLAY_STAND = TILE_ENTITY_TYPES.register(
 			"display_stand",
 			() -> TileEntityType.Builder.create(DisplayStandTileEntity::new, BlockInit.DISPLAY_STAND.get()).build(null));
+	
+	public static final RegistryObject<TileEntityType<AlloyFurnaceTileEntity>> ALLOY_FURNACE = TILE_ENTITY_TYPES.register(
+			"alloy_furnace",
+			() -> TileEntityType.Builder.create(AlloyFurnaceTileEntity::new, BlockInit.ALLOY_FURNACE.get()).build(null));
 }

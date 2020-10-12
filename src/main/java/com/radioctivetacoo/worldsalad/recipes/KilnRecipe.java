@@ -1,6 +1,7 @@
 package com.radioctivetacoo.worldsalad.recipes;
 
 import com.radioctivetacoo.worldsalad.init.RecipeSerializerInit;
+import com.radioctivetacoo.worldsalad.recipes.interfaces.IKilnRecipe;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipeSerializer;

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ACC",
+    "FSF",
+    "F F"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:iron_plate"
+    },
+    "S": {
+      "item": "worldsalad:simple_machine_casing"
+    },
+    "C": {
+      "item": "worldsalad:copper_wire"
+    },
+    "A": {
+      "item": "worldsalad:aluminum_block"
+    },
+    "M": {
+      "item": "worldsalad:medium_battery"
+    }
+  },
+  "result": {
+    "item": "worldsalad:alloy_furnace",
+    "count": 1
+  }
+}

@@ -1,6 +1,7 @@
 package com.radioctivetacoo.worldsalad.recipes;
 
 import com.radioctivetacoo.worldsalad.init.RecipeSerializerInit;
+import com.radioctivetacoo.worldsalad.recipes.interfaces.IHydraulicPressRecipe;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipeSerializer;

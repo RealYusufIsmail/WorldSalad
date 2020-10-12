@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:hydraulicpress",
+	"output": {
+		"item": "worldsalad:steel_plate"
+	},
+	
+	"input": {
+		"item": "worldsalad:steel_ingot"
+	},
+	
+	"input2": {
+		"item": "worldsalad:steel_ingot"
+	}
+}

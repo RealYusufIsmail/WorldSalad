@@ -65,7 +65,7 @@ public class Wraith extends MonsterEntity implements IFlyingAnimal, IAnimatedEnt
 		this.func_213623_ec();
 		super.livingTick();
 		if (this.world.isRemote) {
-	          for(int i = 0; i < 5; ++i) {
+	          for(int i = 0; i < 2; ++i) {
 	            this.world.addParticle(ParticleTypes.LARGE_SMOKE, this.getPosXRandom(0.5D), this.getPosYRandom(), this.getPosZRandom(0.5D), 0.0D, 0.0D, 0.0D);
 	         }
 	      }
@@ -166,14 +166,20 @@ public class Wraith extends MonsterEntity implements IFlyingAnimal, IAnimatedEnt
 		if (super.attackEntityAsMob(entityIn)) {
 			if (entityIn instanceof LivingEntity) {
 				int i = 1;
+				int j = 0;
+				int k = 0;
 				if (this.world.getDifficulty() == Difficulty.NORMAL) {
 					i = 2;
+					j = 1;
 				} else if (this.world.getDifficulty() == Difficulty.HARD) {
 					i = 3;
+					j = 2;
+					k = 1;
 				}
 
 				if (i > 0) {
 					((LivingEntity) entityIn).addPotionEffect(new EffectInstance(Effects.SLOWNESS, i * 15, 6));
+					((LivingEntity) entityIn).addPotionEffect(new EffectInstance(Effects.WITHER,  j * 30, 0 + k));
 				}
 			}
 

@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:hydraulicpress",
+	"output": {
+		"item": "minecraft:blaze_rod"
+	},
+	
+	"input": {
+		"item": "minecraft:blaze_powder"
+	},
+	
+	"input2": {
+		"item": "minecraft:blaze_powder"
+	}
+}

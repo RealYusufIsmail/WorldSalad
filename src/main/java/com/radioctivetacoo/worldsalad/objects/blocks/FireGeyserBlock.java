@@ -26,7 +26,6 @@ public class FireGeyserBlock extends Block {
 	      if (!entityIn.isImmuneToFire() && entityIn instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity)entityIn)) {
 	         entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 3.0F);
 	      }
-
 	      super.onEntityWalk(worldIn, pos, entityIn);
 	   }
 	

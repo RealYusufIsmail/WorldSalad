@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FFF",
+    "FFF",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:molysteel_ingot"
+    }
+  },
+  "result": {
+    "item": "worldsalad:molysteel_block",
+    "count": 1
+  }
+}

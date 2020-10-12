@@ -4,12 +4,14 @@ import java.util.function.Function;
 import java.util.stream.Stream;
 
 import com.radioctivetacoo.worldsalad.WorldSalad;
+import com.radioctivetacoo.worldsalad.init.BlockInit;
 import com.radioctivetacoo.worldsalad.init.DimensionInit;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.HorizontalBlock;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
@@ -155,17 +157,22 @@ public class MushrineBlock extends Block {
 				entity = repositionEntity.apply(false);
 
 				int i = 0;
-				while (!entity.world.getBlockState(new BlockPos(pos.getX(), pos.getY() + i, pos.getZ())).getBlock()
-						.equals(Blocks.AIR)
-						&& !entity.world.getBlockState(new BlockPos(pos.getX(), pos.getY() + i + 1, pos.getZ()))
-								.getBlock().equals(Blocks.AIR)) {
+				while (!entity.world.getBlockState(new BlockPos(pos.getX(), pos.getY() + i, pos.getZ())).getBlock().equals(Blocks.AIR) && !entity.world.getBlockState(new BlockPos(pos.getX(), pos.getY() + i + 1, pos.getZ())).getBlock().equals(Blocks.AIR)) {
 					i++;
 				}
-				while (entity.world.getBlockState(new BlockPos(pos.getX(), pos.getY() + i - 1, pos.getZ())).getBlock()
-						.equals(Blocks.AIR)) {
+				while (entity.world.getBlockState(new BlockPos(pos.getX(), pos.getY() + i - 1, pos.getZ())).getBlock().equals(Blocks.AIR)) {
 					i--;
 				}
+				Material material = entity.world.getBlockState(new BlockPos(pos.getX(), pos.getY() + i - 1, pos.getZ())).getMaterial();
 				entity.setPositionAndUpdate(pos.getX(), pos.getY() + i + 1, pos.getZ());
+				
+				if (material.isLiquid()) {
+				
+				destWorld.setBlockState(new BlockPos(pos.getX(), pos.getY() + i - 1, pos.getZ()), BlockInit.FUNGAL_DIRT.get().getDefaultState());
+				destWorld.setBlockState(new BlockPos(pos.getX(), pos.getY() + i- 1, pos.getZ() - 1), BlockInit.FUNGAL_DIRT.get().getDefaultState());
+				destWorld.setBlockState(new BlockPos(pos.getX() - 1, pos.getY() + i- 1, pos.getZ() - 1), BlockInit.FUNGAL_DIRT.get().getDefaultState());
+				destWorld.setBlockState(new BlockPos(pos.getX() - 1, pos.getY() + i- 1, pos.getZ()), BlockInit.FUNGAL_DIRT.get().getDefaultState());
+				}
 
 				return entity;
 			}

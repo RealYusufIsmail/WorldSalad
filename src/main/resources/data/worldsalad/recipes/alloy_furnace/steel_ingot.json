@@ -1,0 +1,18 @@
+{
+	"type": "worldsalad:alloyfurnace",
+	"output": {
+		"item": "worldsalad:steel_ingot"
+	},
+	
+	"input": {
+		"item": "minecraft:iron_ingot"
+	},
+	
+	"input2": {
+		"item": "minecraft:coal"
+	},
+	
+	"input3": {
+		"item": "worldsalad:manganese_dust"
+	}
+}

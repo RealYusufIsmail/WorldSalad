@@ -53,7 +53,6 @@ public class GlowingMushroomBiome extends Biome {
 	private static final BlockState DEATHCAPBLOCK = BlockInit.DEATHCAP.get().getDefaultState();
 	private static final BlockState AMANITABLOCK = BlockInit.AMANITA.get().getDefaultState();
 	private static final BlockState LUMGRASS = BlockInit.LUMGRASS.get().getDefaultState();
-	private static final BlockState SPOREPUMPERBLOCK = BlockInit.SPOREPUMPER.get().getDefaultState();
 	private static final BlockState TALL_LUMGRASS = BlockInit.TALL_LUMGRASS.get().getDefaultState();
 	public static final BlockClusterFeatureConfig TALL_LUMGRASS_CONFIG = (new BlockClusterFeatureConfig.Builder(
 			new SimpleBlockStateProvider(TALL_LUMGRASS), new DoublePlantBlockPlacer())).tries(64).func_227317_b_()
@@ -71,8 +70,6 @@ public class GlowingMushroomBiome extends Biome {
 					.build();
 	BlockClusterFeatureConfig MOREL = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(MORELBLOCK),
 			new SimpleBlockPlacer())).tries(1).func_227317_b_().build();
-	BlockClusterFeatureConfig SPOREPUMPER = (new BlockClusterFeatureConfig.Builder(
-			new SimpleBlockStateProvider(SPOREPUMPERBLOCK), new SimpleBlockPlacer())).tries(1).func_227317_b_().build();
 	BlockClusterFeatureConfig AMANITA = (new BlockClusterFeatureConfig.Builder(
 			new SimpleBlockStateProvider(AMANITABLOCK), new SimpleBlockPlacer())).tries(2).func_227317_b_().build();
 	BlockClusterFeatureConfig DEATHCAP = (new BlockClusterFeatureConfig.Builder(
@@ -110,10 +107,7 @@ public class GlowingMushroomBiome extends Biome {
 				Feature.RANDOM_PATCH.withConfiguration(GLOWSHROOM3).withPlacement(
 						Placement.COUNT_CHANCE_HEIGHTMAP.configure(new HeightWithChanceConfig(8, 0.25F))));
 		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_PATCH.withConfiguration(MOREL)
-				.withPlacement(Placement.COUNT_CHANCE_HEIGHTMAP.configure(new HeightWithChanceConfig(3, 0.04F))));
-		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-				Feature.RANDOM_PATCH.withConfiguration(SPOREPUMPER).withPlacement(
-						Placement.COUNT_CHANCE_HEIGHTMAP.configure(new HeightWithChanceConfig(8, 0.14F))));
+				.withPlacement(Placement.COUNT_CHANCE_HEIGHTMAP.configure(new HeightWithChanceConfig(8, 0.04F))));
 		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_PATCH.withConfiguration(AMANITA)
 				.withPlacement(Placement.COUNT_CHANCE_HEIGHTMAP.configure(new HeightWithChanceConfig(5, 0.07F))));
 		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_PATCH.withConfiguration(DEATHCAP)

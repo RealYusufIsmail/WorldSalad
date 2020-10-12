@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:molysteel_ingot"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:molysteel_nugget",
+    "count": 9
+  }
+}

@@ -2,6 +2,7 @@ package com.radioctivetacoo.worldsalad.tileentity;
 
 import com.radioctivetacoo.worldsalad.WorldSalad;
 import com.radioctivetacoo.worldsalad.container.LesserInfuserContainer;
+import com.radioctivetacoo.worldsalad.init.BlockInit;
 import com.radioctivetacoo.worldsalad.init.RecipeSerializerInit;
 import com.radioctivetacoo.worldsalad.init.TileEntityInit;
 import com.radioctivetacoo.worldsalad.objects.blocks.LesserInfuserBlock;
@@ -36,6 +37,7 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
@@ -74,28 +76,38 @@ public class LesserInfuserTileEntity extends TileEntity implements ITickableTile
 	{
 		return this.currentProgress > 0;
 	}
+	
+	public boolean hasCatalyst()
+	{
+		return this.world.getBlockState(new BlockPos(pos.getX(), pos.getY() + 1, pos.getZ())).getBlock().equals(BlockInit.ESSENCE_CATALYST.get());
+	}
 
 	@Override
 	public void tick() {
 		boolean dirty = false;
 		if (this.world != null && !this.world.isRemote) {
-			if (this.inventory.getStackInSlot(4).isEmpty()) {
+			if (this.inventory.getStackInSlot(4).isEmpty() || !this.hasCatalyst()) {
 				this.currentProgress = 0;
 			}
 			if (this.currentProgress > 0) {
 
 			}
-			if (!this.inventory.getStackInSlot(0).isEmpty() && !this.inventory.getStackInSlot(1).isEmpty() && !this.inventory.getStackInSlot(2).isEmpty() && !this.inventory.getStackInSlot(3).isEmpty() && this.getRecipe(this.inventory.getStackInSlot(4)) != null && this.inventory.getStackInSlot(5).getCount() < 64) {
+			if (this.hasCatalyst() && !this.inventory.getStackInSlot(0).isEmpty() && !this.inventory.getStackInSlot(1).isEmpty() && !this.inventory.getStackInSlot(2).isEmpty() && !this.inventory.getStackInSlot(3).isEmpty() && this.getRecipe(this.inventory.getStackInSlot(4)) != null && this.inventory.getStackInSlot(5).getCount() < 64) {
 				ItemStack output = this.getRecipe(this.inventory.getStackInSlot(4)).getRecipeOutput();
 				if (this.inventory.getStackInSlot(5).getItem().equals(output.getItem()) || this.inventory.getStackInSlot(5).isEmpty()) {
 				if (this.currentProgress < this.maxProgress) {
-					if (this.currentProgress + 2 <= this.maxProgress) {
-						this.currentProgress = this.currentProgress + 6;
-					}
 					this.currentProgress++;
 					dirty = true;
 					}
 				}
+			}
+			if (this.hasCatalyst())
+			{
+				this.world.setBlockState(this.getPos(), this.getBlockState().with(LesserInfuserBlock.HAS_CATALYST, true));
+			}
+			if (!this.hasCatalyst())
+			{
+				this.world.setBlockState(this.getPos(), this.getBlockState().with(LesserInfuserBlock.HAS_CATALYST, false));
 			}
 			if (this.isRunning()) {
 				this.world.setBlockState(this.getPos(), this.getBlockState().with(LesserInfuserBlock.LIT, true));

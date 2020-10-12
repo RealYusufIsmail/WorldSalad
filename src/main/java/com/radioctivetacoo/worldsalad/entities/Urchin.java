@@ -1,31 +1,25 @@
 package com.radioctivetacoo.worldsalad.entities;
 
-import java.util.Random;
-
 import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
-import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.monster.DrownedEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
-import net.minecraft.tags.FluidTags;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Difficulty;
-import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 
-public class Urchin extends MonsterEntity {
-	public Urchin(EntityType<? extends MonsterEntity> type, World worldIn) {
+public class Urchin extends DrownedEntity {
+	public Urchin(EntityType<? extends DrownedEntity> type, World worldIn) {
 		super(type, worldIn);
 	}
 
@@ -126,9 +120,5 @@ public class Urchin extends MonsterEntity {
 	@Override
 	public CreatureAttribute getCreatureAttribute() {
 		return CreatureAttribute.ARTHROPOD;
-	}
-	
-	public static boolean canSpawnHere(EntityType<Urchin> type, IWorld worldIn, SpawnReason reason, BlockPos pos, Random randomIn) {
-		return (reason == SpawnReason.SPAWNER || worldIn.getFluidState(pos).isTagged(FluidTags.WATER));
 	}
 }

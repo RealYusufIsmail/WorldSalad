@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "F F",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:huge_enoki_block"
+    }
+  },
+  "result": {
+    "item": "worldsalad:raw_enoki_bulb",
+    "count": 1
+  }
+}

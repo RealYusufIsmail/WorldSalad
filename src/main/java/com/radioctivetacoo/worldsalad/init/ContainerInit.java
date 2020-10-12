@@ -1,6 +1,7 @@
 package com.radioctivetacoo.worldsalad.init;
 
 import com.radioctivetacoo.worldsalad.WorldSalad;
+import com.radioctivetacoo.worldsalad.container.AlloyFurnaceContainer;
 import com.radioctivetacoo.worldsalad.container.ArchaeologyStationContainer;
 import com.radioctivetacoo.worldsalad.container.DeepFryerContainer;
 import com.radioctivetacoo.worldsalad.container.DisplayStandContainer;
@@ -44,4 +45,7 @@ public class ContainerInit {
 	
 	public static final RegistryObject<ContainerType<DisplayStandContainer>> DISPLAY_STAND = CONTAINER_TYPES
 			.register("display_stand", () -> IForgeContainerType.create(DisplayStandContainer::new));
+	
+	public static final RegistryObject<ContainerType<AlloyFurnaceContainer>> ALLOY_FURNACE = CONTAINER_TYPES
+			.register("alloy_furnace", () -> IForgeContainerType.create(AlloyFurnaceContainer::new));
 }
