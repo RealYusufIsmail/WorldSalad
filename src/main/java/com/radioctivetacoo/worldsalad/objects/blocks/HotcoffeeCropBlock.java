@@ -31,7 +31,7 @@ public class HotcoffeeCropBlock extends CropsBlock {
 
 	@Override
 	protected IItemProvider getSeedsItem() {
-		return ItemInit.HOTCOFFE_SEED.get();
+		return ItemInit.HOTCOFFEE_SEED.get();
 	}
 
 	@Override

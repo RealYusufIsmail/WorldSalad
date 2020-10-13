@@ -41,6 +41,8 @@ import com.radioctivetacoo.worldsalad.objects.blocks.MoldGrowthBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.MoldgrassBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.MorelBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.MushrineBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.PassionFruitBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.PassionVineCropBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.SeedPressBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.SpinningWheelBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.TallFungrassBlock;
@@ -82,8 +84,7 @@ public class BlockInit {
 							.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 	
 	public static final RegistryObject<Block> KILN = BLOCKS.register("kiln",
-			() -> new KilnBlock(
-					Block.Properties.create(Material.ROCK).lightValue(11).hardnessAndResistance(1.8f, 7.0f)
+			() -> new KilnBlock(Block.Properties.create(Material.ROCK).lightValue(11).hardnessAndResistance(1.8f, 7.0f)
 							.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
 
 	public static final RegistryObject<Block> SEED_PRESS = BLOCKS.register("seed_press",
@@ -154,6 +155,54 @@ public class BlockInit {
 	
 	public static final RegistryObject<Block> AMBER_LAMP = BLOCKS.register("amber_lamp",
 			() -> new Block(Block.Properties.from(Blocks.STONE).sound(SoundType.GLASS).lightValue(14)));
+	
+	public static final RegistryObject<Block> BLACK_NEON_BLOCK = BLOCKS.register("black_neon_block",
+			() -> new Block(Block.Properties.from(Blocks.GLASS).sound(SoundType.GLASS).lightValue(14)));
+	
+	public static final RegistryObject<Block> GRAY_NEON_BLOCK = BLOCKS.register("gray_neon_block",
+			() -> new Block(Block.Properties.from(Blocks.GLASS).sound(SoundType.GLASS).lightValue(14)));
+	
+	public static final RegistryObject<Block> LIGHT_GRAY_NEON_BLOCK = BLOCKS.register("light_gray_neon_block",
+			() -> new Block(Block.Properties.from(Blocks.GLASS).sound(SoundType.GLASS).lightValue(14)));
+	
+	public static final RegistryObject<Block> WHITE_NEON_BLOCK = BLOCKS.register("white_neon_block",
+			() -> new Block(Block.Properties.from(Blocks.GLASS).sound(SoundType.GLASS).lightValue(14)));
+	
+	public static final RegistryObject<Block> BLUE_NEON_BLOCK = BLOCKS.register("blue_neon_block",
+			() -> new Block(Block.Properties.from(Blocks.GLASS).sound(SoundType.GLASS).lightValue(14)));
+	
+	public static final RegistryObject<Block> ORANGE_NEON_BLOCK = BLOCKS.register("orange_neon_block",
+			() -> new Block(Block.Properties.from(Blocks.GLASS).sound(SoundType.GLASS).lightValue(14)));
+	
+	public static final RegistryObject<Block> YELLOW_NEON_BLOCK = BLOCKS.register("yellow_neon_block",
+			() -> new Block(Block.Properties.from(Blocks.GLASS).sound(SoundType.GLASS).lightValue(14)));
+	
+	public static final RegistryObject<Block> RED_NEON_BLOCK = BLOCKS.register("red_neon_block",
+			() -> new Block(Block.Properties.from(Blocks.GLASS).sound(SoundType.GLASS).lightValue(14)));
+	
+	public static final RegistryObject<Block> LIGHT_BLUE_NEON_BLOCK = BLOCKS.register("light_blue_neon_block",
+			() -> new Block(Block.Properties.from(Blocks.GLASS).sound(SoundType.GLASS).lightValue(14)));
+	
+	public static final RegistryObject<Block> PINK_NEON_BLOCK = BLOCKS.register("pink_neon_block",
+			() -> new Block(Block.Properties.from(Blocks.GLASS).sound(SoundType.GLASS).lightValue(14)));
+	
+	public static final RegistryObject<Block> PURPLE_NEON_BLOCK = BLOCKS.register("purple_neon_block",
+			() -> new Block(Block.Properties.from(Blocks.GLASS).sound(SoundType.GLASS).lightValue(14)));
+
+	public static final RegistryObject<Block> LIME_NEON_BLOCK = BLOCKS.register("lime_neon_block",
+			() -> new Block(Block.Properties.from(Blocks.GLASS).sound(SoundType.GLASS).lightValue(14)));
+	
+	public static final RegistryObject<Block> MAGENTA_NEON_BLOCK = BLOCKS.register("magenta_neon_block",
+			() -> new Block(Block.Properties.from(Blocks.GLASS).sound(SoundType.GLASS).lightValue(14)));
+	
+	public static final RegistryObject<Block> CYAN_NEON_BLOCK = BLOCKS.register("cyan_neon_block",
+			() -> new Block(Block.Properties.from(Blocks.GLASS).sound(SoundType.GLASS).lightValue(14)));
+	
+	public static final RegistryObject<Block> GREEN_NEON_BLOCK = BLOCKS.register("green_neon_block",
+			() -> new Block(Block.Properties.from(Blocks.GLASS).sound(SoundType.GLASS).lightValue(14)));
+	
+	public static final RegistryObject<Block> BROWN_NEON_BLOCK = BLOCKS.register("brown_neon_block",
+			() -> new Block(Block.Properties.from(Blocks.GLASS).sound(SoundType.GLASS).lightValue(14)));
 	
 	// Stones and dirts
 	public static final RegistryObject<Block> MOLDY_HYPHAE_COBBLESTONE = BLOCKS.register("moldy_hyphae_cobblestone",
@@ -276,6 +325,12 @@ public class BlockInit {
 	
 	public static final RegistryObject<Block> HOTCOFFEE_CROP = BLOCKS.register("hotcoffee_crop",
 			() -> new HotcoffeeCropBlock(Block.Properties.from(Blocks.WHEAT)));
+	
+	public static final RegistryObject<Block> PASSION_VINE_CROP = BLOCKS.register("passion_vine_crop",
+			() -> new PassionVineCropBlock(Block.Properties.from(Blocks.WHEAT)));
+	
+	public static final RegistryObject<Block> PASSION_FRUIT_BLOCK = BLOCKS.register("passion_fruit_block",
+			() -> new PassionFruitBlock(Block.Properties.create(Material.BAMBOO).hardnessAndResistance(0.1f, 1.0f).doesNotBlockMovement()));
 	
 	public static final RegistryObject<Block> AMBER_GLASS = BLOCKS.register("amber_glass",
 			() -> new GlassBlock(Block.Properties.from(Blocks.GLASS)));

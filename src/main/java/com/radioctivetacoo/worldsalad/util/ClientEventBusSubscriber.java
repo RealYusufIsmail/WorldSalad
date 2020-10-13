@@ -80,6 +80,8 @@ public class ClientEventBusSubscriber {
 		RenderTypeLookup.setRenderLayer(BlockInit.POTTED_WILLOW_SAPLING.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.LICHEN.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.ESSENCE_CATALYST.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.PASSION_VINE_CROP.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.PASSION_FRUIT_BLOCK.get(), RenderType.getCutout());
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.ROCK_MONSTER.get(), RockMonsterRender::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.MOTH.get(), MothRender::new);

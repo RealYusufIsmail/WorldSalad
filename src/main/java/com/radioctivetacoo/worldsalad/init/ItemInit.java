@@ -73,7 +73,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> ECTOPLASM = ITEMS.register("ectoplasm",
 			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
 	
-	public static final RegistryObject<Item> HOTCOFFE_SEED = ITEMS.register("hotcoffee_seeds",
+	public static final RegistryObject<Item> HOTCOFFEE_SEED = ITEMS.register("hotcoffee_seeds",
 			() -> new BlockItem(BlockInit.HOTCOFFEE_CROP.get(), new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> FIERY_COAL = ITEMS.register("fiery_coal",

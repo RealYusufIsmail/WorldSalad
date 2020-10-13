@@ -108,7 +108,7 @@ public class WorldSalad {
 		ComposterBlock.registerCompostable(0.65f, ItemInit.GHOST_GRAPES.get());
 		ComposterBlock.registerCompostable(0.65f, ItemInit.HOTCOFFEE_BEANS.get());
 		ComposterBlock.registerCompostable(0.65f, ItemInit.CHOCOLATE_HOTCOFFEE_BEANS.get());
-		ComposterBlock.registerCompostable(0.3f, ItemInit.HOTCOFFE_SEED.get());
+		ComposterBlock.registerCompostable(0.3f, ItemInit.HOTCOFFEE_SEED.get());
 		ComposterBlock.registerCompostable(0.3f, BlockInit.AMANITA.get());
 		ComposterBlock.registerCompostable(0.3f, BlockInit.DEATHCAP.get());
 		ComposterBlock.registerCompostable(0.3f, BlockInit.DESERT_SHAGGY_MANE.get());

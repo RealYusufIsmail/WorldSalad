@@ -20,6 +20,6 @@ public class SeedPressSeedSlot extends SlotItemHandler {
 
 	public static boolean isSeeds(ItemStack itemStackIn) {
 		return itemStackIn.getItem() == Items.WHEAT_SEEDS || itemStackIn.getItem() == Items.BEETROOT_SEEDS
-				|| itemStackIn.getItem() == Items.MELON_SEEDS || itemStackIn.getItem() == Items.PUMPKIN_SEEDS || itemStackIn.getItem() == ItemInit.HOTCOFFE_SEED.get();
+				|| itemStackIn.getItem() == Items.MELON_SEEDS || itemStackIn.getItem() == Items.PUMPKIN_SEEDS || itemStackIn.getItem() == ItemInit.HOTCOFFEE_SEED.get();
 	}
 }

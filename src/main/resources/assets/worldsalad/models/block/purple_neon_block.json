@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "worldsalad:blocks/purple_neon_block"
+	}
+}
