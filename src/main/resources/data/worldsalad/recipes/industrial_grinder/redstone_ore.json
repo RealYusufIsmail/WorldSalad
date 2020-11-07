@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "minecraft:redstone"
+	},
+	
+	"outputBonus": {
+		"item": "minecraft:redstone"
+	},
+	
+	"input": {
+		"item": "minecraft:redstone_ore"
+	}
+}

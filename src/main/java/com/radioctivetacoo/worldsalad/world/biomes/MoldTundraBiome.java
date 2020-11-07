@@ -48,7 +48,7 @@ public class MoldTundraBiome extends Biome {
 		super(biomeBuilder);
 
 		this.addCarver(GenerationStage.Carving.LIQUID,
-				Biome.createCarver(new HyphaeCarver(ProbabilityConfig::deserialize), new ProbabilityConfig(0.2f)));
+				Biome.createCarver(new HyphaeCarver(ProbabilityConfig::deserialize), new ProbabilityConfig(0.35f)));
 
 		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 				Feature.FANCY_TREE.withConfiguration(DeadTree.DEAD_TREE_CONFIG).withPlacement(

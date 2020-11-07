@@ -1,0 +1,7 @@
+{
+    "parent": "block/carpet",
+    "textures": {
+        "particle": "worldsalad:blocks/dark_oak_leaf_pile",
+        "wool": "worldsalad:blocks/dark_oak_leaf_pile"
+    }
+}

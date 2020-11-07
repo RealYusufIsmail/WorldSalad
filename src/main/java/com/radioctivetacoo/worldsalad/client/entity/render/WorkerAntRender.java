@@ -14,7 +14,7 @@ public class WorkerAntRender extends MobRenderer<WorkerAnt, WorkerAntModel> {
 			"textures/entity/worker_ant.png");
 
 	public WorkerAntRender(EntityRendererManager renderManagerIn) {
-		super(renderManagerIn, new WorkerAntModel(), 0.4f);
+		super(renderManagerIn, new WorkerAntModel(), 0.5f);
 	}
 
 	@Override

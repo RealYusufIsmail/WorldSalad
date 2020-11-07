@@ -1,6 +1,7 @@
 {
 	"replace": false,
 	"values": [
-		"worldsalad:willow_leaves"
+		"worldsalad:willow_leaves",
+		"worldsalad:madrone_leaves"
 	]
 }

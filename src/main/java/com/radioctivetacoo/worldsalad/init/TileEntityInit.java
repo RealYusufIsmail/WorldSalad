@@ -3,9 +3,14 @@ package com.radioctivetacoo.worldsalad.init;
 import com.radioctivetacoo.worldsalad.WorldSalad;
 import com.radioctivetacoo.worldsalad.tileentity.AlloyFurnaceTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.ArchaeologyStationTileEntity;
+import com.radioctivetacoo.worldsalad.tileentity.BoilerTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.DeepFryerTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.DisplayStandTileEntity;
+import com.radioctivetacoo.worldsalad.tileentity.DistillerTileEntity;
+import com.radioctivetacoo.worldsalad.tileentity.DistillingBarrelTileEntity;
+import com.radioctivetacoo.worldsalad.tileentity.FloatationBinTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.HydraulicPressTileEntity;
+import com.radioctivetacoo.worldsalad.tileentity.IndustrialGrinderTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.KilnTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.LesserInfuserTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.SeedPressTileEntity;
@@ -56,4 +61,24 @@ public class TileEntityInit {
 	public static final RegistryObject<TileEntityType<AlloyFurnaceTileEntity>> ALLOY_FURNACE = TILE_ENTITY_TYPES.register(
 			"alloy_furnace",
 			() -> TileEntityType.Builder.create(AlloyFurnaceTileEntity::new, BlockInit.ALLOY_FURNACE.get()).build(null));
+	
+	public static final RegistryObject<TileEntityType<IndustrialGrinderTileEntity>> INDUSTRIAL_GRINDER = TILE_ENTITY_TYPES.register(
+			"industrial_grinder",
+			() -> TileEntityType.Builder.create(IndustrialGrinderTileEntity::new, BlockInit.INDUSTRIAL_GRINDER.get()).build(null));
+	
+	public static final RegistryObject<TileEntityType<FloatationBinTileEntity>> FLOATATION_BIN = TILE_ENTITY_TYPES.register(
+			"floatation_bin",
+			() -> TileEntityType.Builder.create(FloatationBinTileEntity::new, BlockInit.FLOATATION_BIN.get()).build(null));
+	
+	public static final RegistryObject<TileEntityType<DistillingBarrelTileEntity>> DISTILLING_BARREL = TILE_ENTITY_TYPES.register(
+			"distilling_barrel",
+			() -> TileEntityType.Builder.create(DistillingBarrelTileEntity::new, BlockInit.DISTILLING_BARREL.get()).build(null));
+	
+	public static final RegistryObject<TileEntityType<BoilerTileEntity>> BOILER = TILE_ENTITY_TYPES.register(
+			"boiler",
+			() -> TileEntityType.Builder.create(BoilerTileEntity::new, BlockInit.BOILER.get()).build(null));
+	
+	public static final RegistryObject<TileEntityType<DistillerTileEntity>> DISTILLER = TILE_ENTITY_TYPES.register(
+			"distiller",
+			() -> TileEntityType.Builder.create(DistillerTileEntity::new, BlockInit.DISTILLER.get()).build(null));
 }

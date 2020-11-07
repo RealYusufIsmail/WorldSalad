@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "minecraft:quartz"
+	},
+	
+	"outputBonus": {
+		"item": "minecraft:quartz"
+	},
+	
+	"input": {
+		"item": "minecraft:nether_quartz_ore"
+	}
+}

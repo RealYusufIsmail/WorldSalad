@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "worldsalad:lithium_dust"
+	},
+	
+	"outputBonus": {
+		"item": "worldsalad:lithium_dust"
+	},
+	
+	"input": {
+		"item": "worldsalad:lithium_ore"
+	}
+}

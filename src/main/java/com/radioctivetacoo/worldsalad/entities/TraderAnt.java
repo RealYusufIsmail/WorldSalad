@@ -90,7 +90,7 @@ public class TraderAnt extends CreatureEntity implements IAnimatedEntity {
 		this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
 		this.goalSelector.addGoal(8, new SwimGoal(this));
 		this.goalSelector.addGoal(7, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
-		this.goalSelector.addGoal(3, new AvoidEntityGoal(this, Exoskeleton.class, 24.0F, 1.5D, 1.5D));
+		this.goalSelector.addGoal(3, new AvoidEntityGoal(this, Exoskeleton.class, 24.0F, 1D, 1.5D));
 		this.targetSelector.addGoal(8, (new HurtByTargetGoal(this)));
 	}
 

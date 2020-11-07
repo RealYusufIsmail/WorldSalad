@@ -122,9 +122,9 @@ public class HyphaeChunkGenerator extends NoiseChunkGenerator<HyphaeGenSettings>
 	}
 
 	@Override
-	public List<Biome.SpawnListEntry> getPossibleCreatures(EntityClassification creatureType, BlockPos pos) {
-		return super.getPossibleCreatures(creatureType, pos);
-	}
+    public List<Biome.SpawnListEntry> getPossibleCreatures(EntityClassification creatureType, BlockPos pos) {
+        return super.getPossibleCreatures(creatureType, pos);
+    }
 
 	@Override
 	public int getGroundHeight() {

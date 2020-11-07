@@ -14,7 +14,7 @@ public class TraderAntRender extends MobRenderer<TraderAnt, TraderAntModel> {
 			"textures/entity/trader_ant.png");
 
 	public TraderAntRender(EntityRendererManager renderManagerIn) {
-		super(renderManagerIn, new TraderAntModel(), 0.4f);
+		super(renderManagerIn, new TraderAntModel(), 0.5f);
 	}
 
 	@Override

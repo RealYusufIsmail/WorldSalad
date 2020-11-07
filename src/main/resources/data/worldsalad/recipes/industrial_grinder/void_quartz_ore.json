@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "worldsalad:void_quartz"
+	},
+	
+	"outputBonus": {
+		"item": "worldsalad:void_quartz"
+	},
+	
+	"input": {
+		"item": "worldsalad:void_quartz_ore"
+	}
+}

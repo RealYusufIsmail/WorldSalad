@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "worldsalad:blood_quartz"
+	},
+	
+	"outputBonus": {
+		"item": "worldsalad:blood_quartz"
+	},
+	
+	"input": {
+		"item": "worldsalad:blood_quartz_ore"
+	}
+}

@@ -27,6 +27,11 @@ public class Urchin extends DrownedEntity {
 	protected boolean canDropLoot() {
 		return true;
 	}
+	
+	@Override
+	protected boolean shouldBurnInDay() {
+		return false;
+	}
 
 	@Override
 	public boolean isPreventingPlayerRest(PlayerEntity playerIn) {

@@ -4,7 +4,7 @@ import com.radioctivetacoo.worldsalad.WorldSalad;
 import com.radioctivetacoo.worldsalad.container.KilnContainer;
 import com.radioctivetacoo.worldsalad.init.RecipeSerializerInit;
 import com.radioctivetacoo.worldsalad.init.TileEntityInit;
-import com.radioctivetacoo.worldsalad.objects.blocks.KilnBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.KilnBlock;
 import com.radioctivetacoo.worldsalad.recipes.KilnRecipe;
 import com.radioctivetacoo.worldsalad.util.WorldSaladItemHandler;
 

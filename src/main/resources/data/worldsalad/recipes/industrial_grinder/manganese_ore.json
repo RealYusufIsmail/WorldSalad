@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "worldsalad:manganese_dust"
+	},
+	
+	"outputBonus": {
+		"item": "worldsalad:manganese_dust"
+	},
+	
+	"input": {
+		"item": "worldsalad:manganese_ore"
+	}
+}

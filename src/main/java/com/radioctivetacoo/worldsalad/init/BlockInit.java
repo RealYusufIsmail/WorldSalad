@@ -1,32 +1,17 @@
  package com.radioctivetacoo.worldsalad.init;
 
 import com.radioctivetacoo.worldsalad.WorldSalad;
-import com.radioctivetacoo.worldsalad.objects.blocks.AlloyFurnaceBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.AmanitaBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.ArchaeologyStationBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.CrusherBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.DeathcapBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.DeepFryerBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.DesertShaggyManeBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.DenseMadroneLeavesBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.DirtCakeBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.DisplayStandBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.DryReedBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.EssenceCatalystBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.FalseExperienceOreBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.FireGeyserBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.FountainGrassBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.FungrassBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.GeodeBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.GhostGrapeBushBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.GlowingHyceliumBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.GlowshroomBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.HotcoffeeCropBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.HyceliumBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.HydraulicPressBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.KilnBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.LesserInfuserBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.LichenBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.LumgrassBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.LeafPileBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.MadroneLeavesBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.ModCarpetBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.ModDoorBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.ModLogBlock;
@@ -37,16 +22,39 @@ import com.radioctivetacoo.worldsalad.objects.blocks.ModPressurePlateBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.ModSaplingBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.ModTrapDoorBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.ModWoodButtonBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.MoldGrowthBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.MoldgrassBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.MorelBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.MushrineBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.PassionFruitBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.PassionVineCropBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.SeedPressBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.SpinningWheelBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.TallFungrassBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.TallLumgrassBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.AlloyFurnaceBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.ArchaeologyStationBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.BoilerBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.DeepFryerBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.DisplayStandBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.DistillerBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.DistillingBarrelBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.FloatationBinBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.HydraulicPressBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.IndustrialGrinderBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.KilnBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.LesserInfuserBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.SeedPressBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.SpinningWheelBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.AmanitaBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.DeathcapBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.DesertShaggyManeBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.DryReedBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.FountainGrassBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.FungrassBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.GhostGrapeBushBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.HotcoffeeCropBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.LichenBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.LumgrassBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.MoldGrowthBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.MorelBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.PassionFruitBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.PassionVineCropBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.TallFungrassBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.TallLumgrassBlock;
+import com.radioctivetacoo.worldsalad.world.feature.MadroneTree;
 import com.radioctivetacoo.worldsalad.world.feature.WillowTree;
 
 import net.minecraft.block.Block;
@@ -86,7 +94,7 @@ public class BlockInit {
 	public static final RegistryObject<Block> KILN = BLOCKS.register("kiln",
 			() -> new KilnBlock(Block.Properties.create(Material.ROCK).lightValue(11).hardnessAndResistance(1.8f, 7.0f)
 							.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
-
+	
 	public static final RegistryObject<Block> SEED_PRESS = BLOCKS.register("seed_press",
 			() -> new SeedPressBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.6f, 4.0f)
 					.harvestTool(ToolType.AXE).sound(SoundType.WOOD)));
@@ -94,10 +102,6 @@ public class BlockInit {
 	public static final RegistryObject<Block> SPINNING_WHEEL = BLOCKS.register("spinning_wheel",
 			() -> new SpinningWheelBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.6f, 4.0f)
 					.harvestTool(ToolType.AXE).sound(SoundType.WOOD)));
-
-	public static final RegistryObject<Block> CRUSHER = BLOCKS.register("crusher",
-			() -> new CrusherBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0f, 99.0f)
-					.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 	
 	public static final RegistryObject<Block> LESSER_INFUSER = BLOCKS.register("lesser_infuser",
 			() -> new LesserInfuserBlock(Block.Properties.create(Material.ROCK).lightValue(11).hardnessAndResistance(2.0f, 99.0f)
@@ -118,15 +122,38 @@ public class BlockInit {
 			() -> new AlloyFurnaceBlock(Block.Properties.create(Material.IRON).lightValue(11).hardnessAndResistance(4.6f, 99.0f)
 					.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 	
+	public static final RegistryObject<Block> FLOATATION_BIN = BLOCKS.register("floatation_bin",
+			() -> new FloatationBinBlock(Block.Properties.create(Material.IRON).lightValue(11).hardnessAndResistance(4.6f, 99.0f)
+					.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
+	
+	public static final RegistryObject<Block> INDUSTRIAL_GRINDER = BLOCKS.register("industrial_grinder",
+			() -> new IndustrialGrinderBlock(Block.Properties.create(Material.IRON).lightValue(11).hardnessAndResistance(4.6f, 99.0f)
+					.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
+	
 	public static final RegistryObject<Block> DISPLAY_STAND = BLOCKS.register("display_stand",
 			() -> new DisplayStandBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.6f, 99.0f)
-					.harvestLevel(1).harvestTool(ToolType.AXE).sound(SoundType.WOOD)));
+					.harvestTool(ToolType.AXE).sound(SoundType.WOOD)));
+	
+	public static final RegistryObject<Block> DISTILLING_BARREL = BLOCKS.register("distilling_barrel",
+			() -> new DistillingBarrelBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.6f, 99.0f)
+					.harvestTool(ToolType.AXE).sound(SoundType.WOOD)));
 	
 	public static final RegistryObject<Block> DIRT_CAKE = BLOCKS.register("dirt_cake",
 			() -> new DirtCakeBlock(Block.Properties.from(Blocks.CAKE)));
 	
 	public static final RegistryObject<Block> ESSENCE_CATALYST = BLOCKS.register("essence_catalyst",
 			() -> new EssenceCatalystBlock(Block.Properties.from(Blocks.STONE).doesNotBlockMovement().lightValue(14)));
+	
+	public static final RegistryObject<Block> DISTILLATION_TOWER_BLOCK = BLOCKS.register("distillation_tower_block",
+			() -> new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2f, 99.0f)));
+	
+	public static final RegistryObject<Block> DISTILLER = BLOCKS.register("distiller",
+			() -> new DistillerBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(1.6f, 99.0f)
+					.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
+	
+	public static final RegistryObject<Block> BOILER = BLOCKS.register("boiler",
+			() -> new BoilerBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(1.6f, 99.0f)
+					.harvestLevel(1).lightValue(11).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 
 	// Decorations
 	public static final RegistryObject<Block> FIREGEYSER = BLOCKS.register("firegeyser",
@@ -203,6 +230,33 @@ public class BlockInit {
 	
 	public static final RegistryObject<Block> BROWN_NEON_BLOCK = BLOCKS.register("brown_neon_block",
 			() -> new Block(Block.Properties.from(Blocks.GLASS).sound(SoundType.GLASS).lightValue(14)));
+	
+	public static final RegistryObject<Block> MADRONE_LEAF_PILE = BLOCKS.register("madrone_leaf_pile",
+			() -> new LeafPileBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
+	
+	public static final RegistryObject<Block> OAK_LEAF_PILE = BLOCKS.register("oak_leaf_pile",
+			() -> new LeafPileBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
+	
+	public static final RegistryObject<Block> BIRCH_LEAF_PILE = BLOCKS.register("birch_leaf_pile",
+			() -> new LeafPileBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
+	
+	public static final RegistryObject<Block> SPRUCE_LEAF_PILE = BLOCKS.register("spruce_leaf_pile",
+			() -> new LeafPileBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
+	
+	public static final RegistryObject<Block> DARK_OAK_LEAF_PILE = BLOCKS.register("dark_oak_leaf_pile",
+			() -> new LeafPileBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
+	
+	public static final RegistryObject<Block> ACACIA_LEAF_PILE = BLOCKS.register("acacia_leaf_pile",
+			() -> new LeafPileBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
+	
+	public static final RegistryObject<Block> JUNGLE_LEAF_PILE = BLOCKS.register("jungle_leaf_pile",
+			() -> new LeafPileBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
+	
+	public static final RegistryObject<Block> WILLOW_LEAF_PILE = BLOCKS.register("willow_leaf_pile",
+			() -> new LeafPileBlock(Block.Properties.from(Blocks.OAK_LEAVES)));;
+	
+	public static final RegistryObject<Block> BROWN_LEAF_PILE = BLOCKS.register("brown_leaf_pile",
+			() -> new LeafPileBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
 	
 	// Stones and dirts
 	public static final RegistryObject<Block> MOLDY_HYPHAE_COBBLESTONE = BLOCKS.register("moldy_hyphae_cobblestone",
@@ -330,7 +384,7 @@ public class BlockInit {
 			() -> new PassionVineCropBlock(Block.Properties.from(Blocks.WHEAT)));
 	
 	public static final RegistryObject<Block> PASSION_FRUIT_BLOCK = BLOCKS.register("passion_fruit_block",
-			() -> new PassionFruitBlock(Block.Properties.create(Material.BAMBOO).hardnessAndResistance(0.1f, 1.0f).doesNotBlockMovement()));
+			() -> new PassionFruitBlock(Block.Properties.create(Material.BAMBOO).sound(SoundType.BAMBOO_SAPLING).hardnessAndResistance(0.0f, 1.0f).doesNotBlockMovement()));
 	
 	public static final RegistryObject<Block> AMBER_GLASS = BLOCKS.register("amber_glass",
 			() -> new GlassBlock(Block.Properties.from(Blocks.GLASS)));
@@ -569,6 +623,66 @@ public class BlockInit {
 	public static final RegistryObject<Block> POTTED_WILLOW_SAPLING = BLOCKS.register("potted_willow_sapling",
 			() -> new FlowerPotBlock(WILLOW_SAPLING.get(), Block.Properties.from(Blocks.FLOWER_POT).notSolid()));
 
+	// Willow
+		public static final RegistryObject<Block> MADRONE_PLANKS = BLOCKS.register("madrone_planks",
+				() -> new Block(Block.Properties.from(Blocks.OAK_PLANKS)));
+
+		public static final RegistryObject<Block> MADRONE_LOG = BLOCKS.register("madrone_log",
+				() -> new ModLogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_PLANKS)));
+		
+		public static final RegistryObject<Block> MADRONE_WOOD = BLOCKS.register("madrone_wood",
+				() -> new ModLogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_PLANKS)));
+		
+		public static final RegistryObject<Block> STRIPPED_MADRONE_LOG = BLOCKS.register("stripped_madrone_log",
+				() -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_PLANKS)));
+		
+		public static final RegistryObject<Block> STRIPPED_MADRONE_WOOD = BLOCKS.register("stripped_madrone_wood",
+				() -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_PLANKS)));
+
+		public static final RegistryObject<Block> MADRONE_LEAVES = BLOCKS.register("madrone_leaves",
+				() -> new MadroneLeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
+		
+		public static final RegistryObject<Block> DENSE_MADRONE_LEAVES = BLOCKS.register("dense_madrone_leaves",
+				() -> new DenseMadroneLeavesBlock(Block.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly().sound(SoundType.PLANT)));
+
+		public static final RegistryObject<Block> MADRONE_SAPLING = BLOCKS.register("madrone_sapling",
+				() -> new ModSaplingBlock(() -> new MadroneTree(), Block.Properties.from(Blocks.OAK_SAPLING)));
+
+		public static final RegistryObject<Block> MADRONE_STAIRS = BLOCKS.register("madrone_stairs",
+				() -> new StairsBlock(() -> BlockInit.MADRONE_PLANKS.get().getDefaultState(),
+						Block.Properties.create(Material.WOOD, MaterialColor.GREEN).hardnessAndResistance(2f, 3.0f)
+								.sound(SoundType.WOOD).harvestTool(ToolType.AXE)));
+
+		public static final RegistryObject<Block> MADRONE_FENCE = BLOCKS.register("madrone_fence",
+				() -> new FenceBlock(Block.Properties.create(Material.WOOD, MaterialColor.GREEN)
+						.hardnessAndResistance(2f, 3.0f).sound(SoundType.WOOD).harvestTool(ToolType.AXE)));
+
+		public static final RegistryObject<Block> MADRONE_BUTTON = BLOCKS.register("madrone_button",
+				() -> new ModWoodButtonBlock(
+						Block.Properties.create(Material.WOOD, MaterialColor.GREEN).hardnessAndResistance(2f, 3.0f)
+								.sound(SoundType.WOOD).doesNotBlockMovement().harvestTool(ToolType.AXE)));
+
+		public static final RegistryObject<Block> MADRONE_PRESSURE_PLATE = BLOCKS.register("madrone_pressure_plate",
+				() -> new ModPressurePlateBlock(Sensitivity.EVERYTHING,
+						Block.Properties.create(Material.WOOD, MaterialColor.GREEN).hardnessAndResistance(2f, 3.0f)
+								.doesNotBlockMovement().sound(SoundType.WOOD).harvestTool(ToolType.AXE)));
+
+		public static final RegistryObject<Block> MADRONE_SLAB = BLOCKS.register("madrone_slab",
+				() -> new SlabBlock(Block.Properties.from(BlockInit.MADRONE_PLANKS.get())));
+
+		public static final RegistryObject<Block> MADRONE_DOOR = BLOCKS.register("madrone_door",
+				() -> new ModDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)));
+
+		public static final RegistryObject<Block> MADRONE_TRAPDOOR = BLOCKS.register("madrone_trapdoor",
+				() -> new ModTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)));
+
+		public static final RegistryObject<Block> MADRONE_FENCE_GATE = BLOCKS.register("madrone_fence_gate",
+				() -> new FenceGateBlock(Block.Properties.from(Blocks.OAK_FENCE_GATE)));
+		
+		@SuppressWarnings("deprecation")
+		public static final RegistryObject<Block> POTTED_MADRONE_SAPLING = BLOCKS.register("potted_madrone_sapling",
+				() -> new FlowerPotBlock(MADRONE_SAPLING.get(), Block.Properties.from(Blocks.FLOWER_POT).notSolid()));
+		
 	// Bleached
 	public static final RegistryObject<Block> BLEACHED_PLANKS = BLOCKS.register("bleached_planks",
 			() -> new Block(Block.Properties.from(Blocks.OAK_PLANKS)));
@@ -630,19 +744,19 @@ public class BlockInit {
 			() -> new ModMushroomBlock(Block.Properties.from(Blocks.BROWN_MUSHROOM).lightValue(8)));
 
 	public static final RegistryObject<Block> AMANITA = BLOCKS.register("amanita",
-			() -> new AmanitaBlock(Block.Properties.from(Blocks.BROWN_MUSHROOM)));
+			() -> new AmanitaBlock(Block.Properties.from(Blocks.BROWN_MUSHROOM).lightValue(0)));
 	
 	public static final RegistryObject<Block> TOADSTOOL = BLOCKS.register("toadstool",
-			() -> new ModMushroomBlock(Block.Properties.from(Blocks.BROWN_MUSHROOM)));
+			() -> new ModMushroomBlock(Block.Properties.from(Blocks.BROWN_MUSHROOM).lightValue(0)));
 	
 	public static final RegistryObject<Block> DESERT_SHAGGY_MANE = BLOCKS.register("desert_shaggy_mane",
-			() -> new DesertShaggyManeBlock(Block.Properties.from(Blocks.BROWN_MUSHROOM)));
+			() -> new DesertShaggyManeBlock(Block.Properties.from(Blocks.BROWN_MUSHROOM).lightValue(0)));
 
 	public static final RegistryObject<Block> DEATHCAP = BLOCKS.register("deathcap",
-			() -> new DeathcapBlock(Block.Properties.from(Blocks.BROWN_MUSHROOM)));
+			() -> new DeathcapBlock(Block.Properties.from(Blocks.BROWN_MUSHROOM).lightValue(0)));
 
 	public static final RegistryObject<Block> MOREL = BLOCKS.register("morel",
-			() -> new MorelBlock(Block.Properties.from(Blocks.BROWN_MUSHROOM)));
+			() -> new MorelBlock(Block.Properties.from(Blocks.BROWN_MUSHROOM).lightValue(0)));
 
 	public static final RegistryObject<Block> MOLD_BLOCK = BLOCKS.register("mold_block",
 			() -> new Block(Block.Properties.from(Blocks.SLIME_BLOCK)));
@@ -651,6 +765,9 @@ public class BlockInit {
 			() -> new Block(Block.Properties.from(Blocks.SLIME_BLOCK)));
 	
 	public static final RegistryObject<Block> ANT_FUNGUS_BLOCK = BLOCKS.register("ant_fungus_block",
+			() -> new Block(Block.Properties.from(Blocks.SLIME_BLOCK)));
+	
+	public static final RegistryObject<Block> MILDEW_HYPHAE = BLOCKS.register("mildew_hyphae",
 			() -> new Block(Block.Properties.from(Blocks.SLIME_BLOCK)));
 
 	public static final RegistryObject<Block> FUNGRASS = BLOCKS.register("fungrass",
@@ -766,11 +883,11 @@ public class BlockInit {
 					.harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
 
 	public static final RegistryObject<Block> MITHRIL_ORE = BLOCKS.register("mithril_ore",
-			() -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.8f, 8.0f).harvestLevel(3)
+			() -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.8f, 8.0f).harvestLevel(4)
 					.harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
 
 	public static final RegistryObject<Block> MOLYBDENUM_ORE = BLOCKS.register("molybdenum_ore",
-			() -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.8f, 8.0f).harvestLevel(3)
+			() -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.8f, 8.0f).harvestLevel(4)
 					.harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
 
 	public static final RegistryObject<Block> SPORE_QUARTZ_ORE = BLOCKS.register("spore_quartz_ore",

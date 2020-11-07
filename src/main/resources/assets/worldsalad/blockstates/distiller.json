@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "worldsalad:block/distiller" },
+        "facing=south": { "model": "worldsalad:block/distiller", "y": 180 },
+        "facing=west":  { "model": "worldsalad:block/distiller", "y": 270 },
+        "facing=east":  { "model": "worldsalad:block/distiller", "y": 90 }
+    }
+}

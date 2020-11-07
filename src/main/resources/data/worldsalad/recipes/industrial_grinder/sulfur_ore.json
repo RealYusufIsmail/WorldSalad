@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "worldsalad:sulfur"
+	},
+	
+	"outputBonus": {
+		"item": "worldsalad:sulfur"
+	},
+	
+	"input": {
+		"item": "worldsalad:sulphur_ore"
+	}
+}

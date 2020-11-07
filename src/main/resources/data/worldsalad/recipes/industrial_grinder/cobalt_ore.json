@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "worldsalad:cobalt_shard"
+	},
+	
+	"outputBonus": {
+		"item": "worldsalad:cobalt_shard"
+	},
+	
+	"input": {
+		"item": "worldsalad:cobalt_ore"
+	}
+}

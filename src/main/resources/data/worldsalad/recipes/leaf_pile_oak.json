@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "FF "
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:oak_leaves"
+    }
+  },
+  "result": {
+    "item": "worldsalad:oak_leaf_pile",
+    "count": 3
+  }
+}

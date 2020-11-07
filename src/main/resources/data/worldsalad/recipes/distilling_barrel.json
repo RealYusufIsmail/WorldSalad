@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WCW",
+    "W W",
+    "SQS"
+  ],
+  "key": {
+    "W": {
+      "tag": "minecraft:planks"
+    },
+    "Q": {
+      "item": "minecraft:barrel"
+    },
+    "C": {
+      "item": "worldsalad:copper_ingot"
+    },
+    "S": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "worldsalad:distilling_barrel",
+    "count": 1
+  }
+}

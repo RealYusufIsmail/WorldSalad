@@ -14,7 +14,7 @@ public class ExoskeletonRender extends MobRenderer<Exoskeleton, ExoskeletonModel
 			"textures/entity/exoskeleton.png");
 
 	public ExoskeletonRender(EntityRendererManager renderManagerIn) {
-		super(renderManagerIn, new ExoskeletonModel(), 0.4f);
+		super(renderManagerIn, new ExoskeletonModel(), 0.5f);
 	}
 
 	@Override

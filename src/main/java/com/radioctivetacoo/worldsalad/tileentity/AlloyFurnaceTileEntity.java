@@ -4,7 +4,7 @@ import com.radioctivetacoo.worldsalad.WorldSalad;
 import com.radioctivetacoo.worldsalad.container.AlloyFurnaceContainer;
 import com.radioctivetacoo.worldsalad.init.RecipeSerializerInit;
 import com.radioctivetacoo.worldsalad.init.TileEntityInit;
-import com.radioctivetacoo.worldsalad.objects.blocks.AlloyFurnaceBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.AlloyFurnaceBlock;
 import com.radioctivetacoo.worldsalad.recipes.AlloyFurnaceRecipe;
 import com.radioctivetacoo.worldsalad.util.WorldSaladItemHandler;
 

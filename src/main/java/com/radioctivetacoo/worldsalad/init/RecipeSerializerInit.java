@@ -5,8 +5,12 @@ import com.radioctivetacoo.worldsalad.recipes.AlloyFurnaceRecipe;
 import com.radioctivetacoo.worldsalad.recipes.AlloyFurnaceRecipeSerializer;
 import com.radioctivetacoo.worldsalad.recipes.DeepFryerRecipe;
 import com.radioctivetacoo.worldsalad.recipes.DeepFryerRecipeSerializer;
+import com.radioctivetacoo.worldsalad.recipes.FloatationBinRecipe;
+import com.radioctivetacoo.worldsalad.recipes.FloatationBinRecipeSerializer;
 import com.radioctivetacoo.worldsalad.recipes.HydraulicPressRecipe;
 import com.radioctivetacoo.worldsalad.recipes.HydraulicPressRecipeSerializer;
+import com.radioctivetacoo.worldsalad.recipes.IndustrialGrinderRecipe;
+import com.radioctivetacoo.worldsalad.recipes.IndustrialGrinderRecipeSerializer;
 import com.radioctivetacoo.worldsalad.recipes.KilnRecipe;
 import com.radioctivetacoo.worldsalad.recipes.KilnRecipeSerializer;
 import com.radioctivetacoo.worldsalad.recipes.LesserInfuserRecipe;
@@ -15,7 +19,9 @@ import com.radioctivetacoo.worldsalad.recipes.SpinningWheelRecipe;
 import com.radioctivetacoo.worldsalad.recipes.SpinningWheelRecipeSerializer;
 import com.radioctivetacoo.worldsalad.recipes.interfaces.IAlloyFurnaceRecipe;
 import com.radioctivetacoo.worldsalad.recipes.interfaces.IDeepFryerRecipe;
+import com.radioctivetacoo.worldsalad.recipes.interfaces.IFloatationBinRecipe;
 import com.radioctivetacoo.worldsalad.recipes.interfaces.IHydraulicPressRecipe;
+import com.radioctivetacoo.worldsalad.recipes.interfaces.IIndustrialGrinderRecipe;
 import com.radioctivetacoo.worldsalad.recipes.interfaces.IKilnRecipe;
 import com.radioctivetacoo.worldsalad.recipes.interfaces.ILesserInfuserRecipe;
 import com.radioctivetacoo.worldsalad.recipes.interfaces.ISpinningWheelRecipe;
@@ -44,6 +50,10 @@ public class RecipeSerializerInit {
 	public static final IRecipeType<HydraulicPressRecipe> HYDRAULIC_PRESS_TYPE = registerType(IHydraulicPressRecipe.RECIPE_TYPE_ID);
 	public static final IRecipeSerializer<AlloyFurnaceRecipe> ALLOY_FURNACE_RECIPE_SERIALIZER = new AlloyFurnaceRecipeSerializer();
 	public static final IRecipeType<AlloyFurnaceRecipe> ALLOY_FURNACE_TYPE = registerType(IAlloyFurnaceRecipe.RECIPE_TYPE_ID);
+	public static final IRecipeSerializer<IndustrialGrinderRecipe> INDUSTRIAL_GRINDER_RECIPE_SERIALIZER = new IndustrialGrinderRecipeSerializer();
+	public static final IRecipeType<IndustrialGrinderRecipe> INDUSTRIAL_GRINDER_TYPE = registerType(IIndustrialGrinderRecipe.RECIPE_TYPE_ID);
+	public static final IRecipeSerializer<FloatationBinRecipe> FLOATATION_BIN_RECIPE_SERIALIZER = new FloatationBinRecipeSerializer();
+	public static final IRecipeType<FloatationBinRecipe> FLOATATION_BIN_TYPE = registerType(IFloatationBinRecipe.RECIPE_TYPE_ID);
 
 	public static final DeferredRegister<IRecipeSerializer<?>> RECIPE_SERIALIZERS = new DeferredRegister<>(
 			ForgeRegistries.RECIPE_SERIALIZERS, WorldSalad.MOD_ID);
@@ -65,6 +75,12 @@ public class RecipeSerializerInit {
 	
 	public static final RegistryObject<IRecipeSerializer<?>> ALLOY_FURNACE_SERIALIZER = RECIPE_SERIALIZERS
 			.register("alloyfurnace", () -> ALLOY_FURNACE_RECIPE_SERIALIZER);
+	
+	public static final RegistryObject<IRecipeSerializer<?>> INDUSTRIAL_GRINDER_SERIALIZER = RECIPE_SERIALIZERS
+			.register("industrialgrinder", () -> INDUSTRIAL_GRINDER_RECIPE_SERIALIZER);
+	
+	public static final RegistryObject<IRecipeSerializer<?>> FLOATATION_BIN_SERIALIZER = RECIPE_SERIALIZERS
+			.register("floatationbin", () -> FLOATATION_BIN_RECIPE_SERIALIZER);
 
 	private static class RecipeType<T extends IRecipe<?>> implements IRecipeType<T> {
 		@Override

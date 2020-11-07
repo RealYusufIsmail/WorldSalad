@@ -5,7 +5,6 @@ import com.radioctivetacoo.worldsalad.world.feature.DeadTree;
 import com.radioctivetacoo.worldsalad.world.gen.carvers.HyphaeCarver;
 
 import net.minecraft.block.BlockState;
-import net.minecraft.block.pattern.BlockMatcher;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
@@ -13,11 +12,8 @@ import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.feature.BlockBlobConfig;
 import net.minecraft.world.gen.feature.BlockClusterFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.feature.ProbabilityConfig;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
-import net.minecraft.world.gen.placement.ConfiguredPlacement;
-import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.FrequencyConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.api.distmarker.Dist;
@@ -46,11 +42,11 @@ public class MildewForestBiome extends Biome {
 		super(biomeBuilder);
 
 		this.addCarver(GenerationStage.Carving.LIQUID,
-				Biome.createCarver(new HyphaeCarver(ProbabilityConfig::deserialize), new ProbabilityConfig(0.2f)));
+				Biome.createCarver(new HyphaeCarver(ProbabilityConfig::deserialize), new ProbabilityConfig(0.35f)));
 
 		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 				Feature.FANCY_TREE.withConfiguration(DeadTree.DEAD_TREE_CONFIG).withPlacement(
-						Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(10, 0f, 0))));
+						Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(6, 0f, 0))));
 		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 				Feature.RANDOM_PATCH.withConfiguration(MOLD_GROWTH_CONFIG)
 						.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(2))));
@@ -62,14 +58,5 @@ public class MildewForestBiome extends Biome {
 				Feature.FOREST_ROCK
 						.withConfiguration(new BlockBlobConfig(BlockInit.MILDEW_BLOCK.get().getDefaultState(), 1))
 						.withPlacement(Placement.FOREST_ROCK.configure(new FrequencyConfig(2))));
-
-		@SuppressWarnings("rawtypes")
-		ConfiguredPlacement customConfig0 = Placement.COUNT_RANGE.configure(new CountRangeConfig(9, 60, 5, 230));
-		this.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-				Feature.ORE.withConfiguration(new OreFeatureConfig(
-						OreFeatureConfig.FillerBlockType.create("MOLDGRASS", null,
-								new BlockMatcher(BlockInit.MOLDGRASS.get())),
-						BlockInit.INFERTILE_SOIL.get().getDefaultState(), 90)).withPlacement(customConfig0));
-
 	}
 }

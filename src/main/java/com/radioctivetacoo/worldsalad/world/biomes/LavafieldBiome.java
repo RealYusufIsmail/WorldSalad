@@ -3,6 +3,8 @@ package com.radioctivetacoo.worldsalad.world.biomes;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
 import com.radioctivetacoo.worldsalad.init.BlockInit;
+import com.radioctivetacoo.worldsalad.world.gen.carvers.LavafieldCarver;
+
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.pattern.BlockMatcher;
@@ -10,11 +12,11 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.blockplacer.DoublePlantBlockPlacer;
 import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
-import net.minecraft.world.gen.carver.WorldCarver;
 import net.minecraft.world.gen.feature.BlockClusterFeatureConfig;
 import net.minecraft.world.gen.feature.BlockStateFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
@@ -78,8 +80,8 @@ public class LavafieldBiome extends Biome {
 		this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.WITCH, 5, 1, 1));
 		this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.ILLUSIONER, 5, 1, 1));
 
-		this.addCarver(GenerationStage.Carving.AIR,
-				Biome.createCarver(WorldCarver.CAVE, new ProbabilityConfig(0.17547987F)));
+		this.addCarver(GenerationStage.Carving.AIR, Biome.createCarver(
+				new LavafieldCarver(ProbabilityConfig::deserialize), new ProbabilityConfig(0.17547987F)));
 
 		this.addStructure(
 				Feature.MINESHAFT.withConfiguration(new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL)));
@@ -168,6 +170,8 @@ public class LavafieldBiome extends Biome {
 						OreFeatureConfig.FillerBlockType.create("LAVAROCK", null,
 								new BlockMatcher(BlockInit.LAVAROCK.get())),
 						BlockInit.FIREGEYSER.get().getDefaultState(), 3)).withPlacement(customConfig6));
+		
+		DefaultBiomeFeatures.addOres(this);
 	}
 
 }

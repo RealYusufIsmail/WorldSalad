@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:crushed_limestone"
+    },
+    {
+      "item": "worldsalad:coal_powder"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:alloy_blend",
+    "count": 1
+  }
+}

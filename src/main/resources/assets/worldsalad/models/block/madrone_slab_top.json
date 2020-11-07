@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab_top",
+    "textures": {
+        "bottom": "worldsalad:blocks/madrone_planks",
+        "top": "worldsalad:blocks/madrone_planks",
+        "side": "worldsalad:blocks/madrone_planks"
+    }
+}

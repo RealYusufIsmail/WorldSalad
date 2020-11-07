@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "worldsalad:dirty_iron_dust"
+	},
+	
+	"outputBonus": {
+		"item": "minecraft:iron_nugget"
+	},
+	
+	"input": {
+		"item": "worldsalad:hyphae_hematite_ore"
+	}
+}

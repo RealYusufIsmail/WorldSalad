@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "minecraft:cobblestone"
+	},
+	
+	"outputBonus": {
+		"item": "minecraft:gravel"
+	},
+	
+	"input": {
+		"item": "minecraft:stone"
+	}
+}

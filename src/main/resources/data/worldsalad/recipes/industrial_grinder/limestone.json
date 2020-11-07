@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "worldsalad:crushed_limestone"
+	},
+	
+	"outputBonus": {
+		"item": "worldsalad:crushed_limestone"
+	},
+	
+	"input": {
+		"item": "worldsalad:limestone"
+	}
+}

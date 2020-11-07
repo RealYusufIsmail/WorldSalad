@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F  ",
+    "FF ",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:madrone_planks"
+    }
+  },
+  "result": {
+    "item": "worldsalad:madrone_stairs",
+    "count": 4
+  }
+}

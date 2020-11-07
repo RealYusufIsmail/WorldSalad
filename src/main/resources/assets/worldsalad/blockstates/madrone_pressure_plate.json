@@ -1,0 +1,6 @@
+ {
+    "variants": {
+        "powered=false": { "model": "worldsalad:block/madrone_pressure_plate" },
+        "powered=true": { "model": "worldsalad:block/madrone_pressure_plate_down" }
+    }
+}

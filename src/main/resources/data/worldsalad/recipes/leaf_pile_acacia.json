@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "FF "
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:acacia_leaves"
+    }
+  },
+  "result": {
+    "item": "worldsalad:acacia_leaf_pile",
+    "count": 3
+  }
+}

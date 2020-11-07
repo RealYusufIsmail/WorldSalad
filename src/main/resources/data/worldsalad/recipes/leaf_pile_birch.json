@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "FF "
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:birch_leaves"
+    }
+  },
+  "result": {
+    "item": "worldsalad:birch_leaf_pile",
+    "count": 3
+  }
+}

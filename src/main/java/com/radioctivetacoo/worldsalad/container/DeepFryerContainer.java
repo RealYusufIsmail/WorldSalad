@@ -57,7 +57,7 @@ public class DeepFryerContainer extends Container {
 		// Frier Slots
 		this.addSlot(new SlotItemHandler(tile.getInventory(), 0, 73, 35));
 		this.addSlot(new ModOutputSlot(tile.getInventory(), 1, 141, 35));
-		this.addSlot(new WaterBucketSlot(tile.getInventory(), 2, 33, 19));
+		this.addSlot(new DeepFryerBucketSlot(tile.getInventory(), 2, 33, 19));
 		this.addSlot(new FluxPowderSlot(tile.getInventory(), 3, 8, 19));
 
 		this.trackInt(currentSmeltTime = new FunctionalIntReferenceHolder(() -> this.tileEntity.currentSmeltTime,

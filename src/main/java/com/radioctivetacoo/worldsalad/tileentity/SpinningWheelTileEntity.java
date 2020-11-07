@@ -5,7 +5,7 @@ import com.radioctivetacoo.worldsalad.container.SpinningWheelContainer;
 import com.radioctivetacoo.worldsalad.init.ItemInit;
 import com.radioctivetacoo.worldsalad.init.RecipeSerializerInit;
 import com.radioctivetacoo.worldsalad.init.TileEntityInit;
-import com.radioctivetacoo.worldsalad.objects.blocks.SpinningWheelBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.SpinningWheelBlock;
 import com.radioctivetacoo.worldsalad.recipes.SpinningWheelRecipe;
 import com.radioctivetacoo.worldsalad.util.WorldSaladItemHandler;
 

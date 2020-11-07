@@ -5,7 +5,7 @@ import com.radioctivetacoo.worldsalad.container.LesserInfuserContainer;
 import com.radioctivetacoo.worldsalad.init.BlockInit;
 import com.radioctivetacoo.worldsalad.init.RecipeSerializerInit;
 import com.radioctivetacoo.worldsalad.init.TileEntityInit;
-import com.radioctivetacoo.worldsalad.objects.blocks.LesserInfuserBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.LesserInfuserBlock;
 import com.radioctivetacoo.worldsalad.recipes.LesserInfuserRecipe;
 import com.radioctivetacoo.worldsalad.util.WorldSaladItemHandler;
 
@@ -100,14 +100,6 @@ public class LesserInfuserTileEntity extends TileEntity implements ITickableTile
 					dirty = true;
 					}
 				}
-			}
-			if (this.hasCatalyst())
-			{
-				this.world.setBlockState(this.getPos(), this.getBlockState().with(LesserInfuserBlock.HAS_CATALYST, true));
-			}
-			if (!this.hasCatalyst())
-			{
-				this.world.setBlockState(this.getPos(), this.getBlockState().with(LesserInfuserBlock.HAS_CATALYST, false));
 			}
 			if (this.isRunning()) {
 				this.world.setBlockState(this.getPos(), this.getBlockState().with(LesserInfuserBlock.LIT, true));

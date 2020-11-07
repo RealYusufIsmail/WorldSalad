@@ -1,0 +1,10 @@
+{
+	"type": "worldsalad:floatationbin",
+	"output": {
+		"item": "worldsalad:aluminum_dust"
+	},
+	
+	"input": {
+		"item": "worldsalad:dirty_aluminum_dust"
+	}
+}

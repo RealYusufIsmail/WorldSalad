@@ -3,8 +3,12 @@
 	"values": [
 		"worldsalad:crude_oil_flowing",
 		"worldsalad:crude_oil_fluid",
+		"worldsalad:pine_oil_flowing",
+		"worldsalad:pine_oil_fluid",
 		"worldsalad:acid_flowing",
 		"worldsalad:acid_fluid",
+		"worldsalad:ethanol_flowing",
+		"worldsalad:ethanol_fluid",
 		"worldsalad:vegetable_oil_flowing",
 		"worldsalad:vegetable_oil_fluid"
 	]

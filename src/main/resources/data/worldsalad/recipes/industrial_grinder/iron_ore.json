@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "worldsalad:dirty_iron_dust"
+	},
+	
+	"outputBonus": {
+		"item": "worldsalad:manganese_dust"
+	},
+	
+	"input": {
+		"item": "minecraft:iron_ore"
+	}
+}

@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FBF",
+    "APA",
+    "SQS"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:iron_plate"
+    },
+    "A": {
+      "item": "worldsalad:copper_wire"
+    },
+    "S": {
+      "item": "worldsalad:small_battery"
+    },
+    "P": {
+      "item": "worldsalad:simple_machine_casing"
+    },
+    "Q": {
+      "item": "minecraft:furnace"
+    },
+    "B": {
+      "item": "minecraft:bucket"
+    }
+  },
+  "result": {
+    "item": "worldsalad:floatation_bin",
+    "count": 1
+  }
+}

@@ -54,7 +54,7 @@ public class SeedPressContainer extends Container {
 
 		// Frier Slots
 		this.addSlot(new SeedPressSeedSlot(tile.getInventory(), 0, 18, 33));
-		this.addSlot(new OutputBucketSlot(tile.getInventory(), 1, 120, 52));
+		this.addSlot(new EmptyBucketSlot(tile.getInventory(), 1, 120, 52));
 		this.addSlot(new ModOutputSlot(tile.getInventory(), 2, 86, 33));
 		this.addSlot(new ModOutputSlot(tile.getInventory(), 3, 144, 52));
 

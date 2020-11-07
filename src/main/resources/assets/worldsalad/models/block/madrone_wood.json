@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "worldsalad:blocks/madrone_log",
+        "side": "worldsalad:blocks/madrone_log"
+    }
+}

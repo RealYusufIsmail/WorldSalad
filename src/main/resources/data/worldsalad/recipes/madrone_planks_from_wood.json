@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:madrone_wood"
+    }
+  ],
+  "result": {
+    "item": "worldsalad:madrone_planks",
+    "count": 4
+  }
+}

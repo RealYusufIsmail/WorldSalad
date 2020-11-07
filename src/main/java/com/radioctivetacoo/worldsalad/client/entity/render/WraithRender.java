@@ -14,7 +14,7 @@ public class WraithRender extends MobRenderer<Wraith, WraithModel> {
 			"textures/entity/wraith.png");
 
 	public WraithRender(EntityRendererManager renderManagerIn) {
-		super(renderManagerIn, new WraithModel(), 0.4f);
+		super(renderManagerIn, new WraithModel(), 0.5f);
 	}
 
 	@Override

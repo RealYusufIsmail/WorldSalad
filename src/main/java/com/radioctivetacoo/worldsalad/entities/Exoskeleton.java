@@ -37,6 +37,10 @@ public class Exoskeleton extends MonsterEntity implements IAnimatedEntity {
 	protected boolean canDropLoot() {
 		return true;
 	}
+	
+	protected boolean shouldBurnInDay() {
+	      return true;
+	   }
 
 	@Override
 	public boolean isPreventingPlayerRest(PlayerEntity playerIn) {

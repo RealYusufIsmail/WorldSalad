@@ -1,0 +1,7 @@
+{
+    "parent": "block/carpet",
+    "textures": {
+        "particle": "worldsalad:blocks/spruce_leaf_pile",
+        "wool": "worldsalad:blocks/spruce_leaf_pile"
+    }
+}

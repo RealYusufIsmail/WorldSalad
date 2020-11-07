@@ -39,8 +39,10 @@ import com.radioctivetacoo.worldsalad.init.ItemInit;
 import com.radioctivetacoo.worldsalad.init.RecipeSerializerInit;
 import com.radioctivetacoo.worldsalad.init.SoundInit;
 import com.radioctivetacoo.worldsalad.init.TileEntityInit;
-import com.radioctivetacoo.worldsalad.objects.blocks.GhostGrapeBushBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.HotcoffeeCropBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.GhostGrapeBushBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.HotcoffeeCropBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.PassionFruitBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.PassionVineCropBlock;
 import com.radioctivetacoo.worldsalad.objects.items.ModSpawnEggItem;
 import com.radioctivetacoo.worldsalad.world.gen.ModOreGen;
 import com.radioctivetacoo.worldsalad.world.gen.StructureGen;
@@ -80,7 +82,7 @@ public class WorldSalad {
 		final IForgeRegistry<Item> registry = event.getRegistry();
 
 		BlockInit.BLOCKS.getEntries().stream().filter(
-				block -> !(block.get() instanceof GhostGrapeBushBlock) && !(block.get() instanceof FlowingFluidBlock) && !(block.get() instanceof HotcoffeeCropBlock) && !(block.get() instanceof FlowerPotBlock))
+				block -> !(block.get() instanceof GhostGrapeBushBlock) && !(block.get() instanceof FlowingFluidBlock) && !(block.get() instanceof PassionFruitBlock) && !(block.get() instanceof PassionVineCropBlock) && !(block.get() instanceof HotcoffeeCropBlock) && !(block.get() instanceof FlowerPotBlock))
 				.map(RegistryObject::get).forEach(block -> {
 					final Item.Properties properties = new Item.Properties().group(WorldSaladBlocksItemGroup.instance);
 					final BlockItem blockItem = new BlockItem(block, properties);

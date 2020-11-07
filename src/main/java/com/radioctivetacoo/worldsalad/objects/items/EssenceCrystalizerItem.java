@@ -19,16 +19,19 @@ public class EssenceCrystalizerItem extends Item {
 	
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
-		@SuppressWarnings("unused")
 		ItemStack itemstack = playerIn.getHeldItem(handIn);
 		if (!worldIn.isRemote) {
 			if (playerIn.experienceTotal >= 150) {
 				playerIn.giveExperiencePoints(-150);
 				playerIn.dropItem(new ItemStack(ItemInit.ESSENCE_CRYSTAL.get()), true, false);
 				worldIn.playSound((PlayerEntity)null, playerIn.getPosX(), playerIn.getPosY(), playerIn.getPosZ(), SoundEvents.ENTITY_PLAYER_LEVELUP, SoundCategory.PLAYERS, 0.5F, 1F);
+				itemstack.damageItem(1, playerIn, (p_220017_1_) -> {
+		            p_220017_1_.sendBreakAnimation(handIn);
+		         });
 				if (!playerIn.abilities.isCreativeMode) { 
 					playerIn.getCooldownTracker().setCooldown(this, 40);
 					playerIn.setHealth(playerIn.getHealth() - 6);
+					
 				}
 			}
 			else

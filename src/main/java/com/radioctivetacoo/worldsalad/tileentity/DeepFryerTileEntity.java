@@ -5,7 +5,7 @@ import com.radioctivetacoo.worldsalad.container.DeepFryerContainer;
 import com.radioctivetacoo.worldsalad.init.ItemInit;
 import com.radioctivetacoo.worldsalad.init.RecipeSerializerInit;
 import com.radioctivetacoo.worldsalad.init.TileEntityInit;
-import com.radioctivetacoo.worldsalad.objects.blocks.DeepFryerBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.DeepFryerBlock;
 import com.radioctivetacoo.worldsalad.recipes.DeepFryerRecipe;
 import com.radioctivetacoo.worldsalad.util.WorldSaladItemHandler;
 
@@ -75,6 +75,10 @@ public class DeepFryerTileEntity extends TileEntity implements ITickableTileEnti
 	public boolean hasFluid() {
 		return this.fluidLeft > 0;
 	}
+	
+	public boolean isRunning() {
+		return this.currentSmeltTime > 0;
+	}
 
 	@Override
 	public Container createMenu(final int windowID, final PlayerInventory playerInv, final PlayerEntity playerIn) {
@@ -98,10 +102,10 @@ public class DeepFryerTileEntity extends TileEntity implements ITickableTileEnti
 				this.inventory.insertItem(2, new ItemStack(Items.BUCKET), false);
 				this.fluidLeft = this.fluidLeft + 100;
 			}
-			if (this.isPowered()) {
+			if (this.isRunning()) {
 				this.world.setBlockState(this.getPos(), this.getBlockState().with(DeepFryerBlock.LIT, true));
 			}
-			if (this.isPowered() == false) {
+			if (this.isRunning() == false) {
 				this.world.setBlockState(this.getPos(), this.getBlockState().with(DeepFryerBlock.LIT, false));
 			}
 			if (this.getRecipe(this.inventory.getStackInSlot(0)) != null && this.isPowered() && this.fluidLeft >= 50 && this.inventory.getStackInSlot(1).getCount() < 64) {

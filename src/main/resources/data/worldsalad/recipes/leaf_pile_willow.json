@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "FF "
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:willow_leaves"
+    }
+  },
+  "result": {
+    "item": "worldsalad:willow_leaf_pile",
+    "count": 3
+  }
+}

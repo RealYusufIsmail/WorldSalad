@@ -9,6 +9,8 @@ import com.radioctivetacoo.worldsalad.world.feature.structures.EmptyShroomHouseP
 import com.radioctivetacoo.worldsalad.world.feature.structures.EmptyShroomHouseStructure;
 import com.radioctivetacoo.worldsalad.world.feature.structures.ExoskeletonMushRoomPieces;
 import com.radioctivetacoo.worldsalad.world.feature.structures.ExoskeletonMushRoomStructure;
+import com.radioctivetacoo.worldsalad.world.feature.structures.GiantMildewPieces;
+import com.radioctivetacoo.worldsalad.world.feature.structures.GiantMildewStructure;
 import com.radioctivetacoo.worldsalad.world.feature.structures.MushrockFivePieces;
 import com.radioctivetacoo.worldsalad.world.feature.structures.MushrockFiveStructure;
 import com.radioctivetacoo.worldsalad.world.feature.structures.MushrockFourPieces;
@@ -50,6 +52,7 @@ public class FeatureInit {
 	public static IStructurePieceType EMPTY_SHROOMHOUSE_PIECE = EmptyShroomHousePieces.Piece::new;
 	public static IStructurePieceType WRAITH_MUSH_ROOM_PIECE = WraithMushRoomPieces.Piece::new;
 	public static IStructurePieceType EXOSKELETON_MUSH_ROOM_PIECE = ExoskeletonMushRoomPieces.Piece::new;
+	public static IStructurePieceType GIANT_MILDEW_PIECE = GiantMildewPieces.Piece::new;
 	public static IStructurePieceType MUSHROCK1_PIECE = MushrockOnePieces.Piece::new;
 	public static IStructurePieceType MUSHROCK2_PIECE = MushrockTwoPieces.Piece::new;
 	public static IStructurePieceType MUSHROCK3_PIECE = MushrockThreePieces.Piece::new;
@@ -94,6 +97,9 @@ public class FeatureInit {
 	public static final RegistryObject<MushrockSevenStructure> MUSHROCK7 = FEATURES.register("mushrock7", 
 			() -> new MushrockSevenStructure(NoFeatureConfig::deserialize));
 	
+	public static final RegistryObject<GiantMildewStructure> GIANT_MILDEW = FEATURES.register("giant_mildew", 
+			() -> new GiantMildewStructure(NoFeatureConfig::deserialize));
+	
 	@SubscribeEvent
 	public static void registerStructurePieces(RegistryEvent.Register<Feature<?>> event)
 	{
@@ -102,6 +108,7 @@ public class FeatureInit {
 		Registry.register(Registry.STRUCTURE_PIECE, "EMPTY_SHROOMHOUSE".toLowerCase(Locale.ROOT), EMPTY_SHROOMHOUSE_PIECE);
 		Registry.register(Registry.STRUCTURE_PIECE, "WRAITH_MUSH_ROOM".toLowerCase(Locale.ROOT), WRAITH_MUSH_ROOM_PIECE);
 		Registry.register(Registry.STRUCTURE_PIECE, "EXOSKELETON_MUSH_ROOM".toLowerCase(Locale.ROOT), EXOSKELETON_MUSH_ROOM_PIECE);
+		Registry.register(Registry.STRUCTURE_PIECE, "GIANT_MILDEW".toLowerCase(Locale.ROOT), GIANT_MILDEW_PIECE);
 		Registry.register(Registry.STRUCTURE_PIECE, "MUSHROCK1".toLowerCase(Locale.ROOT), MUSHROCK1_PIECE);
 		Registry.register(Registry.STRUCTURE_PIECE, "MUSHROCK2".toLowerCase(Locale.ROOT), MUSHROCK2_PIECE);
 		Registry.register(Registry.STRUCTURE_PIECE, "MUSHROCK3".toLowerCase(Locale.ROOT), MUSHROCK3_PIECE);

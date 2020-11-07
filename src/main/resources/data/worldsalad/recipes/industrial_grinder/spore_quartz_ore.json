@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "worldsalad:spore_quartz"
+	},
+	
+	"outputBonus": {
+		"item": "worldsalad:spore_quartz"
+	},
+	
+	"input": {
+		"item": "worldsalad:spore_quartz_ore"
+	}
+}

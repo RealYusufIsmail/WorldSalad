@@ -5,11 +5,11 @@
 	},
 	
 	"input": {
-		"item": "minecraft:iron_ingot"
+		"item": "worldsalad:iron_dust"
 	},
 	
 	"input2": {
-		"item": "minecraft:coal"
+		"item": "worldsalad:alloy_blend"
 	},
 	
 	"input3": {

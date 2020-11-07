@@ -1,6 +1,8 @@
 {
 	"replace": false,
 	"values": [
-		"worldsalad:willow_fence"
+		"worldsalad:willow_fence",
+		"worldsalad:madrone_fence",
+		"worldsalad:bleached_fence"
 	]
 }

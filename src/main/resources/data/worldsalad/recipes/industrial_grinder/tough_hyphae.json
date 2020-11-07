@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "worldsalad:hyphae_cobblestone"
+	},
+	
+	"outputBonus": {
+		"item": "worldsalad:biosediment"
+	},
+	
+	"input": {
+		"item": "worldsalad:tough_hyphae"
+	}
+}

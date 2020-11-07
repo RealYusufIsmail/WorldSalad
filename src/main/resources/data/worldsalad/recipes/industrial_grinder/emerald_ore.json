@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "minecraft:emerald"
+	},
+	
+	"outputBonus": {
+		"item": "minecraft:emerald"
+	},
+	
+	"input": {
+		"item": "minecraft:emerald_ore"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "minecraft:flint"
+	},
+	
+	"outputBonus": {
+		"item": "minecraft:flint"
+	},
+	
+	"input": {
+		"item": "minecraft:gravel"
+	}
+}

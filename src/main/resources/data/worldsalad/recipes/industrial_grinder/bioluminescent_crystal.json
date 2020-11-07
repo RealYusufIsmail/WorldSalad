@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "minecraft:glowstone"
+	},
+	
+	"outputBonus": {
+		"item": "minecraft:glowstone"
+	},
+	
+	"input": {
+		"item": "worldsalad:bioluminescent_crystal"
+	}
+}

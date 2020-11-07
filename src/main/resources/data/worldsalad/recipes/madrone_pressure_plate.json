@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "FF "
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:madrone_planks"
+    }
+  },
+  "result": {
+    "item": "worldsalad:madrone_pressure_plate"
+  }
+}

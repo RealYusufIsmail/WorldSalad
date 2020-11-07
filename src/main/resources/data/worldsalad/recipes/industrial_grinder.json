@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IBI",
+    "FPF",
+    "FSF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:iron_plate"
+    },
+    "I": {
+      "item": "worldsalad:copper_plate"
+    },
+    "S": {
+      "item": "worldsalad:medium_battery"
+    },
+    "P": {
+      "item": "worldsalad:simple_machine_casing"
+    },
+    "B": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "worldsalad:industrial_grinder",
+    "count": 1
+  }
+}

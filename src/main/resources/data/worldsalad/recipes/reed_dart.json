@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "H  ",
+    "F  ",
+    "F  "
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:dry_reed"
+    },
+    "H": {
+      "item": "worldsalad:hyphae_cobblestone"
+    }
+  },
+  "result": {
+    "item": "worldsalad:reed_dart",
+    "count": 3
+  }
+}

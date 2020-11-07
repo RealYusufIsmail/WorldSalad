@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "facing=north,lit=false": { "model": "worldsalad:block/floatation_bin" },
+        "facing=south,lit=false": { "model": "worldsalad:block/floatation_bin", "y": 180 },
+        "facing=west,lit=false":  { "model": "worldsalad:block/floatation_bin", "y": 270 },
+        "facing=east,lit=false":  { "model": "worldsalad:block/floatation_bin", "y": 90 },
+        "facing=north,lit=true": { "model": "worldsalad:block/floatation_bin_on" },
+        "facing=south,lit=true": { "model": "worldsalad:block/floatation_bin_on", "y": 180 },
+        "facing=west,lit=true":  { "model": "worldsalad:block/floatation_bin_on", "y": 270 },
+        "facing=east,lit=true":  { "model": "worldsalad:block/floatation_bin_on", "y": 90 }
+    }
+}

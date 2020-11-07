@@ -1,8 +1,12 @@
 package com.radioctivetacoo.worldsalad.util;
 
 import com.radioctivetacoo.worldsalad.WorldSalad;
+import com.radioctivetacoo.worldsalad.client.entity.render.CordycepsAntRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.ExoskeletonRender;
+import com.radioctivetacoo.worldsalad.client.entity.render.FungalZombieRender;
+import com.radioctivetacoo.worldsalad.client.entity.render.MacrobeRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.MothRender;
+import com.radioctivetacoo.worldsalad.client.entity.render.RedcapRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.RockMonsterRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.SoldierAntRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.TraderAntRender;
@@ -11,9 +15,14 @@ import com.radioctivetacoo.worldsalad.client.entity.render.WorkerAntRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.WraithRender;
 import com.radioctivetacoo.worldsalad.client.gui.AlloyFurnaceScreen;
 import com.radioctivetacoo.worldsalad.client.gui.ArchaeologyStationScreen;
+import com.radioctivetacoo.worldsalad.client.gui.BoilerScreen;
 import com.radioctivetacoo.worldsalad.client.gui.DeepFryerScreen;
 import com.radioctivetacoo.worldsalad.client.gui.DisplayStandScreen;
+import com.radioctivetacoo.worldsalad.client.gui.DistillerScreen;
+import com.radioctivetacoo.worldsalad.client.gui.DistillingBarrelScreen;
+import com.radioctivetacoo.worldsalad.client.gui.FloatationBinScreen;
 import com.radioctivetacoo.worldsalad.client.gui.HydraulicPressScreen;
+import com.radioctivetacoo.worldsalad.client.gui.IndustrialGrinderScreen;
 import com.radioctivetacoo.worldsalad.client.gui.KilnScreen;
 import com.radioctivetacoo.worldsalad.client.gui.LesserInfuserScreen;
 import com.radioctivetacoo.worldsalad.client.gui.SeedPressScreen;
@@ -49,11 +58,20 @@ public class ClientEventBusSubscriber {
 		ScreenManager.registerFactory(ContainerInit.ARCHAEOLOGY_STATION.get(), ArchaeologyStationScreen::new);
 		ScreenManager.registerFactory(ContainerInit.DISPLAY_STAND.get(), DisplayStandScreen::new);
 		ScreenManager.registerFactory(ContainerInit.ALLOY_FURNACE.get(), AlloyFurnaceScreen::new);
+		ScreenManager.registerFactory(ContainerInit.INDUSTRIAL_GRINDER.get(), IndustrialGrinderScreen::new);
+		ScreenManager.registerFactory(ContainerInit.FLOATATION_BIN.get(), FloatationBinScreen::new);
+		ScreenManager.registerFactory(ContainerInit.DISTILLING_BARREL.get(), DistillingBarrelScreen::new);
+		ScreenManager.registerFactory(ContainerInit.BOILER.get(), BoilerScreen::new);
+		ScreenManager.registerFactory(ContainerInit.DISTILLER.get(), DistillerScreen::new);
 
 		RenderTypeLookup.setRenderLayer(FluidInit.VEGETABLE_OIL_FLOWING.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(FluidInit.VEGETABLE_OIL_FLUID.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(FluidInit.ACID_FLOWING.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(FluidInit.ACID_FLUID.get(), RenderType.getTranslucent());
+		RenderTypeLookup.setRenderLayer(FluidInit.ETHANOL_FLOWING.get(), RenderType.getTranslucent());
+		RenderTypeLookup.setRenderLayer(FluidInit.ETHANOL_FLUID.get(), RenderType.getTranslucent());
+		RenderTypeLookup.setRenderLayer(FluidInit.PINE_OIL_FLOWING.get(), RenderType.getTranslucent());
+		RenderTypeLookup.setRenderLayer(FluidInit.PINE_OIL_FLUID.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(BlockInit.BLUE_GLOWING_MUSHROOM.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(BlockInit.PINK_GLOWING_MUSHROOM.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(BlockInit.GREEN_GLOWING_MUSHROOM.get(), RenderType.getTranslucent());
@@ -61,6 +79,7 @@ public class ClientEventBusSubscriber {
 		RenderTypeLookup.setRenderLayer(BlockInit.PINK_MUSHROOM_BLOCK.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(BlockInit.GREEN_MUSHROOM_BLOCK.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(BlockInit.WILLOW_SAPLING.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.MADRONE_SAPLING.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.TALL_LUMGRASS.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.FOUNTAIN_GRASS.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.MOLD_GROWTH.get(), RenderType.getCutout());
@@ -71,6 +90,8 @@ public class ClientEventBusSubscriber {
 		RenderTypeLookup.setRenderLayer(BlockInit.GHOST_GRAPE_BUSH.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.WILLOW_DOOR.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.WILLOW_TRAPDOOR.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.MADRONE_DOOR.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.MADRONE_TRAPDOOR.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.DRY_REED.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.SPINNING_WHEEL.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.DEEP_FRYER.get(), RenderType.getTranslucent());
@@ -78,10 +99,22 @@ public class ClientEventBusSubscriber {
 		RenderTypeLookup.setRenderLayer(BlockInit.AMBER_GLASS_PANE.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(BlockInit.HOTCOFFEE_CROP.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.POTTED_WILLOW_SAPLING.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.POTTED_MADRONE_SAPLING.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.LICHEN.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.ESSENCE_CATALYST.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.PASSION_VINE_CROP.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.PASSION_FRUIT_BLOCK.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.MADRONE_LEAVES.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.MADRONE_LEAF_PILE.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.OAK_LEAF_PILE.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.DARK_OAK_LEAF_PILE.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.ACACIA_LEAF_PILE.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.SPRUCE_LEAF_PILE.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.BIRCH_LEAF_PILE.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.WILLOW_LEAF_PILE.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.JUNGLE_LEAF_PILE.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.BROWN_LEAF_PILE.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.FLOATATION_BIN.get(), RenderType.getTranslucent());
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.ROCK_MONSTER.get(), RockMonsterRender::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.MOTH.get(), MothRender::new);
@@ -91,6 +124,10 @@ public class ClientEventBusSubscriber {
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.SOLDIER_ANT.get(), SoldierAntRender::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.WRAITH.get(), WraithRender::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.WORKER_ANT.get(), WorkerAntRender::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityInit.CORDYCEPS_ANT.get(), CordycepsAntRender::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityInit.FUNGAL_ZOMBIE.get(), FungalZombieRender::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityInit.MACROBE.get(), MacrobeRender::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityInit.REDCAP.get(), RedcapRender::new);
 		
 		ClientRegistry.bindTileEntityRenderer(TileEntityInit.DISPLAY_STAND.get(), DisplayStandRenderer::new);
 	}

@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "minecraft:diamond"
+	},
+	
+	"outputBonus": {
+		"item": "minecraft:diamond"
+	},
+	
+	"input": {
+		"item": "minecraft:diamond_ore"
+	}
+}

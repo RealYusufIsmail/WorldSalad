@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+		"side": "worldsalad:blocks/distillation_tower_block",
+		"end": "worldsalad:blocks/distillation_tower_block_end"
+	}
+}

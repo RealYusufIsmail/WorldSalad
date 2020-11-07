@@ -8,6 +8,8 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.MyceliumBlock;
 import net.minecraft.block.SnowBlock;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EntitySpawnPlacementRegistry.PlacementType;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
@@ -22,6 +24,22 @@ public class HyceliumBlock extends MyceliumBlock {
 	public HyceliumBlock(Properties properties) {
 		super(properties);
 		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public boolean canCreatureSpawn(BlockState state, IBlockReader world, BlockPos pos, PlacementType type, EntityType<?> entityType) {
+		if (entityType == EntityType.MOOSHROOM) {
+			return true;
+		}
+		return false;
+	}
+	
+	@Override
+	public boolean canEntitySpawn(BlockState state, IBlockReader worldIn, BlockPos pos, EntityType<?> type) {
+		if (type == EntityType.MOOSHROOM) {
+			return true;
+		}
+		return false;
 	}
 
 	private static boolean func_220257_b(BlockState state, IWorldReader worldReader, BlockPos pos) {

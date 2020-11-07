@@ -4,6 +4,7 @@ import java.util.UUID;
 
 import javax.annotation.Nullable;
 
+import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -14,8 +15,6 @@ import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
-import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
@@ -27,22 +26,17 @@ import software.bernie.geckolib.entity.IAnimatedEntity;
 import software.bernie.geckolib.event.AnimationTestEvent;
 import software.bernie.geckolib.manager.EntityAnimationManager;
 
-public class WorkerAnt extends MonsterEntity implements IAnimatedEntity {
+public class WorkerAnt extends CreatureEntity implements IAnimatedEntity {
 	@SuppressWarnings("unused")
 	private UUID angerTargetUUID;
 	private EntityAnimationManager manager = new EntityAnimationManager();
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private AnimationController controller = new EntityAnimationController(this, "moveController", 20, this::animationPredicate);
 	
-	public WorkerAnt(EntityType<? extends MonsterEntity> type, World worldIn) {
+	public WorkerAnt(EntityType<? extends CreatureEntity> type, World worldIn) {
 		super(type, worldIn);
 		registerAnimationControllers();
 		this.experienceValue = 6;
-	}
-	
-	@Override
-	public boolean isPreventingPlayerRest(PlayerEntity playerIn) {
-		return false;
 	}
 
 	@Override
@@ -97,6 +91,7 @@ public class WorkerAnt extends MonsterEntity implements IAnimatedEntity {
 		this.goalSelector.addGoal(8, new SwimGoal(this));
 		this.goalSelector.addGoal(7, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Exoskeleton.class, true));
+		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, CordycepsAnt.class, true));
 		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.0D, true));
 		this.targetSelector.addGoal(8, (new HurtByTargetGoal(this, SoldierAnt.class).setCallsForHelp(SoldierAnt.class)));
 	}
@@ -107,6 +102,7 @@ public class WorkerAnt extends MonsterEntity implements IAnimatedEntity {
 		this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.4F);
 		this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(30.0D);
 		this.getAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(2.0D);
+		this.getAttributes().registerAttribute(SharedMonsterAttributes.ATTACK_DAMAGE);
 		this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(5.0D);
 	}
 

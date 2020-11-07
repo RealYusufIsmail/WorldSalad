@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "worldsalad:dirty_gold_dust"
+	},
+	
+	"outputBonus": {
+		"item": "minecraft:redstone"
+	},
+	
+	"input": {
+		"item": "minecraft:gold_ore"
+	}
+}

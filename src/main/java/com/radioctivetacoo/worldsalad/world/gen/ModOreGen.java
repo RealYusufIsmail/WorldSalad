@@ -2,6 +2,7 @@ package com.radioctivetacoo.worldsalad.world.gen;
 
 import com.radioctivetacoo.worldsalad.init.BiomeInit;
 import com.radioctivetacoo.worldsalad.init.BlockInit;
+import com.radioctivetacoo.worldsalad.init.FluidInit;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.block.pattern.BlockMatcher;
@@ -15,6 +16,7 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.placement.ConfiguredPlacement;
 import net.minecraft.world.gen.placement.CountRangeConfig;
+import net.minecraft.world.gen.placement.FrequencyConfig;
 import net.minecraft.world.gen.placement.HeightWithChanceConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -217,7 +219,7 @@ public class ModOreGen {
 							BlockInit.HYPHAE_HEMATITE_ORE.get().getDefaultState(), 7)).withPlacement(customConfigHematite));
 			
 			@SuppressWarnings("rawtypes")
-			ConfiguredPlacement customConfigEXPOre = Placement.COUNT_RANGE.configure(new CountRangeConfig(3, 5, 5, 130));
+			ConfiguredPlacement customConfigEXPOre = Placement.COUNT_RANGE.configure(new CountRangeConfig(3, 5, 5, 30));
 			biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
 					Feature.ORE.withConfiguration(new OreFeatureConfig(
 							OreFeatureConfig.FillerBlockType.create("HYPHAESTONE", null,
@@ -225,7 +227,7 @@ public class ModOreGen {
 							BlockInit.EXPERIENCE_ORE.get().getDefaultState(), 4)).withPlacement(customConfigEXPOre));
 			
 			@SuppressWarnings("rawtypes")
-			ConfiguredPlacement customConfigFakeEXPOre = Placement.COUNT_RANGE.configure(new CountRangeConfig(3, 5, 5, 130));
+			ConfiguredPlacement customConfigFakeEXPOre = Placement.COUNT_RANGE.configure(new CountRangeConfig(3, 5, 5, 30));
 			biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
 					Feature.ORE.withConfiguration(new OreFeatureConfig(
 							OreFeatureConfig.FillerBlockType.create("HYPHAESTONE", null,
@@ -439,6 +441,15 @@ public class ModOreGen {
 							.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
 									BlockInit.LIMESTONE.get().getDefaultState(), 20))
 							.withPlacement(customConfigLimestone));
+			
+			@SuppressWarnings("rawtypes")
+			ConfiguredPlacement customConfigOil = Placement.COUNT_RANGE
+					.configure(new CountRangeConfig(1, 11, 0, 25));
+			biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+					Feature.ORE
+							.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
+									FluidInit.CRUDE_OIL_BLOCK.get().getDefaultState(), 40))
+							.withPlacement(customConfigOil));
 
 			BlockClusterFeatureConfig AMANITAOVERWORLD = (new BlockClusterFeatureConfig.Builder(
 					new SimpleBlockStateProvider(BlockInit.AMANITA.get().getDefaultState()), new SimpleBlockPlacer()))
@@ -454,6 +465,85 @@ public class ModOreGen {
 					Feature.RANDOM_PATCH.withConfiguration(DEATHCAPOVERWORLD).withPlacement(
 							Placement.COUNT_CHANCE_HEIGHTMAP.configure(new HeightWithChanceConfig(0, 0.07F))));
 			
+			BlockClusterFeatureConfig OAK_LEAF_PILE_CONFIG = (new BlockClusterFeatureConfig.Builder(
+					new SimpleBlockStateProvider(BlockInit.OAK_LEAF_PILE.get().getDefaultState()), new SimpleBlockPlacer())).tries(32).build();
+			BlockClusterFeatureConfig SPRUCE_LEAF_PILE_CONFIG = (new BlockClusterFeatureConfig.Builder(
+					new SimpleBlockStateProvider(BlockInit.SPRUCE_LEAF_PILE.get().getDefaultState()), new SimpleBlockPlacer())).tries(32).build();
+			BlockClusterFeatureConfig BIRCH_LEAF_PILE_CONFIG = (new BlockClusterFeatureConfig.Builder(
+					new SimpleBlockStateProvider(BlockInit.BIRCH_LEAF_PILE.get().getDefaultState()), new SimpleBlockPlacer())).tries(32).build();
+			BlockClusterFeatureConfig ACACIA_LEAF_PILE_CONFIG = (new BlockClusterFeatureConfig.Builder(
+					new SimpleBlockStateProvider(BlockInit.ACACIA_LEAF_PILE.get().getDefaultState()), new SimpleBlockPlacer())).tries(32).build();
+			BlockClusterFeatureConfig DARK_OAK_LEAF_PILE_CONFIG = (new BlockClusterFeatureConfig.Builder(
+					new SimpleBlockStateProvider(BlockInit.DARK_OAK_LEAF_PILE.get().getDefaultState()), new SimpleBlockPlacer())).tries(32).build();
+			BlockClusterFeatureConfig BROWN_LEAF_PILE_CONFIG = (new BlockClusterFeatureConfig.Builder(
+					new SimpleBlockStateProvider(BlockInit.BROWN_LEAF_PILE.get().getDefaultState()), new SimpleBlockPlacer())).tries(32).build();
+			BlockClusterFeatureConfig JUNGLE_LEAF_PILE_CONFIG = (new BlockClusterFeatureConfig.Builder(
+					new SimpleBlockStateProvider(BlockInit.JUNGLE_LEAF_PILE.get().getDefaultState()), new SimpleBlockPlacer())).tries(32).build();
+			
+			if (biome == Biomes.DARK_FOREST || biome == Biomes.DARK_FOREST_HILLS)
+			{
+				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(DARK_OAK_LEAF_PILE_CONFIG)
+								.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(6))));
+			}
+			
+			if (biome == Biomes.FOREST || biome == Biomes.DARK_FOREST || biome == Biomes.DARK_FOREST_HILLS)
+			{
+				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(OAK_LEAF_PILE_CONFIG)
+								.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(6))));
+				
+				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(BIRCH_LEAF_PILE_CONFIG)
+								.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(1))));
+				
+				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(BROWN_LEAF_PILE_CONFIG)
+								.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(1))));
+			}
+			
+			if (biome == Biomes.GIANT_SPRUCE_TAIGA || biome == Biomes.GIANT_SPRUCE_TAIGA_HILLS || biome == Biomes.GIANT_TREE_TAIGA || biome == Biomes.GIANT_TREE_TAIGA_HILLS || biome == Biomes.TAIGA || biome == Biomes.TAIGA_HILLS || biome == Biomes.TAIGA_MOUNTAINS)
+			{
+				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(SPRUCE_LEAF_PILE_CONFIG)
+								.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(6))));
+				
+				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(BROWN_LEAF_PILE_CONFIG)
+								.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(1))));
+			}
+			
+			if (biome == Biomes.BIRCH_FOREST || biome == Biomes.BIRCH_FOREST_HILLS || biome == Biomes.TALL_BIRCH_HILLS || biome == Biomes.TALL_BIRCH_FOREST)
+			{
+				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(BIRCH_LEAF_PILE_CONFIG)
+								.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(4))));
+			}
+			
+			if (biome == Biomes.SAVANNA || biome == Biomes.SAVANNA_PLATEAU || biome == Biomes.SHATTERED_SAVANNA || biome == Biomes.SHATTERED_SAVANNA_PLATEAU)
+			{
+				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(ACACIA_LEAF_PILE_CONFIG)
+								.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(1))));
+			}
+			
+			if (biome == Biomes.WOODED_BADLANDS_PLATEAU || biome == Biomes.FLOWER_FOREST)
+			{
+				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(BROWN_LEAF_PILE_CONFIG)
+								.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(1))));
+			}
+			
+			if (biome == Biomes.BAMBOO_JUNGLE || biome == Biomes.JUNGLE_EDGE || biome == Biomes.JUNGLE || biome == Biomes.BAMBOO_JUNGLE_HILLS || biome == Biomes.JUNGLE_HILLS || biome == Biomes.MODIFIED_JUNGLE)
+			{
+				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(OAK_LEAF_PILE_CONFIG)
+								.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(1))));
+				
+				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(JUNGLE_LEAF_PILE_CONFIG)
+								.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(3))));
+			}
 		}
 	}
 }

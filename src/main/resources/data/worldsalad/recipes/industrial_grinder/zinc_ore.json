@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "worldsalad:zinc_dust"
+	},
+	
+	"outputBonus": {
+		"item": "worldsalad:zinc_dust"
+	},
+	
+	"input": {
+		"item": "worldsalad:zinc_ore"
+	}
+}

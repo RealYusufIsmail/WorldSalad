@@ -14,7 +14,7 @@ public class SoldierAntRender extends MobRenderer<SoldierAnt, SoldierAntModel> {
 			"textures/entity/soldier_ant.png");
 
 	public SoldierAntRender(EntityRendererManager renderManagerIn) {
-		super(renderManagerIn, new SoldierAntModel(), 0.4f);
+		super(renderManagerIn, new SoldierAntModel(), 0.65f);
 	}
 
 	@Override

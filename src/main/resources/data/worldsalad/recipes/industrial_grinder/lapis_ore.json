@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "minecraft:lapis_lazuli"
+	},
+	
+	"outputBonus": {
+		"item": "minecraft:lapis_lazuli"
+	},
+	
+	"input": {
+		"item": "minecraft:lapis_ore"
+	}
+}
