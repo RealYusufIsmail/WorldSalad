@@ -1,7 +1,10 @@
 package com.radioctivetacoo.worldsalad.init;
 
 import com.radioctivetacoo.worldsalad.WorldSalad;
+import com.radioctivetacoo.worldsalad.WorldSalad.WorldSaladFoodItemGroup;
 import com.radioctivetacoo.worldsalad.WorldSalad.WorldSaladItemsItemGroup;
+import com.radioctivetacoo.worldsalad.WorldSalad.WorldSaladMaterialsItemGroup;
+import com.radioctivetacoo.worldsalad.WorldSalad.WorldSaladSpawnEggsItemGroup;
 import com.radioctivetacoo.worldsalad.WorldSalad.WorldSaladToolsItemGroup;
 import com.radioctivetacoo.worldsalad.objects.items.BreathingReedItem;
 import com.radioctivetacoo.worldsalad.objects.items.DartItem;
@@ -128,6 +131,18 @@ public class ItemInit {
 			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> STEEL_PLATE = ITEMS.register("steel_plate",
+			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+	
+	public static final RegistryObject<Item> IRON_ROD = ITEMS.register("iron_rod",
+			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+	
+	public static final RegistryObject<Item> GOLD_ROD = ITEMS.register("gold_rod",
+			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+	
+	public static final RegistryObject<Item> COPPER_ROD = ITEMS.register("copper_rod",
+			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+	
+	public static final RegistryObject<Item> STEEL_ROD = ITEMS.register("steel_rod",
 			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> CELL_CULTURE = ITEMS.register("cell_culture",
@@ -347,226 +362,229 @@ public class ItemInit {
 
 	// ores
 	public static final RegistryObject<Item> BIOLUMINESCENT_CRYSTAL = ITEMS.register("bioluminescent_crystal",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> SPORE_QUARTZ = ITEMS.register("spore_quartz",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> BLOOD_QUARTZ = ITEMS.register("blood_quartz",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> VOID_QUARTZ = ITEMS.register("void_quartz",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> SULFUR = ITEMS.register("sulfur",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> SALT = ITEMS.register("salt",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> LITHIUM_DUST = ITEMS.register("lithium_dust",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> SILICON_INGOT = ITEMS.register("silicon_ingot",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> SILICON_NUGGET = ITEMS.register("silicon_nugget",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register("copper_ingot",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> ALUMINUM_INGOT = ITEMS.register("aluminum_ingot",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> ALUMINUM_NUGGET = ITEMS.register("aluminum_nugget",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> LEAD_INGOT = ITEMS.register("lead_ingot",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> LEAD_NUGGET = ITEMS.register("lead_nugget",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> PLATINUM_INGOT = ITEMS.register("platinum_ingot",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> PLATINUM_NUGGET = ITEMS.register("platinum_nugget",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> URANIUM_INGOT = ITEMS.register("uranium_ingot",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> URANIUM_NUGGET = ITEMS.register("uranium_nugget",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> TITANIUM_NUGGET = ITEMS.register("titanium_nugget",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> TUNGSTEN_INGOT = ITEMS.register("tungsten_ingot",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> TUNGSTEN_NUGGET = ITEMS.register("tungsten_nugget",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> MOLYBDENUM_INGOT = ITEMS.register("molybdenum_ingot",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> MOLYBDENUM_NUGGET = ITEMS.register("molybdenum_nugget",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> MITHRIL_INGOT = ITEMS.register("mithril_ingot",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> MITHRIL_NUGGET = ITEMS.register("mithril_nugget",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> STEEL_NUGGET = ITEMS.register("steel_nugget",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> MOLYSTEEL_INGOT = ITEMS.register("molysteel_ingot",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> MOLYSTEEL_NUGGET = ITEMS.register("molysteel_nugget",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> COBALT_SHARD = ITEMS.register("cobalt_shard",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> ZINC_DUST = ITEMS.register("zinc_dust",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> MANGANESE_DUST = ITEMS.register("manganese_dust",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> COPPER_DUST = ITEMS.register("copper_dust",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> IRON_DUST = ITEMS.register("iron_dust",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> GOLD_DUST = ITEMS.register("gold_dust",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> ALUMINUM_DUST = ITEMS.register("aluminum_dust",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> DIRTY_COPPER_DUST = ITEMS.register("dirty_copper_dust",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> DIRTY_IRON_DUST = ITEMS.register("dirty_iron_dust",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> DIRTY_GOLD_DUST = ITEMS.register("dirty_gold_dust",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> DIRTY_ALUMINUM_DUST = ITEMS.register("dirty_aluminum_dust",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
+	
+	public static final RegistryObject<Item> MITHRIL_DUST = ITEMS.register("mithril_dust",
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> COAL_POWDER = ITEMS.register("coal_powder",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> CRUSHED_LIMESTONE = ITEMS.register("crushed_limestone",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> ALLOY_BLEND = ITEMS.register("alloy_blend",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> AMBER = ITEMS.register("amber",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> AMBER_DROPLET = ITEMS.register("amber_droplet",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> CHITIN_SHARD = ITEMS.register("chitin_shard",
 			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
 
 	// food
 	public static final RegistryObject<Item> FRIED_CHICKEN = ITEMS.register("fried_chicken",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(7).saturation(0.8f)
 							.effect(new EffectInstance(Effects.REGENERATION, 100, 1), 1f).build())));
 	
 	public static final RegistryObject<Item> BACON = ITEMS.register("bacon",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(7).saturation(0.8f).setAlwaysEdible()
 							.effect(new EffectInstance(Effects.STRENGTH, 200, 0), 1f).build())));
 
 	public static final RegistryObject<Item> GREEN_APPLE = ITEMS.register("green_apple",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(4).saturation(0.3f).build())));
 
 	public static final RegistryObject<Item> GHOST_GRAPES = ITEMS.register("ghost_grapes",
 			() -> new BlockItem(BlockInit.GHOST_GRAPE_BUSH.get(),
-					new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+					new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 							.food(new Food.Builder().hunger(1).saturation(0f).setAlwaysEdible().fastToEat()
 									.effect(new EffectInstance(Effects.SLOW_FALLING, 20, 1), 1f).build())));
 
 	public static final RegistryObject<Item> LUMBERRY = ITEMS.register("lumberry",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(1).saturation(0f).setAlwaysEdible().fastToEat()
 							.effect(new EffectInstance(Effects.NIGHT_VISION, 400, 0), 1f).build())));
 
 	public static final RegistryObject<Item> FUNGBERRY = ITEMS.register("fungberry",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(1).saturation(0f).fastToEat().build())));
 
 	public static final RegistryObject<Item> MOLDBERRY = ITEMS.register("moldberry",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(1).saturation(0f).setAlwaysEdible().fastToEat()
 							.effect(new EffectInstance(Effects.BLINDNESS, 400, 0), 1f).build())));
 	
 	public static final RegistryObject<Item> RAW_SQUID = ITEMS.register("raw_squid",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(2).saturation(0f).build())));
 	
 	public static final RegistryObject<Item> COOKED_SQUID = ITEMS.register("cooked_squid",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(6).saturation(0.2f).build())));
 	
 	public static final RegistryObject<Item> FRIED_CALAMARI = ITEMS.register("fried_calamari",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(6).saturation(0.5f).effect(new EffectInstance(Effects.WATER_BREATHING, 400, 0), 1f).build())));
 	
 	public static final RegistryObject<Item> FRENCH_FRIES = ITEMS.register("french_fries",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(4).saturation(0.5f).effect(new EffectInstance(Effects.HASTE, 600, 1), 1f).build())));
 	
 	public static final RegistryObject<Item> FRIED_MOREL = ITEMS.register("fried_morel",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(6).saturation(0.5f).effect(new EffectInstance(Effects.RESISTANCE, 1800, 0), 1f).build())));
 	
 	public static final RegistryObject<Item> HOTCOFFEE_BEANS = ITEMS.register("hotcoffee_beans",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(0).saturation(0f).fastToEat()
 							.effect(new EffectInstance(Effects.HUNGER, 100, 0), 1f).build())));
 	
 	public static final RegistryObject<Item> CHOCOLATE_HOTCOFFEE_BEANS = ITEMS.register("chocolate_hotcoffee_beans",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(4).saturation(0f).setAlwaysEdible().fastToEat()
 							.build())));
 	
 	public static final RegistryObject<Item> EARTHWORMS = ITEMS.register("earthworms",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(1).saturation(0f).setAlwaysEdible().fastToEat()
 							.effect(new EffectInstance(Effects.HASTE, 200, 0), 1f).build())));
 	
 	public static final RegistryObject<Item> GUMMY_WORMS = ITEMS.register("gummy_worms",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(4).saturation(0f).setAlwaysEdible().fastToEat()
 							.effect(new EffectInstance(Effects.HASTE, 500, 0), 1f).build())));
 	
 	public static final RegistryObject<Item> RAW_ENOKI_BULB = ITEMS.register("raw_enoki_bulb",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(2).saturation(0f).build())));
 	
 	public static final RegistryObject<Item> SMOKED_ENOKI_BULB = ITEMS.register("smoked_enoki_bulb",
@@ -574,76 +592,88 @@ public class ItemInit {
 					.food(new Food.Builder().hunger(5).saturation(0.2f).build())));
 	
 	public static final RegistryObject<Item> HYPHAE_BERRY_PIE = ITEMS.register("hyphae_berry_pie",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(8).saturation(0.35f).build())));
 	
 	public static final RegistryObject<Item> PASSION_FRUIT = ITEMS.register("passion_fruit",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(4).saturation(0.2f).build())));
 	
 	public static final RegistryObject<Item> MADRONEBERRY = ITEMS.register("madroneberry",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(2).saturation(0.1f).build())));
 	
 	public static final RegistryObject<Item> URCHIN_ROE = ITEMS.register("urchin_roe",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(4).saturation(0.45f).build())));
 	
 	public static final RegistryObject<Item> GLOWSHROOM_STEW = ITEMS.register("glowshroom_stew",
-			() -> new ModStewItem(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new ModStewItem(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(5).saturation(0.2f).effect(new EffectInstance(Effects.GLOWING, 2400, 0), 1f).build()).maxStackSize(1)));
 	
 	public static final RegistryObject<Item> GREATER_MUSHROOM_STEW = ITEMS.register("greater_mushroom_stew",
-			() -> new ModStewItem(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new ModStewItem(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(9).saturation(0.5f).effect(new EffectInstance(Effects.ABSORPTION, 2400, 2), 1f).build()).maxStackSize(1)));
 	
 	public static final RegistryObject<Item> MEGA_STUFFED_MUSHROOM = ITEMS.register("mega_stuffed_mushroom",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(10).saturation(1.0F).setAlwaysEdible().fastToEat()
 							.effect(new EffectInstance(Effects.STRENGTH, 800, 0), 1f).effect(new EffectInstance(Effects.REGENERATION, 40, 3), 1f).effect(new EffectInstance(Effects.RESISTANCE, 1200, 0), 1f).build())));
 
 	// spawn eggs
 	public static final RegistryObject<ModSpawnEggItem> MOTH_SPAWN_EGG = ITEMS.register("moth_spawn_egg",
 			() -> new ModSpawnEggItem(EntityInit.MOTH, 0x9bd494, 0x563b63,
-					new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
 
 	public static final RegistryObject<ModSpawnEggItem> ROCK_MONSTER_SPAWN_EGG = ITEMS
 			.register("rock_monster_spawn_egg", () -> new ModSpawnEggItem(EntityInit.ROCK_MONSTER, 0xaab1b3, 0x4e5557,
-					new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
 	
 	public static final RegistryObject<ModSpawnEggItem> EXOSKELETON_SPAWN_EGG = ITEMS
 			.register("exoskeleton_spawn_egg", () -> new ModSpawnEggItem(EntityInit.EXOSKELETON, 0xe6e6e6, 0x9be04c,
-					new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
 	
 	public static final RegistryObject<ModSpawnEggItem> CORDYCEPS_ANT_SPAWN_EGG = ITEMS
 			.register("cordyceps_ant_spawn_egg", () -> new ModSpawnEggItem(EntityInit.CORDYCEPS_ANT, 0x57370a, 0x597848,
-					new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
 	
 	public static final RegistryObject<ModSpawnEggItem> WRAITH_SPAWN_EGG = ITEMS
 			.register("wraith_spawn_egg", () -> new ModSpawnEggItem(EntityInit.WRAITH, 0x1c0610, 0xb0d0d1,
-					new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
 	
 	public static final RegistryObject<ModSpawnEggItem> URCHIN_SPAWN_EGG = ITEMS
 			.register("urchin_spawn_egg", () -> new ModSpawnEggItem(EntityInit.URCHIN, 0x211f21, 0x631863,
-					new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
 	
 	public static final RegistryObject<ModSpawnEggItem> SOLDIER_ANT_SPAWN_EGG = ITEMS
 			.register("soldier_ant_spawn_egg", () -> new ModSpawnEggItem(EntityInit.SOLDIER_ANT, 0x57370a, 0xc72020,
-					new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
 	
 	public static final RegistryObject<ModSpawnEggItem> TRADER_ANT_SPAWN_EGG = ITEMS
 			.register("trader_ant_spawn_egg", () -> new ModSpawnEggItem(EntityInit.TRADER_ANT, 0x57370a, 0x20bcc7,
-					new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
 	
 	public static final RegistryObject<ModSpawnEggItem> WORKER_ANT_SPAWN_EGG = ITEMS
 			.register("worker_ant_spawn_egg", () -> new ModSpawnEggItem(EntityInit.WORKER_ANT, 0x57370a, 0xde9b2f,
-					new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
 	
 	public static final RegistryObject<ModSpawnEggItem> FUNGAL_ZOMBIE_SPAWN_EGG = ITEMS
 			.register("fungal_zombie_spawn_egg", () -> new ModSpawnEggItem(EntityInit.FUNGAL_ZOMBIE, 0x47705f, 0x9bb06a,
-					new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
 	
 	public static final RegistryObject<ModSpawnEggItem> MACROBE_SPAWN_EGG = ITEMS
 			.register("macrobe_spawn_egg", () -> new ModSpawnEggItem(EntityInit.MACROBE, 0x50ad80f, 0xe6e6e6,
-					new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
+	
+	public static final RegistryObject<ModSpawnEggItem> REDCAP_SPAWN_EGG = ITEMS
+			.register("redcap_spawn_egg", () -> new ModSpawnEggItem(EntityInit.REDCAP, 0xf2ddb6, 0xbd2f2f,
+					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
+	
+	public static final RegistryObject<ModSpawnEggItem> BROWNCAP_SPAWN_EGG = ITEMS
+			.register("browncap_spawn_egg", () -> new ModSpawnEggItem(EntityInit.BROWNCAP, 0xf2ddb6, 0x876e3e,
+					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
+	
+	public static final RegistryObject<ModSpawnEggItem> BLUECAP_SPAWN_EGG = ITEMS
+			.register("bluecap_spawn_egg", () -> new ModSpawnEggItem(EntityInit.BLUECAP, 0xf2ddb6, 0x5ae0cc,
+					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
 }

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ESE",
+    "SAS",
+    "ESE"
+  ],
+  "key": {
+    "A": {
+      "item": "worldsalad:essence_crystal"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "S": {
+      "item": "worldsalad:magic_chalk_block"
+    }
+  },
+  "result": {
+    "item": "worldsalad:essence_catalyst",
+    "count": 1
+  }
+}

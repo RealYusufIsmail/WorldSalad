@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " D ",
+    "SAS",
+    "SQS"
+  ],
+  "key": {
+    "D": {
+      "item": "worldsalad:distillation_tower_block"
+    },
+    "A": {
+      "item": "worldsalad:advanced_machine_casing"
+    },
+    "Q": {
+      "item": "worldsalad:medium_battery"
+    },
+    "S": {
+      "item": "worldsalad:iron_plate"
+    }
+  },
+  "result": {
+    "item": "worldsalad:distiller",
+    "count": 1
+  }
+}

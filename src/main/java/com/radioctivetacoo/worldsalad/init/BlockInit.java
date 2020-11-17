@@ -3,7 +3,6 @@
 import com.radioctivetacoo.worldsalad.WorldSalad;
 import com.radioctivetacoo.worldsalad.objects.blocks.DenseMadroneLeavesBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.DirtCakeBlock;
-import com.radioctivetacoo.worldsalad.objects.blocks.EssenceCatalystBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.FalseExperienceOreBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.FireGeyserBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.GeodeBlock;
@@ -31,6 +30,7 @@ import com.radioctivetacoo.worldsalad.objects.blocks.machines.DeepFryerBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.machines.DisplayStandBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.machines.DistillerBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.machines.DistillingBarrelBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.EssenceCatalystBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.machines.FloatationBinBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.machines.HydraulicPressBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.machines.IndustrialGrinderBlock;
@@ -156,6 +156,15 @@ public class BlockInit {
 					.harvestLevel(1).lightValue(11).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 
 	// Decorations
+	public static final RegistryObject<Block> MAGIC_CHALK_BLOCK = BLOCKS.register("magic_chalk_block",
+			() -> new Block(Block.Properties.from(Blocks.STONE).hardnessAndResistance(0.4f, 2f)));
+	
+	public static final RegistryObject<Block> MAGIC_CHALK_BRICKS = BLOCKS.register("magic_chalk_bricks",
+			() -> new Block(Block.Properties.from(Blocks.STONE).hardnessAndResistance(0.4f, 2f)));
+	
+	public static final RegistryObject<Block> MAGIC_CHALK_PAVER = BLOCKS.register("magic_chalk_paver",
+			() -> new Block(Block.Properties.from(Blocks.STONE).hardnessAndResistance(0.4f, 2f)));
+	
 	public static final RegistryObject<Block> FIREGEYSER = BLOCKS.register("firegeyser",
 			() -> new FireGeyserBlock(Block.Properties.from(Blocks.STONE)));
 
@@ -178,6 +187,9 @@ public class BlockInit {
 			() -> new Block(Block.Properties.from(Blocks.STONE)));
 	
 	public static final RegistryObject<Block> SIMPLE_MACHINE_CASING = BLOCKS.register("simple_machine_casing",
+			() -> new Block(Block.Properties.from(Blocks.IRON_BLOCK)));
+	
+	public static final RegistryObject<Block> ADVANCED_MACHINE_CASING = BLOCKS.register("advanced_machine_casing",
 			() -> new Block(Block.Properties.from(Blocks.IRON_BLOCK)));
 	
 	public static final RegistryObject<Block> AMBER_LAMP = BLOCKS.register("amber_lamp",
@@ -883,7 +895,7 @@ public class BlockInit {
 					.harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
 
 	public static final RegistryObject<Block> MITHRIL_ORE = BLOCKS.register("mithril_ore",
-			() -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.8f, 8.0f).harvestLevel(4)
+			() -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.8f, 8.0f).harvestLevel(3)
 					.harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
 
 	public static final RegistryObject<Block> MOLYBDENUM_ORE = BLOCKS.register("molybdenum_ore",
@@ -918,6 +930,15 @@ public class BlockInit {
 	
 	public static final RegistryObject<Block> HYPHAE_BRICK_WALL = BLOCKS.register("hyphae_brick_wall", 
 			() -> new WallBlock(Block.Properties.from(BlockInit.HYPHAE_COBBLESTONE.get())));
+	
+	public static final RegistryObject<Block> MAGIC_CHALK_WALL = BLOCKS.register("magic_chalk_wall", 
+			() -> new WallBlock(Block.Properties.from(BlockInit.MAGIC_CHALK_BLOCK.get())));
+	
+	public static final RegistryObject<Block> MAGIC_CHALK_BRICK_WALL = BLOCKS.register("magic_chalk_brick_wall", 
+			() -> new WallBlock(Block.Properties.from(BlockInit.MAGIC_CHALK_BLOCK.get())));
+	
+	public static final RegistryObject<Block> MAGIC_CHALK_PAVER_WALL = BLOCKS.register("magic_chalk_paver_wall", 
+			() -> new WallBlock(Block.Properties.from(BlockInit.MAGIC_CHALK_BLOCK.get())));
 		
 	// Slabs
 	public static final RegistryObject<Block> HYPHAE_COBBLESTONE_SLAB = BLOCKS.register("hyphae_cobblestone_slab",
@@ -937,6 +958,15 @@ public class BlockInit {
 	
 	public static final RegistryObject<Block> ADOBE_SLAB = BLOCKS.register("adobe_slab",
 			() -> new SlabBlock(Block.Properties.from(BlockInit.ADOBE_BLOCK.get())));
+	
+	public static final RegistryObject<Block> MAGIC_CHALK_SLAB = BLOCKS.register("magic_chalk_slab",
+			() -> new SlabBlock(Block.Properties.from(BlockInit.MAGIC_CHALK_BLOCK.get())));
+	
+	public static final RegistryObject<Block> MAGIC_CHALK_BRICK_SLAB = BLOCKS.register("magic_chalk_brick_slab",
+			() -> new SlabBlock(Block.Properties.from(BlockInit.MAGIC_CHALK_BLOCK.get())));
+	
+	public static final RegistryObject<Block> MAGIC_CHALK_PAVER_SLAB = BLOCKS.register("magic_chalk_paver_slab",
+			() -> new SlabBlock(Block.Properties.from(BlockInit.MAGIC_CHALK_BLOCK.get())));
 
 	// Stairs
 	public static final RegistryObject<Block> HYPHAE_COBBLESTONE_STAIRS = BLOCKS.register("hyphae_cobblestone_stairs",
@@ -959,7 +989,7 @@ public class BlockInit {
 					Block.Properties.create(Material.ROCK, MaterialColor.PURPLE).hardnessAndResistance(1.8f, 3.0f)
 							.sound(SoundType.STONE).harvestTool(ToolType.PICKAXE)));
 	
-	public static final RegistryObject<Block> ADPBE_BRICK_STAIRS = BLOCKS.register("adobe_brick_stairs",
+	public static final RegistryObject<Block> ADOBE_BRICK_STAIRS = BLOCKS.register("adobe_brick_stairs",
 			() -> new StairsBlock(() -> BlockInit.ADOBE_BRICKS.get().getDefaultState(),
 					Block.Properties.create(Material.ROCK, MaterialColor.PURPLE).hardnessAndResistance(1.8f, 3.0f)
 							.sound(SoundType.STONE).harvestTool(ToolType.PICKAXE)));
@@ -967,5 +997,20 @@ public class BlockInit {
 	public static final RegistryObject<Block> ADOBE_STAIRS = BLOCKS.register("adobe_stairs",
 			() -> new StairsBlock(() -> BlockInit.ADOBE_BLOCK.get().getDefaultState(),
 					Block.Properties.create(Material.ROCK, MaterialColor.PURPLE).hardnessAndResistance(1.8f, 3.0f)
+							.sound(SoundType.STONE).harvestTool(ToolType.PICKAXE)));
+	
+	public static final RegistryObject<Block> MAGIC_CHALK_STAIRS = BLOCKS.register("magic_chalk_stairs",
+			() -> new StairsBlock(() -> BlockInit.MAGIC_CHALK_BLOCK.get().getDefaultState(),
+					Block.Properties.create(Material.ROCK, MaterialColor.GRAY).hardnessAndResistance(0.5f, 2.0f)
+							.sound(SoundType.STONE).harvestTool(ToolType.PICKAXE)));
+	
+	public static final RegistryObject<Block> MAGIC_CHALK_BRICK_STAIRS = BLOCKS.register("magic_chalk_brick_stairs",
+			() -> new StairsBlock(() -> BlockInit.MAGIC_CHALK_BRICKS.get().getDefaultState(),
+					Block.Properties.create(Material.ROCK, MaterialColor.GRAY).hardnessAndResistance(0.5f, 2.0f)
+							.sound(SoundType.STONE).harvestTool(ToolType.PICKAXE)));
+	
+	public static final RegistryObject<Block> MAGIC_CHALK_PAVER_STAIRS = BLOCKS.register("magic_chalk_paver_stairs",
+			() -> new StairsBlock(() -> BlockInit.MAGIC_CHALK_PAVER.get().getDefaultState(),
+					Block.Properties.create(Material.ROCK, MaterialColor.GRAY).hardnessAndResistance(0.5f, 2.0f)
 							.sound(SoundType.STONE).harvestTool(ToolType.PICKAXE)));
 }

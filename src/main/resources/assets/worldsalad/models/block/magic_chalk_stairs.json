@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "worldsalad:blocks/magic_chalk_block",
+        "top": "worldsalad:blocks/magic_chalk_block",
+        "side": "worldsalad:blocks/magic_chalk_block"
+    }
+}

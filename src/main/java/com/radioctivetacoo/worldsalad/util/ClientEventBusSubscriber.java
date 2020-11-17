@@ -1,6 +1,8 @@
 package com.radioctivetacoo.worldsalad.util;
 
 import com.radioctivetacoo.worldsalad.WorldSalad;
+import com.radioctivetacoo.worldsalad.client.entity.render.BluecapRender;
+import com.radioctivetacoo.worldsalad.client.entity.render.BrowncapRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.CordycepsAntRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.ExoskeletonRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.FungalZombieRender;
@@ -128,6 +130,8 @@ public class ClientEventBusSubscriber {
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.FUNGAL_ZOMBIE.get(), FungalZombieRender::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.MACROBE.get(), MacrobeRender::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.REDCAP.get(), RedcapRender::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityInit.BROWNCAP.get(), BrowncapRender::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityInit.BLUECAP.get(), BluecapRender::new);
 		
 		ClientRegistry.bindTileEntityRenderer(TileEntityInit.DISPLAY_STAND.get(), DisplayStandRenderer::new);
 	}

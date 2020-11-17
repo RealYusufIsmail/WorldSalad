@@ -35,7 +35,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
 
-public class SeedPressBlock extends Block {
+public class SeedPressBlock extends ModMachineBlock {
 	public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 	private static final VoxelShape SHAPE_N = Stream.of(Block.makeCuboidShape(7, 12, 7, 9, 25, 9),
 			Block.makeCuboidShape(5, 4, 2, 11, 6, 3), Block.makeCuboidShape(3, 5, 13, 13, 14, 15),

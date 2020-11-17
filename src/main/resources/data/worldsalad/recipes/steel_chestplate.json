@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F F",
+    "FFF",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:steel_ingot"
+    }
+  },
+  "result": {
+    "item": "worldsalad:steel_chestplate",
+    "count": 1
+  }
+}

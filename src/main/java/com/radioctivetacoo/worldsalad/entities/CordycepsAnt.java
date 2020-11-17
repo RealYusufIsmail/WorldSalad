@@ -151,8 +151,8 @@ public class CordycepsAnt extends MonsterEntity implements IAnimatedEntity {
 				}
 
 				if (i > 0) {
-					((LivingEntity) entityIn).addPotionEffect(new EffectInstance(Effects.POISON, 20 + i, 8));
-					((LivingEntity) entityIn).addPotionEffect(new EffectInstance(Effects.WITHER, 20 + i, 8));
+					((LivingEntity) entityIn).addPotionEffect(new EffectInstance(Effects.POISON, 50 + i, 8));
+					((LivingEntity) entityIn).addPotionEffect(new EffectInstance(Effects.WITHER, 50 + i, 8));
 				}
 			}
 

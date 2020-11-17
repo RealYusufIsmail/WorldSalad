@@ -33,7 +33,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
 
-public class DisplayStandBlock extends Block {
+public class DisplayStandBlock extends ModMachineBlock {
 	public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 	
 	private static final VoxelShape SHAPE = Stream.of(

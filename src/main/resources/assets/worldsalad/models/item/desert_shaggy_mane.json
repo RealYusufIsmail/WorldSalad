@@ -1,3 +1,6 @@
 {
-	"parent": "worldsalad:block/desert_shaggy_mane"
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "worldsalad:items/desert_shaggy_mane"
+		}
 }

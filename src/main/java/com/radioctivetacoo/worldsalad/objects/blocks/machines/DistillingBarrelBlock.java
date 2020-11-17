@@ -35,7 +35,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
 
-public class DistillingBarrelBlock extends Block {
+public class DistillingBarrelBlock extends ModMachineBlock {
 	public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 
 	private static final VoxelShape SHAPE_N = Stream

@@ -93,8 +93,8 @@ public class Exoskeleton extends MonsterEntity implements IAnimatedEntity {
 		super.registerAttributes();
 		this.getAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(20.0D);
 		this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.31F);
-		this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(8.0D);
-		this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(24.0D);
+		this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(12.0D);
+		this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(26.0D);
 		this.getAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(2.0D);
 	}
 

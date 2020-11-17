@@ -28,7 +28,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
 
-public class LesserInfuserBlock extends Block {
+public class LesserInfuserBlock extends ModMachineBlock {
 	public static final BooleanProperty LIT = BooleanProperty.create("lit");
 	
 	public LesserInfuserBlock(Properties properties) {

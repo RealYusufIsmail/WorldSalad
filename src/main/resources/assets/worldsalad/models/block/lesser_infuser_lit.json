@@ -1,7 +1,7 @@
 {
     "parent": "block/cube_bottom_top",
     "textures": {
-        "bottom": "minecraft:block/furnace_top",
+        "bottom": "worldsalad:blocks/magic_chalk_paver",
         "top": "worldsalad:blocks/lesser_infuser_top_lit",
         "side": "worldsalad:blocks/lesser_infuser_side_lit"
     }

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GPG",
+    "SAS",
+    "SES"
+  ],
+  "key": {
+    "A": {
+      "item": "worldsalad:essence_crystal"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "P": {
+      "item": "minecraft:ender_pearl"
+    },
+    "E": {
+      "item": "minecraft:diamond"
+    },
+    "S": {
+      "item": "worldsalad:magic_chalk_paver"
+    }
+  },
+  "result": {
+    "item": "worldsalad:lesser_infuser",
+    "count": 1
+  }
+}

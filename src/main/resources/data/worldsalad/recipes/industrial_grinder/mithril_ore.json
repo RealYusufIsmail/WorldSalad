@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "worldsalad:mithril_dust"
+	},
+	
+	"outputBonus": {
+		"item": "minecraft:mithril_dust"
+	},
+	
+	"input": {
+		"item": "worldsalad:mithril_ore"
+	}
+}

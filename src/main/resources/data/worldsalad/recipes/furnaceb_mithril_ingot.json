@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "worldsalad:mithril_ore"
+    "item": "worldsalad:mithril_dust"
   },
   "result": "worldsalad:mithril_ingot",
   "experience": 0.1,

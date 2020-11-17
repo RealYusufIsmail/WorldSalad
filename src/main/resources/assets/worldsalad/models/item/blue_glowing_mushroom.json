@@ -1,3 +1,6 @@
 {
-	"parent": "worldsalad:block/blue_glowing_mushroom"
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "worldsalad:items/blue_glowshroom"
+		}
 }

@@ -32,6 +32,7 @@ import com.radioctivetacoo.worldsalad.init.BlockInit;
 import com.radioctivetacoo.worldsalad.init.CarverInit;
 import com.radioctivetacoo.worldsalad.init.ContainerInit;
 import com.radioctivetacoo.worldsalad.init.DimensionInit;
+import com.radioctivetacoo.worldsalad.init.EffectInit;
 import com.radioctivetacoo.worldsalad.init.EntityInit;
 import com.radioctivetacoo.worldsalad.init.FeatureInit;
 import com.radioctivetacoo.worldsalad.init.FluidInit;
@@ -39,6 +40,8 @@ import com.radioctivetacoo.worldsalad.init.ItemInit;
 import com.radioctivetacoo.worldsalad.init.RecipeSerializerInit;
 import com.radioctivetacoo.worldsalad.init.SoundInit;
 import com.radioctivetacoo.worldsalad.init.TileEntityInit;
+import com.radioctivetacoo.worldsalad.objects.blocks.DirtCakeBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.ModMachineBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.plants.GhostGrapeBushBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.plants.HotcoffeeCropBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.plants.PassionFruitBlock;
@@ -61,6 +64,7 @@ public class WorldSalad {
 		modEventBus.addListener(this::doClientStuff);
 
 		SoundInit.SOUNDS.register(modEventBus);
+		EffectInit.EFFECTS.register(modEventBus);
 		ItemInit.ITEMS.register(modEventBus);
 		RecipeSerializerInit.RECIPE_SERIALIZERS.register(modEventBus);
 		BlockInit.BLOCKS.register(modEventBus);
@@ -82,9 +86,29 @@ public class WorldSalad {
 		final IForgeRegistry<Item> registry = event.getRegistry();
 
 		BlockInit.BLOCKS.getEntries().stream().filter(
-				block -> !(block.get() instanceof GhostGrapeBushBlock) && !(block.get() instanceof FlowingFluidBlock) && !(block.get() instanceof PassionFruitBlock) && !(block.get() instanceof PassionVineCropBlock) && !(block.get() instanceof HotcoffeeCropBlock) && !(block.get() instanceof FlowerPotBlock))
+				block -> !(block.get() instanceof GhostGrapeBushBlock) && !(block.get() instanceof FlowingFluidBlock) && !(block.get() instanceof PassionFruitBlock) && 
+				!(block.get() instanceof PassionVineCropBlock) && !(block.get() instanceof HotcoffeeCropBlock) && !(block.get().equals(BlockInit.DISTILLATION_TOWER_BLOCK.get())) 
+				&& !(block.get() instanceof FlowerPotBlock) && !(block.get() instanceof ModMachineBlock) && !(block.get() instanceof DirtCakeBlock))
 				.map(RegistryObject::get).forEach(block -> {
 					final Item.Properties properties = new Item.Properties().group(WorldSaladBlocksItemGroup.instance);
+					final BlockItem blockItem = new BlockItem(block, properties);
+					blockItem.setRegistryName(block.getRegistryName());
+					registry.register(blockItem);
+				});
+		
+		BlockInit.BLOCKS.getEntries().stream().filter(
+				block -> (block.get() instanceof ModMachineBlock) || (block.get().equals(BlockInit.DISTILLATION_TOWER_BLOCK.get())))
+				.map(RegistryObject::get).forEach(block -> {
+					final Item.Properties properties = new Item.Properties().group(WorldSaladMachinesItemGroup.instance);
+					final BlockItem blockItem = new BlockItem(block, properties);
+					blockItem.setRegistryName(block.getRegistryName());
+					registry.register(blockItem);
+				});
+		
+		BlockInit.BLOCKS.getEntries().stream().filter(
+				block -> (block.get() instanceof DirtCakeBlock))
+				.map(RegistryObject::get).forEach(block -> {
+					final Item.Properties properties = new Item.Properties().group(WorldSaladFoodItemGroup.instance);
 					final BlockItem blockItem = new BlockItem(block, properties);
 					blockItem.setRegistryName(block.getRegistryName());
 					registry.register(blockItem);
@@ -180,6 +204,62 @@ public class WorldSalad {
 		@Override
 		public ItemStack createIcon() {
 			return new ItemStack(ItemInit.ESSENCE_CRYSTALIZER.get());
+		}
+	}
+	
+	public static class WorldSaladMachinesItemGroup extends ItemGroup {
+		public static final WorldSaladMachinesItemGroup instance = new WorldSaladMachinesItemGroup(ItemGroup.GROUPS.length,
+				"worldsaladmachines");
+
+		private WorldSaladMachinesItemGroup(int index, String label) {
+			super(index, label);
+		}
+
+		@Override
+		public ItemStack createIcon() {
+			return new ItemStack(BlockInit.ALLOY_FURNACE.get());
+		}
+	}
+	
+	public static class WorldSaladMaterialsItemGroup extends ItemGroup {
+		public static final WorldSaladMaterialsItemGroup instance = new WorldSaladMaterialsItemGroup(ItemGroup.GROUPS.length,
+				"worldsaladmaterials");
+
+		private WorldSaladMaterialsItemGroup(int index, String label) {
+			super(index, label);
+		}
+
+		@Override
+		public ItemStack createIcon() {
+			return new ItemStack(ItemInit.STEEL_INGOT.get());
+		}
+	}
+	
+	public static class WorldSaladSpawnEggsItemGroup extends ItemGroup {
+		public static final WorldSaladSpawnEggsItemGroup instance = new WorldSaladSpawnEggsItemGroup(ItemGroup.GROUPS.length,
+				"worldsaladspawneggs");
+
+		private WorldSaladSpawnEggsItemGroup(int index, String label) {
+			super(index, label);
+		}
+
+		@Override
+		public ItemStack createIcon() {
+			return new ItemStack(ItemInit.CORDYCEPS_ANT_SPAWN_EGG.get());
+		}
+	}
+	
+	public static class WorldSaladFoodItemGroup extends ItemGroup {
+		public static final WorldSaladFoodItemGroup instance = new WorldSaladFoodItemGroup(ItemGroup.GROUPS.length,
+				"worldsaladfoods");
+
+		private WorldSaladFoodItemGroup(int index, String label) {
+			super(index, label);
+		}
+
+		@Override
+		public ItemStack createIcon() {
+			return new ItemStack(BlockInit.DIRT_CAKE.get());
 		}
 	}
 }

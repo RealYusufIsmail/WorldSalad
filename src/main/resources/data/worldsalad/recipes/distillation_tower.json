@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I I",
+    "I I",
+    "I I"
+  ],
+  "key": {
+    "I": {
+      "item": "worldsalad:iron_plate"
+    }
+  },
+  "result": {
+    "item": "worldsalad:distillation_tower_block",
+    "count": 1
+  }
+}

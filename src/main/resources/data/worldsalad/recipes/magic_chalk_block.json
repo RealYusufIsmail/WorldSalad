@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SLS",
+    "SMS",
+    "SSS"
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "S": {
+      "item": "worldsalad:crushed_limestone"
+    },
+    "M": {
+      "item": "worldsalad:mithril_dust"
+    }
+  },
+  "result": {
+    "item": "worldsalad:magic_chalk_block",
+    "count": 12
+  }
+}

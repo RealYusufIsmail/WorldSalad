@@ -1,3 +1,6 @@
 {
-	"parent": "worldsalad:block/toadstool"
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "worldsalad:items/toadstool"
+		}
 }

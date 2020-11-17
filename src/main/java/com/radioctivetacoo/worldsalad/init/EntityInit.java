@@ -1,6 +1,8 @@
 package com.radioctivetacoo.worldsalad.init;
 
 import com.radioctivetacoo.worldsalad.WorldSalad;
+import com.radioctivetacoo.worldsalad.entities.Bluecap;
+import com.radioctivetacoo.worldsalad.entities.Browncap;
 import com.radioctivetacoo.worldsalad.entities.CordycepsAnt;
 import com.radioctivetacoo.worldsalad.entities.Exoskeleton;
 import com.radioctivetacoo.worldsalad.entities.FungalZombie;
@@ -52,6 +54,9 @@ public class EntityInit {
 		registerEntityWorldSpawns(MOTH.get(), 250, 3, 4, EntityClassification.MONSTER,
 				BiomeInit.GLOWING_MUSHROOM_BIOME.get());
 		
+		registerEntityWorldSpawns(BLUECAP.get(), 50, 1, 3, EntityClassification.MONSTER,
+				BiomeInit.GLOWING_MUSHROOM_BIOME.get());
+		
 		registerEntityWorldSpawns(EXOSKELETON.get(), 150, 1, 3, EntityClassification.MONSTER,
 				BiomeInit.MOLD_TUNDRA_BIOME.get(), BiomeInit.MILDEW_FOREST_BIOME.get(), BiomeInit.MUSHROOM_CANYON_FLATS_BIOME.get(), BiomeInit.MUSHROOM_CANYON_SHATTERED_BIOME.get());
 		
@@ -70,12 +75,19 @@ public class EntityInit {
 				BiomeInit.ACID_OCEAN_BIOME.get(), BiomeInit.GLOWING_MUSHROOM_BIOME.get(), 
 				BiomeInit.MUSHROOM_FOREST_BIOME.get(), BiomeInit.DENSE_MUSHROOM_FOREST_BIOME.get());
 		
+		registerEntityWorldSpawns(REDCAP.get(), 25, 2, 6, EntityClassification.MONSTER,
+				BiomeInit.MUSHROOM_FOREST_BIOME.get(), BiomeInit.DENSE_MUSHROOM_FOREST_BIOME.get());
+		
+		registerEntityWorldSpawns(BROWNCAP.get(), 15, 2, 6, EntityClassification.MONSTER,
+				BiomeInit.MUSHROOM_FOREST_BIOME.get(), BiomeInit.DENSE_MUSHROOM_FOREST_BIOME.get());
+		
 		//neutral
 		registerEntityWorldSpawns(WORKER_ANT.get(), 100, 2, 3, EntityClassification.CREATURE,
 				BiomeInit.MUSHROOM_CANYON_FLATS_BIOME.get(), BiomeInit.MUSHROOM_CANYON_SHATTERED_BIOME.get());
 		
 		registerEntityWorldSpawns(URCHIN.get(), 150, 3, 4, EntityClassification.MONSTER,
-				Biomes.BEACH, Biomes.DEEP_COLD_OCEAN, Biomes.COLD_OCEAN, Biomes.DEEP_FROZEN_OCEAN, Biomes.DEEP_LUKEWARM_OCEAN, Biomes.DEEP_OCEAN, Biomes.DEEP_WARM_OCEAN, Biomes.LUKEWARM_OCEAN, Biomes.FROZEN_OCEAN, Biomes.WARM_OCEAN);
+				Biomes.BEACH, Biomes.DEEP_COLD_OCEAN, Biomes.COLD_OCEAN, Biomes.DEEP_FROZEN_OCEAN, 
+				Biomes.DEEP_LUKEWARM_OCEAN, Biomes.DEEP_OCEAN, Biomes.DEEP_WARM_OCEAN, Biomes.LUKEWARM_OCEAN, Biomes.FROZEN_OCEAN, Biomes.WARM_OCEAN);
 	
 		//passive
 		}
@@ -99,6 +111,8 @@ public class EntityInit {
 		//neutral
 		registerPlacementTypes(WORKER_ANT.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawn);
 		registerPlacementTypes(REDCAP.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawn);
+		registerPlacementTypes(BLUECAP.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawn);
+		registerPlacementTypes(BROWNCAP.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawn);
 		registerPlacementTypes(URCHIN.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Urchin::func_223332_b);
 		//passive
 	}
@@ -147,7 +161,15 @@ public class EntityInit {
 	
 	public static final RegistryObject<EntityType<Redcap>> REDCAP = ENTITY_TYPES.register("redcap",
 			() -> EntityType.Builder.<Redcap>create(Redcap::new, EntityClassification.CREATURE)
-					.size(0.7f, 0.5f).build(new ResourceLocation(WorldSalad.MOD_ID, "redcap").toString()));
+					.size(0.8f, 1.2f).build(new ResourceLocation(WorldSalad.MOD_ID, "redcap").toString()));
+	
+	public static final RegistryObject<EntityType<Browncap>> BROWNCAP = ENTITY_TYPES.register("browncap",
+			() -> EntityType.Builder.<Browncap>create(Browncap::new, EntityClassification.CREATURE)
+					.size(0.8f, 1.2f).build(new ResourceLocation(WorldSalad.MOD_ID, "browncap").toString()));
+	
+	public static final RegistryObject<EntityType<Bluecap>> BLUECAP = ENTITY_TYPES.register("bluecap",
+			() -> EntityType.Builder.<Bluecap>create(Bluecap::new, EntityClassification.CREATURE)
+					.size(0.8f, 1.2f).build(new ResourceLocation(WorldSalad.MOD_ID, "bluecap").toString()));
 	
 	// passive mobs
 	public static final RegistryObject<EntityType<TraderAnt>> TRADER_ANT = ENTITY_TYPES.register("trader_ant",

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "FF ",
+    "FF "
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:magic_chalk_block"
+    }
+  },
+  "result": {
+    "item": "worldsalad:magic_chalk_bricks",
+    "count": 4
+  }
+}

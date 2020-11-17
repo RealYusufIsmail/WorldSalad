@@ -413,13 +413,13 @@ public class ModOreGen {
 
 			@SuppressWarnings("rawtypes")
 			ConfiguredPlacement customConfigEndMithril = Placement.COUNT_RANGE
-					.configure(new CountRangeConfig(1, 0, 0, 130));
+					.configure(new CountRangeConfig(4, 0, 0, 130));
 			biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
 					Feature.ORE
 							.withConfiguration(new OreFeatureConfig(
 									OreFeatureConfig.FillerBlockType.create("ED", null,
 											new BlockMatcher(Blocks.END_STONE)),
-									BlockInit.MITHRIL_ORE.get().getDefaultState(), 8))
+									BlockInit.MITHRIL_ORE.get().getDefaultState(), 12))
 							.withPlacement(customConfigEndMithril));
 
 			@SuppressWarnings("rawtypes")
@@ -506,11 +506,11 @@ public class ModOreGen {
 			{
 				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 						Feature.RANDOM_PATCH.withConfiguration(SPRUCE_LEAF_PILE_CONFIG)
-								.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(6))));
+								.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(7))));
 				
 				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 						Feature.RANDOM_PATCH.withConfiguration(BROWN_LEAF_PILE_CONFIG)
-								.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(1))));
+								.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(4))));
 			}
 			
 			if (biome == Biomes.BIRCH_FOREST || biome == Biomes.BIRCH_FOREST_HILLS || biome == Biomes.TALL_BIRCH_HILLS || biome == Biomes.TALL_BIRCH_FOREST)

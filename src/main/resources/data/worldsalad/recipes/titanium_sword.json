@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " F ",
+    " F ",
+    " S "
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:titanium_ingot"
+    },
+    "S": {
+      "item": "worldsalad:iron_rod"
+    }
+  },
+  "result": {
+    "item": "worldsalad:titanium_sword",
+    "count": 1
+  }
+}

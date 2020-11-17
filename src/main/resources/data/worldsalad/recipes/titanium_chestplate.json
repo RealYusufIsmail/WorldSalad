@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F F",
+    "FFF",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:titanium_ingot"
+    }
+  },
+  "result": {
+    "item": "worldsalad:titanium_chestplate",
+    "count": 1
+  }
+}

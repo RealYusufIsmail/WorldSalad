@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:hydraulicpress",
+	"output": {
+		"item": "worldsalad:steel_rod"
+	},
+	
+	"input": {
+		"item": "worldsalad:steel_plate"
+	},
+	
+	"input2": {
+		"item": "minecraft:stick"
+	}
+}

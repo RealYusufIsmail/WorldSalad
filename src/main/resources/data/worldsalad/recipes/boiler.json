@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " D ",
+    "SAS",
+    "SQS"
+  ],
+  "key": {
+    "D": {
+      "item": "worldsalad:copper_wire"
+    },
+    "A": {
+      "item": "worldsalad:simple_machine_casing"
+    },
+    "Q": {
+      "item": "minecraft:furnace"
+    },
+    "S": {
+      "item": "worldsalad:iron_plate"
+    }
+  },
+  "result": {
+    "item": "worldsalad:boiler",
+    "count": 1
+  }
+}

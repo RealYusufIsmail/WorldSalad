@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "F F",
+    "F F"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:titanium_ingot"
+    }
+  },
+  "result": {
+    "item": "worldsalad:titanium_boots",
+    "count": 1
+  }
+}

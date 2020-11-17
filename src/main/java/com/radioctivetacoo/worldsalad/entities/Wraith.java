@@ -183,7 +183,7 @@ public class Wraith extends MonsterEntity implements IFlyingAnimal, IAnimatedEnt
 
 				if (i > 0) {
 					((LivingEntity) entityIn).addPotionEffect(new EffectInstance(Effects.SLOWNESS, i * 15, 6));
-					((LivingEntity) entityIn).addPotionEffect(new EffectInstance(Effects.WITHER,  j * 30, 0 + k));
+					((LivingEntity) entityIn).addPotionEffect(new EffectInstance(Effects.WITHER,  j * 40, 0 + k));
 				}
 			}
 

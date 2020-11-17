@@ -10,6 +10,8 @@
 		"worldsalad:ethanol_flowing",
 		"worldsalad:ethanol_fluid",
 		"worldsalad:vegetable_oil_flowing",
-		"worldsalad:vegetable_oil_fluid"
+		"worldsalad:vegetable_oil_fluid",
+		"worldsalad:refined_oil_flowing",
+		"worldsalad:refined_oil_fluid"
 	]
 }

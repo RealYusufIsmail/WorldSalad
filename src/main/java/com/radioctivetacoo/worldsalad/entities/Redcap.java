@@ -94,10 +94,9 @@ public class Redcap extends CreatureEntity implements IAnimatedEntity {
 		this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
 		this.goalSelector.addGoal(8, new SwimGoal(this));
 		this.goalSelector.addGoal(7, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
-		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Exoskeleton.class, true));
-		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, CordycepsAnt.class, true));
+		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, FungalZombie.class, true));
 		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.0D, true));
-		this.targetSelector.addGoal(8, (new HurtByTargetGoal(this, SoldierAnt.class).setCallsForHelp(SoldierAnt.class)));
+		this.targetSelector.addGoal(8, (new HurtByTargetGoal(this, Redcap.class).setCallsForHelp(Redcap.class)));
 	}
 
 	@Override
@@ -142,7 +141,7 @@ public class Redcap extends CreatureEntity implements IAnimatedEntity {
 				}
 
 				if (i > 0) {
-					((LivingEntity) entityIn).addPotionEffect(new EffectInstance(Effects.POISON, i * 20, 0));
+					((LivingEntity) entityIn).addPotionEffect(new EffectInstance(Effects.POISON, i * 40, 0));
 				}
 			}
 

@@ -36,7 +36,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
 
-public class SpinningWheelBlock extends Block {
+public class SpinningWheelBlock extends ModMachineBlock {
 	public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 	public static final BooleanProperty SPINNING = BooleanProperty.create("spinning");
 	private static final VoxelShape SHAPE = Stream.of(Block.makeCuboidShape(1, 12, 1, 15, 16, 15),
