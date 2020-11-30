@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PDM",
+    "SSC",
+    "RB "
+  ],
+  "key": {
+    "S": {
+      "item": "worldsalad:silicon_ingot"
+    },
+    "P": {
+      "item": "worldsalad:redstone_processing_matrix"
+    },
+    "D": {
+      "item": "worldsalad:redstone_data_matrix"
+    },
+    "M": {
+      "item": "worldsalad:redstone_memory_matrix"
+    },
+    "B": {
+      "item": "worldsalad:medium_battery"
+    },
+    "R": {
+      "item": "worldsalad:resin"
+    },
+    "C": {
+      "item": "worldsalad:copper_wire"
+    }
+  },
+  "result": {
+    "item": "worldsalad:intermediate_circuitboard",
+    "count": 1
+  }
+}

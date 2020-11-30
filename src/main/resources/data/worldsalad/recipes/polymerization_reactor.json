@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "SAS",
+    "SQS"
+  ],
+  "key": {
+    "T": {
+      "item": "worldsalad:steel_plate"
+    },
+    "A": {
+      "item": "worldsalad:advanced_machine_casing"
+    },
+    "Q": {
+      "item": "worldsalad:intermediate_circuitboard"
+    },
+    "S": {
+      "item": "worldsalad:iron_plate"
+    }
+  },
+  "result": {
+    "item": "worldsalad:polymerization_reactor",
+    "count": 1
+  }
+}

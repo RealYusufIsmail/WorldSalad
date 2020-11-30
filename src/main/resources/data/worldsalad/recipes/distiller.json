@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " D ",
+    "SDS",
     "SAS",
     "SQS"
   ],
@@ -13,7 +13,7 @@
       "item": "worldsalad:advanced_machine_casing"
     },
     "Q": {
-      "item": "worldsalad:medium_battery"
+      "item": "worldsalad:intermediate_circuitboard"
     },
     "S": {
       "item": "worldsalad:iron_plate"

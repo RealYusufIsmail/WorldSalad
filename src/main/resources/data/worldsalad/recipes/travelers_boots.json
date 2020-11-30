@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " E ",
+    "L L",
+    "P P"
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:rabbit_hide"
+    },
+    "P": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "E": {
+      "item": "worldsalad:extremoplasm"
+    }
+  },
+  "result": {
+    "item": "worldsalad:travelers_boots",
+    "count": 1
+  }
+}

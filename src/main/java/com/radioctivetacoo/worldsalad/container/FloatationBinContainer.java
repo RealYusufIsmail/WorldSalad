@@ -3,6 +3,9 @@ package com.radioctivetacoo.worldsalad.container;
 import javax.annotation.Nonnull;
 import java.util.Objects;
 
+import com.radioctivetacoo.worldsalad.container.slots.FluxPowderSlot;
+import com.radioctivetacoo.worldsalad.container.slots.ModOutputSlot;
+import com.radioctivetacoo.worldsalad.container.slots.PineOilBucketSlot;
 import com.radioctivetacoo.worldsalad.init.BlockInit;
 import com.radioctivetacoo.worldsalad.init.ContainerInit;
 import com.radioctivetacoo.worldsalad.tileentity.FloatationBinTileEntity;

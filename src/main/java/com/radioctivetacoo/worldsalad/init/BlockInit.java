@@ -33,9 +33,11 @@ import com.radioctivetacoo.worldsalad.objects.blocks.machines.DistillingBarrelBl
 import com.radioctivetacoo.worldsalad.objects.blocks.machines.EssenceCatalystBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.machines.FloatationBinBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.machines.HydraulicPressBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.IncensePlateBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.machines.IndustrialGrinderBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.machines.KilnBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.machines.LesserInfuserBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.PolymerizationReactorBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.machines.SeedPressBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.machines.SpinningWheelBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.plants.AmanitaBlock;
@@ -154,6 +156,14 @@ public class BlockInit {
 	public static final RegistryObject<Block> BOILER = BLOCKS.register("boiler",
 			() -> new BoilerBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(1.6f, 99.0f)
 					.harvestLevel(1).lightValue(11).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
+	
+	public static final RegistryObject<Block> POLYMERIZATION_REACTOR = BLOCKS.register("polymerization_reactor",
+			() -> new PolymerizationReactorBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(1.6f, 99.0f)
+					.harvestLevel(1).lightValue(11).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
+	
+	public static final RegistryObject<Block> INCENSE_PLATE = BLOCKS.register("incense_plate",
+			() -> new IncensePlateBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(1.6f, 99.0f)
+					.lightValue(4).sound(SoundType.METAL)));
 
 	// Decorations
 	public static final RegistryObject<Block> MAGIC_CHALK_BLOCK = BLOCKS.register("magic_chalk_block",

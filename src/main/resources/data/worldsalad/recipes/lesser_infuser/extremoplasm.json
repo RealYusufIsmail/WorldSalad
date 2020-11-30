@@ -1,0 +1,10 @@
+{
+	"type": "worldsalad:lesserinfuser",
+	"output": {
+		"item": "worldsalad:extremoplasm"
+	},
+	
+	"input": {
+		"item": "worldsalad:ectoplasm"
+	}
+}

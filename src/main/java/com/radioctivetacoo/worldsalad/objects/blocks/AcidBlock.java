@@ -3,6 +3,9 @@ package com.radioctivetacoo.worldsalad.objects.blocks;
 import java.util.Random;
 import java.util.function.Supplier;
 
+import com.radioctivetacoo.worldsalad.init.EffectInit;
+import com.radioctivetacoo.worldsalad.init.ItemInit;
+
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.entity.Entity;
@@ -11,13 +14,12 @@ import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FlowingFluid;
 import net.minecraft.fluid.IFluidState;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -54,10 +56,16 @@ public class AcidBlock extends FlowingFluidBlock {
 
 	@Override
 	public void onEntityCollision(BlockState state, World worldIn, BlockPos pos, Entity entityIn) {
-		if (!worldIn.isRemote && worldIn.getDifficulty() != Difficulty.PEACEFUL) {
+		if (!worldIn.isRemote) {
 			if (entityIn instanceof AnimalEntity || entityIn instanceof PlayerEntity) {
+				if (((LivingEntity) entityIn).getItemStackFromSlot(EquipmentSlotType.FEET).getItem() != ItemInit.SCLERITOME_BOOTS.get() || 
+					((LivingEntity) entityIn).getItemStackFromSlot(EquipmentSlotType.LEGS).getItem() != ItemInit.SCLERITOME_LEGGINGS.get() ||
+					((LivingEntity) entityIn).getItemStackFromSlot(EquipmentSlotType.CHEST).getItem() != ItemInit.SCLERITOME_CHESTPLATE.get() ||
+					((LivingEntity) entityIn).getItemStackFromSlot(EquipmentSlotType.HEAD).getItem() != ItemInit.SCLERITOME_HELMET.get())
+				{
 				LivingEntity livingentity = (LivingEntity) entityIn;
-				livingentity.addPotionEffect(new EffectInstance(Effects.WITHER, 20, 2));
+				livingentity.addPotionEffect(new EffectInstance(EffectInit.ACID.get(), 20, 1));
+				}
 			}
 		}
 	}

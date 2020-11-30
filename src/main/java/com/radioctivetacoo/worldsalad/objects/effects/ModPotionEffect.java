@@ -57,7 +57,7 @@ public class ModPotionEffect extends Effect {
 	
 	public void performEffect(LivingEntity entityLivingBaseIn, int amplifier) {
 	      if (this == EffectInit.ACID.get()) {
-	         entityLivingBaseIn.attackEntityFrom(DamageSource.IN_FIRE, 4.0F);
+	         entityLivingBaseIn.attackEntityFrom(DamageSource.MAGIC, 4.0F);
 	      }
 	   }
 }

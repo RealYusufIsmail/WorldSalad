@@ -6,6 +6,7 @@ import com.radioctivetacoo.worldsalad.entities.Browncap;
 import com.radioctivetacoo.worldsalad.entities.CordycepsAnt;
 import com.radioctivetacoo.worldsalad.entities.Exoskeleton;
 import com.radioctivetacoo.worldsalad.entities.FungalZombie;
+import com.radioctivetacoo.worldsalad.entities.GiantToad;
 import com.radioctivetacoo.worldsalad.entities.Macrobe;
 import com.radioctivetacoo.worldsalad.entities.Moth;
 import com.radioctivetacoo.worldsalad.entities.Redcap;
@@ -20,6 +21,7 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntitySpawnPlacementRegistry.IPlacementPredicate;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.util.ResourceLocation;
@@ -75,6 +77,11 @@ public class EntityInit {
 				BiomeInit.ACID_OCEAN_BIOME.get(), BiomeInit.GLOWING_MUSHROOM_BIOME.get(), 
 				BiomeInit.MUSHROOM_FOREST_BIOME.get(), BiomeInit.DENSE_MUSHROOM_FOREST_BIOME.get());
 		
+		registerEntityWorldSpawns(GIANT_TOAD.get(), 200, 1, 4, EntityClassification.MONSTER,
+				BiomeInit.MOLD_TUNDRA_BIOME.get(), BiomeInit.MILDEW_FOREST_BIOME.get(), 
+				BiomeInit.ACID_OCEAN_BIOME.get(), BiomeInit.GLOWING_MUSHROOM_BIOME.get(), 
+				BiomeInit.MUSHROOM_FOREST_BIOME.get(), BiomeInit.DENSE_MUSHROOM_FOREST_BIOME.get());
+		
 		registerEntityWorldSpawns(REDCAP.get(), 25, 2, 6, EntityClassification.MONSTER,
 				BiomeInit.MUSHROOM_FOREST_BIOME.get(), BiomeInit.DENSE_MUSHROOM_FOREST_BIOME.get());
 		
@@ -107,9 +114,10 @@ public class EntityInit {
 		registerPlacementTypes(EXOSKELETON.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawnInLight);
 		registerPlacementTypes(CORDYCEPS_ANT.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawn);
 		registerPlacementTypes(FUNGAL_ZOMBIE.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, ZombieEntity::canMonsterSpawnInLight);
-		registerPlacementTypes(MACROBE.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, ZombieEntity::canMonsterSpawn);
+		registerPlacementTypes(MACROBE.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawn);
+		registerPlacementTypes(GIANT_TOAD.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MobEntity::canSpawnOn);
 		//neutral
-		registerPlacementTypes(WORKER_ANT.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawn);
+		registerPlacementTypes(WORKER_ANT.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MobEntity::canSpawnOn);
 		registerPlacementTypes(REDCAP.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawn);
 		registerPlacementTypes(BLUECAP.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawn);
 		registerPlacementTypes(BROWNCAP.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawn);
@@ -145,6 +153,10 @@ public class EntityInit {
 	public static final RegistryObject<EntityType<Macrobe>> MACROBE = ENTITY_TYPES.register("macrobe",
 			() -> EntityType.Builder.<Macrobe>create(Macrobe::new, EntityClassification.MONSTER)
 					.size(1.3f, 3.8f).build(new ResourceLocation(WorldSalad.MOD_ID, "macrobe").toString()));
+	
+	public static final RegistryObject<EntityType<GiantToad>> GIANT_TOAD = ENTITY_TYPES.register("giant_toad",
+			() -> EntityType.Builder.<GiantToad>create(GiantToad::new, EntityClassification.MONSTER)
+					.size(1.1f, 0.9f).build(new ResourceLocation(WorldSalad.MOD_ID, "giant_toad").toString()));
 
 	// neutral mobs
 	public static final RegistryObject<EntityType<Urchin>> URCHIN = ENTITY_TYPES.register("urchin",

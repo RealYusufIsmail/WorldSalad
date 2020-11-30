@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "BNQ",
+    "FNF",
     "IPI",
     "FSF"
   ],
@@ -17,12 +17,6 @@
     },
     "P": {
       "item": "worldsalad:simple_machine_casing"
-    },
-    "B": {
-      "item": "minecraft:bucket"
-    },
-    "Q": {
-      "item": "minecraft:iron_ingot"
     },
     "N": {
       "item": "minecraft:piston"

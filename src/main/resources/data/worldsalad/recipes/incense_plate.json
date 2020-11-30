@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "L L",
+    "G G",
+    "DTD"
+  ],
+  "key": {
+    "L": {
+      "item": "worldsalad:lichen"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "T": {
+      "item": "worldsalad:toadstone"
+    }
+  },
+  "result": {
+    "item": "worldsalad:incense_plate",
+    "count": 1
+  }
+}

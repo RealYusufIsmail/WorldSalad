@@ -2,21 +2,13 @@ package com.radioctivetacoo.worldsalad.init;
 
 import com.radioctivetacoo.worldsalad.WorldSalad;
 import com.radioctivetacoo.worldsalad.recipes.AlloyFurnaceRecipe;
-import com.radioctivetacoo.worldsalad.recipes.AlloyFurnaceRecipeSerializer;
 import com.radioctivetacoo.worldsalad.recipes.DeepFryerRecipe;
-import com.radioctivetacoo.worldsalad.recipes.DeepFryerRecipeSerializer;
 import com.radioctivetacoo.worldsalad.recipes.FloatationBinRecipe;
-import com.radioctivetacoo.worldsalad.recipes.FloatationBinRecipeSerializer;
 import com.radioctivetacoo.worldsalad.recipes.HydraulicPressRecipe;
-import com.radioctivetacoo.worldsalad.recipes.HydraulicPressRecipeSerializer;
 import com.radioctivetacoo.worldsalad.recipes.IndustrialGrinderRecipe;
-import com.radioctivetacoo.worldsalad.recipes.IndustrialGrinderRecipeSerializer;
 import com.radioctivetacoo.worldsalad.recipes.KilnRecipe;
-import com.radioctivetacoo.worldsalad.recipes.KilnRecipeSerializer;
 import com.radioctivetacoo.worldsalad.recipes.LesserInfuserRecipe;
-import com.radioctivetacoo.worldsalad.recipes.LesserInfuserRecipeSerializer;
 import com.radioctivetacoo.worldsalad.recipes.SpinningWheelRecipe;
-import com.radioctivetacoo.worldsalad.recipes.SpinningWheelRecipeSerializer;
 import com.radioctivetacoo.worldsalad.recipes.interfaces.IAlloyFurnaceRecipe;
 import com.radioctivetacoo.worldsalad.recipes.interfaces.IDeepFryerRecipe;
 import com.radioctivetacoo.worldsalad.recipes.interfaces.IFloatationBinRecipe;
@@ -25,6 +17,14 @@ import com.radioctivetacoo.worldsalad.recipes.interfaces.IIndustrialGrinderRecip
 import com.radioctivetacoo.worldsalad.recipes.interfaces.IKilnRecipe;
 import com.radioctivetacoo.worldsalad.recipes.interfaces.ILesserInfuserRecipe;
 import com.radioctivetacoo.worldsalad.recipes.interfaces.ISpinningWheelRecipe;
+import com.radioctivetacoo.worldsalad.recipes.serializers.AlloyFurnaceRecipeSerializer;
+import com.radioctivetacoo.worldsalad.recipes.serializers.DeepFryerRecipeSerializer;
+import com.radioctivetacoo.worldsalad.recipes.serializers.FloatationBinRecipeSerializer;
+import com.radioctivetacoo.worldsalad.recipes.serializers.HydraulicPressRecipeSerializer;
+import com.radioctivetacoo.worldsalad.recipes.serializers.IndustrialGrinderRecipeSerializer;
+import com.radioctivetacoo.worldsalad.recipes.serializers.KilnRecipeSerializer;
+import com.radioctivetacoo.worldsalad.recipes.serializers.LesserInfuserRecipeSerializer;
+import com.radioctivetacoo.worldsalad.recipes.serializers.SpinningWheelRecipeSerializer;
 
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.IRecipeSerializer;

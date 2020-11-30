@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FIF",
+    "IBI",
+    "FIF"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:gold_ingot"
+    },
+    "B": {
+      "item": "worldsalad:cell_culture"
+    },
+    "F": {
+      "item": "worldsalad:ectoplasm"
+    }
+  },
+  "result": {
+    "item": "worldsalad:dormant_mitochondrion",
+    "count": 2
+  }
+}

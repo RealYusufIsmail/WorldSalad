@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IMI",
+    "ISI",
+    "III"
+  ],
+  "key": {
+    "S": {
+      "item": "worldsalad:incense_stick"
+    },
+    "M": {
+      "item": "worldsalad:manganese_dust"
+    },
+    "I": {
+      "item": "minecraft:ghast_tear"
+    }
+  },
+  "result": {
+    "item": "worldsalad:incense_stick_regeneration",
+    "count": 1
+  }
+}

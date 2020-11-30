@@ -2,24 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "FBF",
-    "APA",
-    "SQS"
+    "FPF",
+    "FQF"
   ],
   "key": {
     "F": {
       "item": "worldsalad:iron_plate"
     },
-    "A": {
-      "item": "worldsalad:copper_wire"
-    },
-    "S": {
-      "item": "worldsalad:small_battery"
-    },
     "P": {
       "item": "worldsalad:simple_machine_casing"
     },
     "Q": {
-      "item": "minecraft:furnace"
+      "item": "worldsalad:simple_circuitboard"
     },
     "B": {
       "item": "minecraft:bucket"

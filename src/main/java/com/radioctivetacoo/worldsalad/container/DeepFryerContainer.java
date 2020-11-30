@@ -3,6 +3,9 @@ package com.radioctivetacoo.worldsalad.container;
 import javax.annotation.Nonnull;
 import java.util.Objects;
 
+import com.radioctivetacoo.worldsalad.container.slots.VegetableOilBucketSlot;
+import com.radioctivetacoo.worldsalad.container.slots.FluxPowderSlot;
+import com.radioctivetacoo.worldsalad.container.slots.ModOutputSlot;
 import com.radioctivetacoo.worldsalad.init.BlockInit;
 import com.radioctivetacoo.worldsalad.init.ContainerInit;
 import com.radioctivetacoo.worldsalad.tileentity.DeepFryerTileEntity;
@@ -57,7 +60,7 @@ public class DeepFryerContainer extends Container {
 		// Frier Slots
 		this.addSlot(new SlotItemHandler(tile.getInventory(), 0, 73, 35));
 		this.addSlot(new ModOutputSlot(tile.getInventory(), 1, 141, 35));
-		this.addSlot(new DeepFryerBucketSlot(tile.getInventory(), 2, 33, 19));
+		this.addSlot(new VegetableOilBucketSlot(tile.getInventory(), 2, 33, 19));
 		this.addSlot(new FluxPowderSlot(tile.getInventory(), 3, 8, 19));
 
 		this.trackInt(currentSmeltTime = new FunctionalIntReferenceHolder(() -> this.tileEntity.currentSmeltTime,

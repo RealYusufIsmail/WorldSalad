@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "worldsalad:distilling_barrel"
+          "name": "worldsalad:distiller"
         }
       ]
     }

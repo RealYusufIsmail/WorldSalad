@@ -25,7 +25,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.Direction;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.common.capabilities.Capability;
@@ -65,7 +64,10 @@ public class DistillingBarrelTileEntity extends TileEntity implements ITickableT
 	}
 	
 	public boolean hasBoiler() {
-		return this.world.getBlockState(new BlockPos(pos.getX(), pos.getY() - 1, pos.getZ())).with(BoilerBlock.LIT, true).getBlock().equals(BlockInit.BOILER.get());
+		return this.world.getBlockState(pos.down()).equals(BlockInit.BOILER.get().getDefaultState().with(BoilerBlock.LIT, true).with(BoilerBlock.FACING, Direction.NORTH)) || 
+				this.world.getBlockState(pos.down()).equals(BlockInit.BOILER.get().getDefaultState().with(BoilerBlock.LIT, true).with(BoilerBlock.FACING, Direction.NORTH))|| 
+				this.world.getBlockState(pos.down()).equals(BlockInit.BOILER.get().getDefaultState().with(BoilerBlock.LIT, true).with(BoilerBlock.FACING, Direction.EAST)) || 
+				this.world.getBlockState(pos.down()).equals(BlockInit.BOILER.get().getDefaultState().with(BoilerBlock.LIT, true).with(BoilerBlock.FACING, Direction.WEST));
 	}
 
 	@Override

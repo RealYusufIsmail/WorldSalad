@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DSD",
+    "SAS",
+    "DSD"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "A": {
+      "item": "worldsalad:silicon_wafer"
+    },
+    "S": {
+      "item": "worldsalad:flux_powder"
+    }
+  },
+  "result": {
+    "item": "worldsalad:redstone_memory_matrix",
+    "count": 2
+  }
+}

@@ -5,6 +5,7 @@ import com.radioctivetacoo.worldsalad.container.DistillerContainer;
 import com.radioctivetacoo.worldsalad.init.BlockInit;
 import com.radioctivetacoo.worldsalad.init.ItemInit;
 import com.radioctivetacoo.worldsalad.init.TileEntityInit;
+import com.radioctivetacoo.worldsalad.objects.blocks.machines.BoilerBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.machines.DistillerBlock;
 import com.radioctivetacoo.worldsalad.util.WorldSaladItemHandler;
 
@@ -67,7 +68,16 @@ public class DistillerTileEntity extends TileEntity implements ITickableTileEnti
 	}
 
 	public boolean hasBoiler() {
-		return this.world.getBlockState(pos.down()).getBlock().equals(BlockInit.BOILER.get()) && this.world.getBlockState(pos.up()).getBlock().equals(BlockInit.DISTILLATION_TOWER_BLOCK.get()) && this.world.getBlockState(pos.up().up()).getBlock().equals(BlockInit.DISTILLATION_TOWER_BLOCK.get());
+		if (this.world.getBlockState(pos.up()).getBlock().equals(BlockInit.DISTILLATION_TOWER_BLOCK.get()) && this.world.getBlockState(pos.up(2)).getBlock().equals(BlockInit.DISTILLATION_TOWER_BLOCK.get()))
+			{
+			return this.world.getBlockState(pos.down()).equals(BlockInit.BOILER.get().getDefaultState().with(BoilerBlock.LIT, true).with(BoilerBlock.FACING, Direction.NORTH)) || 
+					this.world.getBlockState(pos.down()).equals(BlockInit.BOILER.get().getDefaultState().with(BoilerBlock.LIT, true).with(BoilerBlock.FACING, Direction.NORTH))|| 
+					this.world.getBlockState(pos.down()).equals(BlockInit.BOILER.get().getDefaultState().with(BoilerBlock.LIT, true).with(BoilerBlock.FACING, Direction.EAST)) || 
+					this.world.getBlockState(pos.down()).equals(BlockInit.BOILER.get().getDefaultState().with(BoilerBlock.LIT, true).with(BoilerBlock.FACING, Direction.WEST));
+			}
+		else {
+			return false;
+		}
 	}
 
 	@Override
@@ -84,12 +94,11 @@ public class DistillerTileEntity extends TileEntity implements ITickableTileEnti
 				this.currentProgress = 0;
 			}
 			
-			/*reset if the boiler is removed or unlit - work in progress
+			//reset if the boiler is removed or unlit - work in progress
 			if (!hasBoiler())
 			{
 				currentProgress = 0;
 			}
-			*/
 			//set output fluid type to none if output tank empty
 			if (!hasOutputFluid())
 			{

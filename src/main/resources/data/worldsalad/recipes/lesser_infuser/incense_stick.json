@@ -1,0 +1,10 @@
+{
+	"type": "worldsalad:lesserinfuser",
+	"output": {
+		"item": "worldsalad:incense_stick"
+	},
+	
+	"input": {
+		"item": "minecraft:blaze_rod"
+	}
+}

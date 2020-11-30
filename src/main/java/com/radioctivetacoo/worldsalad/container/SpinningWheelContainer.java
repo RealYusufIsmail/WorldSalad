@@ -3,6 +3,8 @@ package com.radioctivetacoo.worldsalad.container;
 import javax.annotation.Nonnull;
 import java.util.Objects;
 
+import com.radioctivetacoo.worldsalad.container.slots.ModOutputSlot;
+import com.radioctivetacoo.worldsalad.container.slots.VegetableOilBucketSlot;
 import com.radioctivetacoo.worldsalad.init.BlockInit;
 import com.radioctivetacoo.worldsalad.init.ContainerInit;
 import com.radioctivetacoo.worldsalad.tileentity.SpinningWheelTileEntity;
@@ -60,7 +62,7 @@ public class SpinningWheelContainer extends Container {
 		this.addSlot(new SlotItemHandler(tile.getInventory(), 2, 33, 43));
 		this.addSlot(new SlotItemHandler(tile.getInventory(), 3, 51, 35));
 		this.addSlot(new ModOutputSlot(tile.getInventory(), 4, 109, 35));
-		this.addSlot(new WaterBucketSlot(tile.getInventory(), 5, 144, 52));
+		this.addSlot(new VegetableOilBucketSlot(tile.getInventory(), 5, 144, 52));
 
 		this.trackInt(currentProgress = new FunctionalIntReferenceHolder(() -> this.tileEntity.currentProgress,
 				value -> this.tileEntity.currentProgress = value));

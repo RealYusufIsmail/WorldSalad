@@ -45,6 +45,21 @@
             {
               "function": "minecraft:set_count",
               "count": {
+                "min": 0.0,
+                "max": 1.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "worldsalad:passion_fruit_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
                 "min": 2.0,
                 "max": 5.0,
                 "type": "minecraft:uniform"

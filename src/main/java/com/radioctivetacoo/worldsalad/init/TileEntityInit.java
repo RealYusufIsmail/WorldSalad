@@ -10,9 +10,11 @@ import com.radioctivetacoo.worldsalad.tileentity.DistillerTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.DistillingBarrelTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.FloatationBinTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.HydraulicPressTileEntity;
+import com.radioctivetacoo.worldsalad.tileentity.IncensePlateTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.IndustrialGrinderTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.KilnTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.LesserInfuserTileEntity;
+import com.radioctivetacoo.worldsalad.tileentity.PolymerizationReactorTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.SeedPressTileEntity;
 import com.radioctivetacoo.worldsalad.tileentity.SpinningWheelTileEntity;
 
@@ -81,4 +83,12 @@ public class TileEntityInit {
 	public static final RegistryObject<TileEntityType<DistillerTileEntity>> DISTILLER = TILE_ENTITY_TYPES.register(
 			"distiller",
 			() -> TileEntityType.Builder.create(DistillerTileEntity::new, BlockInit.DISTILLER.get()).build(null));
+	
+	public static final RegistryObject<TileEntityType<PolymerizationReactorTileEntity>> POLYMERIZATION_REACTOR = TILE_ENTITY_TYPES.register(
+			"polymerization_reactor",
+			() -> TileEntityType.Builder.create(PolymerizationReactorTileEntity::new, BlockInit.POLYMERIZATION_REACTOR.get()).build(null));
+	
+	public static final RegistryObject<TileEntityType<IncensePlateTileEntity>> INCENSE_PLATE = TILE_ENTITY_TYPES.register(
+			"incense_plate",
+			() -> TileEntityType.Builder.create(IncensePlateTileEntity::new, BlockInit.INCENSE_PLATE.get()).build(null));
 }

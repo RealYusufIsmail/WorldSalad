@@ -1,14 +1,11 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " D ",
+    "SSS",
     "SAS",
     "SQS"
   ],
   "key": {
-    "D": {
-      "item": "worldsalad:copper_wire"
-    },
     "A": {
       "item": "worldsalad:simple_machine_casing"
     },

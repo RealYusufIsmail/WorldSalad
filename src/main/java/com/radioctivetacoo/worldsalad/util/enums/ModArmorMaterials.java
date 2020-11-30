@@ -22,6 +22,14 @@ public enum ModArmorMaterials implements IArmorMaterial {
 	
 	TITANIUM(WorldSalad.MOD_ID + ":titanium", 41, new int[] {4, 7, 10, 4}, 16, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2F, () -> {
 		return Ingredient.fromItems(ItemInit.TITANIUM_INGOT.get());
+	}),
+	
+	CHITIN(WorldSalad.MOD_ID + ":scleritome", 23, new int[] {3, 5, 7, 3}, 23, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0F, () -> {
+		return Ingredient.fromItems(ItemInit.CRYSTAL_SCLERITE.get());
+	}),
+	
+	TRAVELER(WorldSalad.MOD_ID + ":traveler", 10, new int[] {1, 1, 1, 1}, 55, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0F, () -> {
+		return Ingredient.fromItems(ItemInit.EXTREMOPLASM.get());
 	});
 	
 	private static final int[] MAX_DAMAGE_ARRAY = new int[] {13, 15, 16, 11};

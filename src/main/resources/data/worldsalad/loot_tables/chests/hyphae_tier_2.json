@@ -20,8 +20,18 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 7,
+          "name": "worldsalad:passion_fruit_seeds"
+        },
+        {
+          "type": "minecraft:item",
           "weight": 15,
           "name": "minecraft:music_disc_cat"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 20,
+          "name": "worldsalad:sonar_device"
         },
         {
           "type": "minecraft:item",

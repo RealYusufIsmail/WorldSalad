@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "ACC",
+    "CCC",
     "FSF",
     "FMF"
   ],
@@ -15,11 +15,8 @@
     "C": {
       "item": "worldsalad:copper_wire"
     },
-    "A": {
-      "item": "worldsalad:aluminum_block"
-    },
     "M": {
-      "item": "worldsalad:medium_battery"
+      "item": "worldsalad:intermediate_circuitboard"
     }
   },
   "result": {

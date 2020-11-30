@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "worldsalad:raw_toad"
+  },
+  "result": "worldsalad:cooked_toad",
+  "experience": 0.1,
+  "cookingtime": 100
+}

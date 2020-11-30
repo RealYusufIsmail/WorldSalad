@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CSC",
+    "C C",
+    "   "
+  ],
+  "key": {
+    "C": {
+      "item": "worldsalad:chitin_shard"
+    },
+    "S": {
+      "item": "worldsalad:crystal_sclerite"
+    }
+  },
+  "result": {
+    "item": "worldsalad:scleritome_helmet",
+    "count": 1
+  }
+}

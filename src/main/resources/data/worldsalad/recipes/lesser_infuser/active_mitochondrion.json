@@ -1,0 +1,10 @@
+{
+	"type": "worldsalad:lesserinfuser",
+	"output": {
+		"item": "worldsalad:mitochondrion"
+	},
+	
+	"input": {
+		"item": "worldsalad:dormant_mitochondrion"
+	}
+}

@@ -1,5 +1,7 @@
 package com.radioctivetacoo.worldsalad.entities;
 
+import com.radioctivetacoo.worldsalad.init.EffectInit;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -14,7 +16,6 @@ import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
@@ -143,16 +144,15 @@ public class CordycepsAnt extends MonsterEntity implements IAnimatedEntity {
 	public boolean attackEntityAsMob(Entity entityIn) {
 		if (super.attackEntityAsMob(entityIn)) {
 			if (entityIn instanceof LivingEntity) {
-				int i = 15;
+				int j = 0;
 				if (this.world.getDifficulty() == Difficulty.NORMAL) {
-					i = 20;
+					j = 0;
 				} else if (this.world.getDifficulty() == Difficulty.HARD) {
-					i = 30;
+					j = 1;
 				}
 
-				if (i > 0) {
-					((LivingEntity) entityIn).addPotionEffect(new EffectInstance(Effects.POISON, 50 + i, 8));
-					((LivingEntity) entityIn).addPotionEffect(new EffectInstance(Effects.WITHER, 50 + i, 8));
+				if (j >= 0) {
+					((LivingEntity) entityIn).addPotionEffect(new EffectInstance(EffectInit.BLIGHT.get(), 1200, 0 + j));
 				}
 			}
 

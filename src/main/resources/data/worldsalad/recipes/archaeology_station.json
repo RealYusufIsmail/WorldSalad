@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "ASA",
+    "FSF",
     "FCF",
     "FBF"
   ],
@@ -9,17 +9,14 @@
     "F": {
       "item": "worldsalad:iron_plate"
     },
-    "A": {
-      "item": "worldsalad:aluminum_ingot"
-    },
     "C": {
       "item": "worldsalad:simple_machine_casing"
     },
     "B": {
-      "item": "worldsalad:medium_battery"
+      "item": "worldsalad:intermediate_circuitboard"
     },
     "S": {
-      "item": "worldsalad:silicon_wafer"
+      "item": "minecraft:glass_pane"
     }
   },
   "result": {

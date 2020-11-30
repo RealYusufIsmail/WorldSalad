@@ -6,6 +6,7 @@ import com.radioctivetacoo.worldsalad.client.entity.render.BrowncapRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.CordycepsAntRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.ExoskeletonRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.FungalZombieRender;
+import com.radioctivetacoo.worldsalad.client.entity.render.GiantToadRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.MacrobeRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.MothRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.RedcapRender;
@@ -27,6 +28,7 @@ import com.radioctivetacoo.worldsalad.client.gui.HydraulicPressScreen;
 import com.radioctivetacoo.worldsalad.client.gui.IndustrialGrinderScreen;
 import com.radioctivetacoo.worldsalad.client.gui.KilnScreen;
 import com.radioctivetacoo.worldsalad.client.gui.LesserInfuserScreen;
+import com.radioctivetacoo.worldsalad.client.gui.PolymerizationReactorScreen;
 import com.radioctivetacoo.worldsalad.client.gui.SeedPressScreen;
 import com.radioctivetacoo.worldsalad.client.gui.SpinningWheelScreen;
 import com.radioctivetacoo.worldsalad.client.tileentity.renderer.DisplayStandRenderer;
@@ -65,6 +67,7 @@ public class ClientEventBusSubscriber {
 		ScreenManager.registerFactory(ContainerInit.DISTILLING_BARREL.get(), DistillingBarrelScreen::new);
 		ScreenManager.registerFactory(ContainerInit.BOILER.get(), BoilerScreen::new);
 		ScreenManager.registerFactory(ContainerInit.DISTILLER.get(), DistillerScreen::new);
+		ScreenManager.registerFactory(ContainerInit.POLYMERIZATION_REACTOR.get(), PolymerizationReactorScreen::new);
 
 		RenderTypeLookup.setRenderLayer(FluidInit.VEGETABLE_OIL_FLOWING.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(FluidInit.VEGETABLE_OIL_FLUID.get(), RenderType.getTranslucent());
@@ -117,6 +120,7 @@ public class ClientEventBusSubscriber {
 		RenderTypeLookup.setRenderLayer(BlockInit.JUNGLE_LEAF_PILE.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.BROWN_LEAF_PILE.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.FLOATATION_BIN.get(), RenderType.getTranslucent());
+		RenderTypeLookup.setRenderLayer(BlockInit.POLYMERIZATION_REACTOR.get(), RenderType.getCutout());
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.ROCK_MONSTER.get(), RockMonsterRender::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.MOTH.get(), MothRender::new);
@@ -132,6 +136,7 @@ public class ClientEventBusSubscriber {
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.REDCAP.get(), RedcapRender::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.BROWNCAP.get(), BrowncapRender::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.BLUECAP.get(), BluecapRender::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityInit.GIANT_TOAD.get(), GiantToadRender::new);
 		
 		ClientRegistry.bindTileEntityRenderer(TileEntityInit.DISPLAY_STAND.get(), DisplayStandRenderer::new);
 	}

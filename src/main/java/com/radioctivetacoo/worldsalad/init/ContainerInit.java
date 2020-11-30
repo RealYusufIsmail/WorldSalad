@@ -13,6 +13,7 @@ import com.radioctivetacoo.worldsalad.container.HydraulicPressContainer;
 import com.radioctivetacoo.worldsalad.container.IndustrialGrinderContainer;
 import com.radioctivetacoo.worldsalad.container.KilnContainer;
 import com.radioctivetacoo.worldsalad.container.LesserInfuserContainer;
+import com.radioctivetacoo.worldsalad.container.PolymerizationReactorContainer;
 import com.radioctivetacoo.worldsalad.container.SeedPressContainer;
 import com.radioctivetacoo.worldsalad.container.SpinningWheelContainer;
 
@@ -68,4 +69,7 @@ public class ContainerInit {
 	
 	public static final RegistryObject<ContainerType<DistillerContainer>> DISTILLER = CONTAINER_TYPES
 			.register("distiller", () -> IForgeContainerType.create(DistillerContainer::new));
+	
+	public static final RegistryObject<ContainerType<PolymerizationReactorContainer>> POLYMERIZATION_REACTOR = CONTAINER_TYPES
+			.register("polymerization_reactor", () -> IForgeContainerType.create(PolymerizationReactorContainer::new));
 }

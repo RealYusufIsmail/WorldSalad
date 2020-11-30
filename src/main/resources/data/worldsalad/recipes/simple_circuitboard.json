@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PBR",
+    "SSC",
+    "   "
+  ],
+  "key": {
+    "S": {
+      "item": "worldsalad:silicon_ingot"
+    },
+    "P": {
+      "item": "worldsalad:redstone_processing_matrix"
+    },
+    "R": {
+      "item": "worldsalad:resin"
+    },
+    "B": {
+      "item": "worldsalad:small_battery"
+    },
+    "C": {
+      "item": "worldsalad:copper_wire"
+    }
+  },
+  "result": {
+    "item": "worldsalad:simple_circuitboard",
+    "count": 1
+  }
+}
