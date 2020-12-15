@@ -21,21 +21,19 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
-import software.bernie.geckolib.animation.builder.AnimationBuilder;
-import software.bernie.geckolib.animation.controller.AnimationController;
-import software.bernie.geckolib.animation.controller.EntityAnimationController;
-import software.bernie.geckolib.entity.IAnimatedEntity;
-import software.bernie.geckolib.event.AnimationTestEvent;
-import software.bernie.geckolib.manager.EntityAnimationManager;
+import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.PlayState;
+import software.bernie.geckolib3.core.builder.AnimationBuilder;
+import software.bernie.geckolib3.core.controller.AnimationController;
+import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class CordycepsAnt extends MonsterEntity implements IAnimatedEntity {
-	private EntityAnimationManager manager = new EntityAnimationManager();
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	private AnimationController controller = new EntityAnimationController(this, "moveController", 20, this::animationPredicate);
+public class CordycepsAnt extends MonsterEntity implements IAnimatable {
+	private AnimationFactory manager = new AnimationFactory(this);
 	
 	public CordycepsAnt(EntityType<? extends MonsterEntity> type, World worldIn) {
 		super(type, worldIn);
-		registerAnimationControllers();
 		this.experienceValue = 8;
 	}
 
@@ -121,22 +119,28 @@ public class CordycepsAnt extends MonsterEntity implements IAnimatedEntity {
 	}
 
 	@Override
-	public EntityAnimationManager getAnimationManager() {
+	public AnimationFactory getFactory() {
 		return manager;
 	}
 	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public void registerControllers(AnimationData data) {
+		data.addAnimationController(new AnimationController(this, "controller", 0, this::predicate));
+	}
+	
 	@SuppressWarnings("unchecked")
-	private <E extends CordycepsAnt> boolean animationPredicate(AnimationTestEvent<E> event)
+	private <E extends Exoskeleton> PlayState predicate(AnimationEvent<E> event)
 	{
-		if(event.isWalking())
+		if(event.isMoving())
 		{
-			controller.setAnimation(new AnimationBuilder().addAnimation("animation.exoskeleton.walking", true));
-			controller.transitionLengthTicks = 0; 
-			return true;
+			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.exoskeleton.walking", true));
+			event.getController().transitionLengthTicks = 0; 
+			return PlayState.CONTINUE;
 		} else {
-			controller.setAnimation(new AnimationBuilder().addAnimation("animation.exoskeleton.idle", true));
-			controller.transitionLengthTicks = 0;
-			return true;
+			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.exoskeleton.idle", true));
+			event.getController().transitionLengthTicks = 0;
+			return PlayState.CONTINUE;
 		}
 	}
 	
@@ -160,10 +164,5 @@ public class CordycepsAnt extends MonsterEntity implements IAnimatedEntity {
 		} else {
 			return false;
 		}
-	}
-	
-	private void registerAnimationControllers()
-	{
-		manager.addAnimationController(controller);
 	}
 }

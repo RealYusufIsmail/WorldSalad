@@ -55,6 +55,7 @@ public class RecipeSerializerInit {
 	public static final IRecipeSerializer<FloatationBinRecipe> FLOATATION_BIN_RECIPE_SERIALIZER = new FloatationBinRecipeSerializer();
 	public static final IRecipeType<FloatationBinRecipe> FLOATATION_BIN_TYPE = registerType(IFloatationBinRecipe.RECIPE_TYPE_ID);
 
+	@SuppressWarnings("deprecation")
 	public static final DeferredRegister<IRecipeSerializer<?>> RECIPE_SERIALIZERS = new DeferredRegister<>(
 			ForgeRegistries.RECIPE_SERIALIZERS, WorldSalad.MOD_ID);
 

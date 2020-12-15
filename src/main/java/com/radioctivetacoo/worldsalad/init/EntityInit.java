@@ -1,9 +1,11 @@
 package com.radioctivetacoo.worldsalad.init;
 
 import com.radioctivetacoo.worldsalad.WorldSalad;
+import com.radioctivetacoo.worldsalad.entities.Bioluminary;
 import com.radioctivetacoo.worldsalad.entities.Bluecap;
 import com.radioctivetacoo.worldsalad.entities.Browncap;
 import com.radioctivetacoo.worldsalad.entities.CordycepsAnt;
+import com.radioctivetacoo.worldsalad.entities.Dragonfly;
 import com.radioctivetacoo.worldsalad.entities.Exoskeleton;
 import com.radioctivetacoo.worldsalad.entities.FungalZombie;
 import com.radioctivetacoo.worldsalad.entities.GiantToad;
@@ -34,6 +36,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class EntityInit {
+	@SuppressWarnings("deprecation")
 	public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = new DeferredRegister<>(ForgeRegistries.ENTITIES,
 			WorldSalad.MOD_ID);
 
@@ -54,6 +57,9 @@ public class EntityInit {
 				BiomeInit.CRAG_BIOME.get(), Biomes.MOUNTAINS, Biomes.GRAVELLY_MOUNTAINS, Biomes.MOUNTAIN_EDGE, Biomes.MODIFIED_GRAVELLY_MOUNTAINS, Biomes.SNOWY_MOUNTAINS);
 		
 		registerEntityWorldSpawns(MOTH.get(), 250, 3, 4, EntityClassification.MONSTER,
+				BiomeInit.GLOWING_MUSHROOM_BIOME.get());
+		
+		registerEntityWorldSpawns(BIOLUMINARY.get(), 110, 1, 3, EntityClassification.MONSTER,
 				BiomeInit.GLOWING_MUSHROOM_BIOME.get());
 		
 		registerEntityWorldSpawns(BLUECAP.get(), 50, 1, 3, EntityClassification.MONSTER,
@@ -110,6 +116,7 @@ public class EntityInit {
 		//hostile mobs
 		registerPlacementTypes(ROCK_MONSTER.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawnInLight);
 		registerPlacementTypes(WRAITH.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawnInLight);
+		registerPlacementTypes(BIOLUMINARY.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawn);
 		registerPlacementTypes(MOTH.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawn);
 		registerPlacementTypes(EXOSKELETON.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawnInLight);
 		registerPlacementTypes(CORDYCEPS_ANT.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawn);
@@ -157,6 +164,10 @@ public class EntityInit {
 	public static final RegistryObject<EntityType<GiantToad>> GIANT_TOAD = ENTITY_TYPES.register("giant_toad",
 			() -> EntityType.Builder.<GiantToad>create(GiantToad::new, EntityClassification.MONSTER)
 					.size(1.1f, 0.9f).build(new ResourceLocation(WorldSalad.MOD_ID, "giant_toad").toString()));
+	
+	public static final RegistryObject<EntityType<Bioluminary>> BIOLUMINARY = ENTITY_TYPES.register("bioluminary",
+			() -> EntityType.Builder.<Bioluminary>create(Bioluminary::new, EntityClassification.MONSTER)
+					.size(0.4f, 2.7f).build(new ResourceLocation(WorldSalad.MOD_ID, "bioluminary").toString()));
 
 	// neutral mobs
 	public static final RegistryObject<EntityType<Urchin>> URCHIN = ENTITY_TYPES.register("urchin",
@@ -187,4 +198,8 @@ public class EntityInit {
 	public static final RegistryObject<EntityType<TraderAnt>> TRADER_ANT = ENTITY_TYPES.register("trader_ant",
 			() -> EntityType.Builder.<TraderAnt>create(TraderAnt::new, EntityClassification.MONSTER)
 					.size(0.7f, 0.5f).build(new ResourceLocation(WorldSalad.MOD_ID, "trader_ant").toString()));
+	
+	public static final RegistryObject<EntityType<Dragonfly>> DRAGONFLY = ENTITY_TYPES.register("dragonfly",
+			() -> EntityType.Builder.<Dragonfly>create(Dragonfly::new, EntityClassification.MONSTER)
+					.size(1.4f, 0.7f).build(new ResourceLocation(WorldSalad.MOD_ID, "dragonfly").toString()));
 }

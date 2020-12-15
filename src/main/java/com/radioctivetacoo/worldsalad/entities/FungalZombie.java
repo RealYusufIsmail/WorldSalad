@@ -18,23 +18,22 @@ import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.world.World;
-import software.bernie.geckolib.animation.builder.AnimationBuilder;
-import software.bernie.geckolib.animation.controller.AnimationController;
-import software.bernie.geckolib.animation.controller.EntityAnimationController;
-import software.bernie.geckolib.entity.IAnimatedEntity;
-import software.bernie.geckolib.event.AnimationTestEvent;
-import software.bernie.geckolib.manager.EntityAnimationManager;
+import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.PlayState;
+import software.bernie.geckolib3.core.builder.AnimationBuilder;
+import software.bernie.geckolib3.core.controller.AnimationController;
+import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class FungalZombie extends ZombieEntity implements IAnimatedEntity {
+public class FungalZombie extends ZombieEntity implements IAnimatable {
 
 	private static final DataParameter<Boolean> IS_CHILD = EntityDataManager.createKey(ZombieEntity.class, DataSerializers.BOOLEAN);
-	private EntityAnimationManager manager = new EntityAnimationManager();
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	private AnimationController controller = new EntityAnimationController(this, "moveController", 20, this::animationPredicate);
+	private AnimationFactory manager = new AnimationFactory(this);
+
 	
 	public FungalZombie(EntityType<? extends ZombieEntity> type, World worldIn) {
 		super(type, worldIn);
-		registerAnimationControllers();
 		this.experienceValue = 6;
 	}
 	
@@ -80,27 +79,28 @@ public class FungalZombie extends ZombieEntity implements IAnimatedEntity {
 	}
 	
 	@Override
-	public EntityAnimationManager getAnimationManager() {
+	public AnimationFactory getFactory() {
 		return manager;
 	}
 	
-	@SuppressWarnings("unchecked")
-	private <E extends Exoskeleton> boolean animationPredicate(AnimationTestEvent<E> event)
-	{
-		if(event.isWalking())
-		{
-			controller.setAnimation(new AnimationBuilder().addAnimation("animation.fungal_zombie.walking", true));
-			controller.transitionLengthTicks = 0; 
-			return true;
-		} else {
-			controller.setAnimation(new AnimationBuilder().addAnimation("animation.fungal_zombie.idle", true));
-			controller.transitionLengthTicks = 0;
-			return true;
-		}
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public void registerControllers(AnimationData data) {
+		data.addAnimationController(new AnimationController(this, "controller", 0, this::predicate));
 	}
 	
-	private void registerAnimationControllers()
+	@SuppressWarnings("unchecked")
+	private <E extends Exoskeleton> PlayState predicate(AnimationEvent<E> event)
 	{
-		manager.addAnimationController(controller);
+		if(event.isMoving())
+		{
+			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.fungal_zombie.walking", true));
+			event.getController().transitionLengthTicks = 0; 
+			return PlayState.CONTINUE;
+		} else {
+			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.fungal_zombie.idle", true));
+			event.getController().transitionLengthTicks = 0;
+			return PlayState.CONTINUE;
+		}
 	}
 }

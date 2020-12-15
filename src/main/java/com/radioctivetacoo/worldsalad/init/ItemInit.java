@@ -8,6 +8,7 @@ import com.radioctivetacoo.worldsalad.WorldSalad.WorldSaladSpawnEggsItemGroup;
 import com.radioctivetacoo.worldsalad.WorldSalad.WorldSaladToolsItemGroup;
 import com.radioctivetacoo.worldsalad.objects.items.BreathingReedItem;
 import com.radioctivetacoo.worldsalad.objects.items.DartItem;
+import com.radioctivetacoo.worldsalad.objects.items.DragonflySaddleItem;
 import com.radioctivetacoo.worldsalad.objects.items.EssenceCrystalItem;
 import com.radioctivetacoo.worldsalad.objects.items.EssenceCrystalizerItem;
 import com.radioctivetacoo.worldsalad.objects.items.FieryCoalItem;
@@ -47,6 +48,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ItemInit {
 	
+	@SuppressWarnings("deprecation")
 	public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, WorldSalad.MOD_ID);
 	// armor
 	public static final RegistryObject<Item> STEEL_HELMET = ITEMS.register("steel_helmet",
@@ -142,6 +144,9 @@ public class ItemInit {
 	
 	public static final RegistryObject<Item> GRAND_SLAMYON = ITEMS.register("grand_slamyon",
 			() -> new GrandSlamyonItem(new Item.Properties().group(WorldSaladToolsItemGroup.instance).maxStackSize(1).maxDamage(748)));
+	
+	public static final RegistryObject<Item> DRAGONFLY_SADDLE = ITEMS.register("dragonfly_saddle",
+			() -> new DragonflySaddleItem(new Item.Properties().group(WorldSaladToolsItemGroup.instance).maxStackSize(1)));
 	
 	// items
 	public static final RegistryObject<Item> PLACEHOLDER = ITEMS.register("placeholder",
@@ -588,26 +593,26 @@ public class ItemInit {
 			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	// food
+	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> FRIED_CHICKEN = ITEMS.register("fried_chicken",
 			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(7).saturation(0.8f)
 							.effect(new EffectInstance(Effects.REGENERATION, 100, 1), 1f).build())));
-	
+	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> BACON = ITEMS.register("bacon",
 			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(7).saturation(0.8f).setAlwaysEdible()
 							.effect(new EffectInstance(Effects.STRENGTH, 200, 0), 1f).build())));
-
 	public static final RegistryObject<Item> GREEN_APPLE = ITEMS.register("green_apple",
 			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(4).saturation(0.3f).build())));
-
+	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> GHOST_GRAPES = ITEMS.register("ghost_grapes",
 			() -> new BlockItem(BlockInit.GHOST_GRAPE_BUSH.get(),
 					new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 							.food(new Food.Builder().hunger(1).saturation(0f).setAlwaysEdible().fastToEat()
 									.effect(new EffectInstance(Effects.SLOW_FALLING, 20, 1), 1f).build())));
-
+	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> LUMBERRY = ITEMS.register("lumberry",
 			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(1).saturation(0f).setAlwaysEdible().fastToEat()
@@ -616,7 +621,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> FUNGBERRY = ITEMS.register("fungberry",
 			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(1).saturation(0f).fastToEat().build())));
-
+	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> MOLDBERRY = ITEMS.register("moldberry",
 			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(1).saturation(0f).setAlwaysEdible().fastToEat()
@@ -629,19 +634,19 @@ public class ItemInit {
 	public static final RegistryObject<Item> COOKED_SQUID = ITEMS.register("cooked_squid",
 			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(6).saturation(0.2f).build())));
-	
+	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> FRIED_CALAMARI = ITEMS.register("fried_calamari",
 			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(6).saturation(0.5f).effect(new EffectInstance(Effects.WATER_BREATHING, 400, 0), 1f).build())));
-	
+	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> FRENCH_FRIES = ITEMS.register("french_fries",
 			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(4).saturation(0.5f).effect(new EffectInstance(Effects.HASTE, 600, 1), 1f).build())));
-	
+	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> FRIED_MOREL = ITEMS.register("fried_morel",
 			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(6).saturation(0.5f).effect(new EffectInstance(Effects.RESISTANCE, 1800, 0), 1f).build())));
-	
+	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> HOTCOFFEE_BEANS = ITEMS.register("hotcoffee_beans",
 			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(0).saturation(0f).fastToEat()
@@ -651,12 +656,12 @@ public class ItemInit {
 			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(4).saturation(0f).setAlwaysEdible().fastToEat()
 							.build())));
-	
+	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> EARTHWORMS = ITEMS.register("earthworms",
 			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(1).saturation(0f).setAlwaysEdible().fastToEat()
 							.effect(new EffectInstance(Effects.HASTE, 200, 0), 1f).build())));
-	
+	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> GUMMY_WORMS = ITEMS.register("gummy_worms",
 			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(4).saturation(0f).setAlwaysEdible().fastToEat()
@@ -669,7 +674,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> SMOKED_ENOKI_BULB = ITEMS.register("smoked_enoki_bulb",
 			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
 					.food(new Food.Builder().hunger(5).saturation(0.2f).build())));
-	
+	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> RAW_TOAD = ITEMS.register("raw_toad",
 			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(2).saturation(0f).effect(new EffectInstance(Effects.POISON, 500, 0), 0.2f).build())));
@@ -693,15 +698,15 @@ public class ItemInit {
 	public static final RegistryObject<Item> URCHIN_ROE = ITEMS.register("urchin_roe",
 			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(4).saturation(0.45f).build())));
-	
+	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> GLOWSHROOM_STEW = ITEMS.register("glowshroom_stew",
 			() -> new ModStewItem(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(5).saturation(0.2f).effect(new EffectInstance(Effects.GLOWING, 2400, 0), 1f).build()).maxStackSize(1)));
-	
+	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> GREATER_MUSHROOM_STEW = ITEMS.register("greater_mushroom_stew",
 			() -> new ModStewItem(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(9).saturation(0.5f).effect(new EffectInstance(Effects.ABSORPTION, 2400, 2), 1f).build()).maxStackSize(1)));
-	
+	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> MEGA_STUFFED_MUSHROOM = ITEMS.register("mega_stuffed_mushroom",
 			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(10).saturation(1.0F).setAlwaysEdible().fastToEat()
@@ -766,5 +771,9 @@ public class ItemInit {
 	
 	public static final RegistryObject<ModSpawnEggItem> GIANT_TOAD_SPAWN_EGG = ITEMS
 			.register("giant_toad_spawn_egg", () -> new ModSpawnEggItem(EntityInit.GIANT_TOAD, 0x6c8548, 0x69582f,
+					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
+	
+	public static final RegistryObject<ModSpawnEggItem> BIOLUMINARY_SPAWN_EGG = ITEMS
+			.register("bioluminary_spawn_egg", () -> new ModSpawnEggItem(EntityInit.BIOLUMINARY, 0x82d1d0, 0xc99a49,
 					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
 }

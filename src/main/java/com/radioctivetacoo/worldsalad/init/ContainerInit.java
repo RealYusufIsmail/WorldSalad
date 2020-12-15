@@ -25,6 +25,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ContainerInit {
 
+	@SuppressWarnings("deprecation")
 	public static final DeferredRegister<ContainerType<?>> CONTAINER_TYPES = new DeferredRegister<>(
 			ForgeRegistries.CONTAINERS, WorldSalad.MOD_ID);
 

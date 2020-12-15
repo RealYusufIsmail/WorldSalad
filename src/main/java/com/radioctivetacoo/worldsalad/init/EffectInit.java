@@ -13,6 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class EffectInit {
+	@SuppressWarnings("deprecation")
 	public static final DeferredRegister<Effect> EFFECTS = new DeferredRegister<>(ForgeRegistries.POTIONS, WorldSalad.MOD_ID);
 	
 	public static final RegistryObject<Effect> ACID = EFFECTS.register("acid", 

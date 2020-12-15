@@ -11,7 +11,7 @@ import net.minecraft.util.ResourceLocation;
 public class UrchinRender extends MobRenderer<Urchin, UrchinModel<Urchin>> {
 
 	protected static final ResourceLocation TEXTURE = new ResourceLocation(WorldSalad.MOD_ID,
-			"textures/entity/urchin.png");
+			"textures/models/entity/urchin.png");
 
 	public UrchinRender(EntityRendererManager renderManagerIn) {
 		super(renderManagerIn, new UrchinModel<Urchin>(), 0.5f);

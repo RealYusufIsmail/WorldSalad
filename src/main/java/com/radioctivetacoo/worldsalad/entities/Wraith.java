@@ -30,21 +30,19 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
-import software.bernie.geckolib.animation.builder.AnimationBuilder;
-import software.bernie.geckolib.animation.controller.AnimationController;
-import software.bernie.geckolib.animation.controller.EntityAnimationController;
-import software.bernie.geckolib.entity.IAnimatedEntity;
-import software.bernie.geckolib.event.AnimationTestEvent;
-import software.bernie.geckolib.manager.EntityAnimationManager;
+import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.PlayState;
+import software.bernie.geckolib3.core.builder.AnimationBuilder;
+import software.bernie.geckolib3.core.controller.AnimationController;
+import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class Wraith extends MonsterEntity implements IFlyingAnimal, IAnimatedEntity {
-	private EntityAnimationManager manager = new EntityAnimationManager();
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	private AnimationController controller = new EntityAnimationController(this, "moveController", 20, this::animationPredicate);
+public class Wraith extends MonsterEntity implements IFlyingAnimal, IAnimatable {
+	private AnimationFactory manager = new AnimationFactory(this);
 
 	public Wraith(EntityType<? extends MonsterEntity> type, World worldIn) {
 		super(type, worldIn);
-		registerAnimationControllers();
 		this.moveController = new FlyingMovementController(this, 20, true);
 		this.experienceValue = 7;
 	}
@@ -200,19 +198,19 @@ public class Wraith extends MonsterEntity implements IFlyingAnimal, IAnimatedEnt
 	}
 	
 	@Override
-	public EntityAnimationManager getAnimationManager() {
+	public AnimationFactory getFactory() {
 		return manager;
 	}
 	
-	private <E extends Exoskeleton> boolean animationPredicate(AnimationTestEvent<E> event)
-	{
-			controller.setAnimation(new AnimationBuilder().addAnimation("animation.wraith.idle", true));
-			return true;
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public void registerControllers(AnimationData data) {
+		data.addAnimationController(new AnimationController(this, "controller", 0, this::predicate));
 	}
 	
-	private void registerAnimationControllers()
+	private <E extends Exoskeleton> PlayState predicate(AnimationEvent<E> event)
 	{
-		manager.addAnimationController(controller);
+		event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.wraith.idle", true));
+			return PlayState.CONTINUE;
 	}
-
 }

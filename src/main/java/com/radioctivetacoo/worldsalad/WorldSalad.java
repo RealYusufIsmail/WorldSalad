@@ -23,6 +23,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.IForgeRegistry;
+import software.bernie.geckolib3.GeckoLib;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -76,6 +77,7 @@ public class WorldSalad {
 		BiomeInit.BIOMES.register(modEventBus);
 		DimensionInit.MOD_DIMENSIONS.register(modEventBus);
 		FeatureInit.FEATURES.register(modEventBus);
+		GeckoLib.initialize();
 
 		instance = this;
 		MinecraftForge.EVENT_BUS.register(this);

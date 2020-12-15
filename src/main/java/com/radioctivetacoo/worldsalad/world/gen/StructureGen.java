@@ -4,10 +4,13 @@ import com.radioctivetacoo.worldsalad.init.BiomeInit;
 import com.radioctivetacoo.worldsalad.init.FeatureInit;
 
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.gen.GenerationStage.Decoration;
 import net.minecraft.world.gen.feature.IFeatureConfig;
+import net.minecraft.world.gen.feature.ProbabilityConfig;
 import net.minecraft.world.gen.placement.IPlacementConfig;
 import net.minecraft.world.gen.placement.Placement;
+import net.minecraft.world.gen.placement.TopSolidWithNoiseConfig;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class StructureGen {
@@ -31,28 +34,19 @@ public class StructureGen {
 				biome.addStructure(FeatureInit.EMPTY_SHROOMHOUSE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));	
 			}
 			if (biome == BiomeInit.MUSHROOM_CANYON_FLATS_BIOME.get()) {
-				biome.addStructure(FeatureInit.MUSHROCK1.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));	
-				biome.addStructure(FeatureInit.MUSHROCK2.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
-				biome.addStructure(FeatureInit.MUSHROCK3.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
-				biome.addStructure(FeatureInit.MUSHROCK4.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
-				biome.addStructure(FeatureInit.MUSHROCK5.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
-				biome.addStructure(FeatureInit.MUSHROCK6.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
-				biome.addStructure(FeatureInit.MUSHROCK7.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+				biome.addStructure(FeatureInit.MUSHROCK.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));	
 			}
 			if (biome == BiomeInit.MILDEW_FOREST_BIOME.get()) {
 				biome.addStructure(FeatureInit.GIANT_MILDEW.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
 			}
+			if (biome == BiomeInit.GLOWING_MUSHROOM_BIOME.get())
+			{
+				biome.addFeature(Decoration.VEGETAL_DECORATION, FeatureInit.LUMBOO.get().withConfiguration(new ProbabilityConfig(0.02F)).withPlacement(Placement.TOP_SOLID_HEIGHTMAP_NOISE_BIASED.configure(new TopSolidWithNoiseConfig(40, 80.0D, 0.3D, Heightmap.Type.WORLD_SURFACE_WG))));
+			}
 			
 		// allow generation between biomes
 			
-			biome.addFeature(Decoration.SURFACE_STRUCTURES, FeatureInit.MUSHROCK1.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
-			biome.addFeature(Decoration.SURFACE_STRUCTURES, FeatureInit.MUSHROCK2.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
-			biome.addFeature(Decoration.SURFACE_STRUCTURES, FeatureInit.MUSHROCK3.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
-			biome.addFeature(Decoration.SURFACE_STRUCTURES, FeatureInit.MUSHROCK4.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
-			biome.addFeature(Decoration.SURFACE_STRUCTURES, FeatureInit.MUSHROCK5.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
-			biome.addFeature(Decoration.SURFACE_STRUCTURES, FeatureInit.MUSHROCK6.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
-			biome.addFeature(Decoration.SURFACE_STRUCTURES, FeatureInit.MUSHROCK7.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
-				
+			biome.addFeature(Decoration.SURFACE_STRUCTURES, FeatureInit.MUSHROCK.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
 			biome.addFeature(Decoration.SURFACE_STRUCTURES, FeatureInit.GIANT_MILDEW.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
 			biome.addFeature(Decoration.SURFACE_STRUCTURES, FeatureInit.EXOSKELETON_MUSH_ROOM.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));	
 			biome.addFeature(Decoration.SURFACE_STRUCTURES, FeatureInit.WRAITH_MUSH_ROOM.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));

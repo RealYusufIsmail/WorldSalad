@@ -15,7 +15,6 @@ import net.minecraft.util.NonNullList;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-@SuppressWarnings("deprecation")
 @OnlyIn(Dist.CLIENT)
 public class DisplayStandRenderer extends TileEntityRenderer<DisplayStandTileEntity> {
 

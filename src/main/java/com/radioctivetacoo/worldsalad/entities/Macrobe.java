@@ -19,21 +19,19 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
-import software.bernie.geckolib.animation.builder.AnimationBuilder;
-import software.bernie.geckolib.animation.controller.AnimationController;
-import software.bernie.geckolib.animation.controller.EntityAnimationController;
-import software.bernie.geckolib.entity.IAnimatedEntity;
-import software.bernie.geckolib.event.AnimationTestEvent;
-import software.bernie.geckolib.manager.EntityAnimationManager;
+import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.PlayState;
+import software.bernie.geckolib3.core.builder.AnimationBuilder;
+import software.bernie.geckolib3.core.controller.AnimationController;
+import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class Macrobe extends MonsterEntity implements IAnimatedEntity, IRangedAttackMob {
-	private EntityAnimationManager manager = new EntityAnimationManager();
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	private AnimationController controller = new EntityAnimationController(this, "moveController", 20, this::animationPredicate);
+public class Macrobe extends MonsterEntity implements IAnimatable, IRangedAttackMob {
+	private AnimationFactory manager = new AnimationFactory(this);
 	
 	public Macrobe(EntityType<? extends MonsterEntity> type, World worldIn) {
 		super(type, worldIn);
-		registerAnimationControllers();
 		this.experienceValue = 30;
 	}
 
@@ -118,21 +116,22 @@ public class Macrobe extends MonsterEntity implements IAnimatedEntity, IRangedAt
 	public boolean canDespawn(double distanceToClosestPlayer) {
 		return super.canDespawn(distanceToClosestPlayer = 100);
 	}
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public void registerControllers(AnimationData data) {
+		data.addAnimationController(new AnimationController(this, "controller", 0, this::predicate));
+	}
 
 	@Override
-	public EntityAnimationManager getAnimationManager() {
+	public AnimationFactory getFactory() {
 		return manager;
 	}
 	
-	private <E extends Macrobe> boolean animationPredicate(AnimationTestEvent<E> event)
+	private <E extends Macrobe> PlayState predicate(AnimationEvent<E> event)
 	{
-			controller.setAnimation(new AnimationBuilder().addAnimation("animation.macrobe.idle", true));
-			return true;
-	}
-	
-	private void registerAnimationControllers()
-	{
-		manager.addAnimationController(controller);
+		event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.macrobe.idle", true));
+			return PlayState.CONTINUE;
 	}
 
 	public void attackEntityWithRangedAttack(LivingEntity target, float distanceFactor) {

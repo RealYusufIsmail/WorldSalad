@@ -19,23 +19,21 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
-import software.bernie.geckolib.animation.builder.AnimationBuilder;
-import software.bernie.geckolib.animation.controller.AnimationController;
-import software.bernie.geckolib.animation.controller.EntityAnimationController;
-import software.bernie.geckolib.entity.IAnimatedEntity;
-import software.bernie.geckolib.event.AnimationTestEvent;
-import software.bernie.geckolib.manager.EntityAnimationManager;
+import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.PlayState;
+import software.bernie.geckolib3.core.builder.AnimationBuilder;
+import software.bernie.geckolib3.core.controller.AnimationController;
+import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class WorkerAnt extends CreatureEntity implements IAnimatedEntity {
+public class WorkerAnt extends CreatureEntity implements IAnimatable {
 	@SuppressWarnings("unused")
 	private UUID angerTargetUUID;
-	private EntityAnimationManager manager = new EntityAnimationManager();
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	private AnimationController controller = new EntityAnimationController(this, "moveController", 20, this::animationPredicate);
+	private AnimationFactory manager = new AnimationFactory(this);
 	
 	public WorkerAnt(EntityType<? extends CreatureEntity> type, World worldIn) {
 		super(type, worldIn);
-		registerAnimationControllers();
 		this.experienceValue = 6;
 	}
 
@@ -127,27 +125,28 @@ public class WorkerAnt extends CreatureEntity implements IAnimatedEntity {
 	}
 
 	@Override
-	public EntityAnimationManager getAnimationManager() {
+	public AnimationFactory getFactory() {
 		return manager;
 	}
 	
-	@SuppressWarnings("unchecked")
-	private <E extends WorkerAnt> boolean animationPredicate(AnimationTestEvent<E> event)
-	{
-		if(event.isWalking())
-		{
-			controller.setAnimation(new AnimationBuilder().addAnimation("animation.exoskeleton.walking", true));
-			controller.transitionLengthTicks = 0; 
-			return true;
-		} else {
-			controller.setAnimation(new AnimationBuilder().addAnimation("animation.exoskeleton.idle", true));
-			controller.transitionLengthTicks = 0;
-			return true;
-		}
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public void registerControllers(AnimationData data) {
+		data.addAnimationController(new AnimationController(this, "controller", 0, this::predicate));
 	}
 	
-	private void registerAnimationControllers()
+	@SuppressWarnings("unchecked")
+	private <E extends Exoskeleton> PlayState predicate(AnimationEvent<E> event)
 	{
-		manager.addAnimationController(controller);
+		if(event.isMoving())
+		{
+			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.exoskeleton.walking", true));
+			event.getController().transitionLengthTicks = 0; 
+			return PlayState.CONTINUE;
+		} else {
+			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.exoskeleton.idle", true));
+			event.getController().transitionLengthTicks = 0;
+			return PlayState.CONTINUE;
+		}
 	}
 }

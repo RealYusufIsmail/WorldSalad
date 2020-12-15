@@ -11,7 +11,7 @@ import net.minecraft.util.ResourceLocation;
 public class MothRender extends MobRenderer<Moth, MothModel<Moth>> {
 
 	protected static final ResourceLocation TEXTURE = new ResourceLocation(WorldSalad.MOD_ID,
-			"textures/entity/moth.png");
+			"textures/models/entity/moth.png");
 
 	public MothRender(EntityRendererManager renderManagerIn) {
 		super(renderManagerIn, new MothModel<Moth>(), 0.5f);

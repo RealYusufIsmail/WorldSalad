@@ -1,0 +1,70 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.bioluminary.constant": {
+			"loop": true,
+			"animation_length": 5.2,
+			"bones": {
+				"Head": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"5.2": {
+							"vector": [0, -360, 0],
+							"easing": "linear"
+						}
+					}
+				},
+				"Body": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"5.2": {
+							"vector": [0, 360, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.bioluminary.walk": {
+			"loop": true,
+			"animation_length": 2.08,
+			"bones": {
+				"LeftLeg": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.52": {
+							"vector": [25, 0, 0]
+						},
+						"1.56": {
+							"vector": [-25, 0, 0]
+						},
+						"2.08": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"RightLeg": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.52": {
+							"vector": [-25, 0, 0]
+						},
+						"1.56": {
+							"vector": [25, 0, 0]
+						},
+						"2.08": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		}
+	}
+}

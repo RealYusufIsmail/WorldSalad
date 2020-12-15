@@ -18,6 +18,6 @@ public class ArchaeologyStationInputSlot extends SlotItemHandler {
 	}
 
 	public static boolean isValidBlock(ItemStack itemStackIn) {
-		return itemStackIn.getItem() == BlockInit.SHALE.get().asItem() || itemStackIn.getItem() == BlockInit.BLACK_SHALE.get().asItem() || itemStackIn.getItem() == BlockInit.SILT.get().asItem() || itemStackIn.getItem() == BlockInit.STARDUST.get().asItem() || itemStackIn.getItem() == BlockInit.BIOSEDIMENT.get().asItem() || itemStackIn.getItem() == BlockInit.VOLCANIC_GRAVEL.get().asItem();
+		return itemStackIn.getItem() == BlockInit.SHALE.get().asItem() || itemStackIn.getItem() == BlockInit.BLACK_SHALE.get().asItem() || itemStackIn.getItem() == BlockInit.SILT.get().asItem() || itemStackIn.getItem() == BlockInit.MOONDUST.get().asItem() || itemStackIn.getItem() == BlockInit.BIOSEDIMENT.get().asItem() || itemStackIn.getItem() == BlockInit.VOLCANIC_GRAVEL.get().asItem();
 	}
 }

@@ -1,0 +1,205 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 32,
+				"texture_height": 67,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "Bioluminary",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "Body",
+					"parent": "Bioluminary",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-2, 23, -2], "size": [4, 12, 4], "uv": [0, 30]},
+						{"origin": [-2, 11, -2], "size": [4, 12, 4], "uv": [0, 30]},
+						{"origin": [2, 11, 0], "size": [3, 16, 0], "uv": [16, 35]},
+						{"origin": [0, 27, -5], "size": [0, 16, 3], "uv": [16, 32], "mirror": true},
+						{"origin": [0, 27, 2], "size": [0, 16, 3], "uv": [16, 48]},
+						{"origin": [-5, 27, 0], "size": [3, 16, 0], "uv": [16, 35], "mirror": true},
+						{"origin": [2, 27, 0], "size": [3, 16, 0], "uv": [16, 35]},
+						{"origin": [-5, 11, 0], "size": [3, 16, 0], "uv": [16, 35], "mirror": true},
+						{"origin": [0, 11, 2], "size": [0, 16, 3], "uv": [16, 35], "mirror": true},
+						{"origin": [0, 11, -5], "size": [0, 16, 3], "uv": [16, 35], "mirror": true}
+					]
+				},
+				{
+					"name": "Petals2",
+					"parent": "Body",
+					"pivot": [0, 43, 0]
+				},
+				{
+					"name": "Petal5",
+					"parent": "Petals2",
+					"pivot": [0, 41, -2],
+					"rotation": [57.5, 0, 0],
+					"cubes": [
+						{"origin": [-2, 36.1643, -14.59052], "size": [4, 0, 5], "uv": [18, 19]},
+						{"origin": [-2, 34.01511, -17.96409], "size": [4, 0, 5], "uv": [18, 19]}
+					]
+				},
+				{
+					"name": "Petal6",
+					"parent": "Petals2",
+					"pivot": [0, 40, 2],
+					"rotation": [-57.5, 0, 0],
+					"cubes": [
+						{"origin": [-2, 35.7016, 8.74713], "size": [4, 0, 5], "uv": [0, 19]},
+						{"origin": [-2, 33.5524, 12.1207], "size": [4, 0, 5], "uv": [0, 19]}
+					]
+				},
+				{
+					"name": "Petal7",
+					"parent": "Petals2",
+					"pivot": [2, 41, 0],
+					"rotation": [0, 0, 57.5],
+					"cubes": [
+						{"origin": [9.59052, 36.1643, -2], "size": [5, 0, 4], "uv": [0, 25], "mirror": true},
+						{"origin": [12.96409, 34.01511, -2], "size": [5, 0, 4], "uv": [0, 25], "mirror": true}
+					]
+				},
+				{
+					"name": "Petal8",
+					"parent": "Petals2",
+					"pivot": [-2, 41, 0],
+					"rotation": [0, 0, -57.5],
+					"cubes": [
+						{"origin": [-14.59052, 36.1643, -2], "size": [5, 0, 4], "uv": [0, 25]},
+						{"origin": [-17.96409, 34.01511, -2], "size": [5, 0, 4], "uv": [0, 25]}
+					]
+				},
+				{
+					"name": "Petals4",
+					"parent": "Body",
+					"pivot": [0, 43, 0]
+				},
+				{
+					"name": "Petal10",
+					"parent": "Petals4",
+					"pivot": [0, 41, -2],
+					"rotation": [57.5, 0, 0],
+					"cubes": [
+						{"origin": [-2, 32.40321, -20.49426], "size": [4, 0, 5], "uv": [18, 19]},
+						{"origin": [-2, 30.25401, -23.86783], "size": [4, 0, 5], "uv": [18, 19]}
+					]
+				},
+				{
+					"name": "Petal11",
+					"parent": "Petals4",
+					"pivot": [0, 40, 2],
+					"rotation": [-57.5, 0, 0],
+					"cubes": [
+						{"origin": [-2, 31.94051, 14.65087], "size": [4, 0, 5], "uv": [0, 19]},
+						{"origin": [-2, 29.79131, 18.02444], "size": [4, 0, 5], "uv": [0, 19]}
+					]
+				},
+				{
+					"name": "Petal12",
+					"parent": "Petals4",
+					"pivot": [2, 41, 0],
+					"rotation": [0, 0, 57.5],
+					"cubes": [
+						{"origin": [15.49426, 32.40321, -2], "size": [5, 0, 4], "uv": [0, 25], "mirror": true},
+						{"origin": [18.86783, 30.25401, -2], "size": [5, 0, 4], "uv": [0, 25], "mirror": true}
+					]
+				},
+				{
+					"name": "Petal13",
+					"parent": "Petals4",
+					"pivot": [-2, 41, 0],
+					"rotation": [0, 0, -57.5],
+					"cubes": [
+						{"origin": [-20.49426, 32.40321, -2], "size": [5, 0, 4], "uv": [0, 25]},
+						{"origin": [-23.86783, 30.25401, -2], "size": [5, 0, 4], "uv": [0, 25]}
+					]
+				},
+				{
+					"name": "Head",
+					"parent": "Bioluminary",
+					"pivot": [0, 12, 0],
+					"cubes": [
+						{"origin": [-2, 35, -2], "size": [4, 4, 4], "uv": [0, 11]},
+						{"origin": [0, 40, -2], "size": [0, 7, 4], "uv": [0, 0]},
+						{"origin": [-2, 40, 0], "size": [4, 7, 0], "uv": [0, 4]},
+						{"origin": [-3, 38, -3], "size": [6, 2, 6], "uv": [8, 3]}
+					]
+				},
+				{
+					"name": "Petals3",
+					"parent": "Head",
+					"pivot": [0, 42, 0]
+				},
+				{
+					"name": "Petal2",
+					"parent": "Petals3",
+					"pivot": [0, 40, -2],
+					"rotation": [57.5, 0, 0],
+					"cubes": [
+						{"origin": [-2, 39.4627, -7.84339], "size": [4, 0, 5], "uv": [18, 19]},
+						{"origin": [-2, 37.3135, -11.21696], "size": [4, 0, 5], "uv": [18, 19]}
+					]
+				},
+				{
+					"name": "Petal3",
+					"parent": "Petals3",
+					"pivot": [0, 39, 2],
+					"rotation": [-57.5, 0, 0],
+					"cubes": [
+						{"origin": [-2, 39, 2], "size": [4, 0, 5], "uv": [0, 19]},
+						{"origin": [-2, 36.8508, 5.37357], "size": [4, 0, 5], "uv": [0, 19]}
+					]
+				},
+				{
+					"name": "Petal4",
+					"parent": "Petals3",
+					"pivot": [2, 40, 0],
+					"rotation": [0, 0, 57.5],
+					"cubes": [
+						{"origin": [2.84339, 39.4627, -2], "size": [5, 0, 4], "uv": [0, 25], "mirror": true},
+						{"origin": [6.21696, 37.3135, -2], "size": [5, 0, 4], "uv": [0, 25], "mirror": true}
+					]
+				},
+				{
+					"name": "Petal9",
+					"parent": "Petals3",
+					"pivot": [-2, 40, 0],
+					"rotation": [0, 0, -57.5],
+					"cubes": [
+						{"origin": [-7.84339, 39.4627, -2], "size": [5, 0, 4], "uv": [0, 25]},
+						{"origin": [-11.21696, 37.3135, -2], "size": [5, 0, 4], "uv": [0, 25]}
+					]
+				},
+				{
+					"name": "Legs",
+					"parent": "Bioluminary",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "LeftLeg",
+					"parent": "Legs",
+					"pivot": [2, 11, 0],
+					"cubes": [
+						{"origin": [0.9, 0, -1.5], "size": [2, 11, 3], "uv": [0, 46]}
+					]
+				},
+				{
+					"name": "RightLeg",
+					"parent": "Legs",
+					"pivot": [-2, 11, 0],
+					"cubes": [
+						{"origin": [-2.9, 0, -1.5], "size": [2, 11, 3], "uv": [0, 46], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

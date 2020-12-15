@@ -140,5 +140,6 @@ public class GlowingMushroomBiome extends Biome {
 						OreFeatureConfig.FillerBlockType.create("DIRT", null,
 								new BlockMatcher(Blocks.DIRT)),
 						BlockInit.FUNGAL_DIRT.get().getDefaultState(), 100)).withPlacement(customConfig0));
+		
 	}
 }

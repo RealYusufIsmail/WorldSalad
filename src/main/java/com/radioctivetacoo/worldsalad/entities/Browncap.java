@@ -23,23 +23,21 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
-import software.bernie.geckolib.animation.builder.AnimationBuilder;
-import software.bernie.geckolib.animation.controller.AnimationController;
-import software.bernie.geckolib.animation.controller.EntityAnimationController;
-import software.bernie.geckolib.entity.IAnimatedEntity;
-import software.bernie.geckolib.event.AnimationTestEvent;
-import software.bernie.geckolib.manager.EntityAnimationManager;
+import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.PlayState;
+import software.bernie.geckolib3.core.builder.AnimationBuilder;
+import software.bernie.geckolib3.core.controller.AnimationController;
+import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class Browncap extends CreatureEntity implements IAnimatedEntity {
+public class Browncap extends CreatureEntity implements IAnimatable {
 	@SuppressWarnings("unused")
 	private UUID angerTargetUUID;
-	private EntityAnimationManager manager = new EntityAnimationManager();
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	private AnimationController controller = new EntityAnimationController(this, "moveController", 20, this::animationPredicate);
+	private AnimationFactory manager = new AnimationFactory(this);
 	
 	public Browncap(EntityType<? extends CreatureEntity> type, World worldIn) {
 		super(type, worldIn);
-		registerAnimationControllers();
 		this.experienceValue = 6;
 	}
 
@@ -152,27 +150,29 @@ public class Browncap extends CreatureEntity implements IAnimatedEntity {
 	}
 
 	@Override
-	public EntityAnimationManager getAnimationManager() {
+	public AnimationFactory getFactory() {
 		return manager;
 	}
 	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public void registerControllers(AnimationData data) {
+		data.addAnimationController(new AnimationController(this, "controller", 0, this::predicate));
+	}
+	
 	@SuppressWarnings("unchecked")
-	private <E extends Browncap> boolean animationPredicate(AnimationTestEvent<E> event)
+	private <E extends Bluecap> PlayState predicate(AnimationEvent<E> event)
 	{
-		if(event.isWalking())
+		if(event.isMoving())
 		{
-			controller.setAnimation(new AnimationBuilder().addAnimation("animation.redcap.walking", true));
-			controller.transitionLengthTicks = 0; 
-			return true;
+			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.redcap.walking", true));
+			event.getController().transitionLengthTicks = 0; 
+			return PlayState.CONTINUE;
 		} else {
-			controller.setAnimation(new AnimationBuilder().addAnimation("animation.redcap.idle", true));
-			controller.transitionLengthTicks = 0;
-			return true;
+			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.redcap.idle", true));
+			event.getController().transitionLengthTicks = 0;
+			return PlayState.CONTINUE;
 		}
 	}
 	
-	private void registerAnimationControllers()
-	{
-		manager.addAnimationController(controller);
-	}
 }

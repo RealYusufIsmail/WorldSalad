@@ -10,6 +10,7 @@ import com.radioctivetacoo.worldsalad.objects.blocks.GlowingHyceliumBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.GlowshroomBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.HyceliumBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.LeafPileBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.LumbooBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.MadroneLeavesBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.ModCarpetBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.ModDoorBlock;
@@ -22,6 +23,7 @@ import com.radioctivetacoo.worldsalad.objects.blocks.ModSaplingBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.ModTrapDoorBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.ModWoodButtonBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.MoldgrassBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.MoondustBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.MushrineBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.machines.AlloyFurnaceBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.machines.ArchaeologyStationBlock;
@@ -84,6 +86,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class BlockInit {
+	@SuppressWarnings("deprecation")
 	public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS,
 			WorldSalad.MOD_ID);
 
@@ -332,8 +335,8 @@ public class BlockInit {
 	public static final RegistryObject<Block> SILT = BLOCKS.register("silt",
 			() -> new FallingBlock(Block.Properties.from(Blocks.SAND)));
 	
-	public static final RegistryObject<Block> STARDUST = BLOCKS.register("stardust",
-			() -> new FallingBlock(Block.Properties.from(Blocks.SAND)));
+	public static final RegistryObject<Block> MOONDUST = BLOCKS.register("moondust",
+			() -> new MoondustBlock(0xd613d0, Block.Properties.create(Material.EARTH, MaterialColor.LIGHT_GRAY).sound(SoundType.SAND).hardnessAndResistance(0.7f, 1f).harvestTool(ToolType.SHOVEL)));
 	
 	public static final RegistryObject<Block> BIOSEDIMENT = BLOCKS.register("biosediment",
 			() -> new FallingBlock(Block.Properties.from(Blocks.SAND)));
@@ -413,6 +416,9 @@ public class BlockInit {
 	
 	public static final RegistryObject<Block> AMBER_GLASS_PANE = BLOCKS.register("amber_glass_pane",
 			() -> new ModPaneBlock(Block.Properties.from(Blocks.GLASS_PANE)));
+	
+	public static final RegistryObject<Block> LUMINANT_BIOMASS_BLOCK = BLOCKS.register("luminant_biomass_block",
+			() -> new Block(Block.Properties.from(Blocks.DIRT).hardnessAndResistance(0.3f, 0.1f).sound(SoundType.SLIME).lightValue(14)));
 
 	// Quartz Blocks
 	public static final RegistryObject<Block> SPORE_QUARTZ_PILLAR = BLOCKS.register("spore_quartz_pillar",
@@ -753,6 +759,9 @@ public class BlockInit {
 			() -> new FenceGateBlock(Block.Properties.from(Blocks.OAK_FENCE_GATE)));
 
 	// Plants
+	public static final RegistryObject<Block> LUMBOO = BLOCKS.register("lumboo",
+			() -> new LumbooBlock(Block.Properties.from(Blocks.BAMBOO).lightValue(7)));
+	
 	public static final RegistryObject<Block> LICHEN = BLOCKS.register("lichen",
 			() -> new LichenBlock(Block.Properties.from(Blocks.DANDELION)));
 	
@@ -781,16 +790,16 @@ public class BlockInit {
 			() -> new MorelBlock(Block.Properties.from(Blocks.BROWN_MUSHROOM).lightValue(0)));
 
 	public static final RegistryObject<Block> MOLD_BLOCK = BLOCKS.register("mold_block",
-			() -> new Block(Block.Properties.from(Blocks.SLIME_BLOCK)));
+			() -> new Block(Block.Properties.from(Blocks.DIRT).hardnessAndResistance(0.15f, 0.1f).sound(SoundType.SLIME)));
 
 	public static final RegistryObject<Block> MILDEW_BLOCK = BLOCKS.register("mildew_block",
-			() -> new Block(Block.Properties.from(Blocks.SLIME_BLOCK)));
+			() -> new Block(Block.Properties.from(Blocks.DIRT).hardnessAndResistance(0.15f, 0.1f).sound(SoundType.SLIME)));
 	
 	public static final RegistryObject<Block> ANT_FUNGUS_BLOCK = BLOCKS.register("ant_fungus_block",
-			() -> new Block(Block.Properties.from(Blocks.SLIME_BLOCK)));
+			() -> new Block(Block.Properties.from(Blocks.DIRT).hardnessAndResistance(0.15f, 0.1f).sound(SoundType.SLIME)));
 	
 	public static final RegistryObject<Block> MILDEW_HYPHAE = BLOCKS.register("mildew_hyphae",
-			() -> new Block(Block.Properties.from(Blocks.SLIME_BLOCK)));
+			() -> new Block(Block.Properties.from(Blocks.DIRT).hardnessAndResistance(0.15f, 0.1f).sound(SoundType.SLIME)));
 
 	public static final RegistryObject<Block> FUNGRASS = BLOCKS.register("fungrass",
 			() -> new FungrassBlock(Block.Properties.from(Blocks.GRASS)));

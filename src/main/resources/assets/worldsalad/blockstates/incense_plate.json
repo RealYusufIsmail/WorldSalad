@@ -16,7 +16,7 @@
         "has_stick=true,lit=false,stick_type=5": { "model": "worldsalad:block/incense_plate_stick" },
         "has_stick=true,lit=false,stick_type=6": { "model": "worldsalad:block/incense_plate_stick" },
         "has_stick=true,lit=false,stick_type=7": { "model": "worldsalad:block/incense_plate_stick" },
-        "has_stick=false,lit=true,stick_typ e=0": { "model": "worldsalad:block/incense_plate_lit" },
+        "has_stick=false,lit=true,stick_type=0": { "model": "worldsalad:block/incense_plate_lit" },
         "has_stick=false,lit=true,stick_type=1": { "model": "worldsalad:block/incense_plate_lit" },
         "has_stick=false,lit=true,stick_type=2": { "model": "worldsalad:block/incense_plate_lit" },
         "has_stick=false,lit=true,stick_type=3": { "model": "worldsalad:block/incense_plate_lit" },

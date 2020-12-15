@@ -172,7 +172,7 @@ public class ArchaeologyStationTileEntity extends TileEntity implements ITickabl
 					resource2 = Items.FLINT;
 					sediment = Items.GRAVEL;
 				}
-				if (this.inventory.getStackInSlot(0).getItem().equals(BlockInit.STARDUST.get().asItem())) {
+				if (this.inventory.getStackInSlot(0).getItem().equals(BlockInit.MOONDUST.get().asItem())) {
 					print1 = ItemInit.ENDERMITE_EGG_PRINT.get();
 					print2 = ItemInit.ANCIENT_ENDER_PEARL_PRINT.get();
 					print3 = ItemInit.SHULKER_SHELL_PRINT.get();

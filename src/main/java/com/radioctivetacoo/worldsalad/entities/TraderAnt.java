@@ -21,22 +21,20 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
-import software.bernie.geckolib.animation.builder.AnimationBuilder;
-import software.bernie.geckolib.animation.controller.AnimationController;
-import software.bernie.geckolib.animation.controller.EntityAnimationController;
-import software.bernie.geckolib.entity.IAnimatedEntity;
-import software.bernie.geckolib.event.AnimationTestEvent;
-import software.bernie.geckolib.manager.EntityAnimationManager;
+import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.PlayState;
+import software.bernie.geckolib3.core.builder.AnimationBuilder;
+import software.bernie.geckolib3.core.controller.AnimationController;
+import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class TraderAnt extends CreatureEntity implements IAnimatedEntity {
-	private EntityAnimationManager manager = new EntityAnimationManager();
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	private AnimationController controller = new EntityAnimationController(this, "moveController", 20, this::animationPredicate);
+public class TraderAnt extends CreatureEntity implements IAnimatable {
+	private AnimationFactory manager = new AnimationFactory(this);
 	private int tradeCooldown;
 	
 	public TraderAnt(EntityType<? extends CreatureEntity> type, World worldIn) {
 		super(type, worldIn);
-		registerAnimationControllers();
 		this.experienceValue = 6;
 	}
 	
@@ -121,11 +119,6 @@ public class TraderAnt extends CreatureEntity implements IAnimatedEntity {
 	public boolean canDespawn(double distanceToClosestPlayer) {
 		return false;
 	}
-
-	@Override
-	public EntityAnimationManager getAnimationManager() {
-		return manager;
-	}
 	
 	public boolean processInteract(PlayerEntity player, Hand hand) {
 	      ItemStack itemstack = player.getHeldItem(hand);
@@ -202,22 +195,29 @@ public class TraderAnt extends CreatureEntity implements IAnimatedEntity {
 	      return super.processInteract(player, hand);
 	}
 	
-	@SuppressWarnings("unchecked")
-	private <E extends TraderAnt> boolean animationPredicate(AnimationTestEvent<E> event)
-	{
-		if(event.isWalking())
-		{
-			controller.setAnimation(new AnimationBuilder().addAnimation("animation.exoskeleton.walking", true));
-			controller.transitionLengthTicks = 0; 
-			return true;
-		} else {
-			controller.setAnimation(new AnimationBuilder().addAnimation("animation.exoskeleton.idle", true));
-			controller.transitionLengthTicks = 0;
-			return true;
-		}
+	@Override
+	public AnimationFactory getFactory() {
+		return manager;
 	}
 	
-	private void registerAnimationControllers() {
-		manager.addAnimationController(controller);
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public void registerControllers(AnimationData data) {
+		data.addAnimationController(new AnimationController(this, "controller", 0, this::predicate));
+	}
+	
+	@SuppressWarnings("unchecked")
+	private <E extends Exoskeleton> PlayState predicate(AnimationEvent<E> event)
+	{
+		if(event.isMoving())
+		{
+			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.exoskeleton.walking", true));
+			event.getController().transitionLengthTicks = 0; 
+			return PlayState.CONTINUE;
+		} else {
+			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.exoskeleton.idle", true));
+			event.getController().transitionLengthTicks = 0;
+			return PlayState.CONTINUE;
+		}
 	}
 }

@@ -9,6 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class DimensionInit {
+	@SuppressWarnings("deprecation")
 	public static final DeferredRegister<ModDimension> MOD_DIMENSIONS = new DeferredRegister<>(
 			ForgeRegistries.MOD_DIMENSIONS, WorldSalad.MOD_ID);
 

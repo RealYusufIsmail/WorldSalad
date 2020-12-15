@@ -25,6 +25,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class TileEntityInit {
 
+	@SuppressWarnings("deprecation")
 	public static final DeferredRegister<TileEntityType<?>> TILE_ENTITY_TYPES = new DeferredRegister<>(
 			ForgeRegistries.TILE_ENTITIES, WorldSalad.MOD_ID);
 

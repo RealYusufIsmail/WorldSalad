@@ -1,0 +1,26 @@
+{
+    "multipart": [
+        {   "when": { "age": "0" },
+            "apply": [
+                { "model": "worldsalad:block/lumboo" },
+                { "model": "worldsalad:block/lumboo" },
+                { "model": "worldsalad:block/lumboo" },
+                { "model": "worldsalad:block/lumboo" }
+            ]
+        },
+        {   "when": { "age": "1" },
+            "apply": [
+                { "model": "worldsalad:block/lumboo" },
+                { "model": "worldsalad:block/lumboo" },
+                { "model": "worldsalad:block/lumboo" },
+                { "model": "worldsalad:block/lumboo" }
+	            ]
+        },
+        {   "when": { "leaves": "small" },
+            "apply": { "model": "worldsalad:block/lumboo_small_leaves" }
+        },
+        {   "when": { "leaves": "large" },
+            "apply": { "model": "worldsalad:block/lumboo_large_leaves" }
+        }
+    ]
+}

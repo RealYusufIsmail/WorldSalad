@@ -31,6 +31,7 @@ import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.common.BiomeManager;
 
 public class BiomeInit {
+	@SuppressWarnings("deprecation")
 	public static final DeferredRegister<Biome> BIOMES = new DeferredRegister<>(ForgeRegistries.BIOMES,
 			WorldSalad.MOD_ID);
 
