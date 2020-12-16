@@ -44,6 +44,7 @@ public class Dragonfly extends CreatureEntity implements IAnimatable {
 	@SuppressWarnings("unused")
 	private UUID angerTargetUUID;
 	private AnimationFactory manager = new AnimationFactory(this);
+	//for variants, 0=blue, 1=red, 2=green, 3=pink, 4=white, 5=white, 6=gold
 	private static final DataParameter<Integer> VARIANT = EntityDataManager.createKey(Dragonfly.class, DataSerializers.VARINT);
 	private static final DataParameter<Boolean> SADDLED = EntityDataManager.createKey(Dragonfly.class, DataSerializers.BOOLEAN);
 
@@ -101,7 +102,11 @@ public class Dragonfly extends CreatureEntity implements IAnimatable {
 	}
 	
 	public void setVariant(int variant) {
-		if (variant == 1)
+		if (variant == 0)
+		{
+		this.dataManager.set(VARIANT, 0);
+		}
+		else if (variant == 1)
 		{
 		this.dataManager.set(VARIANT, 1);
 		}
@@ -125,10 +130,6 @@ public class Dragonfly extends CreatureEntity implements IAnimatable {
 		{
 		this.dataManager.set(VARIANT, 6);
 		}
-		else if (variant == 7)
-		{
-		this.dataManager.set(VARIANT, 7);
-		}
 	}
 
 	public int getVariant() {
@@ -141,25 +142,25 @@ public class Dragonfly extends CreatureEntity implements IAnimatable {
 		spawnDataIn = super.onInitialSpawn(worldIn, difficultyIn, reason, spawnDataIn, dataTag);
 		int i = rand.nextInt(19);
 		if (i >= 0 && i <= 3) {
-			setVariant(1);
+			setVariant(0);
 		}
 		if (i >= 2 && i <= 5) {
-			setVariant(2);
+			setVariant(1);
 		}
 		if (i >= 6 && i <= 9) {
-			setVariant(3);
+			setVariant(2);
 		}
 		if (i >= 10 && i <= 13) {
-			setVariant(4);
+			setVariant(3);
 		}
 		if (i == 14 || i == 15) {
-			setVariant(5);
+			setVariant(4);
 		}
 		if (i == 16 || i == 17) {
-			setVariant(6);
+			setVariant(5);
 		}
 		if (i == 18) {
-			setVariant(7);
+			setVariant(6);
 		}
 		return spawnDataIn;
 	}

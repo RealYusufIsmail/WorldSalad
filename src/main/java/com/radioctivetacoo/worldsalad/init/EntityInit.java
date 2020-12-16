@@ -72,7 +72,9 @@ public class EntityInit {
 				BiomeInit.MOLD_TUNDRA_BIOME.get(), BiomeInit.MILDEW_FOREST_BIOME.get());
 		
 		registerEntityWorldSpawns(MACROBE.get(), 4, 1, 1, EntityClassification.MONSTER,
-				BiomeInit.MOLD_TUNDRA_BIOME.get(), BiomeInit.MILDEW_FOREST_BIOME.get());
+				BiomeInit.MOLD_TUNDRA_BIOME.get(), BiomeInit.MILDEW_FOREST_BIOME.get(), BiomeInit.DENSE_MUSHROOM_FOREST_BIOME.get(), BiomeInit.GLOWING_MUSHROOM_BIOME.get(), 
+				BiomeInit.MUSHROOM_CANYON_FLATS_BIOME.get(), BiomeInit.MUSHROOM_CANYON_SHATTERED_BIOME.get(),
+				BiomeInit.MUSHROOM_FOREST_BIOME.get());
 		
 		registerEntityWorldSpawns(CORDYCEPS_ANT.get(), 100, 1, 3, EntityClassification.MONSTER,
 				BiomeInit.MOLD_TUNDRA_BIOME.get(), BiomeInit.MILDEW_FOREST_BIOME.get());
@@ -103,6 +105,8 @@ public class EntityInit {
 				Biomes.DEEP_LUKEWARM_OCEAN, Biomes.DEEP_OCEAN, Biomes.DEEP_WARM_OCEAN, Biomes.LUKEWARM_OCEAN, Biomes.FROZEN_OCEAN, Biomes.WARM_OCEAN);
 	
 		//passive
+		registerEntityWorldSpawns(DRAGONFLY.get(), 70, 2, 3, EntityClassification.CREATURE,
+				BiomeInit.MUSHROOM_CANYON_FLATS_BIOME.get(), BiomeInit.MUSHROOM_CANYON_SHATTERED_BIOME.get());
 		}
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
@@ -130,6 +134,7 @@ public class EntityInit {
 		registerPlacementTypes(BROWNCAP.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MonsterEntity::canMonsterSpawn);
 		registerPlacementTypes(URCHIN.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Urchin::func_223332_b);
 		//passive
+		registerPlacementTypes(DRAGONFLY.get(), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, MobEntity::canSpawnOn);
 	}
 
 	// hostile mobs

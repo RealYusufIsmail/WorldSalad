@@ -776,4 +776,8 @@ public class ItemInit {
 	public static final RegistryObject<ModSpawnEggItem> BIOLUMINARY_SPAWN_EGG = ITEMS
 			.register("bioluminary_spawn_egg", () -> new ModSpawnEggItem(EntityInit.BIOLUMINARY, 0x82d1d0, 0xc99a49,
 					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
+	
+	public static final RegistryObject<ModSpawnEggItem> DRAGONFLY_SPAWN_EGG = ITEMS
+			.register("dragonfly_spawn_egg", () -> new ModSpawnEggItem(EntityInit.DRAGONFLY, 0xccecf0, 0x253d70,
+					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
 }
