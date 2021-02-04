@@ -3,6 +3,8 @@ package com.radioctivetacoo.worldsalad.objects.items;
 import java.util.List;
 
 import com.google.common.collect.Multimap;
+
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
@@ -18,6 +20,8 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
 
 public class GrandSlamyonItem extends Item {
@@ -72,5 +76,11 @@ public class GrandSlamyonItem extends Item {
 	
 	public int getItemEnchantability() {
 	      return 1;
+	}
+	
+	public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+		tooltip.add(new StringTextComponent("\u00A73" + "Right Click to hurt and throw enemies into the air."));
+		tooltip.add(new StringTextComponent("\u00A78" + "\u00A7o" + "'A super smash.'"));
+		super.addInformation(stack, worldIn, tooltip, flagIn);
 	}
 }

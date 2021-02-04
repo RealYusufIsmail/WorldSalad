@@ -2,6 +2,7 @@ package com.radioctivetacoo.worldsalad.util;
 
 import com.radioctivetacoo.worldsalad.WorldSalad;
 import com.radioctivetacoo.worldsalad.client.entity.render.BioluminaryGeoRenderer;
+import com.radioctivetacoo.worldsalad.client.entity.render.BioluminescentHorrorGeoRenderer;
 import com.radioctivetacoo.worldsalad.client.entity.render.BluecapGeoRenderer;
 import com.radioctivetacoo.worldsalad.client.entity.render.BrowncapGeoRenderer;
 import com.radioctivetacoo.worldsalad.client.entity.render.CordycepsAntGeoRenderer;
@@ -123,6 +124,7 @@ public class ClientEventBusSubscriber {
 		RenderTypeLookup.setRenderLayer(BlockInit.BROWN_LEAF_PILE.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.FLOATATION_BIN.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(BlockInit.POLYMERIZATION_REACTOR.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.ALUMINUM_PLATFORM.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.LUMBOO.get(), RenderType.getCutout());
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.ROCK_MONSTER.get(), RockMonsterGeoRenderer::new);
@@ -142,6 +144,7 @@ public class ClientEventBusSubscriber {
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.GIANT_TOAD.get(), GiantToadGeoRenderer::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.DRAGONFLY.get(), DragonflyGeoRenderer::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.BIOLUMINARY.get(), BioluminaryGeoRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityInit.BIOLUMINESCENT_HORROR.get(), BioluminescentHorrorGeoRenderer::new);
 		
 		ClientRegistry.bindTileEntityRenderer(TileEntityInit.DISPLAY_STAND.get(), DisplayStandRenderer::new);
 	}

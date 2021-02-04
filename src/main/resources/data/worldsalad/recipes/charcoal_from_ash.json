@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FFF",
+    "FFF",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:ash_block"
+    }
+  },
+  "result": {
+    "item": "minecraft:charcoal",
+    "count": 1
+  }
+}

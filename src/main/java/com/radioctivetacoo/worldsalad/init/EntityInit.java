@@ -2,6 +2,7 @@ package com.radioctivetacoo.worldsalad.init;
 
 import com.radioctivetacoo.worldsalad.WorldSalad;
 import com.radioctivetacoo.worldsalad.entities.Bioluminary;
+import com.radioctivetacoo.worldsalad.entities.BioluminescentHorror;
 import com.radioctivetacoo.worldsalad.entities.Bluecap;
 import com.radioctivetacoo.worldsalad.entities.Browncap;
 import com.radioctivetacoo.worldsalad.entities.CordycepsAnt;
@@ -205,6 +206,11 @@ public class EntityInit {
 					.size(0.7f, 0.5f).build(new ResourceLocation(WorldSalad.MOD_ID, "trader_ant").toString()));
 	
 	public static final RegistryObject<EntityType<Dragonfly>> DRAGONFLY = ENTITY_TYPES.register("dragonfly",
-			() -> EntityType.Builder.<Dragonfly>create(Dragonfly::new, EntityClassification.MONSTER)
+			() -> EntityType.Builder.<Dragonfly>create(Dragonfly::new, EntityClassification.CREATURE)
 					.size(1.4f, 0.7f).build(new ResourceLocation(WorldSalad.MOD_ID, "dragonfly").toString()));
+	
+	// bosses
+	public static final RegistryObject<EntityType<BioluminescentHorror>> BIOLUMINESCENT_HORROR = ENTITY_TYPES.register("bioluminescent_horror",
+			() -> EntityType.Builder.<BioluminescentHorror>create(BioluminescentHorror::new, EntityClassification.MONSTER)
+					.size(4f, 1.6f).build(new ResourceLocation(WorldSalad.MOD_ID, "bioluminescent_horror").toString()));
 }

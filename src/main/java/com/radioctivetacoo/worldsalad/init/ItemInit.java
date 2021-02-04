@@ -6,6 +6,7 @@ import com.radioctivetacoo.worldsalad.WorldSalad.WorldSaladItemsItemGroup;
 import com.radioctivetacoo.worldsalad.WorldSalad.WorldSaladMaterialsItemGroup;
 import com.radioctivetacoo.worldsalad.WorldSalad.WorldSaladSpawnEggsItemGroup;
 import com.radioctivetacoo.worldsalad.WorldSalad.WorldSaladToolsItemGroup;
+import com.radioctivetacoo.worldsalad.objects.items.AshenNeedleItem;
 import com.radioctivetacoo.worldsalad.objects.items.BreathingReedItem;
 import com.radioctivetacoo.worldsalad.objects.items.DartItem;
 import com.radioctivetacoo.worldsalad.objects.items.DragonflySaddleItem;
@@ -14,6 +15,7 @@ import com.radioctivetacoo.worldsalad.objects.items.EssenceCrystalizerItem;
 import com.radioctivetacoo.worldsalad.objects.items.FieryCoalItem;
 import com.radioctivetacoo.worldsalad.objects.items.FossilPrintItem;
 import com.radioctivetacoo.worldsalad.objects.items.GrandSlamyonItem;
+import com.radioctivetacoo.worldsalad.objects.items.KeyPieceItem;
 import com.radioctivetacoo.worldsalad.objects.items.MitochondrionItem;
 import com.radioctivetacoo.worldsalad.objects.items.ModSpawnEggItem;
 import com.radioctivetacoo.worldsalad.objects.items.ModStewItem;
@@ -145,8 +147,14 @@ public class ItemInit {
 	public static final RegistryObject<Item> GRAND_SLAMYON = ITEMS.register("grand_slamyon",
 			() -> new GrandSlamyonItem(new Item.Properties().group(WorldSaladToolsItemGroup.instance).maxStackSize(1).maxDamage(748)));
 	
+	public static final RegistryObject<Item> ASHEN_NEEDLE = ITEMS.register("ashen_needle",
+			() -> new AshenNeedleItem(new Item.Properties().group(WorldSaladToolsItemGroup.instance).maxStackSize(1).maxDamage(250)));
+	
 	public static final RegistryObject<Item> DRAGONFLY_SADDLE = ITEMS.register("dragonfly_saddle",
 			() -> new DragonflySaddleItem(new Item.Properties().group(WorldSaladToolsItemGroup.instance).maxStackSize(1)));
+	
+	public static final RegistryObject<Item> LUMINANT_KEY_PIECE = ITEMS.register("luminant_key_piece",
+			() -> new KeyPieceItem(new Item.Properties().group(WorldSaladToolsItemGroup.instance).maxStackSize(1)));
 	
 	// items
 	public static final RegistryObject<Item> PLACEHOLDER = ITEMS.register("placeholder",
@@ -227,7 +235,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> HOTCOFFEE_SEED = ITEMS.register("hotcoffee_seeds",
 			() -> new BlockItem(BlockInit.HOTCOFFEE_CROP.get(), new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
 	
-	public static final RegistryObject<Item> PASSION_FRUIT_SEED = ITEMS.register("passion_fruit_seeds",
+	public static final RegistryObject<Item> PASSION_FRUIT_SEEDS = ITEMS.register("passion_fruit_seeds",
 			() -> new BlockItem(BlockInit.PASSION_VINE_CROP.get(), new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> FIERY_COAL = ITEMS.register("fiery_coal",
@@ -303,6 +311,9 @@ public class ItemInit {
 			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> ADVANCED_CIRCUITBOARD = ITEMS.register("advanced_circuitboard",
+			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+	
+	public static final RegistryObject<Item> STRANGE_MECHANICAL_COMPONENT = ITEMS.register("strange_mechanical_component",
 			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
 
 	
@@ -672,7 +683,7 @@ public class ItemInit {
 					.food(new Food.Builder().hunger(2).saturation(0f).build())));
 	
 	public static final RegistryObject<Item> SMOKED_ENOKI_BULB = ITEMS.register("smoked_enoki_bulb",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(5).saturation(0.2f).build())));
 	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> RAW_TOAD = ITEMS.register("raw_toad",
@@ -680,7 +691,7 @@ public class ItemInit {
 					.food(new Food.Builder().hunger(2).saturation(0f).effect(new EffectInstance(Effects.POISON, 500, 0), 0.2f).build())));
 	
 	public static final RegistryObject<Item> COOKED_TOAD = ITEMS.register("cooked_toad",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)
+			() -> new Item(new Item.Properties().group(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().hunger(5).saturation(0.6f).build())));
 	
 	public static final RegistryObject<Item> HYPHAE_BERRY_PIE = ITEMS.register("hyphae_berry_pie",
@@ -779,5 +790,9 @@ public class ItemInit {
 	
 	public static final RegistryObject<ModSpawnEggItem> DRAGONFLY_SPAWN_EGG = ITEMS
 			.register("dragonfly_spawn_egg", () -> new ModSpawnEggItem(EntityInit.DRAGONFLY, 0xccecf0, 0x253d70,
+					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
+	
+	public static final RegistryObject<ModSpawnEggItem> GLOWING_COG = ITEMS
+			.register("glowing_cog", () -> new ModSpawnEggItem(EntityInit.BIOLUMINESCENT_HORROR, 0xccecf0, 0x253d70,
 					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
 }

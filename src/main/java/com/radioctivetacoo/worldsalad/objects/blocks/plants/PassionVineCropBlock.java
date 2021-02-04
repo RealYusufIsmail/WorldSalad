@@ -35,7 +35,7 @@ public class PassionVineCropBlock extends CropsBlock {
 
 	@Override
 	protected IItemProvider getSeedsItem() {
-		return ItemInit.PASSION_FRUIT_SEED.get();
+		return ItemInit.PASSION_FRUIT_SEEDS.get();
 	}
 
 	@Override

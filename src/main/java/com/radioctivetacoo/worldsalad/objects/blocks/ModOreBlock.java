@@ -20,7 +20,7 @@ public class ModOreBlock extends OreBlock {
 		     return MathHelper.nextInt(rand, 1, 2);
 	      } else if (this == BlockInit.COBALT_ORE.get()) {
 			 return MathHelper.nextInt(rand, 1, 3);
-	      } else if (this == BlockInit.HYPHAE_AMBER_ORE.get()) {
+	      } else if (this == BlockInit.HYPHAE_AMBER_ORE.get() || this == BlockInit.AMBERED_ADOBE.get()) {
 				 return MathHelper.nextInt(rand, 4, 5);
 	      } else if (this == BlockInit.EXPERIENCE_ORE.get()) {
 				 return MathHelper.nextInt(rand, 15, 25);

@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "worldsalad:amber"
+	},
+	
+	"outputBonus": {
+		"item": "worldsalad:amber_droplet"
+	},
+	
+	"input": {
+		"item": "worldsalad:ambered_adobe"
+	}
+}

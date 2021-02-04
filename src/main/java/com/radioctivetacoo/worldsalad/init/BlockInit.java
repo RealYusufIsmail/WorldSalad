@@ -1,6 +1,7 @@
  package com.radioctivetacoo.worldsalad.init;
 
 import com.radioctivetacoo.worldsalad.WorldSalad;
+import com.radioctivetacoo.worldsalad.objects.blocks.AluminumPlatformBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.DenseMadroneLeavesBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.DirtCakeBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.FalseExperienceOreBlock;
@@ -171,6 +172,12 @@ public class BlockInit {
 	// Decorations
 	public static final RegistryObject<Block> MAGIC_CHALK_BLOCK = BLOCKS.register("magic_chalk_block",
 			() -> new Block(Block.Properties.from(Blocks.STONE).hardnessAndResistance(0.4f, 2f)));
+	
+	public static final RegistryObject<Block> ALUMINUM_PLATE_WALL = BLOCKS.register("aluminum_plate_wall",
+			() -> new Block(Block.Properties.from(Blocks.STONE).sound(SoundType.METAL).hardnessAndResistance(1.1f, 2f)));
+	
+	public static final RegistryObject<Block> ALUMINUM_PLATFORM = BLOCKS.register("aluminum_platform",
+			() -> new AluminumPlatformBlock(Block.Properties.from(Blocks.STONE).sound(SoundType.METAL).hardnessAndResistance(1.1f, 2f)));
 	
 	public static final RegistryObject<Block> MAGIC_CHALK_BRICKS = BLOCKS.register("magic_chalk_bricks",
 			() -> new Block(Block.Properties.from(Blocks.STONE).hardnessAndResistance(0.4f, 2f)));
@@ -935,6 +942,10 @@ public class BlockInit {
 	
 	public static final RegistryObject<Block> HYPHAE_AMBER_ORE = BLOCKS.register("hyphae_amber_ore",
 			() -> new ModOreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.8f, 8.0f).harvestLevel(2)
+					.harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
+	
+	public static final RegistryObject<Block> AMBERED_ADOBE = BLOCKS.register("ambered_adobe",
+			() -> new ModOreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.8f, 8.0f).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
 	
 	// Walls

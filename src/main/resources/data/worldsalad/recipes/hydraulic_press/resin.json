@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:hydraulicpress",
+	"output": {
+		"item": "worldsalad:resin"
+	},
+	
+	"input": {
+		"item": "minecraft:leather"
+	},
+	
+	"input2": {
+		"item": "minecraft:leather"
+	}
+}

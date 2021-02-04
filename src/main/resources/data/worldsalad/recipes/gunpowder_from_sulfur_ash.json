@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worldsalad:ash_block"
+    },
+    {
+      "item": "worldsalad:ash_block"
+    },
+    {
+      "item": "worldsalad:sulfur"
+    },
+    {
+      "item": "worldsalad:sulfur"
+    }
+  ],
+  "result": {
+    "item": "minecraft:gunpowder",
+    "count": 2
+  }
+}

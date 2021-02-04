@@ -10,6 +10,9 @@
 	"biome.worldsalad.mushroom_forest_biome": "Hyphae Plains",
 	
 	"block.worldsalad.boiler": "Boiler",
+	"block.worldsalad.ambered_adobe": "Ambered Adobe",
+	"block.worldsalad.aluminum_plate_wall": "Aluminum Plate Wall",
+	"block.worldsalad.aluminum_platform": "Aluminum Platform",
 	"block.worldsalad.luminant_biomass_block": "Luminant Biomass Block",
 	"block.worldsalad.lumboo": "Lumboo",
 	"block.worldsalad.incense_plate": "Incense Plate",
@@ -311,8 +314,13 @@
 	"entity.worldsalad.bluecap": "Bluecap",
 	"entity.worldsalad.giant_toad": "Giant Toad",
 	"entity.worldsalad.bioluminary": "Bioluminary",
+	"entity.worldsalad.bioluminescent_horror": "Biomechanical Horror",
 	
 	"item.worldsalad.acid_bucket": "Acid Bucket",
+	"item.worldsalad.strange_mechanical_component": "Strange Mechanical Component",
+	"item.worldsalad.ashen_needle": "Ashen Needle",
+	"item.worldsalad.glowing_cog": "Glowing Cog",
+	"item.worldsalad.luminant_key_piece": "Luminant Key Piece",
 	"item.worldsalad.dragonfly_saddle": "Dragonfly Saddle",
 	"item.worldsalad.dragonfly_spawn_egg": "Spawn Dragonfly",
 	"item.worldsalad.raw_toad": "Raw Toad",

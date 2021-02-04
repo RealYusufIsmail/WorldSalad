@@ -1,0 +1,120 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 192,
+				"texture_height": 268,
+				"visible_bounds_width": 8,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "BioluminescentHorror",
+					"pivot": [0, 5, 7]
+				},
+				{
+					"name": "body",
+					"parent": "BioluminescentHorror",
+					"pivot": [0, 6, 14],
+					"cubes": [
+						{"origin": [0, 15, -27], "size": [0, 6, 24], "uv": [108, 10]},
+						{"origin": [0, -3, -29], "size": [0, 8, 24], "pivot": [0, -1, -13], "rotation": [-15, 0, 0], "uv": [108, 16]},
+						{"origin": [-6, 3, -31], "size": [12, 12, 28], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "segment1",
+					"parent": "body",
+					"pivot": [0, 10, 4],
+					"rotation": [-7.5, 0, 0],
+					"cubes": [
+						{"origin": [-4, 6.72184, -5.24394], "size": [8, 8, 26], "uv": [3, 3]}
+					]
+				},
+				{
+					"name": "segment2",
+					"parent": "segment1",
+					"pivot": [0, 10.74894, 19.42656],
+					"rotation": [-20, 0, 0],
+					"cubes": [
+						{"origin": [-4.02, 8.69399, 20.09609], "size": [8, 8, 12], "uv": [20, 18]},
+						{"origin": [-2, 13.08319, 23.7589], "size": [4, 4, 8], "pivot": [0, 5, 23], "rotation": [-35, 0, 0], "uv": [30, 26]},
+						{"origin": [-2, 9.75458, 28.26962], "size": [4, 4, 8], "pivot": [0, 5, 23], "rotation": [45, 0, 0], "uv": [82, 28]},
+						{"origin": [-2, 12.41211, 27.31057], "size": [4, 4, 8], "pivot": [0, 5, 23], "rotation": [67.5, 0, 0], "uv": [82, 28]},
+						{"origin": [-2, 19.0865, 20.46779], "size": [4, 4, 10], "pivot": [0, 5, 23], "rotation": [67.5, 0, 0], "uv": [80, 26]},
+						{"origin": [-2, 25.51438, 14.80735], "size": [4, 4, 10], "pivot": [0, 5, 23], "rotation": [67.5, 0, 0], "uv": [80, 26]}
+					]
+				},
+				{
+					"name": "wings",
+					"parent": "BioluminescentHorror",
+					"pivot": [0, 6, 14]
+				},
+				{
+					"name": "leftwing",
+					"parent": "wings",
+					"pivot": [6, 14, -20]
+				},
+				{
+					"name": "innerboneleft",
+					"parent": "leftwing",
+					"pivot": [-6, 14, -18],
+					"cubes": [
+						{"origin": [4, 11, -33], "size": [30, 2, 2], "pivot": [20, 11, -33], "rotation": [0, 20, 0], "uv": [0, 54]},
+						{"origin": [-2, 12, -29], "size": [32, 0, 24], "pivot": [14, 13, -29], "rotation": [0, 20, 0], "uv": [0, 58]}
+					]
+				},
+				{
+					"name": "outerboneleft",
+					"parent": "leftwing",
+					"pivot": [32, 14, -30],
+					"cubes": [
+						{"origin": [32, 11, -31], "size": [24, 2, 2], "pivot": [50, 11, -31], "rotation": [0, -20, 0], "uv": [6, 54]},
+						{"origin": [30, 11.8, -31], "size": [24, 0, 40], "pivot": [46, 13, -29], "rotation": [-5, -20, 0], "uv": [0, 82], "mirror": true}
+					]
+				},
+				{
+					"name": "righwing",
+					"parent": "wings",
+					"pivot": [-6, 14, -20]
+				},
+				{
+					"name": "innerboneright",
+					"parent": "righwing",
+					"pivot": [-6, 14, -18],
+					"cubes": [
+						{"origin": [-34, 11, -27], "size": [30, 2, 2], "pivot": [-4, 11, -27], "rotation": [0, -20, 0], "uv": [0, 54]},
+						{"origin": [-30, 12, -25], "size": [32, 0, 24], "pivot": [-4, 13, -25], "rotation": [0, -20, 0], "uv": [0, 58], "mirror": true}
+					]
+				},
+				{
+					"name": "outerboneright",
+					"parent": "righwing",
+					"pivot": [-32, 12, -28],
+					"cubes": [
+						{"origin": [-54, 11, -37], "size": [22, 2, 2], "pivot": [-32, 11, -37], "rotation": [0, 20, 0], "uv": [5, 54]},
+						{"origin": [-52, 11.8, -31], "size": [24, 0, 40], "pivot": [-46, 13, -29], "rotation": [-5, 20, 0], "uv": [0, 82]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "BioluminescentHorror",
+					"pivot": [0, 10, -24],
+					"cubes": [
+						{"origin": [-4, 5, -33], "size": [8, 8, 2], "uv": [26, 0]},
+						{"origin": [-2, 7, -35], "size": [4, 4, 2], "uv": [16, 4]},
+						{"origin": [-13, 5, -33], "size": [8, 8, 2], "pivot": [-4, 5, -33], "rotation": [0, 42.5, 0], "uv": [0, 44]},
+						{"origin": [4, 5, -31], "size": [8, 8, 2], "pivot": [6, 5, -31], "rotation": [0, -42.5, 0], "uv": [40, 44]},
+						{"origin": [-4, 13.6, -33], "size": [8, 8, 2], "pivot": [-2, 13, -33], "rotation": [-35, 0, 0], "uv": [20, 44]},
+						{"origin": [-4, 5, -31], "size": [8, 8, 2], "pivot": [-2, 5, -31], "rotation": [-152.5, 0, 0], "uv": [60, 44]},
+						{"origin": [0, 4, -53], "size": [0, 10, 20], "uv": [108, 28]},
+						{"origin": [-5, 9, -53], "size": [10, 0, 20], "uv": [88, 58]}
+					]
+				}
+			]
+		}
+	]
+}

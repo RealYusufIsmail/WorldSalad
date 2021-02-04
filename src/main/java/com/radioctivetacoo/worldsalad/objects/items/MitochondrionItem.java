@@ -6,6 +6,7 @@ import com.radioctivetacoo.worldsalad.entities.SoldierAnt;
 import com.radioctivetacoo.worldsalad.entities.TraderAnt;
 import com.radioctivetacoo.worldsalad.entities.WorkerAnt;
 
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.boss.WitherEntity;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
@@ -24,6 +25,8 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
 
 public class MitochondrionItem extends Item {
@@ -69,5 +72,11 @@ public class MitochondrionItem extends Item {
 	@Override
 	public boolean hasEffect(ItemStack stack) {
 		return true;
+	}
+	
+	public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+		tooltip.add(new StringTextComponent("\u00A73" + "Right Click to strengthen yourself. Costs health."));
+		tooltip.add(new StringTextComponent("\u00A78" + "\u00A7o" + "'The powerhouse of your cells.'"));
+		super.addInformation(stack, worldIn, tooltip, flagIn);
 	}
 }

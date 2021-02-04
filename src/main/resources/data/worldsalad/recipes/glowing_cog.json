@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LPL",
+    "PSP",
+    "LPL"
+  ],
+  "key": {
+    "P": {
+      "item": "worldsalad:copper_ingot"
+    },
+    "S": {
+      "item": "worldsalad:strange_mechanical_component"
+    },
+    "L": {
+      "item": "worldsalad:lumen_essence"
+    }
+  },
+  "result": {
+    "item": "worldsalad:glowing_cog",
+    "count": 1
+  }
+}

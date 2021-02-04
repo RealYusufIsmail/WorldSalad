@@ -2,6 +2,7 @@ package com.radioctivetacoo.worldsalad.objects.items;
 
 import java.util.List;
 
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -14,6 +15,8 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
 
 public class SonarDeviceItem extends Item {
@@ -43,5 +46,11 @@ public class SonarDeviceItem extends Item {
 			         this.entitiesInRange.stream().filter(LivingEntity -> !(LivingEntity instanceof PlayerEntity)).forEach(this::glow);
 			}
 		return ActionResult.resultSuccess(playerIn.getHeldItem(handIn));
+	}
+	
+	public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+		tooltip.add(new StringTextComponent("\u00A73" + "Right Click to reveal mobs."));
+		tooltip.add(new StringTextComponent("\u00A78" + "\u00A7o" + "'Let there be light.'"));
+		super.addInformation(stack, worldIn, tooltip, flagIn);
 	}
 }

@@ -50,7 +50,7 @@ public class HydraulicPressRecipe implements IHydraulicPressRecipe {
 
 	@Override
 	public IRecipeSerializer<?> getSerializer() {
-		return RecipeSerializerInit.SPINNING_WHEEL_SERIALIZER.get();
+		return RecipeSerializerInit.HYDRAULIC_PRESS_SERIALIZER.get();
 	}
 
 	@Override
