@@ -94,7 +94,7 @@ public class BlockInit {
 	// Special Blocks
 	public static final RegistryObject<Block> DEEP_FRYER = BLOCKS.register("deep_fryer",
 			() -> new DeepFryerBlock(
-					Block.Properties.create(Material.IRON).lightValue(11).hardnessAndResistance(2.0f, 10.0f)
+					Block.Properties.create(Material.IRON).lightValue(11).hardnessAndResistance(2.0f, 99.0f)
 							.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 	
 	public static final RegistryObject<Block> KILN = BLOCKS.register("kiln",
@@ -137,11 +137,11 @@ public class BlockInit {
 					.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 	
 	public static final RegistryObject<Block> DISPLAY_STAND = BLOCKS.register("display_stand",
-			() -> new DisplayStandBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.6f, 99.0f)
+			() -> new DisplayStandBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.6f, 4.0f)
 					.harvestTool(ToolType.AXE).sound(SoundType.WOOD)));
 	
 	public static final RegistryObject<Block> DISTILLING_BARREL = BLOCKS.register("distilling_barrel",
-			() -> new DistillingBarrelBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.6f, 99.0f)
+			() -> new DistillingBarrelBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.6f, 4.0f)
 					.harvestTool(ToolType.AXE).sound(SoundType.WOOD)));
 	
 	public static final RegistryObject<Block> DIRT_CAKE = BLOCKS.register("dirt_cake",

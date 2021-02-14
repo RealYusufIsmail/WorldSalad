@@ -24,4 +24,6 @@ public class FungalZombieGeoRenderer extends GeoEntityRenderer<FungalZombie>
 	{
 		return RenderType.getEntityTranslucent(getTextureLocation(animatable));
 	}
+	
+	
 }
