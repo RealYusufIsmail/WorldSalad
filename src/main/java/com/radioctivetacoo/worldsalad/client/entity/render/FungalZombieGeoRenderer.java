@@ -13,7 +13,6 @@ import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 
 public class FungalZombieGeoRenderer extends GeoEntityRenderer<FungalZombie>
 {
-	@SuppressWarnings("unchecked")
 	public FungalZombieGeoRenderer(EntityRendererManager renderManager)
 	{
 		super(renderManager, new FungalZombieModel());
@@ -24,6 +23,4 @@ public class FungalZombieGeoRenderer extends GeoEntityRenderer<FungalZombie>
 	{
 		return RenderType.getEntityTranslucent(getTextureLocation(animatable));
 	}
-	
-	
 }

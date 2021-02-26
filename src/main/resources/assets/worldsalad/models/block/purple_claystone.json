@@ -1,6 +1,7 @@
 {
-	"parent": "block/cube_all",
+	"parent": "block/cube_column",
 	"textures": {
-		"all": "worldsalad:blocks/purple_claystone"
+		"end": "worldsalad:blocks/purple_claystone_top",
+		"side": "worldsalad:blocks/purple_claystone"
 	}
 }

@@ -156,6 +156,15 @@ public class ItemInit {
 	public static final RegistryObject<Item> LUMINANT_KEY_PIECE = ITEMS.register("luminant_key_piece",
 			() -> new KeyPieceItem(new Item.Properties().group(WorldSaladToolsItemGroup.instance).maxStackSize(1)));
 	
+	public static final RegistryObject<Item> PATHOGEN_KEY_PIECE = ITEMS.register("pathogen_key_piece",
+			() -> new KeyPieceItem(new Item.Properties().group(WorldSaladToolsItemGroup.instance).maxStackSize(1)));
+	
+	public static final RegistryObject<Item> PLATED_KEY_PIECE = ITEMS.register("plated_key_piece",
+			() -> new KeyPieceItem(new Item.Properties().group(WorldSaladToolsItemGroup.instance).maxStackSize(1)));
+	
+	public static final RegistryObject<Item> HYPHAE_KEY = ITEMS.register("hyphae_key",
+			() -> new KeyPieceItem(new Item.Properties().group(WorldSaladToolsItemGroup.instance).maxStackSize(1)));
+	
 	// items
 	public static final RegistryObject<Item> PLACEHOLDER = ITEMS.register("placeholder",
 			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
@@ -314,6 +323,9 @@ public class ItemInit {
 			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> STRANGE_MECHANICAL_COMPONENT = ITEMS.register("strange_mechanical_component",
+			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+	
+	public static final RegistryObject<Item> STRANGE_OPTICAL_COMPONENT = ITEMS.register("strange_optical_component",
 			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
 
 	
@@ -771,7 +783,7 @@ public class ItemInit {
 	public static final RegistryObject<ModSpawnEggItem> REDCAP_SPAWN_EGG = ITEMS
 			.register("redcap_spawn_egg", () -> new ModSpawnEggItem(EntityInit.REDCAP, 0xf2ddb6, 0xbd2f2f,
 					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
-	
+	 
 	public static final RegistryObject<ModSpawnEggItem> BROWNCAP_SPAWN_EGG = ITEMS
 			.register("browncap_spawn_egg", () -> new ModSpawnEggItem(EntityInit.BROWNCAP, 0xf2ddb6, 0x876e3e,
 					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
@@ -794,5 +806,5 @@ public class ItemInit {
 	
 	public static final RegistryObject<ModSpawnEggItem> GLOWING_COG = ITEMS
 			.register("glowing_cog", () -> new ModSpawnEggItem(EntityInit.BIOLUMINESCENT_HORROR, 0xccecf0, 0x253d70,
-					new Item.Properties().group(WorldSaladSpawnEggsItemGroup.instance)));
+					new Item.Properties().group(WorldSaladToolsItemGroup.instance)));
 }

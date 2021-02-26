@@ -164,17 +164,25 @@ public class MushrineBlock extends Block {
 					i--;
 				}
 				Material material = entity.world.getBlockState(new BlockPos(pos.getX(), pos.getY() + i - 1, pos.getZ())).getMaterial();
+				Material materialup = entity.world.getBlockState(new BlockPos(pos.getX(), pos.getY() + i, pos.getZ())).getMaterial();
 				entity.setPositionAndUpdate(pos.getX(), pos.getY() + i + 1, pos.getZ());
 				
-				if (material.isLiquid()) {
-				
-				destWorld.setBlockState(new BlockPos(pos.getX(), pos.getY() + i - 1, pos.getZ()), BlockInit.FUNGAL_DIRT.get().getDefaultState());
-				destWorld.setBlockState(new BlockPos(pos.getX(), pos.getY() + i- 1, pos.getZ() - 1), BlockInit.FUNGAL_DIRT.get().getDefaultState());
-				destWorld.setBlockState(new BlockPos(pos.getX() - 1, pos.getY() + i- 1, pos.getZ() - 1), BlockInit.FUNGAL_DIRT.get().getDefaultState());
-				destWorld.setBlockState(new BlockPos(pos.getX() - 1, pos.getY() + i- 1, pos.getZ()), BlockInit.FUNGAL_DIRT.get().getDefaultState());
-				}
+				{
+					if (materialup.isLiquid()) {
+						destWorld.setBlockState(new BlockPos(pos.getX(), pos.getY() + i, pos.getZ()), BlockInit.FUNGAL_DIRT.get().getDefaultState());
+						destWorld.setBlockState(new BlockPos(pos.getX(), pos.getY() + i, pos.getZ() - 1), BlockInit.FUNGAL_DIRT.get().getDefaultState());
+						destWorld.setBlockState(new BlockPos(pos.getX() - 1, pos.getY() + i, pos.getZ() - 1), BlockInit.FUNGAL_DIRT.get().getDefaultState());
+						destWorld.setBlockState(new BlockPos(pos.getX() - 1, pos.getY() + i, pos.getZ()), BlockInit.FUNGAL_DIRT.get().getDefaultState());
+						}
+				else if (material.isLiquid()) {
+					destWorld.setBlockState(new BlockPos(pos.getX(), pos.getY() + i - 1, pos.getZ()), BlockInit.FUNGAL_DIRT.get().getDefaultState());
+					destWorld.setBlockState(new BlockPos(pos.getX(), pos.getY() + i - 1, pos.getZ() - 1), BlockInit.FUNGAL_DIRT.get().getDefaultState());
+					destWorld.setBlockState(new BlockPos(pos.getX() - 1, pos.getY() + i - 1, pos.getZ() - 1), BlockInit.FUNGAL_DIRT.get().getDefaultState());
+					destWorld.setBlockState(new BlockPos(pos.getX() - 1, pos.getY() + i - 1, pos.getZ()), BlockInit.FUNGAL_DIRT.get().getDefaultState());
+					}
 
 				return entity;
+				}
 			}
 		});
 	}

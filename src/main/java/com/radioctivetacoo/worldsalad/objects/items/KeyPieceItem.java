@@ -22,6 +22,18 @@ public class KeyPieceItem extends Item {
 		{
 		tooltip.add(new StringTextComponent("\u00A73" + "Part of an ancient key, protected by a half-creature, half-construct..."));
 		}
+		else if (this == ItemInit.PATHOGEN_KEY_PIECE.get())
+		{
+		tooltip.add(new StringTextComponent("\u00A73" + "Part of an ancient key, protected by a roaming conglomerate of death..."));
+		}
+		else if (this == ItemInit.PLATED_KEY_PIECE.get())
+		{
+		tooltip.add(new StringTextComponent("\u00A73" + "Part of an ancient key, protected by a fallen royalty..."));
+		}
+		else if (this == ItemInit.HYPHAE_KEY.get())
+		{
+		tooltip.add(new StringTextComponent("\u00A73" + "The guardians have been defeated. Where could it lead?"));
+		}
 		super.addInformation(stack, worldIn, tooltip, flagIn);
 	}
 	

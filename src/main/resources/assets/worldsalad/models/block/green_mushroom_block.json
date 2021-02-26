@@ -1,6 +1,14 @@
 {
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "worldsalad:blocks/green_glowing_mushroom_head"
-	}
+    "textures": {
+        "texture": "worldsalad:blocks/green_glowing_mushroom_head",
+        "particle": "worldsalad:blocks/green_glowing_mushroom_head"
+    },
+    "elements": [
+        {   "from": [ 0, 0, 0 ],
+            "to": [ 16, 16, 0 ],
+            "faces": {
+                "north": { "texture": "#texture", "cullface":"north" }
+            }
+        }
+    ]
 }

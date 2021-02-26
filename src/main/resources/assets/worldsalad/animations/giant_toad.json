@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.giant_toad.walk": {
+		"animation.giant_toad.walking": {
 			"loop": true,
 			"animation_length": 1.36,
 			"bones": {

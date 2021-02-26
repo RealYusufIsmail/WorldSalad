@@ -27,12 +27,12 @@ public class AcidOceanBiome extends Biome {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public int getSkyColor() {
-		return 0xaef2bf;
+		return 0x26144f;
 	}
 
 	@Override
 	public float getSpawningChance() {
-		return 0F;
+		return 1F;
 	}
 	
 	private static final BlockState TOADSTOOLBLOCK = BlockInit.TOADSTOOL.get().getDefaultState();

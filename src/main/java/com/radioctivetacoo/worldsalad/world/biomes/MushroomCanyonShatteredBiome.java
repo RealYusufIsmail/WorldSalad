@@ -41,6 +41,7 @@ public class MushroomCanyonShatteredBiome extends Biome {
 	private static final BlockState LICHENBLOCK = BlockInit.LICHEN.get().getDefaultState();
 	BlockClusterFeatureConfig SHAGGYMANE = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(DESERT_SHAGGY_MANE), new SimpleBlockPlacer())).tries(4).func_227317_b_().build();
 	BlockClusterFeatureConfig LICHEN = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(LICHENBLOCK), new SimpleBlockPlacer())).tries(15).func_227317_b_().build();
+	BlockClusterFeatureConfig PRICKLEWEED = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(BlockInit.PRICKLEWEED.get().getDefaultState()), new SimpleBlockPlacer())).tries(15).func_227317_b_().build();
 
 	public static final BlockClusterFeatureConfig SUGAR_CANE_CONFIG = (new BlockClusterFeatureConfig.Builder(
 			new SimpleBlockStateProvider(BlockInit.DRY_REED.get().getDefaultState()), new ColumnBlockPlacer(2, 2)))
@@ -65,6 +66,9 @@ public class MushroomCanyonShatteredBiome extends Biome {
 		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 				Feature.RANDOM_PATCH.withConfiguration(LICHEN).withPlacement(
 						Placement.COUNT_CHANCE_HEIGHTMAP.configure(new HeightWithChanceConfig(5, 0.05F))));
+		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+				Feature.RANDOM_PATCH.withConfiguration(PRICKLEWEED).withPlacement(
+						Placement.COUNT_CHANCE_HEIGHTMAP.configure(new HeightWithChanceConfig(7, 0.05F))));
 		
 		@SuppressWarnings("rawtypes")
 		ConfiguredPlacement customConfig0 = Placement.COUNT_RANGE.configure(new CountRangeConfig(150, 10, 5, 230));

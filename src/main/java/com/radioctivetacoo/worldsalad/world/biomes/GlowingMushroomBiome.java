@@ -33,7 +33,7 @@ public class GlowingMushroomBiome extends Biome {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public int getSkyColor() {
-		return 0x6d6bb5;
+		return 0x26144f;
 	}
 
 	@Override

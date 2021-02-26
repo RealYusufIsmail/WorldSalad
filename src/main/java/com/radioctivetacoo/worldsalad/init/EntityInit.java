@@ -57,7 +57,7 @@ public class EntityInit {
 		registerEntityWorldSpawns(ROCK_MONSTER.get(), 80, 1, 3, EntityClassification.MONSTER,
 				BiomeInit.CRAG_BIOME.get(), Biomes.MOUNTAINS, Biomes.GRAVELLY_MOUNTAINS, Biomes.MOUNTAIN_EDGE, Biomes.MODIFIED_GRAVELLY_MOUNTAINS, Biomes.SNOWY_MOUNTAINS);
 		
-		registerEntityWorldSpawns(MOTH.get(), 250, 3, 4, EntityClassification.MONSTER,
+		registerEntityWorldSpawns(MOTH.get(), 175, 1, 3, EntityClassification.MONSTER,
 				BiomeInit.GLOWING_MUSHROOM_BIOME.get());
 		
 		registerEntityWorldSpawns(BIOLUMINARY.get(), 110, 1, 3, EntityClassification.MONSTER,

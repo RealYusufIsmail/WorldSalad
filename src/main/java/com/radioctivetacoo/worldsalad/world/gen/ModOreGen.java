@@ -2,7 +2,6 @@ package com.radioctivetacoo.worldsalad.world.gen;
 
 import com.radioctivetacoo.worldsalad.init.BiomeInit;
 import com.radioctivetacoo.worldsalad.init.BlockInit;
-import com.radioctivetacoo.worldsalad.init.FluidInit;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.block.pattern.BlockMatcher;
@@ -30,100 +29,45 @@ public class ModOreGen {
 					|| biome == Biomes.LUKEWARM_OCEAN || biome == Biomes.OCEAN || biome == Biomes.RIVER
 					|| biome == Biomes.SWAMP || biome == Biomes.SWAMP_HILLS || biome == Biomes.WARM_OCEAN) {
 				@SuppressWarnings("rawtypes")
-				ConfiguredPlacement customConfigShale = Placement.COUNT_RANGE
-						.configure(new CountRangeConfig(15, 0, 0, 130));
-				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-						Feature.ORE
-								.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-										BlockInit.SHALE.get().getDefaultState(), 25))
-								.withPlacement(customConfigShale));
+				ConfiguredPlacement customConfigShale = Placement.COUNT_RANGE.configure(new CountRangeConfig(15, 0, 0, 130));
+				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockInit.SHALE.get().getDefaultState(), 25)).withPlacement(customConfigShale));
 
 				@SuppressWarnings("rawtypes")
-				ConfiguredPlacement customConfigCobalt = Placement.COUNT_RANGE
-						.configure(new CountRangeConfig(8, 35, 0, 130));
-				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-						Feature.ORE
-								.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-										BlockInit.COBALT_ORE.get().getDefaultState(), 4))
-								.withPlacement(customConfigCobalt));
+				ConfiguredPlacement customConfigCobalt = Placement.COUNT_RANGE.configure(new CountRangeConfig(8, 35, 0, 130));
+				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockInit.COBALT_ORE.get().getDefaultState(), 4)).withPlacement(customConfigCobalt));
 
 			}
 			if (biome == BiomeInit.CRAG_BIOME.get() || biome == Biomes.BEACH) {
 				@SuppressWarnings("rawtypes")
-				ConfiguredPlacement customConfigSnowSalt = Placement.COUNT_RANGE
-						.configure(new CountRangeConfig(118, 0, 0, 130));
-				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-						Feature.ORE
-								.withConfiguration(new OreFeatureConfig(
-										OreFeatureConfig.FillerBlockType.create("SNOW", null,
-												new BlockMatcher(Blocks.SNOW_BLOCK)),
-										BlockInit.ROCK_SALT.get().getDefaultState(), 200))
-								.withPlacement(customConfigSnowSalt));
+				ConfiguredPlacement customConfigSnowSalt = Placement.COUNT_RANGE.configure(new CountRangeConfig(118, 0, 0, 130));
+				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("SNOW", null,new BlockMatcher(Blocks.SNOW_BLOCK)),BlockInit.ROCK_SALT.get().getDefaultState(), 200)).withPlacement(customConfigSnowSalt));
 				@SuppressWarnings("rawtypes")
-
-				ConfiguredPlacement customConfigSandSalt = Placement.COUNT_RANGE
-						.configure(new CountRangeConfig(4, 55, 0, 130));
-				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-						Feature.ORE
-								.withConfiguration(new OreFeatureConfig(
-										OreFeatureConfig.FillerBlockType.create("SAND", null,
-												new BlockMatcher(Blocks.SAND)),
-										BlockInit.ROCK_SALT.get().getDefaultState(), 18))
-								.withPlacement(customConfigSandSalt));
+				ConfiguredPlacement customConfigSandSalt = Placement.COUNT_RANGE.configure(new CountRangeConfig(4, 55, 0, 130));
+				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("SAND", null,new BlockMatcher(Blocks.SAND)),BlockInit.ROCK_SALT.get().getDefaultState(), 18)).withPlacement(customConfigSandSalt));
 			}
 			if (biome == Biomes.DESERT || biome == Biomes.DESERT_LAKES || biome == Biomes.DESERT_HILLS) {
 				@SuppressWarnings("rawtypes")
-				ConfiguredPlacement customConfigSiltStone = Placement.COUNT_RANGE
-						.configure(new CountRangeConfig(8, 0, 0, 130));
-				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-						Feature.ORE
-								.withConfiguration(new OreFeatureConfig(
-										OreFeatureConfig.FillerBlockType.create("SANDSTONE", null,
-												new BlockMatcher(Blocks.SANDSTONE)),
-										BlockInit.SILTSTONE.get().getDefaultState(), 20))
-								.withPlacement(customConfigSiltStone));
+				ConfiguredPlacement customConfigSiltStone = Placement.COUNT_RANGE.configure(new CountRangeConfig(8, 0, 0, 130));
+				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockInit.SILTSTONE.get().getDefaultState(), 20)).withPlacement(customConfigSiltStone));
 
 				@SuppressWarnings("rawtypes")
-				ConfiguredPlacement customConfigSilt = Placement.COUNT_RANGE
-						.configure(new CountRangeConfig(8, 0, 0, 130));
-				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-						Feature.ORE.withConfiguration(new OreFeatureConfig(
-								OreFeatureConfig.FillerBlockType.create("SAND", null, new BlockMatcher(Blocks.SAND)),
-								BlockInit.SILT.get().getDefaultState(), 20)).withPlacement(customConfigSilt));
+				ConfiguredPlacement customConfigSilt = Placement.COUNT_RANGE.configure(new CountRangeConfig(8, 0, 0, 130));
+				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("SAND", null, new BlockMatcher(Blocks.SAND)),BlockInit.SILT.get().getDefaultState(), 20)).withPlacement(customConfigSilt));
 			}
 			if (biome == Biomes.BADLANDS || biome == Biomes.BADLANDS_PLATEAU || biome == Biomes.ERODED_BADLANDS
 					|| biome == Biomes.MODIFIED_BADLANDS_PLATEAU || biome == Biomes.MODIFIED_WOODED_BADLANDS_PLATEAU
 					|| biome == Biomes.WOODED_BADLANDS_PLATEAU) {
 				@SuppressWarnings("rawtypes")
-				ConfiguredPlacement customConfigSiltStone = Placement.COUNT_RANGE
-						.configure(new CountRangeConfig(8, 0, 0, 130));
-				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-						Feature.ORE
-								.withConfiguration(new OreFeatureConfig(
-										OreFeatureConfig.FillerBlockType.create("REDSANDSTONE", null,
-												new BlockMatcher(Blocks.RED_SANDSTONE)),
-										BlockInit.SILTSTONE.get().getDefaultState(), 80))
-								.withPlacement(customConfigSiltStone));
+				ConfiguredPlacement customConfigSiltStone = Placement.COUNT_RANGE.configure(new CountRangeConfig(8, 0, 0, 130));
+				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("REDSANDSTONE", null,new BlockMatcher(Blocks.RED_SANDSTONE)),BlockInit.SILTSTONE.get().getDefaultState(), 80)).withPlacement(customConfigSiltStone));
 
 				@SuppressWarnings("rawtypes")
-				ConfiguredPlacement customConfigSilt = Placement.COUNT_RANGE
-						.configure(new CountRangeConfig(8, 0, 0, 130));
-				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-						Feature.ORE
-								.withConfiguration(new OreFeatureConfig(
-										OreFeatureConfig.FillerBlockType.create("REDSAND", null,
-												new BlockMatcher(Blocks.RED_SAND)),
-										BlockInit.SILT.get().getDefaultState(), 35))
-								.withPlacement(customConfigSilt));
+				ConfiguredPlacement customConfigSilt = Placement.COUNT_RANGE.configure(new CountRangeConfig(8, 0, 0, 130));
+				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("REDSAND", null,new BlockMatcher(Blocks.RED_SAND)),BlockInit.SILT.get().getDefaultState(), 35)).withPlacement(customConfigSilt));
 			}
 			if (biome == Biomes.FROZEN_RIVER || biome == Biomes.RIVER || biome == Biomes.SWAMP) {
 				@SuppressWarnings("rawtypes")
-				ConfiguredPlacement customConfigRiverMud = Placement.COUNT_RANGE
-						.configure(new CountRangeConfig(60, 50, 0, 130));
-				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-						Feature.ORE.withConfiguration(new OreFeatureConfig(
-								OreFeatureConfig.FillerBlockType.create("DIRT", null, new BlockMatcher(Blocks.DIRT)),
-								BlockInit.MUD.get().getDefaultState(), 25)).withPlacement(customConfigRiverMud));
+				ConfiguredPlacement customConfigRiverMud = Placement.COUNT_RANGE.configure(new CountRangeConfig(60, 50, 0, 130));biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("DIRT", null, new BlockMatcher(Blocks.DIRT)),BlockInit.MUD.get().getDefaultState(), 25)).withPlacement(customConfigRiverMud));
 
 			}
 
@@ -432,6 +376,41 @@ public class ModOreGen {
 											new BlockMatcher(Blocks.END_STONE)),
 									BlockInit.MOLYBDENUM_ORE.get().getDefaultState(), 8))
 							.withPlacement(customConfigEndMoly));
+			
+			@SuppressWarnings("rawtypes")
+			ConfiguredPlacement customConfigEndMoondust = Placement.COUNT_RANGE
+					.configure(new CountRangeConfig(1, 0, 0, 130));
+			biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+					Feature.ORE
+							.withConfiguration(new OreFeatureConfig(
+									OreFeatureConfig.FillerBlockType.create("ED", null,
+											new BlockMatcher(Blocks.END_STONE)),
+									BlockInit.MOONDUST.get().getDefaultState(), 50))
+							.withPlacement(customConfigEndMoondust));
+			if (biome == BiomeInit.ACID_OCEAN_BIOME.get() || biome == BiomeInit.GLOWING_MUSHROOM_BIOME.get())
+			{
+			@SuppressWarnings("rawtypes")
+			ConfiguredPlacement customConfigBiosediment = Placement.COUNT_RANGE
+					.configure(new CountRangeConfig(30, 40, 0, 130));
+			biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+					Feature.ORE
+							.withConfiguration(new OreFeatureConfig(
+									OreFeatureConfig.FillerBlockType.create("FD", null,
+											new BlockMatcher(BlockInit.FUNGAL_DIRT.get())),
+									BlockInit.BIOSEDIMENT.get().getDefaultState(), 50))
+							.withPlacement(customConfigBiosediment));
+			
+			@SuppressWarnings("rawtypes")
+			ConfiguredPlacement customConfigBiosedimentMud = Placement.COUNT_RANGE
+					.configure(new CountRangeConfig(30, 40, 0, 180));
+			biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+					Feature.ORE
+							.withConfiguration(new OreFeatureConfig(
+									OreFeatureConfig.FillerBlockType.create("MUD", null,
+											new BlockMatcher(BlockInit.MUD.get())),
+									BlockInit.BIOSEDIMENT.get().getDefaultState(), 50))
+							.withPlacement(customConfigBiosedimentMud));
+			}
 
 			@SuppressWarnings("rawtypes")
 			ConfiguredPlacement customConfigLimestone = Placement.COUNT_RANGE
@@ -441,15 +420,6 @@ public class ModOreGen {
 							.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
 									BlockInit.LIMESTONE.get().getDefaultState(), 20))
 							.withPlacement(customConfigLimestone));
-			
-			@SuppressWarnings("rawtypes")
-			ConfiguredPlacement customConfigOil = Placement.COUNT_RANGE
-					.configure(new CountRangeConfig(1, 11, 0, 25));
-			biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-					Feature.ORE
-							.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-									FluidInit.CRUDE_OIL_BLOCK.get().getDefaultState(), 40))
-							.withPlacement(customConfigOil));
 
 			BlockClusterFeatureConfig AMANITAOVERWORLD = (new BlockClusterFeatureConfig.Builder(
 					new SimpleBlockStateProvider(BlockInit.AMANITA.get().getDefaultState()), new SimpleBlockPlacer()))

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FFF",
+    "FSF",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:amber_droplet"
+    },
+    "S": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "item": "worldsalad:amber_glass",
+    "count": 1
+  }
+}

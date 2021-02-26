@@ -1,5 +1,7 @@
 package com.radioctivetacoo.worldsalad.entities;
 
+import com.radioctivetacoo.worldsalad.init.ItemInit;
+
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.IRangedAttackMob;
 import net.minecraft.entity.LivingEntity;
@@ -10,6 +12,7 @@ import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.RangedAttackGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
+import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -39,6 +42,15 @@ public class Macrobe extends MonsterEntity implements IAnimatable, IRangedAttack
 	protected boolean canDropLoot() {
 		return true;
 	}
+	
+	protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
+	      super.dropSpecialItems(source, looting, recentlyHitIn);
+	      ItemEntity itementity = this.entityDropItem(ItemInit.PATHOGEN_KEY_PIECE.get());
+	      if (itementity != null) {
+	         itementity.setNoDespawn();
+	      }
+
+	   }
 	
 	protected boolean shouldBurnInDay() {
 	      return true;

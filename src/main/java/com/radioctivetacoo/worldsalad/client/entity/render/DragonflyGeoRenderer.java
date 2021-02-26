@@ -28,58 +28,58 @@ public class DragonflyGeoRenderer extends GeoEntityRenderer<Dragonfly>
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(Dragonfly instance) {
-		if (instance.getVariant() == 0) {
-			if (instance.getSaddled() == true) {
+	public ResourceLocation getTextureLocation(Dragonfly entity) {
+		if (entity.getVariant() == 0) {
+			if (entity.getSaddled() == true) {
 				return new ResourceLocation(WorldSalad.MOD_ID,
 						"textures/models/entity/dragonfly/dragonfly_blue_saddled.png");
 			} else {
 				return new ResourceLocation(WorldSalad.MOD_ID, "textures/models/entity/dragonfly/dragonfly_blue.png");
 			}
-		} else if (instance.getVariant() == 1) {
-			if (instance.getSaddled() == true) {
+		} else if (entity.getVariant() == 1) {
+			if (entity.getSaddled() == true) {
 				return new ResourceLocation(WorldSalad.MOD_ID,
 						"textures/models/entity/dragonfly/dragonfly_red_saddled.png");
 			} else {
 				return new ResourceLocation(WorldSalad.MOD_ID, "textures/models/entity/dragonfly/dragonfly_red.png");
 			}
-		} else if (instance.getVariant() == 2) {
-			if (instance.getSaddled() == true) {
+		} else if (entity.getVariant() == 2) {
+			if (entity.getSaddled() == true) {
 				return new ResourceLocation(WorldSalad.MOD_ID,
 						"textures/models/entity/dragonfly/dragonfly_green_saddled.png");
 			} else {
 				return new ResourceLocation(WorldSalad.MOD_ID, "textures/models/entity/dragonfly/dragonfly_green.png");
 			}
-		} else if (instance.getVariant() == 3) {
-			if (instance.getSaddled() == true) {
+		} else if (entity.getVariant() == 3) {
+			if (entity.getSaddled() == true) {
 				return new ResourceLocation(WorldSalad.MOD_ID,
 						"textures/models/entity/dragonfly/dragonfly_pink_saddled.png");
 			} else {
 				return new ResourceLocation(WorldSalad.MOD_ID, "textures/models/entity/dragonfly/dragonfly_pink.png");
 			}
-		} else if (instance.getVariant() == 4) {
-			if (instance.getSaddled() == true) {
+		} else if (entity.getVariant() == 4) {
+			if (entity.getSaddled() == true) {
 				return new ResourceLocation(WorldSalad.MOD_ID,
 						"textures/models/entity/dragonfly/dragonfly_white_saddled.png");
 			} else {
 				return new ResourceLocation(WorldSalad.MOD_ID, "textures/models/entity/dragonfly/dragonfly_white.png");
 			}
-		} else if (instance.getVariant() == 5) {
-			if (instance.getSaddled() == true) {
+		} else if (entity.getVariant() == 5) {
+			if (entity.getSaddled() == true) {
 				return new ResourceLocation(WorldSalad.MOD_ID,
 						"textures/models/entity/dragonfly/dragonfly_black_saddled.png");
 			} else {
 				return new ResourceLocation(WorldSalad.MOD_ID, "textures/models/entity/dragonfly/dragonfly_black.png");
 			}
-		} else if (instance.getVariant() == 6) {
-			if (instance.getSaddled() == true) {
+		} else if (entity.getVariant() == 6) {
+			if (entity.getSaddled() == true) {
 				return new ResourceLocation(WorldSalad.MOD_ID,
 						"textures/models/entity/dragonfly/dragonfly_gold_saddled.png");
 			} else {
 				return new ResourceLocation(WorldSalad.MOD_ID, "textures/models/entity/dragonfly/dragonfly_gold.png");
 			}
 		} else {
-			if (instance.getSaddled() == true) {
+			if (entity.getSaddled() == true) {
 				return new ResourceLocation(WorldSalad.MOD_ID,
 						"textures/models/entity/dragonfly/dragonfly_blue_saddled.png");
 			} else {

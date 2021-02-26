@@ -18,6 +18,8 @@ import com.radioctivetacoo.worldsalad.world.feature.structures.MushrockPieces;
 import com.radioctivetacoo.worldsalad.world.feature.structures.MushrockStructure;
 import com.radioctivetacoo.worldsalad.world.feature.structures.NetherShrinePieces;
 import com.radioctivetacoo.worldsalad.world.feature.structures.NetherShrineStructure;
+import com.radioctivetacoo.worldsalad.world.feature.structures.OilWellPieces;
+import com.radioctivetacoo.worldsalad.world.feature.structures.OilWellStructure;
 import com.radioctivetacoo.worldsalad.world.feature.structures.ShroomHousePieces;
 import com.radioctivetacoo.worldsalad.world.feature.structures.ShroomHouseStructure;
 import com.radioctivetacoo.worldsalad.world.feature.structures.WraithMushRoomPieces;
@@ -54,6 +56,7 @@ public class FeatureInit {
 		Registry.register(Registry.STRUCTURE_PIECE, "MUSHROCK".toLowerCase(Locale.ROOT), MUSHROCK_PIECE);
 		Registry.register(Registry.STRUCTURE_PIECE, "NETHER_SHRINE".toLowerCase(Locale.ROOT), NETHER_SHRINE_PIECE);
 		Registry.register(Registry.STRUCTURE_PIECE, "ANT_HIVE".toLowerCase(Locale.ROOT), ANT_HIVE_PIECE);
+		Registry.register(Registry.STRUCTURE_PIECE, "OIL_WELL".toLowerCase(Locale.ROOT), OIL_WELL_PIECE);
 	}
 	
 	public static IStructurePieceType SHRINE_PIECE = AncientHyphaeShrinePieces.Piece::new;
@@ -65,6 +68,7 @@ public class FeatureInit {
 	public static IStructurePieceType MUSHROCK_PIECE = MushrockPieces.Piece::new;
 	public static IStructurePieceType NETHER_SHRINE_PIECE = NetherShrinePieces.Piece::new;
 	public static IStructurePieceType ANT_HIVE_PIECE = AntHivePieces.Piece::new;
+	public static IStructurePieceType OIL_WELL_PIECE = OilWellPieces.Piece::new;
 
 	//structures
 	public static final RegistryObject<AncientHyphaeShrineStructure> ANCIENT_HYPHAE_SHRINE = FEATURES.register("ancient_hyphae_shrine", 
@@ -93,6 +97,10 @@ public class FeatureInit {
 	
 	public static final RegistryObject<AntHiveStructure> ANT_HIVE = FEATURES.register("ant_hive", 
 			() -> new AntHiveStructure(NoFeatureConfig::deserialize));
+	
+	public static final RegistryObject<OilWellStructure> OIL_WELL = FEATURES.register("oil_well", 
+			() -> new OilWellStructure(NoFeatureConfig::deserialize));
+	
 	
 	//vegetation
 	public static final RegistryObject<LumbooFeature> LUMBOO = FEATURES.register("lumboo", 

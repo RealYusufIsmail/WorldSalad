@@ -1,16 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "LPL",
-    "PSP",
-    "LPL"
+    "LCL",
+    "OSO",
+    "LCL"
   ],
   "key": {
-    "P": {
+    "C": {
       "item": "worldsalad:copper_ingot"
     },
     "S": {
       "item": "worldsalad:strange_mechanical_component"
+    },
+    "O": {
+      "item": "worldsalad:strange_optical_component"
     },
     "L": {
       "item": "worldsalad:lumen_essence"

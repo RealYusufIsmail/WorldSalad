@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "FFF",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:amber_glass"
+    }
+  },
+  "result": {
+    "item": "worldsalad:amber_glass_pane",
+    "count": 16
+  }
+}

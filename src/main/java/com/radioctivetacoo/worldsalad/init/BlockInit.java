@@ -57,6 +57,7 @@ import com.radioctivetacoo.worldsalad.objects.blocks.plants.MoldGrowthBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.plants.MorelBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.plants.PassionFruitBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.plants.PassionVineCropBlock;
+import com.radioctivetacoo.worldsalad.objects.blocks.plants.PrickleweedBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.plants.TallFungrassBlock;
 import com.radioctivetacoo.worldsalad.objects.blocks.plants.TallLumgrassBlock;
 import com.radioctivetacoo.worldsalad.world.feature.MadroneTree;
@@ -94,7 +95,7 @@ public class BlockInit {
 	// Special Blocks
 	public static final RegistryObject<Block> DEEP_FRYER = BLOCKS.register("deep_fryer",
 			() -> new DeepFryerBlock(
-					Block.Properties.create(Material.IRON).lightValue(11).hardnessAndResistance(2.0f, 99.0f)
+					Block.Properties.create(Material.IRON).lightValue(11).hardnessAndResistance(3.0f, 25.0f)
 							.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 	
 	public static final RegistryObject<Block> KILN = BLOCKS.register("kiln",
@@ -102,46 +103,47 @@ public class BlockInit {
 							.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
 	
 	public static final RegistryObject<Block> SEED_PRESS = BLOCKS.register("seed_press",
-			() -> new SeedPressBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.6f, 4.0f)
+			() -> new SeedPressBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2f, 5.0f)
 					.harvestTool(ToolType.AXE).sound(SoundType.WOOD)));
 
 	public static final RegistryObject<Block> SPINNING_WHEEL = BLOCKS.register("spinning_wheel",
-			() -> new SpinningWheelBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.6f, 4.0f)
+			() -> new SpinningWheelBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2f, 5.0f)
 					.harvestTool(ToolType.AXE).sound(SoundType.WOOD)));
 	
 	public static final RegistryObject<Block> LESSER_INFUSER = BLOCKS.register("lesser_infuser",
-			() -> new LesserInfuserBlock(Block.Properties.create(Material.ROCK).lightValue(11).hardnessAndResistance(2.0f, 99.0f)
+			() -> new LesserInfuserBlock(Block.Properties.create(Material.ROCK).lightValue(11).hardnessAndResistance(2.0f, 25.0f)
 					.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
 	
 	public static final RegistryObject<Block> HYDRAULIC_PRESS = BLOCKS.register("hydraulic_press",
-			() -> new HydraulicPressBlock(Block.Properties.from(Blocks.IRON_BLOCK)));
+			() -> new HydraulicPressBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(3.0f, 25.0f)
+					.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 	
 	public static final RegistryObject<Block> MUSHRINE = BLOCKS.register("mushrine",
 			() -> new MushrineBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(6.6f, 99.0f)
-					.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
+					.harvestLevel(0).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 	
 	public static final RegistryObject<Block> ARCHAEOLOGY_STATION = BLOCKS.register("archaeology_station",
-			() -> new ArchaeologyStationBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.6f, 99.0f)
+			() -> new ArchaeologyStationBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(5f, 25.0f)
 					.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 	
 	public static final RegistryObject<Block> ALLOY_FURNACE = BLOCKS.register("alloy_furnace",
-			() -> new AlloyFurnaceBlock(Block.Properties.create(Material.IRON).lightValue(11).hardnessAndResistance(4.6f, 99.0f)
+			() -> new AlloyFurnaceBlock(Block.Properties.create(Material.IRON).lightValue(11).hardnessAndResistance(5f, 25.0f)
 					.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 	
 	public static final RegistryObject<Block> FLOATATION_BIN = BLOCKS.register("floatation_bin",
-			() -> new FloatationBinBlock(Block.Properties.create(Material.IRON).lightValue(11).hardnessAndResistance(4.6f, 99.0f)
+			() -> new FloatationBinBlock(Block.Properties.create(Material.IRON).lightValue(11).hardnessAndResistance(5f, 25.0f)
 					.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 	
 	public static final RegistryObject<Block> INDUSTRIAL_GRINDER = BLOCKS.register("industrial_grinder",
-			() -> new IndustrialGrinderBlock(Block.Properties.create(Material.IRON).lightValue(11).hardnessAndResistance(4.6f, 99.0f)
+			() -> new IndustrialGrinderBlock(Block.Properties.create(Material.IRON).lightValue(11).hardnessAndResistance(5f, 25.0f)
 					.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 	
 	public static final RegistryObject<Block> DISPLAY_STAND = BLOCKS.register("display_stand",
-			() -> new DisplayStandBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.6f, 4.0f)
+			() -> new DisplayStandBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2f, 5.0f)
 					.harvestTool(ToolType.AXE).sound(SoundType.WOOD)));
 	
 	public static final RegistryObject<Block> DISTILLING_BARREL = BLOCKS.register("distilling_barrel",
-			() -> new DistillingBarrelBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.6f, 4.0f)
+			() -> new DistillingBarrelBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2f, 5.0f)
 					.harvestTool(ToolType.AXE).sound(SoundType.WOOD)));
 	
 	public static final RegistryObject<Block> DIRT_CAKE = BLOCKS.register("dirt_cake",
@@ -151,22 +153,22 @@ public class BlockInit {
 			() -> new EssenceCatalystBlock(Block.Properties.from(Blocks.STONE).doesNotBlockMovement().lightValue(14)));
 	
 	public static final RegistryObject<Block> DISTILLATION_TOWER_BLOCK = BLOCKS.register("distillation_tower_block",
-			() -> new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2f, 99.0f)));
+			() -> new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2f, 10.0f)));
 	
 	public static final RegistryObject<Block> DISTILLER = BLOCKS.register("distiller",
-			() -> new DistillerBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(1.6f, 99.0f)
+			() -> new DistillerBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(5f, 25.0f)
 					.harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 	
 	public static final RegistryObject<Block> BOILER = BLOCKS.register("boiler",
-			() -> new BoilerBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(1.6f, 99.0f)
+			() -> new BoilerBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(5f, 25.0f)
 					.harvestLevel(1).lightValue(11).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 	
 	public static final RegistryObject<Block> POLYMERIZATION_REACTOR = BLOCKS.register("polymerization_reactor",
-			() -> new PolymerizationReactorBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(1.6f, 99.0f)
+			() -> new PolymerizationReactorBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(5f, 25.0f)
 					.harvestLevel(1).lightValue(11).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 	
 	public static final RegistryObject<Block> INCENSE_PLATE = BLOCKS.register("incense_plate",
-			() -> new IncensePlateBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(1.6f, 99.0f)
+			() -> new IncensePlateBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(1f, 6.0f)
 					.lightValue(4).sound(SoundType.METAL)));
 
 	// Decorations
@@ -771,6 +773,9 @@ public class BlockInit {
 	
 	public static final RegistryObject<Block> LICHEN = BLOCKS.register("lichen",
 			() -> new LichenBlock(Block.Properties.from(Blocks.DANDELION)));
+	
+	public static final RegistryObject<Block> PRICKLEWEED = BLOCKS.register("prickleweed",
+			() -> new PrickleweedBlock(Block.Properties.from(Blocks.DANDELION)));
 	
 	public static final RegistryObject<Block> GREEN_GLOWING_MUSHROOM = BLOCKS.register("green_glowing_mushroom",
 			() -> new ModMushroomBlock(Block.Properties.from(Blocks.BROWN_MUSHROOM).lightValue(8)));

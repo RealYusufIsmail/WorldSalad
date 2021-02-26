@@ -51,6 +51,11 @@ public class StructureGen {
 			{
 				biome.addStructure(FeatureInit.NETHER_SHRINE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
 			}
+			if (biome != Biomes.NETHER && biome != Biomes.END_BARRENS && biome != Biomes.END_HIGHLANDS && biome != Biomes.END_MIDLANDS && biome != Biomes.SMALL_END_ISLANDS && biome != Biomes.THE_VOID &&
+				biome != BiomeInit.DENSE_MUSHROOM_FOREST_BIOME.get() && biome != BiomeInit.MUSHROOM_FOREST_BIOME.get() && biome != BiomeInit.GLOWING_MUSHROOM_BIOME.get() && biome != BiomeInit.MILDEW_FOREST_BIOME.get() && biome != BiomeInit.MOLD_TUNDRA_BIOME.get() && biome != BiomeInit.MUSHROOM_CANYON_SHATTERED_BIOME.get() )
+			{
+				biome.addStructure(FeatureInit.OIL_WELL.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+			}
 			
 		// allow generation between biomes
 			
@@ -62,6 +67,7 @@ public class StructureGen {
 			biome.addFeature(Decoration.SURFACE_STRUCTURES, FeatureInit.SHROOMHOUSE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
 			biome.addFeature(Decoration.SURFACE_STRUCTURES, FeatureInit.ANCIENT_HYPHAE_SHRINE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
 			biome.addFeature(Decoration.SURFACE_STRUCTURES, FeatureInit.ANT_HIVE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
+			biome.addFeature(Decoration.SURFACE_STRUCTURES, FeatureInit.OIL_WELL.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
 			biome.addFeature(Decoration.UNDERGROUND_STRUCTURES, FeatureInit.NETHER_SHRINE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
 		}
 	}
