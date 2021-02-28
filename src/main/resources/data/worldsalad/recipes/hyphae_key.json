@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "ABC",
+    "   "
+  ],
+  "key": {
+    "A": {
+      "item": "worldsalad:pathogen_key_piece"
+    },
+    "B": {
+      "item": "worldsalad:luminant_key_piece"
+    },
+    "C": {
+      "item": "worldsalad:plated_key_piece"
+    }
+  },
+  "result": {
+    "item": "worldsalad:hyphae_key",
+    "count": 1
+  }
+}

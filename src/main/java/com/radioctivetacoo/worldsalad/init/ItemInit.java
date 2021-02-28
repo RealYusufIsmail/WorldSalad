@@ -286,6 +286,12 @@ public class ItemInit {
 	public static final RegistryObject<Item> SILK_STRAND = ITEMS.register("silk_strand",
 			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
 	
+	public static final RegistryObject<Item> PLAGUE_SEED = ITEMS.register("plague_seed",
+			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+	
+	public static final RegistryObject<Item> ANT_EGG = ITEMS.register("ant_egg",
+			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+	
 	public static final RegistryObject<Item> ESSENCE_CRYSTAL = ITEMS.register("essence_crystal",
 			() -> new EssenceCrystalItem(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
 	
@@ -806,5 +812,9 @@ public class ItemInit {
 	
 	public static final RegistryObject<ModSpawnEggItem> GLOWING_COG = ITEMS
 			.register("glowing_cog", () -> new ModSpawnEggItem(EntityInit.BIOLUMINESCENT_HORROR, 0xccecf0, 0x253d70,
+					new Item.Properties().group(WorldSaladToolsItemGroup.instance)));
+	
+	public static final RegistryObject<ModSpawnEggItem> INFESTED_EGG = ITEMS
+			.register("infested_egg", () -> new ModSpawnEggItem(EntityInit.INFECTED_QUEEN, 0xccecf0, 0x253d70,
 					new Item.Properties().group(WorldSaladToolsItemGroup.instance)));
 }

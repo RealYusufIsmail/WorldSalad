@@ -13,6 +13,7 @@ import net.minecraftforge.items.wrapper.RecipeWrapper;
 
 public class HydraulicPressRecipe implements IHydraulicPressRecipe {
 
+	public static Object recipeList;
 	private final ResourceLocation id;
 	private final Ingredient input;
 	private final Ingredient input2;

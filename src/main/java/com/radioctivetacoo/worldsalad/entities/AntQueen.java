@@ -4,6 +4,8 @@ import java.util.UUID;
 
 import javax.annotation.Nullable;
 
+import com.radioctivetacoo.worldsalad.init.ItemInit;
+
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -27,20 +29,23 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class WorkerAnt extends AbstractAntEntity implements IAnimatable {
+public class AntQueen extends CreatureEntity implements IAnimatable {
 	@SuppressWarnings("unused")
 	private UUID angerTargetUUID;
 	private AnimationFactory manager = new AnimationFactory(this);
+	public int timeUntilNextEgg = this.rand.nextInt(12000) + 6000;
 	
-	public WorkerAnt(EntityType<? extends CreatureEntity> type, World worldIn) {
+	public AntQueen(EntityType<? extends CreatureEntity> type, World worldIn) {
 		super(type, worldIn);
-		this.experienceValue = 6;
+		this.experienceValue = 16;
 	}
 
 	@Override
 	protected boolean canDropLoot() {
 		return true;
 	}
+	
+	
 	
 	public void setRevengeTarget(@Nullable LivingEntity livingBase) {
 	      super.setRevengeTarget(livingBase);
@@ -54,6 +59,12 @@ public class WorkerAnt extends AbstractAntEntity implements IAnimatable {
 	public void livingTick() {
 		this.updateArmSwingProgress();
 		super.livingTick();
+		if (!this.world.isRemote && this.isAlive() && --this.timeUntilNextEgg <= 0) {
+			this.playSound(SoundEvents.ENTITY_ITEM_FRAME_ROTATE_ITEM, 1.0F,
+					(this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
+			this.entityDropItem(ItemInit.ANT_EGG.get());
+			this.timeUntilNextEgg = this.rand.nextInt(12000) + 6000;
+		}
 	}
 	
 	@Override
@@ -70,6 +81,8 @@ public class WorkerAnt extends AbstractAntEntity implements IAnimatable {
 	protected SoundEvent getSplashSound() {
 		return SoundEvents.ENTITY_HOSTILE_SPLASH;
 	}
+	
+	
 
 	@Override
 	public boolean attackEntityFrom(DamageSource source, float amount) {
@@ -83,11 +96,12 @@ public class WorkerAnt extends AbstractAntEntity implements IAnimatable {
 
 	@Override
 	protected void registerGoals() {
-		this.goalSelector.addGoal(12, new LookAtGoal(this, WorkerAnt.class, 3.0F));
-		this.goalSelector.addGoal(11, new LookAtGoal(this, TraderAnt.class, 3.0F));
+		this.goalSelector.addGoal(12, new LookAtGoal(this, SoldierAnt.class, 3.0F));
+		this.goalSelector.addGoal(10, new LookAtGoal(this, TraderAnt.class, 3.0F));
+		this.goalSelector.addGoal(11, new LookAtGoal(this, WorkerAnt.class, 3.0F));
 		this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
-		this.goalSelector.addGoal(8, new SwimGoal(this));
-		this.goalSelector.addGoal(7, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
+		this.goalSelector.addGoal(9, new SwimGoal(this));
+		this.goalSelector.addGoal(8, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Exoskeleton.class, true));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, CordycepsAnt.class, true));
 		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.0D, true));
@@ -97,11 +111,12 @@ public class WorkerAnt extends AbstractAntEntity implements IAnimatable {
 	@Override
 	protected void registerAttributes() {
 		super.registerAttributes();
-		this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.4F);
-		this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(15.0D);
-		this.getAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(2.0D);
+		this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.227F);
+		this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(100.0D);
 		this.getAttributes().registerAttribute(SharedMonsterAttributes.ATTACK_DAMAGE);
-		this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(7.0D);
+		this.getAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(10.0D);
+		this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(20.0D);
+		this.getAttribute(SharedMonsterAttributes.KNOCKBACK_RESISTANCE).setBaseValue(1.8D);
 	}
 
 	@Override

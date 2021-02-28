@@ -29,7 +29,7 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class TraderAnt extends CreatureEntity implements IAnimatable {
+public class TraderAnt extends AbstractAntEntity implements IAnimatable {
 	private AnimationFactory manager = new AnimationFactory(this);
 	private int tradeCooldown;
 	
@@ -89,7 +89,7 @@ public class TraderAnt extends CreatureEntity implements IAnimatable {
 		this.goalSelector.addGoal(8, new SwimGoal(this));
 		this.goalSelector.addGoal(7, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
 		this.goalSelector.addGoal(3, new AvoidEntityGoal(this, Exoskeleton.class, 24.0F, 1D, 1.5D));
-		this.targetSelector.addGoal(8, (new HurtByTargetGoal(this)));
+		this.targetSelector.addGoal(1, (new HurtByTargetGoal(this, AbstractAntEntity.class)).setCallsForHelp());
 	}
 
 	@Override

@@ -1,6 +1,12 @@
 package com.radioctivetacoo.worldsalad.entities;
 
+import com.radioctivetacoo.worldsalad.init.ItemInit;
+
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.goal.LookAtGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
@@ -8,13 +14,26 @@ import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
+import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.network.datasync.DataParameter;
+import net.minecraft.network.datasync.DataSerializers;
+import net.minecraft.network.datasync.EntityDataManager;
+import net.minecraft.pathfinding.ClimberPathNavigator;
+import net.minecraft.pathfinding.PathNavigator;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.BossInfo;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerBossInfo;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
@@ -23,18 +42,92 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class CordycepsAnt extends MonsterEntity implements IAnimatable {
+public class InfectedQueen extends MonsterEntity implements IAnimatable {
 	private AnimationFactory manager = new AnimationFactory(this);
+	private static final DataParameter<Byte> CLIMBING = EntityDataManager.createKey(InfectedQueen.class, DataSerializers.BYTE);
+	private final ServerBossInfo bossInfo = (ServerBossInfo)(new ServerBossInfo(this.getDisplayName(), BossInfo.Color.PURPLE, BossInfo.Overlay.PROGRESS)).setDarkenSky(false);
 	
-	public CordycepsAnt(EntityType<? extends MonsterEntity> type, World worldIn) {
+	public InfectedQueen(EntityType<? extends MonsterEntity> type, World worldIn) {
 		super(type, worldIn);
-		this.experienceValue = 8;
+		this.experienceValue = 20;
 	}
+	
+	@Override
+	protected void updateAITasks() {
+		super.updateAITasks();
+		this.bossInfo.setPercent(this.getHealth() / this.getMaxHealth());
+	}
+	
+	public void addTrackingPlayer(ServerPlayerEntity player) {
+	      super.addTrackingPlayer(player);
+	      this.bossInfo.addPlayer(player);
+	   }
+	
+	public void removeTrackingPlayer(ServerPlayerEntity player) {
+	      super.removeTrackingPlayer(player);
+	      this.bossInfo.removePlayer(player);
+	   }
+	
+	@Override
+	 public boolean isNonBoss() {
+	      return false;
+	   }
+	
+	protected PathNavigator createNavigator(World worldIn) {
+	      return new ClimberPathNavigator(this, worldIn);
+	   }
+
+	protected void registerData() {
+	      super.registerData();
+	      this.dataManager.register(CLIMBING, (byte)0);
+	   }
+	
+	public boolean isBesideClimbableBlock() {
+	      return (this.dataManager.get(CLIMBING) & 1) != 0;
+	   }
+	
+	public boolean isOnLadder() {
+	      return this.isBesideClimbableBlock();
+	   }
+	
+	public void setMotionMultiplier(BlockState state, Vec3d motionMultiplierIn) {
+	      if (state.getBlock() != Blocks.COBWEB) {
+	         super.setMotionMultiplier(state, motionMultiplierIn);
+	      }
+
+	   }
+	   
+	public void setBesideClimbableBlock(boolean climbing) {
+		      byte b0 = this.dataManager.get(CLIMBING);
+		      if (climbing) {
+		         b0 = (byte)(b0 | 1);
+		      } else {
+		         b0 = (byte)(b0 & -2);
+		      }
+
+		      this.dataManager.set(CLIMBING, b0);
+		   }
+	   
+	public void tick() {
+		      super.tick();
+		      if (!this.world.isRemote) {
+		         this.setBesideClimbableBlock(this.collidedHorizontally);
+		      }
+
+		   }
 
 	@Override
 	protected boolean canDropLoot() {
 		return true;
 	}
+	
+	protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
+	      super.dropSpecialItems(source, looting, recentlyHitIn);
+	      ItemEntity itementity = this.entityDropItem(ItemInit.PLATED_KEY_PIECE.get());
+	      if (itementity != null) {
+	         itementity.setNoDespawn();
+	      }
+	   }
 
 	@Override
 	public boolean isPreventingPlayerRest(PlayerEntity playerIn) {
@@ -85,10 +178,10 @@ public class CordycepsAnt extends MonsterEntity implements IAnimatable {
 	@Override
 	protected void registerAttributes() {
 		super.registerAttributes();
-		this.getAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(20.0D);
-		this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.29F);
-		this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(1.0D);
-		this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(30.0D);
+		this.getAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(80.0D);
+		this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.39F);
+		this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(10.0D);
+		this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(300.0D);
 		this.getAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(2.0D);
 	}
 
@@ -137,7 +230,6 @@ public class CordycepsAnt extends MonsterEntity implements IAnimatable {
 			return PlayState.CONTINUE;
 		}
 	}
-	/*
 	@Override
 	public boolean attackEntityAsMob(Entity entityIn) {
 		if (super.attackEntityAsMob(entityIn)) {
@@ -150,7 +242,7 @@ public class CordycepsAnt extends MonsterEntity implements IAnimatable {
 				}
 
 				if (j >= 0) {
-					((LivingEntity) entityIn).addPotionEffect(new EffectInstance(EffectInit.BLIGHT.get(), 1200, 0 + j));
+					((LivingEntity) entityIn).addPotionEffect(new EffectInstance(Effects.POISON, 200, 0 + j));
 				}
 			}
 
@@ -158,5 +250,5 @@ public class CordycepsAnt extends MonsterEntity implements IAnimatable {
 		} else {
 			return false;
 		}
-	}*/
+	}
 }

@@ -27,7 +27,7 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class SoldierAnt extends CreatureEntity implements IAnimatable {
+public class SoldierAnt extends AbstractAntEntity implements IAnimatable {
 	@SuppressWarnings("unused")
 	private UUID angerTargetUUID;
 	private AnimationFactory manager = new AnimationFactory(this);
@@ -92,7 +92,7 @@ public class SoldierAnt extends CreatureEntity implements IAnimatable {
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Exoskeleton.class, true));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, CordycepsAnt.class, true));
 		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.0D, true));
-		this.targetSelector.addGoal(7, (new HurtByTargetGoal(this)));
+		this.targetSelector.addGoal(1, (new HurtByTargetGoal(this, AbstractAntEntity.class)).setCallsForHelp());
 	}
 
 	@Override

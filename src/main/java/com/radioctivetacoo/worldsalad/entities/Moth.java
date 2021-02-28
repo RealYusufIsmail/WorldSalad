@@ -56,7 +56,7 @@ public class Moth extends MonsterEntity implements IFlyingAnimal {
 		this.func_213623_ec();
 		super.livingTick();
 		if (!this.world.isRemote && this.isAlive() && --this.timeUntilNextSilk <= 0) {
-			this.playSound(SoundEvents.BLOCK_COMPARATOR_CLICK, 1.0F,
+			this.playSound(SoundEvents.ENTITY_ITEM_FRAME_ROTATE_ITEM, 1.0F,
 					(this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
 			this.entityDropItem(ItemInit.SILK_STRAND.get());
 			this.timeUntilNextSilk = this.rand.nextInt(4800) + 2400;

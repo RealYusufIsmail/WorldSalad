@@ -16,12 +16,15 @@ import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.BossInfo;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerBossInfo;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
@@ -32,11 +35,33 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 public class Macrobe extends MonsterEntity implements IAnimatable, IRangedAttackMob {
 	private AnimationFactory manager = new AnimationFactory(this);
+	private final ServerBossInfo bossInfo = (ServerBossInfo)(new ServerBossInfo(this.getDisplayName(), BossInfo.Color.GREEN, BossInfo.Overlay.PROGRESS)).setDarkenSky(false);
 	
 	public Macrobe(EntityType<? extends MonsterEntity> type, World worldIn) {
 		super(type, worldIn);
 		this.experienceValue = 30;
 	}
+	
+	@Override
+	protected void updateAITasks() {
+		super.updateAITasks();
+		this.bossInfo.setPercent(this.getHealth() / this.getMaxHealth());
+	}
+	
+	public void addTrackingPlayer(ServerPlayerEntity player) {
+	      super.addTrackingPlayer(player);
+	      this.bossInfo.addPlayer(player);
+	   }
+	
+	public void removeTrackingPlayer(ServerPlayerEntity player) {
+	      super.removeTrackingPlayer(player);
+	      this.bossInfo.removePlayer(player);
+	   }
+	
+	@Override
+	 public boolean isNonBoss() {
+	      return false;
+	   }
 
 	@Override
 	protected boolean canDropLoot() {

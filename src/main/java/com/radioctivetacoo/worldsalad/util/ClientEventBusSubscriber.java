@@ -1,6 +1,7 @@
 package com.radioctivetacoo.worldsalad.util;
 
 import com.radioctivetacoo.worldsalad.WorldSalad;
+import com.radioctivetacoo.worldsalad.client.entity.render.AntQueenGeoRenderer;
 import com.radioctivetacoo.worldsalad.client.entity.render.BioluminaryGeoRenderer;
 import com.radioctivetacoo.worldsalad.client.entity.render.BioluminescentHorrorGeoRenderer;
 import com.radioctivetacoo.worldsalad.client.entity.render.BluecapGeoRenderer;
@@ -10,6 +11,7 @@ import com.radioctivetacoo.worldsalad.client.entity.render.DragonflyGeoRenderer;
 import com.radioctivetacoo.worldsalad.client.entity.render.ExoskeletonGeoRenderer;
 import com.radioctivetacoo.worldsalad.client.entity.render.FungalZombieGeoRenderer;
 import com.radioctivetacoo.worldsalad.client.entity.render.GiantToadGeoRenderer;
+import com.radioctivetacoo.worldsalad.client.entity.render.InfectedQueenGeoRenderer;
 import com.radioctivetacoo.worldsalad.client.entity.render.MacrobeGeoRenderer;
 import com.radioctivetacoo.worldsalad.client.entity.render.MothRender;
 import com.radioctivetacoo.worldsalad.client.entity.render.RedcapGeoRenderer;
@@ -146,6 +148,8 @@ public class ClientEventBusSubscriber {
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.DRAGONFLY.get(), DragonflyGeoRenderer::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.BIOLUMINARY.get(), BioluminaryGeoRenderer::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.BIOLUMINESCENT_HORROR.get(), BioluminescentHorrorGeoRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityInit.INFECTED_QUEEN.get(), InfectedQueenGeoRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityInit.ANT_QUEEN.get(), AntQueenGeoRenderer::new);
 		
 		ClientRegistry.bindTileEntityRenderer(TileEntityInit.DISPLAY_STAND.get(), DisplayStandRenderer::new);
 	}

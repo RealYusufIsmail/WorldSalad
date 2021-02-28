@@ -1,6 +1,7 @@
 package com.radioctivetacoo.worldsalad.init;
 
 import com.radioctivetacoo.worldsalad.WorldSalad;
+import com.radioctivetacoo.worldsalad.entities.AntQueen;
 import com.radioctivetacoo.worldsalad.entities.Bioluminary;
 import com.radioctivetacoo.worldsalad.entities.BioluminescentHorror;
 import com.radioctivetacoo.worldsalad.entities.Bluecap;
@@ -10,6 +11,7 @@ import com.radioctivetacoo.worldsalad.entities.Dragonfly;
 import com.radioctivetacoo.worldsalad.entities.Exoskeleton;
 import com.radioctivetacoo.worldsalad.entities.FungalZombie;
 import com.radioctivetacoo.worldsalad.entities.GiantToad;
+import com.radioctivetacoo.worldsalad.entities.InfectedQueen;
 import com.radioctivetacoo.worldsalad.entities.Macrobe;
 import com.radioctivetacoo.worldsalad.entities.Moth;
 import com.radioctivetacoo.worldsalad.entities.Redcap;
@@ -163,10 +165,6 @@ public class EntityInit {
 			() -> EntityType.Builder.<CordycepsAnt>create(CordycepsAnt::new, EntityClassification.MONSTER)
 					.size(0.85f, 0.6f).build(new ResourceLocation(WorldSalad.MOD_ID, "cordyceps_ant").toString()));
 	
-	public static final RegistryObject<EntityType<Macrobe>> MACROBE = ENTITY_TYPES.register("macrobe",
-			() -> EntityType.Builder.<Macrobe>create(Macrobe::new, EntityClassification.MONSTER)
-					.size(1.3f, 3.8f).build(new ResourceLocation(WorldSalad.MOD_ID, "macrobe").toString()));
-	
 	public static final RegistryObject<EntityType<GiantToad>> GIANT_TOAD = ENTITY_TYPES.register("giant_toad",
 			() -> EntityType.Builder.<GiantToad>create(GiantToad::new, EntityClassification.MONSTER)
 					.size(1.1f, 0.9f).build(new ResourceLocation(WorldSalad.MOD_ID, "giant_toad").toString()));
@@ -200,6 +198,10 @@ public class EntityInit {
 			() -> EntityType.Builder.<Bluecap>create(Bluecap::new, EntityClassification.CREATURE)
 					.size(0.8f, 1.2f).build(new ResourceLocation(WorldSalad.MOD_ID, "bluecap").toString()));
 	
+	public static final RegistryObject<EntityType<AntQueen>> ANT_QUEEN = ENTITY_TYPES.register("ant_queen",
+			() -> EntityType.Builder.<AntQueen>create(AntQueen::new, EntityClassification.CREATURE)
+					.size(1.3f, 1.1f).build(new ResourceLocation(WorldSalad.MOD_ID, "ant_queen").toString()));
+	
 	// passive mobs
 	public static final RegistryObject<EntityType<TraderAnt>> TRADER_ANT = ENTITY_TYPES.register("trader_ant",
 			() -> EntityType.Builder.<TraderAnt>create(TraderAnt::new, EntityClassification.MONSTER)
@@ -213,4 +215,12 @@ public class EntityInit {
 	public static final RegistryObject<EntityType<BioluminescentHorror>> BIOLUMINESCENT_HORROR = ENTITY_TYPES.register("bioluminescent_horror",
 			() -> EntityType.Builder.<BioluminescentHorror>create(BioluminescentHorror::new, EntityClassification.MONSTER)
 					.size(4f, 1.6f).build(new ResourceLocation(WorldSalad.MOD_ID, "bioluminescent_horror").toString()));
+	
+	public static final RegistryObject<EntityType<Macrobe>> MACROBE = ENTITY_TYPES.register("macrobe",
+			() -> EntityType.Builder.<Macrobe>create(Macrobe::new, EntityClassification.MONSTER)
+					.size(1.3f, 3.8f).build(new ResourceLocation(WorldSalad.MOD_ID, "macrobe").toString()));
+	
+	public static final RegistryObject<EntityType<InfectedQueen>> INFECTED_QUEEN = ENTITY_TYPES.register("infected_queen",
+			() -> EntityType.Builder.<InfectedQueen>create(InfectedQueen::new, EntityClassification.MONSTER)
+					.size(1.3f, 1.1f).build(new ResourceLocation(WorldSalad.MOD_ID, "infected_queen").toString()));
 }
