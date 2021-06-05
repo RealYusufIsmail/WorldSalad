@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "worldsalad:block/aluminum_plate_slab" },
+        "type=top": { "model": "worldsalad:block/aluminum_plate_slab_top" },
+        "type=double": { "model": "worldsalad:block/aluminum_plate_wall" }
+    }
+}

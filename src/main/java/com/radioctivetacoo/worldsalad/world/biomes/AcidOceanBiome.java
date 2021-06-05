@@ -68,6 +68,14 @@ public class AcidOceanBiome extends Biome {
 						OreFeatureConfig.FillerBlockType.create("DIRT", null,
 								new BlockMatcher(Blocks.DIRT)),
 						BlockInit.FUNGAL_DIRT.get().getDefaultState(), 100)).withPlacement(customConfig0));
+		
+		@SuppressWarnings("rawtypes")
+		ConfiguredPlacement customConfigIslands = Placement.COUNT_RANGE.configure(new CountRangeConfig(150, 180, 0, 250));
+		this.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+				Feature.ORE.withConfiguration(new OreFeatureConfig(
+						OreFeatureConfig.FillerBlockType.create("AIR", null,
+								new BlockMatcher(Blocks.AIR)),
+						BlockInit.FUNGAL_DIRT.get().getDefaultState(), 100)).withPlacement(customConfigIslands));
 	
 	}
 }

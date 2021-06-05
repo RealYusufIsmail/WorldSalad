@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F  ",
+    "FF ",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:aluminum_plate_wall"
+    }
+  },
+  "result": {
+    "item": "worldsalad:aluminum_plate_stairs",
+    "count": 4
+  }
+}

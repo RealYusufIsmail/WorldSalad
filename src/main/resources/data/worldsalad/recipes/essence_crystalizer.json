@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " EE",
+    " GE",
+    "G  "
+  ],
+  "key": {
+    "G": {
+      "item": "worldsalad:gold_rod"
+    },
+    "E": {
+      "item": "worldsalad:essence_crystal"
+    }
+  },
+  "result": {
+    "item": "worldsalad:essence_crystalizer",
+    "count": 1
+  }
+}

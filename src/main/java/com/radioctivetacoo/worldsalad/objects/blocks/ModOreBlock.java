@@ -18,8 +18,6 @@ public class ModOreBlock extends OreBlock {
 	         return MathHelper.nextInt(rand, 0, 2);
 	      } else if (this == BlockInit.SULPHUR_ORE.get() || this == BlockInit.LITHIUM_ORE.get() || this == BlockInit.ZINC_ORE.get() || this == BlockInit.MANGANESE_ORE.get()) {
 		     return MathHelper.nextInt(rand, 1, 2);
-	      } else if (this == BlockInit.COBALT_ORE.get()) {
-			 return MathHelper.nextInt(rand, 1, 3);
 	      } else if (this == BlockInit.HYPHAE_AMBER_ORE.get() || this == BlockInit.AMBERED_ADOBE.get()) {
 				 return MathHelper.nextInt(rand, 4, 5);
 	      } else if (this == BlockInit.EXPERIENCE_ORE.get()) {

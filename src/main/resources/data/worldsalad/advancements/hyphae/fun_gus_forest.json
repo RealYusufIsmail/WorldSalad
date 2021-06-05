@@ -1,0 +1,39 @@
+{
+   "parent":"worldsalad:hyphae/root",
+   "display":{
+      "icon":{
+         "item":"worldsalad:hycelium"
+      },
+      "title":{
+         "translate":"advancements.hyphae.fun_gus_forest.title"
+      },
+      "description":{
+         "translate":"advancements.hyphae.fun_gus_forest.description"
+      },
+      "frame":"task",
+      "show_toast":false,
+      "announce_to_chat":true,
+      "hidden":false
+   },
+   "criteria":{
+      "worldsalad:dense_mushroom_forest_biome":{
+         "trigger":"minecraft:location",
+         "conditions":{
+            "biome":"worldsalad:dense_mushroom_forest_biome"
+         }
+      },
+      "worldsalad:mushroom_forest_biome":{
+         "trigger":"minecraft:location",
+         "conditions":{
+            "biome":"worldsalad:mushroom_forest_biome"
+     	 }
+      }
+   },
+   "requirements":[
+      [
+         "worldsalad:dense_mushroom_forest_biome",
+         "worldsalad:mushroom_forest_biome"
+      ]
+   ]
+}
+}

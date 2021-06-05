@@ -124,6 +124,6 @@ public class Urchin extends DrownedEntity {
 	
 	@Override
 	public CreatureAttribute getCreatureAttribute() {
-		return CreatureAttribute.ARTHROPOD;
+		return CreatureAttribute.WATER;
 	}
 }

@@ -6,6 +6,7 @@ import javax.annotation.Nullable;
 
 import com.radioctivetacoo.worldsalad.init.ItemInit;
 
+import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -52,6 +53,11 @@ public class Dragonfly extends CreatureEntity implements IAnimatable {
 	public Dragonfly(EntityType<? extends CreatureEntity> type, World worldIn) {
 		super(type, worldIn);
 		this.experienceValue = 6;
+	}
+	
+	@Override
+	public CreatureAttribute getCreatureAttribute() {
+		return CreatureAttribute.ARTHROPOD;
 	}
 
 	@Nullable
@@ -336,7 +342,7 @@ public class Dragonfly extends CreatureEntity implements IAnimatable {
 			event.getController().transitionLengthTicks = 0; 
 			return PlayState.CONTINUE;
 		} else if (event.isMoving()){
-			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.exoskeleton.walk", true));
+			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.exoskeleton.walking", true));
 			event.getController().transitionLengthTicks = 0;
 			return PlayState.CONTINUE;
 		}

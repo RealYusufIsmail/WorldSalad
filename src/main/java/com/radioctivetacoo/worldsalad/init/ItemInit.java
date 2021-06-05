@@ -408,7 +408,7 @@ public class ItemInit {
 			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
 	
 	public static final RegistryObject<Item> ANT_SHELL_FRAGMENT_FOSSIL = ITEMS.register("ant_shell_fragment_fossil",
-			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance)));
+			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
 	
 	public static final RegistryObject<Item> BACTERIUM_FOSSIL = ITEMS.register("bacterium_fossil",
 			() -> new Item(new Item.Properties().group(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
@@ -568,9 +568,6 @@ public class ItemInit {
 			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> MOLYSTEEL_NUGGET = ITEMS.register("molysteel_nugget",
-			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
-
-	public static final RegistryObject<Item> COBALT_SHARD = ITEMS.register("cobalt_shard",
 			() -> new Item(new Item.Properties().group(WorldSaladMaterialsItemGroup.instance)));
 
 	public static final RegistryObject<Item> ZINC_DUST = ITEMS.register("zinc_dust",

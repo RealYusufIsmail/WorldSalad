@@ -1,0 +1,38 @@
+{
+"parent": "worldsalad:hyphae/root",
+  "display": {
+    "icon": {
+      "item": "worldsalad:moldgrass"
+    },
+    "title": {
+      "translate": "advancements.hyphae.fit_the_mold.title"
+    },
+    "description": {
+      "translate": "advancements.hyphae.fit_the_mold.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "worldsalad:mold_tundra_biome": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "worldsalad:mold_tundra_biome"
+      }
+    },
+    "worldsalad:mildew_forest_biome": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "worldsalad:mildew_forest_biome"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "worldsalad:mildew_forest_biome",
+      "worldsalad:mold_tundra_biome"
+    ]
+  ]
+}

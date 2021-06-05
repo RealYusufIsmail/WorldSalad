@@ -1,0 +1,35 @@
+{
+  "parent": "worldsalad:hyphae/burning_sea",
+  "display": {
+    "icon": {
+      "item": "worldsalad:hyphae_key"
+    },
+    "title": {
+      "translate": "advancements.hyphae.a_strange_key.title"
+    },
+    "description": {
+      "translate": "advancements.hyphae.a_strange_key.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "hyphae_key": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:hyphae_key"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hyphae_key"
+    ]
+  ]
+}

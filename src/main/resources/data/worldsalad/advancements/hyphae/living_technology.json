@@ -1,0 +1,35 @@
+{
+  "parent": "worldsalad:hyphae/their_own_devices",
+  "display": {
+    "icon": {
+      "item": "worldsalad:glowing_cog"
+    },
+    "title": {
+      "translate": "advancements.hyphae.living_technology.title"
+    },
+    "description": {
+      "translate": "advancements.hyphae.living_technology.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "glowing_cog": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:glowing_cog"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "glowing_cog"
+    ]
+  ]
+}

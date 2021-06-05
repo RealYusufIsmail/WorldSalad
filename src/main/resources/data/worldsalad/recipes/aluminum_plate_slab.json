@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "worldsalad:aluminum_plate_wall"
+    }
+  },
+  "result": {
+    "item": "worldsalad:aluminum_plate_slab",
+    "count": 6
+  }
+}

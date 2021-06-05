@@ -1,0 +1,182 @@
+{
+"parent": "worldsalad:hobbyist/funger_food",
+  "display": {
+    "icon": {
+      "item": "worldsalad:greater_mushroom_stew"
+    },
+    "title": {
+      "translate": "advancements.hobbyist.funglutton.title"
+    },
+    "description": {
+      "translate": "advancements.hobbyist.funglutton.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 200
+  },
+  "criteria": {
+    "lumberry": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "worldsalad:lumberry"
+        }
+      }
+    },
+    "fungberry": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "worldsalad:fungberry"
+        }
+      }
+    },
+    "moldberry": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "worldsalad:moldberry"
+        }
+      }
+    },
+    "fried_morel": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "worldsalad:fried_morel"
+        }
+      }
+    },
+    "raw_toad": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "worldsalad:raw_toad"
+        }
+      }
+    },
+    "cooked_toad": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "worldsalad:cooked_toad"
+        }
+      }
+    },
+    "raw_enoki_bulb": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "worldsalad:raw_enoki_bulb"
+        }
+      }
+    },
+    "smoked_enoki_bulb": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "worldsalad:smoked_enoki_bulb"
+        }
+      }
+    },
+    "glowshroom_stew": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "worldsalad:glowshroom_stew"
+        }
+      }
+    },
+    "greater_mushroom_stew": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "worldsalad:greater_mushroom_stew"
+        }
+      }
+    },
+    "hyphae_berry_pie": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "worldsalad:hyphae_berry_pie"
+        }
+      }
+    },
+    "mega_stuffed_mushroom": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "worldsalad:mega_stuffed_mushroom"
+        }
+      }
+    },
+    "passion_fruit": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "worldsalad:passion_fruit"
+        }
+      }
+    },
+    "madroneberry": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "worldsalad:madroneberry"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+    	"lumberry"
+    ],
+    [
+    	"fungberry"
+    	],
+    [
+    	"moldberry"
+    	],
+    [
+    	"hyphae_berry_pie"
+    	],
+    [
+    	"greater_mushroom_stew"
+    	],
+    [
+    	"hyphae_berry_pie"
+    	],
+    [
+    	"mega_stuffed_mushroom"
+    	],
+    [
+    	"cooked_toad"
+    	],
+    [
+    	"raw_toad"
+    	],
+    [
+    	"glowshroom_stew"
+    	],
+    [
+    	"fried_morel"
+    	],
+    [
+    	"smoked_enoki_bulb"
+    	],
+    [
+    	"raw_enoki_bulb"
+    	],
+    [
+    	"madroneberry"
+    	],
+    [
+    	"passion_fruit"
+    ]
+  ]
+}

@@ -1,0 +1,129 @@
+{
+"parent": "worldsalad:hobbyist/fungal_fossil",
+  "display": {
+    "icon": {
+      "item": "worldsalad:truffle_fossil"
+    },
+    "title": {
+      "translate": "advancements.hobbyist.hyphae_digsite.title"
+    },
+    "description": {
+      "translate": "advancements.hobbyist.hyphae_digsite.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 200
+  },
+  "criteria": {
+    "truffle_fossil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:truffle_fossil"
+          }
+        ]
+      }
+    },
+    "ant_shell_fragment_fossil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:ant_shell_fragment_fossil"
+          }
+        ]
+      }
+    },
+    "bacterium_fossil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:bacterium_fossil"
+          }
+        ]
+      }
+    },
+    "moth_fossil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:moth_fossil"
+          }
+        ]
+      }
+    },
+    "truffle_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:truffle_print"
+          }
+        ]
+      }
+    },
+    "ant_shell_fragment_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:ant_shell_fragment_print"
+          }
+        ]
+      }
+    },
+    "bacterium_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:bacterium_print"
+          }
+        ]
+      }
+    },
+    "moth_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:moth_print"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+    	"truffle_fossil"
+    	],
+    [
+    	"ant_shell_fragment_fossil"
+    	],
+    [
+    	"bacterium_fossil"
+    	],
+    [
+    	"moth_fossil"
+    	],
+    [
+    	"truffle_print"
+    	],
+    [
+    	"ant_shell_fragment_print"
+    	],
+    [
+    	"bacterium_print"
+    	],
+    [
+    	"moth_print"
+    ]
+  ]
+}

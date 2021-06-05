@@ -4,6 +4,7 @@ import java.util.UUID;
 
 import javax.annotation.Nullable;
 
+import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -49,6 +50,11 @@ public class SoldierAnt extends AbstractAntEntity implements IAnimatable {
 	      }
 
 	   }
+	
+	@Override
+	public CreatureAttribute getCreatureAttribute() {
+		return CreatureAttribute.ARTHROPOD;
+	}
 
 	@Override
 	public void livingTick() {

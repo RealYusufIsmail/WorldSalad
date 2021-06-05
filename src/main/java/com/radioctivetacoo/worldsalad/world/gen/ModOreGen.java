@@ -32,10 +32,6 @@ public class ModOreGen {
 				ConfiguredPlacement customConfigShale = Placement.COUNT_RANGE.configure(new CountRangeConfig(15, 0, 0, 130));
 				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockInit.SHALE.get().getDefaultState(), 25)).withPlacement(customConfigShale));
 
-				@SuppressWarnings("rawtypes")
-				ConfiguredPlacement customConfigCobalt = Placement.COUNT_RANGE.configure(new CountRangeConfig(8, 35, 0, 130));
-				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockInit.COBALT_ORE.get().getDefaultState(), 4)).withPlacement(customConfigCobalt));
-
 			}
 			if (biome == BiomeInit.CRAG_BIOME.get() || biome == Biomes.BEACH) {
 				@SuppressWarnings("rawtypes")

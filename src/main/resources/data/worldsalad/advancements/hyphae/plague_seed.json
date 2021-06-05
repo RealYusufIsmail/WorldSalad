@@ -1,0 +1,35 @@
+{
+  "parent": "worldsalad:hyphae/fit_the_mold",
+  "display": {
+    "icon": {
+      "item": "worldsalad:plague_seed"
+    },
+    "title": {
+      "translate": "advancements.hyphae.plague_seed.title"
+    },
+    "description": {
+      "translate": "advancements.hyphae.plague_seed.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "plague_seed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:plague_seed"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "plague_seed"
+    ]
+  ]
+}

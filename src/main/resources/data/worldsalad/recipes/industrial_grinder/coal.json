@@ -1,0 +1,14 @@
+{
+	"type": "worldsalad:industrialgrinder",
+	"output": {
+		"item": "worldsalad:coal_powder"
+	},
+	
+	"outputBonus": {
+		"item": "worldsalad:coal_powder"
+	},
+	
+	"input": {
+		"item": "minecraft:coal"
+	}
+}

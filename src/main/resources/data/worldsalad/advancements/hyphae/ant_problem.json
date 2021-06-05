@@ -1,0 +1,31 @@
+{
+  "parent": "worldsalad:hyphae/grander_canyons",
+  "display": {
+    "icon": {
+      "item": "worldsalad:chitin_shard"
+    },
+    "title": {
+      "translate": "advancements.hyphae.ant_problem.title"
+    },
+    "description": {
+      "translate": "advancements.hyphae.ant_problem.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ant_hive": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "feature": "worldsalad:ant_hive"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ant_hive"
+    ]
+  ]
+}

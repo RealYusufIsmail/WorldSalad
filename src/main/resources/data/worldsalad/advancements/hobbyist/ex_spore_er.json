@@ -1,0 +1,97 @@
+{
+"parent": "worldsalad:hobbyist/hyphae_hobbyist",
+  "display": {
+    "icon": {
+      "item": "worldsalad:scleritome_boots"
+    },
+    "title": {
+      "translate": "advancements.hobbyist.ex_spore_er.title"
+    },
+    "description": {
+      "translate": "advancements.hobbyist.ex_spore_er.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 200
+  },
+  "criteria": {
+    "worldsalad:mold_tundra_biome": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "worldsalad:mold_tundra_biome"
+      }
+    },
+    "worldsalad:mildew_forest_biome": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "worldsalad:mildew_forest_biome"
+      }
+    },
+    "worldsalad:mushroom_canyon_flats_biome":{
+         "trigger":"minecraft:location",
+         "conditions":{
+            "biome":"worldsalad:mushroom_canyon_flats_biome"
+         }
+      },
+      "worldsalad:mushroom_canyon_shattered_biome":{
+         "trigger":"minecraft:location",
+         "conditions":{
+            "biome":"worldsalad:mushroom_canyon_shattered_biome"
+     	 }
+      },
+      "worldsalad:glowing_mushroom_biome":{
+         "trigger":"minecraft:location",
+         "conditions":{
+            "biome":"worldsalad:glowing_mushroom_biome"
+         }
+      },
+      "worldsalad:acid_ocean_biome": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "worldsalad:acid_ocean_biome"
+      }
+    },
+    "worldsalad:dense_mushroom_forest_biome":{
+         "trigger":"minecraft:location",
+         "conditions":{
+            "biome":"worldsalad:dense_mushroom_forest_biome"
+         }
+      },
+      "worldsalad:mushroom_forest_biome":{
+         "trigger":"minecraft:location",
+         "conditions":{
+            "biome":"worldsalad:mushroom_forest_biome"
+     	 }
+      }
+  },
+  "requirements": [
+    [
+    	"worldsalad:mildew_forest_biome"
+    ],
+    [
+    	"worldsalad:mold_tundra_biome"
+    ],
+    [
+    	"worldsalad:glowing_mushroom_biome"
+    ],
+    [
+    	"worldsalad:acid_ocean_biome"
+    ],
+    [
+    	"worldsalad:mushroom_canyon_flats_biome"
+    ],
+    [
+    	"worldsalad:mushroom_canyon_shattered_biome"
+    ],
+    [
+    	"worldsalad:dense_mushroom_forest_biome"
+    ],
+    [
+    	"worldsalad:mushroom_forest_biome"
+    ]
+  ]
+}

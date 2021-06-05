@@ -1,0 +1,112 @@
+{
+"parent": "worldsalad:hobbyist/root",
+  "display": {
+    "icon": {
+      "item": "worldsalad:ancient_ender_pearl_print"
+    },
+    "title": {
+      "translate": "advancements.hobbyist.far_fossil.title"
+    },
+    "description": {
+      "translate": "advancements.hobbyist.far_fossil.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ancient_ender_pearl_fossil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:ancient_ender_pearl_fossil"
+          }
+        ]
+      }
+    },
+    "ender_bone_fossil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:ender_bone_fossil"
+          }
+        ]
+      }
+    },
+    "endermite_egg_fossil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:endermite_egg_fossil"
+          }
+        ]
+      }
+    },
+    "shulker_shell_fossil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:shulker_shell_fossil"
+          }
+        ]
+      }
+    },
+    "ancient_ender_pearl_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:ancient_ender_pearl_print"
+          }
+        ]
+      }
+    },
+    "ender_bone_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:ender_bone_print"
+          }
+        ]
+      }
+    },
+    "endermite_egg_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:endermite_egg_print"
+          }
+        ]
+      }
+    },
+    "shulker_shell_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:shulker_shell_print"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+    	"ancient_ender_pearl_fossil",
+    	"ender_bone_fossil",
+    	"endermite_egg_fossil",
+    	"shulker_shell_fossil",
+    	"ancient_ender_pearl_print",
+    	"ender_bone_print",
+    	"endermite_egg_print",
+    	"shulker_shell_print"
+    ]
+  ]
+}

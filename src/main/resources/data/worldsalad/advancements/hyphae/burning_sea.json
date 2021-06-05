@@ -1,0 +1,31 @@
+{
+"parent": "worldsalad:hyphae/root",
+  "display": {
+    "icon": {
+      "item": "worldsalad:glowing_coral"
+    },
+    "title": {
+      "translate": "advancements.hyphae.burning_sea.title"
+    },
+    "description": {
+      "translate": "advancements.hyphae.burning_sea.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "worldsalad:acid_ocean_biome": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "worldsalad:acid_ocean_biome"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "worldsalad:acid_ocean_biome"
+    ]
+  ]
+}

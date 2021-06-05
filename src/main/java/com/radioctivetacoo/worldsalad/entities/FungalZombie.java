@@ -1,5 +1,6 @@
 package com.radioctivetacoo.worldsalad.entities;
 
+import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.EntitySize;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.Pose;
@@ -35,6 +36,11 @@ public class FungalZombie extends ZombieEntity implements IAnimatable {
 	public FungalZombie(EntityType<? extends ZombieEntity> type, World worldIn) {
 		super(type, worldIn);
 		this.experienceValue = 6;
+	}
+	
+	@Override
+	public CreatureAttribute getCreatureAttribute() {
+		return CreatureAttribute.UNDEAD;
 	}
 	
 	@Override

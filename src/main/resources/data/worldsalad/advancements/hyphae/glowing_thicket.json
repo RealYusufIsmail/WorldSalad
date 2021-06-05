@@ -1,0 +1,32 @@
+{
+   "parent":"worldsalad:hyphae/root",
+   "display":{
+      "icon":{
+         "item":"worldsalad:glowing_hycelium"
+      },
+      "title":{
+         "translate":"advancements.hyphae.glowing_thicket.title"
+      },
+      "description":{
+         "translate":"advancements.hyphae.glowing_thicket.description"
+      },
+      "frame":"task",
+      "show_toast":false,
+      "announce_to_chat":true,
+      "hidden":false
+   },
+   "criteria":{
+      "worldsalad:glowing_mushroom_biome":{
+         "trigger":"minecraft:location",
+         "conditions":{
+            "biome":"worldsalad:glowing_mushroom_biome"
+         }
+      }
+   },
+   "requirements":[
+      [
+         "worldsalad:glowing_mushroom_biome"
+      ]
+   ]
+}
+}

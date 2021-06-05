@@ -5,6 +5,7 @@ import java.util.function.Predicate;
 
 import javax.annotation.Nullable;
 
+import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -52,6 +53,11 @@ public class Bioluminary extends MonsterEntity implements IAnimatable {
 		public boolean test(@Nullable LivingEntity p_test_1_) {
 			return (p_test_1_ instanceof PlayerEntity) && p_test_1_.getDistanceSq(this.parentEntity) > 9.0D;
 		}
+	}
+	
+	@Override
+	public CreatureAttribute getCreatureAttribute() {
+		return CreatureAttribute.ARTHROPOD;
 	}
 
 	protected void registerData() {

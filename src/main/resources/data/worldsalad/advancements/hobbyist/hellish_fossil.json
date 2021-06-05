@@ -1,0 +1,112 @@
+{
+"parent": "worldsalad:hobbyist/root",
+  "display": {
+    "icon": {
+      "item": "worldsalad:extinguished_blaze_rod_print"
+    },
+    "title": {
+      "translate": "advancements.hobbyist.hellish_fossil.title"
+    },
+    "description": {
+      "translate": "advancements.hobbyist.hellish_fossil.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "extinguished_blaze_rod_fossil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:extinguished_blaze_rod_fossil"
+          }
+        ]
+      }
+    },
+    "crystal_ghast_tear_fossil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:crystal_ghast_tear_fossil"
+          }
+        ]
+      }
+    },
+    "nether_shell_fragment_fossil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:nether_shell_fragment_fossil"
+          }
+        ]
+      }
+    },
+    "nether_cactus_fossil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:nether_cactus_fossil"
+          }
+        ]
+      }
+    },
+    "extinguished_blaze_rod_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:extinguished_blaze_rod_print"
+          }
+        ]
+      }
+    },
+    "crystal_ghast_tear_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:crystal_ghast_tear_print"
+          }
+        ]
+      }
+    },
+    "nether_shell_fragment_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:nether_shell_fragment_print"
+          }
+        ]
+      }
+    },
+    "nether_cactus_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:nether_cactus_print"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+    	"extinguished_blaze_rod_fossil",
+    	"crystal_ghast_tear_fossil",
+    	"nether_shell_fragment_fossil",
+    	"nether_cactus_fossil",
+    	"extinguished_blaze_rod_print",
+    	"crystal_ghast_tear_print",
+    	"nether_shell_fragment_print",
+    	"nether_cactus_print"
+    ]
+  ]
+}

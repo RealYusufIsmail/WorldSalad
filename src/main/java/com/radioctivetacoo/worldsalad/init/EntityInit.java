@@ -74,6 +74,9 @@ public class EntityInit {
 		registerEntityWorldSpawns(WRAITH.get(), 125, 1, 1, EntityClassification.MONSTER,
 				BiomeInit.MOLD_TUNDRA_BIOME.get(), BiomeInit.MILDEW_FOREST_BIOME.get());
 		
+		registerEntityWorldSpawns(WRAITH.get(), 1, 0, 1, EntityClassification.MONSTER,
+				Biomes.END_BARRENS, Biomes.END_HIGHLANDS, Biomes.END_MIDLANDS, Biomes.SMALL_END_ISLANDS);
+		
 		registerEntityWorldSpawns(MACROBE.get(), 4, 1, 1, EntityClassification.MONSTER,
 				BiomeInit.MOLD_TUNDRA_BIOME.get(), BiomeInit.MILDEW_FOREST_BIOME.get(), BiomeInit.DENSE_MUSHROOM_FOREST_BIOME.get(), BiomeInit.GLOWING_MUSHROOM_BIOME.get(), 
 				BiomeInit.MUSHROOM_CANYON_FLATS_BIOME.get(), BiomeInit.MUSHROOM_CANYON_SHATTERED_BIOME.get(),

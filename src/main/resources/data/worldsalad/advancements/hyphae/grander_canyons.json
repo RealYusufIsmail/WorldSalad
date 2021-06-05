@@ -1,0 +1,39 @@
+{
+   "parent":"worldsalad:hyphae/root",
+   "display":{
+      "icon":{
+         "item":"worldsalad:claystone"
+      },
+      "title":{
+         "translate":"advancements.hyphae.grander_canyons.title"
+      },
+      "description":{
+         "translate":"advancements.hyphae.grander_canyons.description"
+      },
+      "frame":"task",
+      "show_toast":false,
+      "announce_to_chat":true,
+      "hidden":false
+   },
+   "criteria":{
+      "worldsalad:mushroom_canyon_flats_biome":{
+         "trigger":"minecraft:location",
+         "conditions":{
+            "biome":"worldsalad:mushroom_canyon_flats_biome"
+         }
+      },
+      "worldsalad:mushroom_canyon_shattered_biome":{
+         "trigger":"minecraft:location",
+         "conditions":{
+            "biome":"worldsalad:mushroom_canyon_shattered_biome"
+     	 }
+      }
+   },
+   "requirements":[
+      [
+         "worldsalad:mushroom_canyon_flats_biome",
+         "worldsalad:mushroom_canyon_shattered_biome"
+      ]
+   ]
+}
+}

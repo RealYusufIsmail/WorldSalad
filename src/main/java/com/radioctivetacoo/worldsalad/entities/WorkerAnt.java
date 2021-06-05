@@ -4,6 +4,7 @@ import java.util.UUID;
 
 import javax.annotation.Nullable;
 
+import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -40,6 +41,11 @@ public class WorkerAnt extends AbstractAntEntity implements IAnimatable {
 	@Override
 	protected boolean canDropLoot() {
 		return true;
+	}
+	
+	@Override
+	public CreatureAttribute getCreatureAttribute() {
+		return CreatureAttribute.ARTHROPOD;
 	}
 	
 	public void setRevengeTarget(@Nullable LivingEntity livingBase) {

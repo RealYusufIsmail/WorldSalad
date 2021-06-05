@@ -3,6 +3,7 @@ package com.radioctivetacoo.worldsalad.entities;
 import com.radioctivetacoo.worldsalad.init.BlockInit;
 import com.radioctivetacoo.worldsalad.init.ItemInit;
 
+import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -46,6 +47,11 @@ public class TraderAnt extends AbstractAntEntity implements IAnimatable {
 	@Override
 	protected boolean canDropLoot() {
 		return true;
+	}
+	
+	@Override
+	public CreatureAttribute getCreatureAttribute() {
+		return CreatureAttribute.ARTHROPOD;
 	}
 
 	@Override

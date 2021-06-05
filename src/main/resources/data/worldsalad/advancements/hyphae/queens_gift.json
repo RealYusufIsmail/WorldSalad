@@ -1,0 +1,35 @@
+{
+  "parent": "worldsalad:hyphae/ant_problem",
+  "display": {
+    "icon": {
+      "item": "worldsalad:ant_egg"
+    },
+    "title": {
+      "translate": "advancements.hyphae.queens_gift.title"
+    },
+    "description": {
+      "translate": "advancements.hyphae.queens_gift.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "antegg": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:ant_egg"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "antegg"
+    ]
+  ]
+}

@@ -1,5 +1,6 @@
 package com.radioctivetacoo.worldsalad.entities;
 
+import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.goal.LookAtGoal;
@@ -35,6 +36,10 @@ public class CordycepsAnt extends MonsterEntity implements IAnimatable {
 	protected boolean canDropLoot() {
 		return true;
 	}
+	
+	public CreatureAttribute getCreatureAttribute() {
+	      return CreatureAttribute.ARTHROPOD;
+	   }
 
 	@Override
 	public boolean isPreventingPlayerRest(PlayerEntity playerIn) {

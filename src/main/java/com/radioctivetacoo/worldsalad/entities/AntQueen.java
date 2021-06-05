@@ -6,6 +6,7 @@ import javax.annotation.Nullable;
 
 import com.radioctivetacoo.worldsalad.init.ItemInit;
 
+import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -45,7 +46,10 @@ public class AntQueen extends CreatureEntity implements IAnimatable {
 		return true;
 	}
 	
-	
+	@Override
+	public CreatureAttribute getCreatureAttribute() {
+		return CreatureAttribute.ARTHROPOD;
+	}
 	
 	public void setRevengeTarget(@Nullable LivingEntity livingBase) {
 	      super.setRevengeTarget(livingBase);

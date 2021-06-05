@@ -1,0 +1,35 @@
+{
+  "parent": "worldsalad:hyphae/queens_gift",
+  "display": {
+    "icon": {
+      "item": "worldsalad:infested_egg"
+    },
+    "title": {
+      "translate": "advancements.hyphae.somethings_wrong.title"
+    },
+    "description": {
+      "translate": "advancements.hyphae.somethings_wrong.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "infested_ant_egg": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:infested_egg"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "infested_ant_egg"
+    ]
+  ]
+}

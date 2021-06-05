@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "worldsalad:fungal_dirt"
+    },
+    "title": {
+      "translate": "advancements.hyphae.root.title"
+    },
+    "description": {
+      "translate": "advancements.hyphae.root.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "worldsalad:textures/gui/advancements/backgrounds/hyphae.png"
+  },
+  "criteria": {
+    "entered_hyphae": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "worldsalad:hyphae"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "entered_hyphae"
+    ]
+  ]
+}

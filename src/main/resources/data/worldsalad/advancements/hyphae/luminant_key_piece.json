@@ -1,0 +1,35 @@
+{
+  "parent": "worldsalad:hyphae/living_technology",
+  "display": {
+    "icon": {
+      "item": "worldsalad:luminant_key_piece"
+    },
+    "title": {
+      "translate": "advancements.hyphae.luminant_key_piece.title"
+    },
+    "description": {
+      "translate": "advancements.hyphae.luminant_key_piece.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "luminant_key_piece": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:luminant_key_piece"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "luminant_key_piece"
+    ]
+  ]
+}

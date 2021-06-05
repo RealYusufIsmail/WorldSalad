@@ -1,0 +1,129 @@
+{
+"parent": "worldsalad:hobbyist/a_fossil",
+  "display": {
+    "icon": {
+      "item": "worldsalad:creeper_fossil"
+    },
+    "title": {
+      "translate": "advancements.hobbyist.a_digsite.title"
+    },
+    "description": {
+      "translate": "advancements.hobbyist.a_digsite.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 200
+  },
+  "criteria": {
+    "creeper_fossil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:creeper_fossil"
+          }
+        ]
+      }
+    },
+    "fern_fossil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:fern_fossil"
+          }
+        ]
+      }
+    },
+    "amber_silverfish": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:amber_silverfish"
+          }
+        ]
+      }
+    },
+    "coprolite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:coprolite"
+          }
+        ]
+      }
+    },
+    "creeper_fossil_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:creeper_fossil_print"
+          }
+        ]
+      }
+    },
+    "fern_fossil_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:fern_fossil_print"
+          }
+        ]
+      }
+    },
+    "amber_silverfish_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:amber_silverfish_print"
+          }
+        ]
+      }
+    },
+    "coprolite_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:coprolite_print"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+    	"creeper_fossil"
+    	],
+    [
+    	"fern_fossil"
+    	],
+    [
+    	"coprolite"
+    	],
+    [
+    	"amber_silverfish"
+    	],
+    [
+    	"creeper_fossil_print"
+    	],
+    [
+    	"fern_fossil_print"
+    	],
+    [
+    	"coprolite_print"
+    	],
+    [
+    	"amber_silverfish_print"
+    ]
+  ]
+}

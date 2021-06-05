@@ -126,7 +126,6 @@ public class ClientEventBusSubscriber {
 		RenderTypeLookup.setRenderLayer(BlockInit.BROWN_LEAF_PILE.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.FLOATATION_BIN.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(BlockInit.POLYMERIZATION_REACTOR.get(), RenderType.getCutout());
-		RenderTypeLookup.setRenderLayer(BlockInit.ALUMINUM_PLATFORM.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.LUMBOO.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.PRICKLEWEED.get(), RenderType.getCutout());
 		

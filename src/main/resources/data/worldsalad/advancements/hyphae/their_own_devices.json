@@ -1,0 +1,48 @@
+{
+  "parent": "worldsalad:hyphae/glowing_thicket",
+  "display": {
+    "icon": {
+      "item": "worldsalad:strange_optical_component"
+    },
+    "title": {
+      "translate": "advancements.hyphae.their_own_devices.title"
+    },
+    "description": {
+      "translate": "advancements.hyphae.their_own_devices.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "optical_component": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:strange_optical_component"
+          }
+        ]
+      }
+    },
+    "mechanical_component": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:strange_mechanical_component"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mechanical_component"
+    ],
+    [
+      "optical_component"
+    ]
+  ]
+}

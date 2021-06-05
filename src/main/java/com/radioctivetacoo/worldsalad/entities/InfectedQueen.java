@@ -4,6 +4,7 @@ import com.radioctivetacoo.worldsalad.init.ItemInit;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -62,6 +63,11 @@ public class InfectedQueen extends MonsterEntity implements IAnimatable {
 	      super.addTrackingPlayer(player);
 	      this.bossInfo.addPlayer(player);
 	   }
+	
+	@Override
+	public CreatureAttribute getCreatureAttribute() {
+		return CreatureAttribute.ARTHROPOD;
+	}
 	
 	public void removeTrackingPlayer(ServerPlayerEntity player) {
 	      super.removeTrackingPlayer(player);

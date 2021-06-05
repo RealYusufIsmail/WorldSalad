@@ -57,11 +57,6 @@
         {
           "type": "minecraft:item",
           "weight": 3,
-          "name": "worldsalad:cobalt_ore"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 3,
           "name": "worldsalad:manganese_ore"
         },
         {

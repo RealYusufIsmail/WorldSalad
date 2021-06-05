@@ -1,0 +1,129 @@
+{
+"parent": "worldsalad:hobbyist/marine_fossil",
+  "display": {
+    "icon": {
+      "item": "worldsalad:trilobite_skeleton"
+    },
+    "title": {
+      "translate": "advancements.hobbyist.marine_fossil.title"
+    },
+    "description": {
+      "translate": "advancements.hobbyist.marine_fossil.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 200
+  },
+  "criteria": {
+    "urchin_skeleton": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:urchin_skeleton"
+          }
+        ]
+      }
+    },
+    "trilobite_skeleton": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:trilobite_skeleton"
+          }
+        ]
+      }
+    },
+    "sharktooth_skeleton": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:sharktooth_skeleton"
+          }
+        ]
+      }
+    },
+    "gastropod_skeleton": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:gastropod_skeleton"
+          }
+        ]
+      }
+    },
+    "urchin_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:urchin_print"
+          }
+        ]
+      }
+    },
+    "trilobite_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:trilobite_print"
+          }
+        ]
+      }
+    },
+    "sharktooth_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:sharktooth_print"
+          }
+        ]
+      }
+    },
+    "gastropod_print": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "worldsalad:gastropod_print"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+    	"urchin_skeleton"
+    	],
+    [
+    	"trilobite_skeleton"
+    	],
+    [
+    	"sharktooth_skeleton"
+    	],
+    [
+    	"gastropod_skeleton"
+    	],
+    [
+    	"urchin_print"
+    	],
+    [
+    	"trilobite_print"
+    	],
+    [
+    	"sharktooth_print"
+    	],
+    [
+    	"gastropod_print"
+    ]
+  ]
+}

@@ -1,5 +1,6 @@
 package com.radioctivetacoo.worldsalad.entities;
 
+import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.goal.LookAtGoal;
@@ -29,6 +30,10 @@ public class Exoskeleton extends MonsterEntity implements IAnimatable {
 	public Exoskeleton(EntityType<? extends MonsterEntity> type, World worldIn) {
 		super(type, worldIn);
 		this.experienceValue = 6;
+	}
+	
+	public CreatureAttribute getCreatureAttribute() {
+		return CreatureAttribute.ARTHROPOD;
 	}
 
 	@Override

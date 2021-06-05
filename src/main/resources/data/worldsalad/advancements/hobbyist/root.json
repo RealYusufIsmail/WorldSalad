@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "worldsalad:world_salad"
+    },
+    "title": {
+      "translate": "advancements.hobbyist.root.title"
+    },
+    "description": {
+      "translate": "advancements.hobbyist.root.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "worldsalad:textures/gui/advancements/backgrounds/hobbyist.png"
+  },
+  "criteria": {
+    "ct": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:crafting_table"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ct"
+    ]
+  ]
+}

@@ -122,6 +122,7 @@ public class WorldSalad {
 		BiomeInit.registerBiomes();
 	}
 
+
 	@SubscribeEvent
 	public static void onRegisterEntities(final RegistryEvent.Register<EntityType<?>> event) {
 		EntityInit.registerEntityWorldSpawn();
@@ -132,6 +133,9 @@ public class WorldSalad {
 	private void setup(final FMLCommonSetupEvent event) {
 		ComposterBlock.registerCompostable(0.3f, BlockInit.WILLOW_LEAVES.get());
 		ComposterBlock.registerCompostable(0.3f, BlockInit.WILLOW_SAPLING.get());
+		ComposterBlock.registerCompostable(0.3f, BlockInit.MADRONE_LEAVES.get());
+		ComposterBlock.registerCompostable(0.5f, BlockInit.DENSE_MADRONE_LEAVES.get());
+		ComposterBlock.registerCompostable(0.3f, BlockInit.MADRONE_SAPLING.get());
 		ComposterBlock.registerCompostable(0.65f, ItemInit.GREEN_APPLE.get());
 		ComposterBlock.registerCompostable(0.65f, ItemInit.GHOST_GRAPES.get());
 		ComposterBlock.registerCompostable(0.65f, ItemInit.HOTCOFFEE_BEANS.get());
@@ -151,6 +155,29 @@ public class WorldSalad {
 		ComposterBlock.registerCompostable(0.1f, BlockInit.DRY_REED.get());
 		ComposterBlock.registerCompostable(0.1f, BlockInit.MOLD_BLOCK.get());
 		ComposterBlock.registerCompostable(0.1f, BlockInit.MILDEW_BLOCK.get());
+		ComposterBlock.registerCompostable(0.1f, BlockInit.ANT_FUNGUS_BLOCK.get());
+		ComposterBlock.registerCompostable(0.1f, ItemInit.RAW_ENOKI_BULB.get());
+		ComposterBlock.registerCompostable(0.1f, ItemInit.SMOKED_ENOKI_BULB.get());
+		ComposterBlock.registerCompostable(0.1f, ItemInit.PASSION_FRUIT.get());
+		ComposterBlock.registerCompostable(0.1f, ItemInit.LUMBERRY.get());
+		ComposterBlock.registerCompostable(0.1f, ItemInit.FUNGBERRY.get());
+		ComposterBlock.registerCompostable(0.1f, ItemInit.MOLDBERRY.get());
+		ComposterBlock.registerCompostable(0.1f, ItemInit.THATCH.get());
+		ComposterBlock.registerCompostable(1f, ItemInit.HYPHAE_BERRY_PIE.get());
+		ComposterBlock.registerCompostable(0.1f, ItemInit.MADRONEBERRY.get());
+		ComposterBlock.registerCompostable(0.1f, BlockInit.FOUNTAIN_GRASS.get());
+		ComposterBlock.registerCompostable(0.1f, ItemInit.MADRONEBERRY.get());
+		ComposterBlock.registerCompostable(0.1f, ItemInit.PASSION_FRUIT_SEEDS.get());
+		ComposterBlock.registerCompostable(0.1f, BlockInit.PINK_GLOWING_MUSHROOM.get());
+		ComposterBlock.registerCompostable(0.1f, BlockInit.BLUE_GLOWING_MUSHROOM.get());
+		ComposterBlock.registerCompostable(0.1f, BlockInit.GREEN_GLOWING_MUSHROOM.get());
+		ComposterBlock.registerCompostable(0.1f, BlockInit.PRICKLEWEED.get());
+		ComposterBlock.registerCompostable(0.1f, BlockInit.LICHEN.get());
+		ComposterBlock.registerCompostable(0.1f, BlockInit.PINK_MUSHROOM_BLOCK.get());
+		ComposterBlock.registerCompostable(0.1f, BlockInit.BLUE_MUSHROOM_BLOCK.get());
+		ComposterBlock.registerCompostable(0.1f, BlockInit.GREEN_MUSHROOM_BLOCK.get());
+		ComposterBlock.registerCompostable(0.1f, BlockInit.HUGE_TOADSTOOL_BLOCK.get());
+		ComposterBlock.registerCompostable(0.1f, BlockInit.HUGE_ENOKI_BLOCK.get());
 	}
 
 	private void doClientStuff(final FMLClientSetupEvent event) {

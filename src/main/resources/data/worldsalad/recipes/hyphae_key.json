@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "   ",
+    "GGG",
     "ABC",
-    "   "
+    "GGG"
   ],
   "key": {
     "A": {
@@ -11,6 +11,9 @@
     },
     "B": {
       "item": "worldsalad:luminant_key_piece"
+    },
+    "G": {
+      "item": "worldsalad:glowing_coral"
     },
     "C": {
       "item": "worldsalad:plated_key_piece"
