@@ -116,19 +116,4 @@ public class HyphaeDimension extends Dimension {
 	public IRenderHandler getSkyRenderer() {
 		return super.getSkyRenderer();
 	}
-
-	@Override
-	public float getCloudHeight() {
-		return 132F;
-	}
-
-	@Override
-	public void setCloudRenderer(IRenderHandler renderer) {
-		super.setCloudRenderer(renderer);
-	}
-
-	@Override
-	public IRenderHandler getCloudRenderer() {
-		return getCloudRenderer();
-	}
 }

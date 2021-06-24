@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  W",
+    " S ",
+    "S  "
+  ],
+  "key": {
+    "S": {
+      "item": "worldsalad:steel_rod"
+    },
+    "W": {
+      "item": "minecraft:wither_rose"
+    }
+  },
+  "result": {
+    "item": "worldsalad:ashen_needle",
+    "count": 1
+  }
+}

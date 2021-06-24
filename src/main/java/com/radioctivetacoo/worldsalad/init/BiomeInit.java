@@ -5,6 +5,7 @@ import com.radioctivetacoo.worldsalad.world.biomes.AcidOceanBiome;
 import com.radioctivetacoo.worldsalad.world.biomes.CragBiome;
 import com.radioctivetacoo.worldsalad.world.biomes.DenseMushroomForestBiome;
 import com.radioctivetacoo.worldsalad.world.biomes.GlowingMushroomBiome;
+import com.radioctivetacoo.worldsalad.world.biomes.GlowingMushroomBiomeSurfaceBuilder;
 import com.radioctivetacoo.worldsalad.world.biomes.LavafieldBiome;
 import com.radioctivetacoo.worldsalad.world.biomes.MildewForestBiome;
 import com.radioctivetacoo.worldsalad.world.biomes.MoldTundraBiome;
@@ -44,20 +45,22 @@ public class BiomeInit {
 					.category(Category.TAIGA).downfall(0.6f).depth(0f).parent(null)));
 
 	public static final RegistryObject<Biome> LAVAFIELD_BIOME = BIOMES.register("lavafield_biome",
-			() -> new LavafieldBiome(new Biome.Builder().precipitation(RainType.RAIN).scale(0.085f).temperature(2.8f)
+			() -> new LavafieldBiome(new Biome.Builder().precipitation(RainType.NONE).scale(0.085f).temperature(2.8f)
 					.waterColor(0xff2d5fb5).waterFogColor(0xff6187c9)
 					.surfaceBuilder(SurfaceBuilder.DEFAULT,
 							new SurfaceBuilderConfig(BlockInit.LAVAROCK.get().getDefaultState(),
 									BlockInit.INFERTILE_SOIL.get().getDefaultState(), Blocks.GRAVEL.getDefaultState()))
-					.category(Category.SAVANNA).downfall(0.3f).depth(0.3f).parent(null)));
+					.category(Category.SAVANNA).downfall(0f).depth(0.3f).parent(null)));
 
 	public static final RegistryObject<Biome> GLOWING_MUSHROOM_BIOME = BIOMES.register("glowing_mushroom_biome",
-			() -> new GlowingMushroomBiome(new Biome.Builder().precipitation(RainType.RAIN).scale(0.275f)
+			() -> new GlowingMushroomBiome(new Biome.Builder().precipitation(RainType.RAIN).scale(0.075f)
 					.temperature(0.8f).waterColor(8245176).waterFogColor(12582868)
-					.surfaceBuilder(SurfaceBuilder.DEFAULT,
+					.surfaceBuilder(new ConfiguredSurfaceBuilder<SurfaceBuilderConfig>(
+							register(WorldSalad.MOD_ID + ":glowing_mushroom_surface",
+									new GlowingMushroomBiomeSurfaceBuilder(
+											SurfaceBuilderConfig::deserialize)),
 							new SurfaceBuilderConfig(BlockInit.GLOWING_HYCELIUM.get().getDefaultState(),
-									BlockInit.FUNGAL_DIRT.get().getDefaultState(),
-									BlockInit.MUD.get().getDefaultState()))
+									Blocks.DIRT.getDefaultState(), BlockInit.FUNGAL_DIRT.get().getDefaultState())))
 					.category(Category.PLAINS).downfall(0.3f).depth(-0.2f).parent(null)));
 
 	public static final RegistryObject<Biome> MUSHROOM_FOREST_BIOME = BIOMES.register("mushroom_forest_biome",
