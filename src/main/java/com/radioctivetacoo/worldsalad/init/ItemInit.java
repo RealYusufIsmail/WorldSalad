@@ -55,33 +55,33 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ItemInit {
 	
 	@SuppressWarnings("deprecation")
-	public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, WorldSalad.MOD_ID);
+	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, WorldSalad.MOD_ID);
 	// armor
-	public static final RegistryObject<Item> STEEL_HELMET = ITEMS.register("steel_helmet",
+	public static final RegistryObject<ArmorItem> STEEL_HELMET = ITEMS.register("steel_helmet",
 			() -> new ArmorItem(ModArmorMaterials.STEEL, EquipmentSlotType.HEAD, new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	
-	public static final RegistryObject<Item> STEEL_CHESTPLATE = ITEMS.register("steel_chestplate",
+	public static final RegistryObject<ArmorItem> STEEL_CHESTPLATE = ITEMS.register("steel_chestplate",
 			() -> new ArmorItem(ModArmorMaterials.STEEL, EquipmentSlotType.CHEST, new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	
-	public static final RegistryObject<Item> STEEL_LEGGINGS = ITEMS.register("steel_leggings",
+	public static final RegistryObject<ArmorItem> STEEL_LEGGINGS = ITEMS.register("steel_leggings",
 			() -> new ArmorItem(ModArmorMaterials.STEEL, EquipmentSlotType.LEGS, new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	
-	public static final RegistryObject<Item> STEEL_BOOTS = ITEMS.register("steel_boots",
+	public static final RegistryObject<ArmorItem> STEEL_BOOTS = ITEMS.register("steel_boots",
 			() -> new ArmorItem(ModArmorMaterials.STEEL, EquipmentSlotType.FEET, new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	
-	public static final RegistryObject<Item> TITANIUM_HELMET = ITEMS.register("titanium_helmet",
+	public static final RegistryObject<ArmorItem> TITANIUM_HELMET = ITEMS.register("titanium_helmet",
 			() -> new ArmorItem(ModArmorMaterials.TITANIUM, EquipmentSlotType.HEAD, new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	 
-	public static final RegistryObject<Item> TITANIUM_CHESTPLATE = ITEMS.register("titanium_chestplate",
+	public static final RegistryObject<ArmorItem> TITANIUM_CHESTPLATE = ITEMS.register("titanium_chestplate",
 			() -> new ArmorItem(ModArmorMaterials.TITANIUM, EquipmentSlotType.CHEST, new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	
-	public static final RegistryObject<Item> TITANIUM_LEGGINGS = ITEMS.register("titanium_leggings",
+	public static final RegistryObject<ArmorItem> TITANIUM_LEGGINGS = ITEMS.register("titanium_leggings",
 			() -> new ArmorItem(ModArmorMaterials.TITANIUM, EquipmentSlotType.LEGS, new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	
-	public static final RegistryObject<Item> TITANIUM_BOOTS = ITEMS.register("titanium_boots",
+	public static final RegistryObject<ArmorItem> TITANIUM_BOOTS = ITEMS.register("titanium_boots",
 			() -> new ArmorItem(ModArmorMaterials.TITANIUM, EquipmentSlotType.FEET, new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	
-	public static final RegistryObject<Item> SCLERITOME_HELMET = ITEMS.register("scleritome_helmet",
+	public static final RegistryObject<ArmorItem> SCLERITOME_HELMET = ITEMS.register("scleritome_helmet",
 			() -> new ArmorItem(ModArmorMaterials.CHITIN, EquipmentSlotType.HEAD, new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	 
 	public static final RegistryObject<Item> SCLERITOME_CHESTPLATE = ITEMS.register("scleritome_chestplate",
@@ -90,30 +90,30 @@ public class ItemInit {
 	public static final RegistryObject<Item> SCLERITOME_LEGGINGS = ITEMS.register("scleritome_leggings",
 			() -> new ArmorItem(ModArmorMaterials.CHITIN, EquipmentSlotType.LEGS, new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	
-	public static final RegistryObject<Item> SCLERITOME_BOOTS = ITEMS.register("scleritome_boots",
+	public static final RegistryObject<ArmorItem> SCLERITOME_BOOTS = ITEMS.register("scleritome_boots",
 			() -> new ArmorItem(ModArmorMaterials.CHITIN, EquipmentSlotType.FEET, new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	
-	public static final RegistryObject<Item> TRAVELERS_BOOTS = ITEMS.register("travelers_boots",
+	public static final RegistryObject<TravelersBootsArmorItem> TRAVELERS_BOOTS = ITEMS.register("travelers_boots",
 			() -> new TravelersBootsArmorItem(ModArmorMaterials.TRAVELER, EquipmentSlotType.FEET, new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	
 	// tools
 	public static final RegistryObject<Item> BREATHING_REED = ITEMS.register("breathing_reed",
-			() -> new BreathingReedItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).maxStackSize(1).maxDamage(24)));
+			() -> new BreathingReedItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).stacksTo(1).durability(24)));
 	
 	public static final RegistryObject<Item> SONAR_DEVICE = ITEMS.register("sonar_device",
-			() -> new SonarDeviceItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).maxStackSize(1).maxDamage(64)));
+			() -> new SonarDeviceItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).stacksTo(1).durability(64)));
 	
 	public static final RegistryObject<Item> MITOCHONDRION = ITEMS.register("mitochondrion",
-			() -> new MitochondrionItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).maxStackSize(1).maxDamage(16)));
+			() -> new MitochondrionItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).stacksTo(1).durability(16)));
 	
 	public static final RegistryObject<Item> ESSENCE_CRYSTALIZER = ITEMS.register("essence_crystalizer",
-			() -> new EssenceCrystalizerItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).maxStackSize(1).maxDamage(64)));
+			() -> new EssenceCrystalizerItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).stacksTo(1).durability(64)));
 	
 	public static final RegistryObject<Item> VAULTING_REED = ITEMS.register("vaulting_reed",
-			() -> new VaultingReedItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).maxStackSize(16)));
+			() -> new VaultingReedItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).stacksTo(16)));
 	
 	public static final RegistryObject<Item> SHOOTING_REED = ITEMS.register("shooting_reed",
-			() -> new ShootingReedItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).maxStackSize(1).maxDamage(48)));
+			() -> new ShootingReedItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).stacksTo(1).durability(48)));
 	
 	public static final RegistryObject<Item> REED_DART = ITEMS.register("reed_dart",
 			() -> new DartItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
@@ -124,13 +124,13 @@ public class ItemInit {
 	public static final RegistryObject<Item> STEEL_PICKAXE = ITEMS.register("steel_pickaxe",
 			() -> new PickaxeItem(ModItemTiers.STEEL, -2, 1F, new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	
-	public static final RegistryObject<Item> STEEL_HOE = ITEMS.register("steel_hoe",
+	public static final RegistryObject<HoeItem> STEEL_HOE = ITEMS.register("steel_hoe",
 			() -> new HoeItem(ModItemTiers.STEEL, 2.0F, new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	
-	public static final RegistryObject<Item> STEEL_AXE = ITEMS.register("steel_axe",
+	public static final RegistryObject<AxeItem> STEEL_AXE = ITEMS.register("steel_axe",
 			() -> new AxeItem(ModItemTiers.STEEL, 4, -3.1F, new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	
-	public static final RegistryObject<Item> STEEL_SHOVEL = ITEMS.register("steel_shovel",
+	public static final RegistryObject<ShovelItem> STEEL_SHOVEL = ITEMS.register("steel_shovel",
 			() -> new ShovelItem(ModItemTiers.STEEL, -3, 1.5F, new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> TITANIUM_SWORD = ITEMS.register("titanium_sword",
@@ -149,25 +149,25 @@ public class ItemInit {
 			() -> new ShovelItem(ModItemTiers.TITANIUM, -3, 1.5F, new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> GRAND_SLAMYON = ITEMS.register("grand_slamyon",
-			() -> new GrandSlamyonItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).maxStackSize(1).maxDamage(748)));
+			() -> new GrandSlamyonItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).stacksTo(1).durability(748)));
 	
 	public static final RegistryObject<Item> ASHEN_NEEDLE = ITEMS.register("ashen_needle",
-			() -> new AshenNeedleItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).maxStackSize(1).maxDamage(250)));
+			() -> new AshenNeedleItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).stacksTo(1).durability(250)));
 	
 	public static final RegistryObject<Item> DRAGONFLY_SADDLE = ITEMS.register("dragonfly_saddle",
-			() -> new DragonflySaddleItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).maxStackSize(1)));
+			() -> new DragonflySaddleItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> LUMINANT_KEY_PIECE = ITEMS.register("luminant_key_piece",
-			() -> new KeyPieceItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).maxStackSize(1)));
+			() -> new KeyPieceItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> PATHOGEN_KEY_PIECE = ITEMS.register("pathogen_key_piece",
-			() -> new KeyPieceItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).maxStackSize(1)));
+			() -> new KeyPieceItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> PLATED_KEY_PIECE = ITEMS.register("plated_key_piece",
-			() -> new KeyPieceItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).maxStackSize(1)));
+			() -> new KeyPieceItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> HYPHAE_KEY = ITEMS.register("hyphae_key",
-			() -> new KeyPieceItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).maxStackSize(1)));
+			() -> new KeyPieceItem(new Item.Properties().tab(WorldSaladToolsItemGroup.instance).stacksTo(1)));
 	
 	// items
 	public static final RegistryObject<Item> PLACEHOLDER = ITEMS.register("placeholder",
@@ -179,7 +179,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> INCENSE_STICK_REGENERATION = ITEMS.register("incense_stick_regeneration",
 			() -> new Item(new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	
-	public static final RegistryObject<Item> INCENSE_STICK_STRENGTH = ITEMS.register("incense_stick_strength",
+	public static final RegistryObject<Item> INCENSE_STICK_DAMAGE_BOOST = ITEMS.register("incense_stick_DAMAGE_BOOST",
 			() -> new Item(new Item.Properties().tab(WorldSaladToolsItemGroup.instance)));
 	
 	public static final RegistryObject<Item> INCENSE_STICK_SPEED = ITEMS.register("incense_stick_speed",
@@ -341,144 +341,144 @@ public class ItemInit {
 	
 	// buckets
 	public static final RegistryObject<Item> CRUDE_OIL_BUCKET = ITEMS.register("crude_oil_bucket",
-			() -> new CrudeOilBucketItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new CrudeOilBucketItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> REFINED_OIL_BUCKET = ITEMS.register("refined_oil_bucket",
-			() -> new RefinedOilBucketItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new RefinedOilBucketItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	public static final RegistryObject<Item> VEGETABLE_OIL_BUCKET = ITEMS.register("vegetable_oil_bucket",
 			() -> new VegetableOilBucketItem(
-					new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+					new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> PINE_OIL_BUCKET = ITEMS.register("pine_oil_bucket",
-			() -> new PineOilBucketItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new PineOilBucketItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	public static final RegistryObject<Item> ACID_BUCKET = ITEMS.register("acid_bucket",
-			() -> new AcidBucketItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new AcidBucketItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> ETHANOL_BUCKET = ITEMS.register("ethanol_bucket",
-			() -> new EthanolBucketItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new EthanolBucketItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	// fossils
 	public static final RegistryObject<Item> URCHIN_SKELETON = ITEMS.register("urchin_skeleton",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	public static final RegistryObject<Item> TRILOBITE_SKELETON = ITEMS.register("trilobite_skeleton",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	public static final RegistryObject<Item> SHARKTOOTH_SKELETON = ITEMS.register("sharktooth_skeleton",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	public static final RegistryObject<Item> GASTROPOD_SKELETON = ITEMS.register("gastropod_skeleton",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	public static final RegistryObject<Item> COPROLITE = ITEMS.register("coprolite",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	public static final RegistryObject<Item> AMBER_SILVERFISH = ITEMS.register("amber_silverfish",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	public static final RegistryObject<Item> FERN_FOSSIL = ITEMS.register("fern_fossil",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	public static final RegistryObject<Item> CREEPER_FOSSIL = ITEMS.register("creeper_fossil",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> CRYSTAL_GHAST_TEAR_FOSSIL = ITEMS.register("crystal_ghast_tear_fossil",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> EXTINGUISHED_BLAZE_ROD_FOSSIL = ITEMS.register("extinguished_blaze_rod_fossil",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> NETHER_SHELL_FRAGMENT_FOSSIL = ITEMS.register("nether_shell_fragment_fossil",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> NETHER_CACTUS_FOSSIL = ITEMS.register("nether_cactus_fossil",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> ANCIENT_ENDER_PEARL_FOSSIL = ITEMS.register("ancient_ender_pearl_fossil",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> ENDER_BONE_FOSSIL = ITEMS.register("ender_bone_fossil",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> ENDERMITE_EGG_FOSSIL = ITEMS.register("endermite_egg_fossil",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> SHULKER_SHELL_FOSSIL = ITEMS.register("shulker_shell_fossil",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> TRUFFLE_FOSSIL = ITEMS.register("truffle_fossil",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> ANT_SHELL_FRAGMENT_FOSSIL = ITEMS.register("ant_shell_fragment_fossil",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> BACTERIUM_FOSSIL = ITEMS.register("bacterium_fossil",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> MOTH_FOSSIL = ITEMS.register("moth_fossil",
-			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new Item(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	public static final RegistryObject<Item> COPROLITE_PRINT = ITEMS.register("coprolite_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	public static final RegistryObject<Item> AMBER_SILVERFISH_PRINT = ITEMS.register("amber_silverfish_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	public static final RegistryObject<Item> FERN_FOSSIL_PRINT = ITEMS.register("fern_fossil_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	public static final RegistryObject<Item> CREEPER_FOSSIL_PRINT = ITEMS.register("creeper_fossil_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	public static final RegistryObject<Item> URCHIN_PRINT = ITEMS.register("urchin_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	public static final RegistryObject<Item> TRILOBITE_PRINT = ITEMS.register("trilobite_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	public static final RegistryObject<Item> SHARKTOOTH_PRINT = ITEMS.register("sharktooth_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	public static final RegistryObject<Item> GASTROPOD_PRINT = ITEMS.register("gastropod_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> CRYSTAL_GHAST_TEAR_PRINT = ITEMS.register("crystal_ghast_tear_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> EXTINGUISHED_BLAZE_ROD_PRINT = ITEMS.register("extinguished_blaze_rod_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> NETHER_SHELL_FRAGMENT_PRINT = ITEMS.register("nether_shell_fragment_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> NETHER_CACTUS_PRINT = ITEMS.register("nether_cactus_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> ANCIENT_ENDER_PEARL_PRINT = ITEMS.register("ancient_ender_pearl_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> ENDER_BONE_PRINT = ITEMS.register("ender_bone_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> ENDERMITE_EGG_PRINT = ITEMS.register("endermite_egg_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> SHULKER_SHELL_PRINT = ITEMS.register("shulker_shell_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> TRUFFLE_PRINT = ITEMS.register("truffle_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> ANT_SHELL_FRAGMENT_PRINT = ITEMS.register("ant_shell_fragment_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> BACTERIUM_PRINT = ITEMS.register("bacterium_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 	
 	public static final RegistryObject<Item> MOTH_PRINT = ITEMS.register("moth_print",
-			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).maxStackSize(1)));
+			() -> new FossilPrintItem(new Item.Properties().tab(WorldSaladItemsItemGroup.instance).stacksTo(1)));
 
 	// ores
 	public static final RegistryObject<Item> BIOLUMINESCENT_CRYSTAL = ITEMS.register("bioluminescent_crystal",
@@ -631,8 +631,8 @@ public class ItemInit {
 	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> BACON = ITEMS.register("bacon",
 			() -> new Item(new Item.Properties().tab(WorldSaladFoodItemGroup.instance)
-					.food(new Food.Builder().nutrition(7).saturationMod(0.8f).setAlwaysEdible()
-							.effect(new EffectInstance(Effects.STRENGTH, 200, 0), 1f).build())));
+					.food(new Food.Builder().nutrition(7).saturationMod(0.8f).alwaysEat()
+							.effect(new EffectInstance(Effects.DAMAGE_BOOST, 200, 0), 1f).build())));
 	public static final RegistryObject<Item> GREEN_APPLE = ITEMS.register("green_apple",
 			() -> new Item(new Item.Properties().tab(WorldSaladFoodItemGroup.instance)
 					.food(new Food.Builder().nutrition(4).saturationMod(0.3f).build())));
@@ -640,21 +640,21 @@ public class ItemInit {
 	public static final RegistryObject<Item> GHOST_GRAPES = ITEMS.register("ghost_grapes",
 			() -> new BlockItem(BlockInit.GHOST_GRAPE_BUSH.get(),
 					new Item.Properties().tab(WorldSaladFoodItemGroup.instance)
-							.food(new Food.Builder().nutrition(1).saturationMod(0f).setAlwaysEdible().fastToEat()
+							.food(new Food.Builder().nutrition(1).saturationMod(0f).alwaysEat().fast()
 									.effect(new EffectInstance(Effects.SLOW_FALLING, 20, 1), 1f).build())));
 	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> LUMBERRY = ITEMS.register("lumberry",
 			() -> new Item(new Item.Properties().tab(WorldSaladFoodItemGroup.instance)
-					.food(new Food.Builder().nutrition(1).saturationMod(0f).setAlwaysEdible().fastToEat()
+					.food(new Food.Builder().nutrition(1).saturationMod(0f).alwaysEat().fast()
 							.effect(new EffectInstance(Effects.NIGHT_VISION, 400, 0), 1f).build())));
 
 	public static final RegistryObject<Item> FUNGBERRY = ITEMS.register("fungberry",
 			() -> new Item(new Item.Properties().tab(WorldSaladFoodItemGroup.instance)
-					.food(new Food.Builder().nutrition(1).saturationMod(0f).fastToEat().build())));
+					.food(new Food.Builder().nutrition(1).saturationMod(0f).fast().build())));
 	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> MOLDBERRY = ITEMS.register("moldberry",
 			() -> new Item(new Item.Properties().tab(WorldSaladFoodItemGroup.instance)
-					.food(new Food.Builder().nutrition(1).saturationMod(0f).setAlwaysEdible().fastToEat()
+					.food(new Food.Builder().nutrition(1).saturationMod(0f).alwaysEat().fast()
 							.effect(new EffectInstance(Effects.BLINDNESS, 400, 0), 1f).build())));
 	
 	public static final RegistryObject<Item> RAW_SQUID = ITEMS.register("raw_squid",
@@ -671,31 +671,31 @@ public class ItemInit {
 	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> FRENCH_FRIES = ITEMS.register("french_fries",
 			() -> new Item(new Item.Properties().tab(WorldSaladFoodItemGroup.instance)
-					.food(new Food.Builder().nutrition(4).saturationMod(0.5f).effect(new EffectInstance(Effects.HASTE, 600, 1), 1f).build())));
+					.food(new Food.Builder().nutrition(4).saturationMod(0.5f).effect(new EffectInstance(Effects.MOVEMENT_SPEED, 600, 1), 1f).build())));
 	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> FRIED_MOREL = ITEMS.register("fried_morel",
 			() -> new Item(new Item.Properties().tab(WorldSaladFoodItemGroup.instance)
-					.food(new Food.Builder().nutrition(6).saturationMod(0.5f).effect(new EffectInstance(Effects.RESISTANCE, 1800, 0), 1f).build())));
+					.food(new Food.Builder().nutrition(6).saturationMod(0.5f).effect(new EffectInstance(Effects.ABSORPTION, 1800, 0), 1f).build())));
 	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> HOTCOFFEE_BEANS = ITEMS.register("hotcoffee_beans",
 			() -> new Item(new Item.Properties().tab(WorldSaladFoodItemGroup.instance)
-					.food(new Food.Builder().nutrition(0).saturationMod(0f).fastToEat()
-							.effect(new EffectInstance(Effects.nutrition, 100, 0), 1f).build())));
+					.food(new Food.Builder().nutrition(0).saturationMod(0f).fast()
+							.effect(new EffectInstance(Effects.HUNGER, 100, 0), 1f).build())));
 	
 	public static final RegistryObject<Item> CHOCOLATE_HOTCOFFEE_BEANS = ITEMS.register("chocolate_hotcoffee_beans",
 			() -> new Item(new Item.Properties().tab(WorldSaladFoodItemGroup.instance)
-					.food(new Food.Builder().nutrition(4).saturationMod(0f).setAlwaysEdible().fastToEat()
+					.food(new Food.Builder().nutrition(4).saturationMod(0f).alwaysEat().fast()
 							.build())));
 	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> EARTHWORMS = ITEMS.register("earthworms",
 			() -> new Item(new Item.Properties().tab(WorldSaladFoodItemGroup.instance)
-					.food(new Food.Builder().nutrition(1).saturationMod(0f).setAlwaysEdible().fastToEat()
-							.effect(new EffectInstance(Effects.HASTE, 200, 0), 1f).build())));
+					.food(new Food.Builder().nutrition(1).saturationMod(0f).alwaysEat().fast()
+							.effect(new EffectInstance(Effects.MOVEMENT_SPEED, 200, 0), 1f).build())));
 	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> GUMMY_WORMS = ITEMS.register("gummy_worms",
 			() -> new Item(new Item.Properties().tab(WorldSaladFoodItemGroup.instance)
-					.food(new Food.Builder().nutrition(4).saturationMod(0f).setAlwaysEdible().fastToEat()
-							.effect(new EffectInstance(Effects.HASTE, 500, 0), 1f).build())));
+					.food(new Food.Builder().nutrition(4).saturationMod(0f).alwaysEat().fast()
+							.effect(new EffectInstance(Effects.MOVEMENT_SPEED, 500, 0), 1f).build())));
 	
 	public static final RegistryObject<Item> RAW_ENOKI_BULB = ITEMS.register("raw_enoki_bulb",
 			() -> new Item(new Item.Properties().tab(WorldSaladFoodItemGroup.instance)
@@ -731,16 +731,16 @@ public class ItemInit {
 	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> GLOWSHROOM_STEW = ITEMS.register("glowshroom_stew",
 			() -> new ModStewItem(new Item.Properties().tab(WorldSaladFoodItemGroup.instance)
-					.food(new Food.Builder().nutrition(5).saturationMod(0.2f).effect(new EffectInstance(Effects.GLOWING, 2400, 0), 1f).build()).maxStackSize(1)));
+					.food(new Food.Builder().nutrition(5).saturationMod(0.2f).effect(new EffectInstance(Effects.GLOWING, 2400, 0), 1f).build()).stacksTo(1)));
 	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> GREATER_MUSHROOM_STEW = ITEMS.register("greater_mushroom_stew",
 			() -> new ModStewItem(new Item.Properties().tab(WorldSaladFoodItemGroup.instance)
-					.food(new Food.Builder().nutrition(9).saturationMod(0.5f).effect(new EffectInstance(Effects.ABSORPTION, 2400, 2), 1f).build()).maxStackSize(1)));
+					.food(new Food.Builder().nutrition(9).saturationMod(0.5f).effect(new EffectInstance(Effects.ABSORPTION, 2400, 2), 1f).build()).stacksTo(1)));
 	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> MEGA_STUFFED_MUSHROOM = ITEMS.register("mega_stuffed_mushroom",
 			() -> new Item(new Item.Properties().tab(WorldSaladFoodItemGroup.instance)
-					.food(new Food.Builder().nutrition(10).saturationMod(1.0F).setAlwaysEdible().fastToEat()
-							.effect(new EffectInstance(Effects.STRENGTH, 800, 0), 1f).effect(new EffectInstance(Effects.REGENERATION, 40, 3), 1f).effect(new EffectInstance(Effects.RESISTANCE, 1200, 0), 1f).build())));
+					.food(new Food.Builder().nutrition(10).saturationMod(1.0F).alwaysEat().fast()
+							.effect(new EffectInstance(Effects.DAMAGE_BOOST, 800, 0), 1f).effect(new EffectInstance(Effects.REGENERATION, 40, 3), 1f).effect(new EffectInstance(Effects.DAMAGE_RESISTANCE, 1200, 0), 1f).build())));
 
 	// spawn eggs
 	public static final RegistryObject<ModSpawnEggItem> MOTH_SPAWN_EGG = ITEMS.register("moth_spawn_egg",
