@@ -9,6 +9,7 @@ import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.fluid.FlowingFluid;
 import net.minecraft.fluid.Fluid;
+import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.FluidAttributes;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
@@ -18,8 +19,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class FluidInit {
 	@SuppressWarnings("deprecation")
-	public static final DeferredRegister<Fluid> FLUIDS = new DeferredRegister<Fluid>(ForgeRegistries.FLUIDS,
-			WorldSalad.MOD_ID);
+
+	public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, WorldSalad.MOD_ID);
+
 
 	// vegetable oil
 	public static final ResourceLocation VEGETABLE_OIL_STILL_RL = new ResourceLocation(WorldSalad.MOD_ID,
@@ -44,8 +46,8 @@ public class FluidInit {
 	public static final RegistryObject<FlowingFluidBlock> VEGETABLE_OIL_BLOCK = BlockInit.BLOCKS.register(
 			"vegetable_oil",
 			() -> new FlowingFluidBlock(() -> FluidInit.VEGETABLE_OIL_FLUID.get(),
-					Block.Properties.create(Material.WATER).doesNotBlockMovement().slipperiness(1)
-							.hardnessAndResistance(100.0f, 100.0f).noDrops()));
+					Block.Properties.of(Material.WATER).noCollission().friction(1)
+							.strength(100.0f, 100.0f).noDrops()));
 
 	// crude oil
 	public static final ResourceLocation CRUDE_OIL_STILL_RL = new ResourceLocation(WorldSalad.MOD_ID,
@@ -68,8 +70,8 @@ public class FluidInit {
 							.bucket(() -> ItemInit.CRUDE_OIL_BUCKET.get());
 
 	public static final RegistryObject<FlowingFluidBlock> CRUDE_OIL_BLOCK = BlockInit.BLOCKS.register("crude_oil",
-			() -> new FlowingFluidBlock(() -> FluidInit.CRUDE_OIL_FLUID.get(), Block.Properties.create(Material.WATER)
-					.doesNotBlockMovement().slipperiness(1).hardnessAndResistance(100.0f, 100.0f).noDrops()));
+			() -> new FlowingFluidBlock(() -> FluidInit.CRUDE_OIL_FLUID.get(), Block.Properties.of(Material.WATER)
+					.noCollission().friction(1).strength(100.0f, 100.0f).noDrops()));
 
 	// acid
 	public static final ResourceLocation ACID_STILL_RL = new ResourceLocation(WorldSalad.MOD_ID, "blocks/acid_still");
@@ -91,8 +93,8 @@ public class FluidInit {
 							.bucket(() -> ItemInit.ACID_BUCKET.get());
 
 	public static final RegistryObject<FlowingFluidBlock> ACID_BLOCK = BlockInit.BLOCKS.register("acid",
-			() -> new AcidBlock(() -> FluidInit.ACID_FLUID.get(), Block.Properties.create(Material.WATER).tickRandomly()
-					.doesNotBlockMovement().lightValue(3).hardnessAndResistance(100.0f, 100.0f).noDrops()));
+			() -> new AcidBlock(() -> FluidInit.ACID_FLUID.get(), Block.Properties.of(Material.WATER).randomTicks()
+					.noCollission().lightLevel(value -> 3).strength(100.0f, 100.0f).noDrops()));
 	
 	// refined oil
 	public static final ResourceLocation PINE_OIL_STILL_RL = new ResourceLocation(WorldSalad.MOD_ID,
@@ -117,8 +119,8 @@ public class FluidInit {
 	public static final RegistryObject<FlowingFluidBlock> PINE_OIL_BLOCK = BlockInit.BLOCKS.register(
 			"pine_oil",
 			() -> new FlowingFluidBlock(() -> FluidInit.PINE_OIL_FLUID.get(),
-					Block.Properties.create(Material.WATER).doesNotBlockMovement().slipperiness(1)
-							.hardnessAndResistance(100.0f, 100.0f).noDrops()));
+					Block.Properties.of(Material.WATER).noCollission().friction(1)
+							.strength(100.0f, 100.0f).noDrops()));
 	
 	//ethanol
 	public static final ResourceLocation ETHANOL_STILL_RL = new ResourceLocation(WorldSalad.MOD_ID,
@@ -143,8 +145,8 @@ public class FluidInit {
 	public static final RegistryObject<FlowingFluidBlock> ETHANOL_BLOCK = BlockInit.BLOCKS.register(
 			"ethanol",
 			() -> new FlowingFluidBlock(() -> FluidInit.ETHANOL_FLUID.get(),
-					Block.Properties.create(Material.WATER).doesNotBlockMovement().slipperiness(1)
-							.hardnessAndResistance(100.0f, 100.0f).noDrops()));
+					Block.Properties.of(Material.WATER).noCollission().friction(1)
+							.strength(100.0f, 100.0f).noDrops()));
 	
 	//refined oil
 	public static final ResourceLocation REFINED_OIL_STILL_RL = new ResourceLocation(WorldSalad.MOD_ID,
@@ -169,6 +171,6 @@ public class FluidInit {
 	public static final RegistryObject<FlowingFluidBlock> REFINED_OIL_BLOCK = BlockInit.BLOCKS.register(
 			"refined_oil",
 			() -> new FlowingFluidBlock(() -> FluidInit.REFINED_OIL_FLUID.get(),
-					Block.Properties.create(Material.WATER).doesNotBlockMovement().slipperiness(1)
-							.hardnessAndResistance(100.0f, 100.0f).noDrops()));
+					Block.Properties.of(Material.WATER).noCollission().friction(1)
+							.strength(100.0f, 100.0f).noDrops()));
 }

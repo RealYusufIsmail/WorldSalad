@@ -29,6 +29,7 @@ import com.radioctivetacoo.worldsalad.world.feature.structures.ShroomHouseStruct
 import com.radioctivetacoo.worldsalad.world.feature.structures.WraithMushRoomPieces;
 import com.radioctivetacoo.worldsalad.world.feature.structures.WraithMushRoomStructure;
 
+import net.minecraft.item.Item;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
@@ -45,9 +46,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 @Mod.EventBusSubscriber(bus = Bus.MOD, modid = WorldSalad.MOD_ID)
 public class FeatureInit {
 	@SuppressWarnings("deprecation")
-	public static final DeferredRegister<Feature<?>> FEATURES = new DeferredRegister.create(
-			ForgeRegistries.FEATURES, WorldSalad.MOD_ID);
-	
+	public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, WorldSalad.MOD_ID);
+
+
 	@SubscribeEvent
 	public static void registerStructurePieces(RegistryEvent.Register<Feature<?>> event)
 	{
@@ -82,7 +83,7 @@ public class FeatureInit {
 			() -> new ShroomHouseStructure(NoFeatureConfig::deserialize));
 	
 	public static final RegistryObject<EmptyShroomHouseStructure> EMPTY_SHROOMHOUSE = FEATURES.register("empty_shroomhouse", 
-			() -> new EmptyShroomHouseStructure(NoFeatureConfig::deserialize));
+			() -> new EmptyShroomHouseStructure(NoFeatureConfig::deSerialize));
 	
 	public static final RegistryObject<WraithMushRoomStructure> WRAITH_MUSH_ROOM = FEATURES.register("wraith_mush_room", 
 			() -> new WraithMushRoomStructure(NoFeatureConfig::deserialize));
@@ -103,7 +104,7 @@ public class FeatureInit {
 			() -> new AntHiveStructure(NoFeatureConfig::deserialize));
 	
 	public static final RegistryObject<OilWellStructure> OIL_WELL = FEATURES.register("oil_well", 
-			() -> new OilWellStructure(NoFeatureConfig::new));
+			() -> new OilWellStructure(NoFeatureConfig::deserialize));
 	
 	
 	//vegetation
