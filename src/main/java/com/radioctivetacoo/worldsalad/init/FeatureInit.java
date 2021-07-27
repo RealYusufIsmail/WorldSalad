@@ -1,3 +1,7 @@
+/*
+All the porting was done by RealYusufIsmail
+https://github.com/RealYusufIsmail
+ */
 package com.radioctivetacoo.worldsalad.init;
 
 import java.util.Locale;
@@ -41,7 +45,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 @Mod.EventBusSubscriber(bus = Bus.MOD, modid = WorldSalad.MOD_ID)
 public class FeatureInit {
 	@SuppressWarnings("deprecation")
-	public static final DeferredRegister<Feature<?>> FEATURES = new DeferredRegister<Feature<?>>(
+	public static final DeferredRegister<Feature<?>> FEATURES = new DeferredRegister.create(
 			ForgeRegistries.FEATURES, WorldSalad.MOD_ID);
 	
 	@SubscribeEvent
@@ -99,7 +103,7 @@ public class FeatureInit {
 			() -> new AntHiveStructure(NoFeatureConfig::deserialize));
 	
 	public static final RegistryObject<OilWellStructure> OIL_WELL = FEATURES.register("oil_well", 
-			() -> new OilWellStructure(NoFeatureConfig::deserialize));
+			() -> new OilWellStructure(NoFeatureConfig::new));
 	
 	
 	//vegetation

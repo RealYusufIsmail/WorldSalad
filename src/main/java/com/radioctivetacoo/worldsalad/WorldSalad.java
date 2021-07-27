@@ -1,3 +1,7 @@
+/*
+All the porting was done by RealYusufIsmail
+https://github.com/RealYusufIsmail
+ */
 package com.radioctivetacoo.worldsalad;
 
 import net.minecraft.block.ComposterBlock;
@@ -92,7 +96,7 @@ public class WorldSalad {
 				!(block.get() instanceof PassionVineCropBlock) && !(block.get() instanceof HotcoffeeCropBlock) && !(block.get().equals(BlockInit.DISTILLATION_TOWER_BLOCK.get())) 
 				&& !(block.get() instanceof FlowerPotBlock) && !(block.get() instanceof ModMachineBlock) && !(block.get() instanceof DirtCakeBlock))
 				.map(RegistryObject::get).forEach(block -> {
-					final Item.Properties properties = new Item.Properties().group(WorldSaladBlocksItemGroup.instance);
+					final Item.Properties properties = new Item.Properties().tab(WorldSaladBlocksItemGroup.instance);
 					final BlockItem blockItem = new BlockItem(block, properties);
 					blockItem.setRegistryName(block.getRegistryName());
 					registry.register(blockItem);
@@ -101,7 +105,7 @@ public class WorldSalad {
 		BlockInit.BLOCKS.getEntries().stream().filter(
 				block -> (block.get() instanceof ModMachineBlock) || (block.get().equals(BlockInit.DISTILLATION_TOWER_BLOCK.get())))
 				.map(RegistryObject::get).forEach(block -> {
-					final Item.Properties properties = new Item.Properties().group(WorldSaladMachinesItemGroup.instance);
+					final Item.Properties properties = new Item.Properties().tab(WorldSaladMachinesItemGroup.instance);
 					final BlockItem blockItem = new BlockItem(block, properties);
 					blockItem.setRegistryName(block.getRegistryName());
 					registry.register(blockItem);
@@ -110,7 +114,7 @@ public class WorldSalad {
 		BlockInit.BLOCKS.getEntries().stream().filter(
 				block -> (block.get() instanceof DirtCakeBlock))
 				.map(RegistryObject::get).forEach(block -> {
-					final Item.Properties properties = new Item.Properties().group(WorldSaladFoodItemGroup.instance);
+					final Item.Properties properties = new Item.Properties().tab(WorldSaladFoodItemGroup.instance);
 					final BlockItem blockItem = new BlockItem(block, properties);
 					blockItem.setRegistryName(block.getRegistryName());
 					registry.register(blockItem);
@@ -131,53 +135,53 @@ public class WorldSalad {
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {
-		ComposterBlock.registerCompostable(0.3f, BlockInit.WILLOW_LEAVES.get());
-		ComposterBlock.registerCompostable(0.3f, BlockInit.WILLOW_SAPLING.get());
-		ComposterBlock.registerCompostable(0.3f, BlockInit.MADRONE_LEAVES.get());
-		ComposterBlock.registerCompostable(0.5f, BlockInit.DENSE_MADRONE_LEAVES.get());
-		ComposterBlock.registerCompostable(0.3f, BlockInit.MADRONE_SAPLING.get());
-		ComposterBlock.registerCompostable(0.65f, ItemInit.GREEN_APPLE.get());
-		ComposterBlock.registerCompostable(0.65f, ItemInit.GHOST_GRAPES.get());
-		ComposterBlock.registerCompostable(0.65f, ItemInit.HOTCOFFEE_BEANS.get());
-		ComposterBlock.registerCompostable(0.65f, ItemInit.CHOCOLATE_HOTCOFFEE_BEANS.get());
-		ComposterBlock.registerCompostable(0.3f, ItemInit.HOTCOFFEE_SEED.get());
-		ComposterBlock.registerCompostable(0.3f, BlockInit.AMANITA.get());
-		ComposterBlock.registerCompostable(0.3f, BlockInit.DEATHCAP.get());
-		ComposterBlock.registerCompostable(0.3f, BlockInit.DESERT_SHAGGY_MANE.get());
-		ComposterBlock.registerCompostable(0.2f, BlockInit.TOADSTOOL.get());
-		ComposterBlock.registerCompostable(1.0f, BlockInit.MOREL.get());
-		ComposterBlock.registerCompostable(0.3f, BlockInit.LUMGRASS.get());
-		ComposterBlock.registerCompostable(0.3f, BlockInit.TALL_LUMGRASS.get());
-		ComposterBlock.registerCompostable(0.3f, BlockInit.FUNGRASS.get());
-		ComposterBlock.registerCompostable(0.3f, BlockInit.TALL_FUNGRASS.get());
-		ComposterBlock.registerCompostable(0.3f, BlockInit.MOLDGRASS.get());
-		ComposterBlock.registerCompostable(0.3f, BlockInit.MOLD_GROWTH.get());
-		ComposterBlock.registerCompostable(0.1f, BlockInit.DRY_REED.get());
-		ComposterBlock.registerCompostable(0.1f, BlockInit.MOLD_BLOCK.get());
-		ComposterBlock.registerCompostable(0.1f, BlockInit.MILDEW_BLOCK.get());
-		ComposterBlock.registerCompostable(0.1f, BlockInit.ANT_FUNGUS_BLOCK.get());
-		ComposterBlock.registerCompostable(0.1f, ItemInit.RAW_ENOKI_BULB.get());
-		ComposterBlock.registerCompostable(0.1f, ItemInit.SMOKED_ENOKI_BULB.get());
-		ComposterBlock.registerCompostable(0.1f, ItemInit.PASSION_FRUIT.get());
-		ComposterBlock.registerCompostable(0.1f, ItemInit.LUMBERRY.get());
-		ComposterBlock.registerCompostable(0.1f, ItemInit.FUNGBERRY.get());
-		ComposterBlock.registerCompostable(0.1f, ItemInit.MOLDBERRY.get());
-		ComposterBlock.registerCompostable(0.1f, ItemInit.THATCH.get());
-		ComposterBlock.registerCompostable(1f, ItemInit.HYPHAE_BERRY_PIE.get());
-		ComposterBlock.registerCompostable(0.1f, ItemInit.MADRONEBERRY.get());
-		ComposterBlock.registerCompostable(0.1f, BlockInit.FOUNTAIN_GRASS.get());
-		ComposterBlock.registerCompostable(0.1f, ItemInit.MADRONEBERRY.get());
-		ComposterBlock.registerCompostable(0.1f, ItemInit.PASSION_FRUIT_SEEDS.get());
-		ComposterBlock.registerCompostable(0.1f, BlockInit.PINK_GLOWING_MUSHROOM.get());
-		ComposterBlock.registerCompostable(0.1f, BlockInit.BLUE_GLOWING_MUSHROOM.get());
-		ComposterBlock.registerCompostable(0.1f, BlockInit.GREEN_GLOWING_MUSHROOM.get());
-		ComposterBlock.registerCompostable(0.1f, BlockInit.PRICKLEWEED.get());
-		ComposterBlock.registerCompostable(0.1f, BlockInit.LICHEN.get());
-		ComposterBlock.registerCompostable(0.1f, BlockInit.PINK_MUSHROOM_BLOCK.get());
-		ComposterBlock.registerCompostable(0.1f, BlockInit.BLUE_MUSHROOM_BLOCK.get());
-		ComposterBlock.registerCompostable(0.1f, BlockInit.GREEN_MUSHROOM_BLOCK.get());
-		ComposterBlock.registerCompostable(0.1f, BlockInit.HUGE_TOADSTOOL_BLOCK.get());
-		ComposterBlock.registerCompostable(0.1f, BlockInit.HUGE_ENOKI_BLOCK.get());
+		ComposterBlock.add(0.3f, BlockInit.WILLOW_LEAVES.get());
+		ComposterBlock.add(0.3f, BlockInit.WILLOW_SAPLING.get());
+		ComposterBlock.add(0.3f, BlockInit.MADRONE_LEAVES.get());
+		ComposterBlock.add(0.5f, BlockInit.DENSE_MADRONE_LEAVES.get());
+		ComposterBlock.add(0.3f, BlockInit.MADRONE_SAPLING.get());
+		ComposterBlock.add(0.65f, ItemInit.GREEN_APPLE.get());
+		ComposterBlock.add(0.65f, ItemInit.GHOST_GRAPES.get());
+		ComposterBlock.add(0.65f, ItemInit.HOTCOFFEE_BEANS.get());
+		ComposterBlock.add(0.65f, ItemInit.CHOCOLATE_HOTCOFFEE_BEANS.get());
+		ComposterBlock.add(0.3f, ItemInit.HOTCOFFEE_SEED.get());
+		ComposterBlock.add(0.3f, BlockInit.AMANITA.get());
+		ComposterBlock.add(0.3f, BlockInit.DEATHCAP.get());
+		ComposterBlock.add(0.3f, BlockInit.DESERT_SHAGGY_MANE.get());
+		ComposterBlock.add(0.2f, BlockInit.TOADSTOOL.get());
+		ComposterBlock.add(1.0f, BlockInit.MOREL.get());
+		ComposterBlock.add(0.3f, BlockInit.LUMGRASS.get());
+		ComposterBlock.add(0.3f, BlockInit.TALL_LUMGRASS.get());
+		ComposterBlock.add(0.3f, BlockInit.FUNGRASS.get());
+		ComposterBlock.add(0.3f, BlockInit.TALL_FUNGRASS.get());
+		ComposterBlock.add(0.3f, BlockInit.MOLDGRASS.get());
+		ComposterBlock.add(0.3f, BlockInit.MOLD_GROWTH.get());
+		ComposterBlock.add(0.1f, BlockInit.DRY_REED.get());
+		ComposterBlock.add(0.1f, BlockInit.MOLD_BLOCK.get());
+		ComposterBlock.add(0.1f, BlockInit.MILDEW_BLOCK.get());
+		ComposterBlock.add(0.1f, BlockInit.ANT_FUNGUS_BLOCK.get());
+		ComposterBlock.add(0.1f, ItemInit.RAW_ENOKI_BULB.get());
+		ComposterBlock.add(0.1f, ItemInit.SMOKED_ENOKI_BULB.get());
+		ComposterBlock.add(0.1f, ItemInit.PASSION_FRUIT.get());
+		ComposterBlock.add(0.1f, ItemInit.LUMBERRY.get());
+		ComposterBlock.add(0.1f, ItemInit.FUNGBERRY.get());
+		ComposterBlock.add(0.1f, ItemInit.MOLDBERRY.get());
+		ComposterBlock.add(0.1f, ItemInit.THATCH.get());
+		ComposterBlock.add(1f, ItemInit.HYPHAE_BERRY_PIE.get());
+		ComposterBlock.add(0.1f, ItemInit.MADRONEBERRY.get());
+		ComposterBlock.add(0.1f, BlockInit.FOUNTAIN_GRASS.get());
+		ComposterBlock.add(0.1f, ItemInit.MADRONEBERRY.get());
+		ComposterBlock.add(0.1f, ItemInit.PASSION_FRUIT_SEEDS.get());
+		ComposterBlock.add(0.1f, BlockInit.PINK_GLOWING_MUSHROOM.get());
+		ComposterBlock.add(0.1f, BlockInit.BLUE_GLOWING_MUSHROOM.get());
+		ComposterBlock.add(0.1f, BlockInit.GREEN_GLOWING_MUSHROOM.get());
+		ComposterBlock.add(0.1f, BlockInit.PRICKLEWEED.get());
+		ComposterBlock.add(0.1f, BlockInit.LICHEN.get());
+		ComposterBlock.add(0.1f, BlockInit.PINK_MUSHROOM_BLOCK.get());
+		ComposterBlock.add(0.1f, BlockInit.BLUE_MUSHROOM_BLOCK.get());
+		ComposterBlock.add(0.1f, BlockInit.GREEN_MUSHROOM_BLOCK.get());
+		ComposterBlock.add(0.1f, BlockInit.HUGE_TOADSTOOL_BLOCK.get());
+		ComposterBlock.add(0.1f, BlockInit.HUGE_ENOKI_BLOCK.get());
 	}
 
 	private void doClientStuff(final FMLClientSetupEvent event) {
@@ -195,7 +199,7 @@ public class WorldSalad {
 	}
 
 	public static class WorldSaladItemsItemGroup extends ItemGroup {
-		public static final WorldSaladItemsItemGroup instance = new WorldSaladItemsItemGroup(ItemGroup.GROUPS.length,
+		public static final WorldSaladItemsItemGroup instance = new WorldSaladItemsItemGroup(ItemGroup.TABS.length,
 				"worldsaladitems");
 
 		private WorldSaladItemsItemGroup(int index, String label) {
@@ -203,13 +207,13 @@ public class WorldSalad {
 		}
 
 		@Override
-		public ItemStack createIcon() {
+		public ItemStack makeIcon() {
 			return new ItemStack(ItemInit.WORLD_SALAD.get());
 		}
 	}
 	
 	public static class WorldSaladBlocksItemGroup extends ItemGroup {
-		public static final WorldSaladBlocksItemGroup instance = new WorldSaladBlocksItemGroup(ItemGroup.GROUPS.length,
+		public static final WorldSaladBlocksItemGroup instance = new WorldSaladBlocksItemGroup(ItemGroup.TABS.length,
 				"worldsaladblocks");
 
 		private WorldSaladBlocksItemGroup(int index, String label) {
@@ -217,13 +221,13 @@ public class WorldSalad {
 		}
 
 		@Override
-		public ItemStack createIcon() {
+		public ItemStack makeIcon() {
 			return new ItemStack(BlockInit.HYCELIUM.get());
 		}
 	}
 	
 	public static class WorldSaladToolsItemGroup extends ItemGroup {
-		public static final WorldSaladToolsItemGroup instance = new WorldSaladToolsItemGroup(ItemGroup.GROUPS.length,
+		public static final WorldSaladToolsItemGroup instance = new WorldSaladToolsItemGroup(ItemGroup.TABS.length,
 				"worldsaladtools");
 
 		private WorldSaladToolsItemGroup(int index, String label) {
@@ -231,13 +235,13 @@ public class WorldSalad {
 		}
 
 		@Override
-		public ItemStack createIcon() {
+		public ItemStack makeIcon() {
 			return new ItemStack(ItemInit.ESSENCE_CRYSTALIZER.get());
 		}
 	}
 	
 	public static class WorldSaladMachinesItemGroup extends ItemGroup {
-		public static final WorldSaladMachinesItemGroup instance = new WorldSaladMachinesItemGroup(ItemGroup.GROUPS.length,
+		public static final WorldSaladMachinesItemGroup instance = new WorldSaladMachinesItemGroup(ItemGroup.TABS.length,
 				"worldsaladmachines");
 
 		private WorldSaladMachinesItemGroup(int index, String label) {
@@ -245,13 +249,13 @@ public class WorldSalad {
 		}
 
 		@Override
-		public ItemStack createIcon() {
+		public ItemStack makeIcon() {
 			return new ItemStack(BlockInit.ALLOY_FURNACE.get());
 		}
 	}
 	
 	public static class WorldSaladMaterialsItemGroup extends ItemGroup {
-		public static final WorldSaladMaterialsItemGroup instance = new WorldSaladMaterialsItemGroup(ItemGroup.GROUPS.length,
+		public static final WorldSaladMaterialsItemGroup instance = new WorldSaladMaterialsItemGroup(ItemGroup.TABS.length,
 				"worldsaladmaterials");
 
 		private WorldSaladMaterialsItemGroup(int index, String label) {
@@ -259,13 +263,13 @@ public class WorldSalad {
 		}
 
 		@Override
-		public ItemStack createIcon() {
+		public ItemStack makeIcon() {
 			return new ItemStack(ItemInit.STEEL_INGOT.get());
 		}
 	}
 	
 	public static class WorldSaladSpawnEggsItemGroup extends ItemGroup {
-		public static final WorldSaladSpawnEggsItemGroup instance = new WorldSaladSpawnEggsItemGroup(ItemGroup.GROUPS.length,
+		public static final WorldSaladSpawnEggsItemGroup instance = new WorldSaladSpawnEggsItemGroup(ItemGroup.TABS.length,
 				"worldsaladspawneggs");
 
 		private WorldSaladSpawnEggsItemGroup(int index, String label) {
@@ -273,13 +277,13 @@ public class WorldSalad {
 		}
 
 		@Override
-		public ItemStack createIcon() {
+		public ItemStack makeIcon() {
 			return new ItemStack(ItemInit.CORDYCEPS_ANT_SPAWN_EGG.get());
 		}
 	}
 	
 	public static class WorldSaladFoodItemGroup extends ItemGroup {
-		public static final WorldSaladFoodItemGroup instance = new WorldSaladFoodItemGroup(ItemGroup.GROUPS.length,
+		public static final WorldSaladFoodItemGroup instance = new WorldSaladFoodItemGroup(ItemGroup.TABS.length,
 				"worldsaladfoods");
 
 		private WorldSaladFoodItemGroup(int index, String label) {
@@ -287,7 +291,7 @@ public class WorldSalad {
 		}
 
 		@Override
-		public ItemStack createIcon() {
+		public ItemStack makeIcon() {
 			return new ItemStack(BlockInit.DIRT_CAKE.get());
 		}
 	}
